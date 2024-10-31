@@ -1,11 +1,11 @@
-import { Tabs } from "expo-router";
+import { Stack } from "expo-router";
 
 export default function RootLayout() {
   return (
-    <Tabs>
-      <Tabs.Screen name="wheel" />
-      <Tabs.Screen name="index" />
-      <Tabs.Screen name="missions" />
-    </Tabs>
+    <Stack>
+      <Stack.Screen name="wheel" />
+      <Stack.Screen name="index" />
+      <Stack.Screen name="missions" />
+    </Stack>
   );
 }

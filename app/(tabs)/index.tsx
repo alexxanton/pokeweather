@@ -7,7 +7,7 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <ImageBackground source={Background} style={styles.bg}>
-        <Text>Edit app/index.tsx to edit this screen.</Text>
+        <Text style={{ fontFamily: 'BlackHanSans' }}>Edit app/index.tsx to edit this screen.</Text>
         <Link href={"/wheel"}>
           Wheel
         </Link>
