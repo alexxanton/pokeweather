@@ -1,23 +1,25 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 import { Image } from 'expo-image';
+import { CBackground } from '@/components/CBackground';
+
+const WheelImage = require("@/assets/images/misc/wheel.png");
+
 
 export default function Wheel() {
   return (
-    <View style={styles.container}>
-      <Image></Image>
+    <CBackground>
+      <Image source={WheelImage} style={styles.image} />
       <Text style={styles.text}>Wheel</Text>
-    </View>
+    </CBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#25292e',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   text: {
     color: '#fff',
   },
+  image: {
+    width: "85%",
+    aspectRatio: 1
+  }
 });
