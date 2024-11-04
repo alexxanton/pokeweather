@@ -1,11 +1,12 @@
-import { Text, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { Link } from 'expo-router';
 import { CBackground } from '@/components/CBackground';
+import { CText } from '@/components/CText';
 
 export default function Index() {
   return (
     <CBackground>
-      <Text style={{ fontFamily: 'BlackHanSans' }}>Edit app/index.tsx to edit this screen.</Text>
+      <CText>Edit app/index.tsx to edit this screen.</CText>
       <Link href={"/wheel"}>
         Wheel
       </Link>

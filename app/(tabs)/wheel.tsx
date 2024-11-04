@@ -1,6 +1,8 @@
-import { Text, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Image } from 'expo-image';
 import { CBackground } from '@/components/CBackground';
+import { CText } from '@/components/CText';
+
 
 const WheelImage = require("@/assets/images/misc/wheel.png");
 
@@ -8,8 +10,8 @@ const WheelImage = require("@/assets/images/misc/wheel.png");
 export default function Wheel() {
   return (
     <CBackground>
-      <Image source={WheelImage} style={styles.image} />
-      <Text style={styles.text}>Wheel</Text>
+      <Image source={WheelImage} style={styles.wheel} />
+      <CText>Wheel</CText>
     </CBackground>
   );
 }
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
   },
-  image: {
+  wheel: {
     width: "85%",
     aspectRatio: 1
   }
