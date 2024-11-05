@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
   bg: {
     flex: 1,
-    paddingTop: 100,
+    paddingTop: 50,
     padding: 20
   }
 });

@@ -1,27 +1,20 @@
 import { Pressable, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
-import { Image } from "expo-image";
+import WheelButton from '@/assets/images/buttons/WheelButton';
 
 
-const WheelButton = require('@/assets/images/buttons/wheel-btn.png');
 
-export default function CButton(dest) {
+export default function CButton(dest:any) {
   const router = useRouter();
 
   return (
-    <Pressable onPress={() => router.push(dest)}>
-      <Image source={WheelButton} style={styles.img} />
+    <Pressable onPress={() => router.push(dest)} style={styles.btn}>
+      <WheelButton width={90} height={90} />
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  location: {
-  },
-  link: {
-  },
-  img: {
-    aspectRatio: 1,
-    width: 100
+  btn: {
   }
 });
