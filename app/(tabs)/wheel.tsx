@@ -1,8 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { StyleSheet } from 'react-native';
 import { Image } from 'expo-image';
 import { CBackground } from '@/components/CBackground';
-import { CText } from '@/components/CText';
 import { CText } from '@/components/CText';
 
 
