@@ -1,12 +1,14 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { StyleSheet, View } from "react-native";
+import { CBackground } from '@/components/CBackground';
 
-export default function Missions() {
+export default function Team() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Missions</Text>
-    </View>
+    <CBackground>
+
+    </CBackground>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

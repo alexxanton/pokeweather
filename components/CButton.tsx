@@ -13,12 +13,6 @@ export default function CButton({type, href}: Props) {
   const [buttonPressed, setButtonPressed] = useState(false);
   const [scale, setScale] = useState(1);
 
-  const styles = StyleSheet.create({
-    btn: {
-      transform: [{scale}]
-    },
-  });
-
   const handlePress = () => {
     if (!buttonPressed) {
       router.push(href);
@@ -39,14 +33,23 @@ export default function CButton({type, href}: Props) {
     setScale(1);
   }
 
+  const handleLongPress = () => {
+  }
+
   return (
     <Pressable
       onPress={handlePress}
       onPressIn={handlePressIn}
       onPressOut={handlePressOut}
-      style={styles.btn}
+      onLongPress={handleLongPress}
+      style={{ transform: [{scale}] }}
     >
       <WheelButton width={90} height={90} />
     </Pressable>
   );
 }
+
+const styles = StyleSheet.create({
+  btn: {
+  },
+});
