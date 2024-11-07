@@ -1,32 +1,34 @@
 import { Pressable, StyleSheet, Vibration } from "react-native";
 import { useRouter } from "expo-router";
-import WheelButton from '@/assets/images/buttons/WheelButton';
 import { useState } from "react";
 
 type Props = {
   type: string,
-  href?: string
+  dest: string,
+  image: React.ElementType,
+  width: number
 }
 
-export default function CButton({type, href}: Props) {
+export default function CButton({type, dest, image, width}: Props) {
   const router = useRouter();
-  const [buttonPressed, setButtonPressed] = useState(false);
+  const [buttonActive, setButtonActive] = useState(true);
   const [scale, setScale] = useState(1);
 
   const handlePress = () => {
-    if (!buttonPressed) {
-      router.push(href);
+    if (type == "link") {
+      if (buttonActive) {
+        router.push(dest);
+      }
+      setButtonActive(false);
+      setTimeout(() => {
+        setButtonActive(true);
+      }, 500);
     }
-    
-    setButtonPressed(true);
-    setTimeout(() => {
-      setButtonPressed(false);
-    }, 500);
   }
 
   const handlePressIn = () => {
     Vibration.vibrate(100);
-    setScale(1.1);
+    setScale(1.03);
   };
 
   const handlePressOut = () => {
@@ -36,6 +38,9 @@ export default function CButton({type, href}: Props) {
   const handleLongPress = () => {
   }
 
+  const ButtonImage = image;
+  // const ButtonImage = buttonMap[dest];
+
   return (
     <Pressable
       onPress={handlePress}
@@ -44,7 +49,7 @@ export default function CButton({type, href}: Props) {
       onLongPress={handleLongPress}
       style={{ transform: [{scale}] }}
     >
-      <WheelButton width={90} height={90} />
+      <ButtonImage width={width} height={90} />
     </Pressable>
   );
 }
