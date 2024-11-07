@@ -5,10 +5,12 @@ import CButton from "@/components/CButton";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
 import BattleButton from '@/assets/images/buttons/BattleButton';
+import BackButton from "@/components/BackButton";
 
 export default function Team() {
   return (
     <CBackground>
+      <BackButton />
       <View style={styles.container}>
       </View>
       <ButtonContainer>

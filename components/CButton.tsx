@@ -6,10 +6,11 @@ type Props = {
   type: string,
   dest: string,
   image: React.ElementType,
-  width: number
+  width?: number,
+  height?: number
 }
 
-export default function CButton({type, dest, image, width}: Props) {
+export default function CButton({type, dest, image, width, height}: Props) {
   const router = useRouter();
   const [buttonActive, setButtonActive] = useState(true);
   const [scale, setScale] = useState(1);

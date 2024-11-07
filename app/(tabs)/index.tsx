@@ -27,7 +27,7 @@ export default function Index() {
           <OutlinedText size={20}>O</OutlinedText>
         </View>
         <OutlinedText size={75}>23</OutlinedText>
-        <Pokeball width={200} height={200} />
+        <CButton type="link" dest="/battle" image={Pokeball} width={200} height={200} />
       </View>
       <ButtonContainer>
         <CButton type="link" dest="/wheel" image={WheelButton} width={90} />

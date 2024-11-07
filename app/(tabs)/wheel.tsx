@@ -1,4 +1,4 @@
-import { Text, Pressable, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Image } from 'expo-image';
 import { CBackground } from '@/components/CBackground';
 import { CText } from '@/components/CText';
@@ -9,6 +9,7 @@ import { useState } from 'react';
 
 import AdButton from '@/assets/images/buttons/AdButton';
 import SpinButton from '@/assets/images/buttons/SpinButton';
+import BackButton from '@/components/BackButton';
 
 
 const WheelImage = require("@/assets/images/misc/wheel.png");
@@ -19,6 +20,7 @@ export default function Wheel() {
 
   return (
     <CBackground>
+      <BackButton />
       <View style={styles.container}>
         <Image source={WheelImage} style={styles.wheel} />
       </View>
