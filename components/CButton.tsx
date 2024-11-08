@@ -3,22 +3,21 @@ import { useRouter } from "expo-router";
 import { useState } from "react";
 
 type Props = {
-  type: string,
-  dest: string,
+  href?: string,
   image: React.ElementType,
   width?: number,
   height?: number
 }
 
-export default function CButton({type, dest, image, width, height}: Props) {
+export default function CButton({href, image, width, height}: Props) {
   const router = useRouter();
   const [buttonActive, setButtonActive] = useState(true);
   const [scale, setScale] = useState(1);
 
   const handlePress = () => {
-    if (type == "link") {
+    if (href) {
       if (buttonActive) {
-        router.push(dest);
+        router.push(href);
       }
       setButtonActive(false);
       setTimeout(() => {
@@ -40,7 +39,7 @@ export default function CButton({type, dest, image, width, height}: Props) {
   }
 
   const ButtonImage = image;
-  // const ButtonImage = buttonMap[dest];
+  // const ButtonImage = buttonMap[href];
 
   return (
     <Pressable

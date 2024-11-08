@@ -28,8 +28,8 @@ export default function Wheel() {
         <CText size={30}>x {tries}</CText>
       </View>
       <ButtonContainer>
-        <CButton type="ad" dest="/ad" image={AdButton} width={90} />
-        <CButton type="spin" dest="/spin" image={SpinButton} width={180} />
+        <CButton href="/ad" image={AdButton} width={90} />
+        <CButton image={SpinButton} width={180} />
       </ButtonContainer>
     </CBackground>
   );

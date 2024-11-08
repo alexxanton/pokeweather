@@ -14,8 +14,8 @@ export default function Team() {
       <View style={styles.container}>
       </View>
       <ButtonContainer>
-        <CButton type="link" dest="/boost" image={BoostButton} width={135} />
-        <CButton type="link" dest="/battle" image={BattleButton} width={135} />
+        <CButton href="/boost" image={BoostButton} width={135} />
+        <CButton href="/battle" image={BattleButton} width={135} />
       </ButtonContainer>
     </CBackground>
   );

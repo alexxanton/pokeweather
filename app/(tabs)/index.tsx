@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import { CBackground } from '@/components/CBackground';
-import { OutlinedText } from '@/components/OutlinedText';
+import { CText } from '@/components/CText';
 import CButton from "@/components/CButton";
 import Pokeball from '@/assets/images/misc/Pokeball';
 import ButtonContainer from "@/components/ButtonContainer";
@@ -16,23 +16,23 @@ export default function Index() {
     <CBackground>
       <View>
         <View style={styles.locationContainer}>
-          <OutlinedText size={20}>Location</OutlinedText>
+          <CText size={20} outline="yes">Location</CText>
         </View>
         <View style={styles.profileContainer}>
-          <CButton type="link" dest="/profile" image={ProfileButton} width={90} />
+          <CButton href="/profile" image={ProfileButton} width={90} />
         </View>
       </View>
       <View style={styles.container}>
         <View style={styles.degree}>
-          <OutlinedText size={20}>O</OutlinedText>
+          <CText size={20} outline="yes">O</CText>
         </View>
-        <OutlinedText size={75}>23</OutlinedText>
-        <CButton type="link" dest="/battle" image={Pokeball} width={200} height={200} />
+        <CText size={75} outline="yes">23</CText>
+        <CButton href="/battle" image={Pokeball} width={200} height={200} />
       </View>
       <ButtonContainer>
-        <CButton type="link" dest="/wheel" image={WheelButton} width={90} />
-        <CButton type="link" dest="/team" image={TeamButton} width={90} />
-        <CButton type="link" dest="/missions" image={MissionsButton} width={90} />
+        <CButton href="/wheel" image={WheelButton} width={90} />
+        <CButton href="/team" image={TeamButton} width={90} />
+        <CButton href="/missions" image={MissionsButton} width={90} />
       </ButtonContainer>
     </CBackground>
   );

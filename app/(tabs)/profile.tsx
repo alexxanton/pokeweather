@@ -12,7 +12,7 @@ export default function Team() {
       <View style={styles.container}>
       </View>
       <ButtonContainer>
-        <CButton type="profile" dest="signout" image={SignoutButton} width={270} />
+        <CButton href="signout" image={SignoutButton} width={270} />
       </ButtonContainer>
     </CBackground>
   );
