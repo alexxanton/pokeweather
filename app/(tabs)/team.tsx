@@ -1,11 +1,11 @@
 import { StyleSheet, View } from "react-native";
 import { CBackground } from '@/components/CBackground';
-import ButtonContainer from "@/components/ButtonContainer";
-import CButton from "@/components/CButton";
+import { ButtonContainer } from "@/components/ButtonContainer";
+import { CButton } from "@/components/CButton";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
 import BattleButton from '@/assets/images/buttons/BattleButton';
-import BackButton from "@/components/BackButton";
+import { BackButton } from "@/components/BackButton";
 
 export default function Team() {
   return (

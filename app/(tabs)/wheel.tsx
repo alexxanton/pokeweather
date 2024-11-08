@@ -3,13 +3,13 @@ import { Image } from 'expo-image';
 import { CBackground } from '@/components/CBackground';
 import { CText } from '@/components/CText';
 import { View } from 'react-native';
-import ButtonContainer from '@/components/ButtonContainer';
-import CButton from '@/components/CButton';
+import { ButtonContainer } from '@/components/ButtonContainer';
+import { CButton } from '@/components/CButton';
 import { useState } from 'react';
 
 import AdButton from '@/assets/images/buttons/AdButton';
 import SpinButton from '@/assets/images/buttons/SpinButton';
-import BackButton from '@/components/BackButton';
+import { BackButton } from '@/components/BackButton';
 
 
 const WheelImage = require("@/assets/images/misc/wheel.png");

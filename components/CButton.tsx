@@ -1,15 +1,17 @@
 import { Pressable, StyleSheet, Vibration } from "react-native";
 import { useRouter } from "expo-router";
-import { useState } from "react";
+import { type ComponentProps, useState } from "react";
 
-type Props = {
+type ButtonProps = {
   href?: string,
   image: React.ElementType,
   width?: number,
   height?: number
 }
 
-export default function CButton({href, image, width, height}: Props) {
+type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & ButtonProps;
+
+export function CButton({href, image, width, height, ...rest}: Props) {
   const router = useRouter();
   const [buttonActive, setButtonActive] = useState(true);
   const [scale, setScale] = useState(1);
@@ -26,16 +28,13 @@ export default function CButton({href, image, width, height}: Props) {
     }
   }
 
-  const handlePressIn = () => {
+  const scaleGrow = () => {
     Vibration.vibrate(100);
     setScale(1.03);
   };
 
-  const handlePressOut = () => {
+  const scaleShrink = () => {
     setScale(1);
-  }
-
-  const handleLongPress = () => {
   }
 
   const ButtonImage = image;
@@ -44,10 +43,10 @@ export default function CButton({href, image, width, height}: Props) {
   return (
     <Pressable
       onPress={handlePress}
-      onPressIn={handlePressIn}
-      onPressOut={handlePressOut}
-      onLongPress={handleLongPress}
+      onPressIn={scaleGrow}
+      onPressOut={scaleShrink}
       style={{ transform: [{scale}] }}
+      {...rest}
     >
       <ButtonImage width={width} height={90} />
     </Pressable>

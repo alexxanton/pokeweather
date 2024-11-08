@@ -10,14 +10,6 @@ type Props = PropsWithChildren<{
 }>;
 
 export function CText({ children, size, outline }: Props) {
-  if (!outline) {
-    return (
-      <Text style={[styles.text, {fontSize:size}]}>
-        {children}
-      </Text>
-    );
-  }
-  
   if (outline == "yes") {
     return (
       <View style={styles.container}>
@@ -35,6 +27,12 @@ export function CText({ children, size, outline }: Props) {
       </View>
     );
   }
+
+  return (
+    <Text style={[styles.text, {fontSize:size}]}>
+      {children}
+    </Text>
+  );
 }
 
 const styles = StyleSheet.create({

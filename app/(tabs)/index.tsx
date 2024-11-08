@@ -1,10 +1,10 @@
 import { StyleSheet, View } from "react-native";
 import { CBackground } from '@/components/CBackground';
 import { CText } from '@/components/CText';
-import CButton from "@/components/CButton";
-import Pokeball from '@/assets/images/misc/Pokeball';
-import ButtonContainer from "@/components/ButtonContainer";
+import { CButton } from "@/components/CButton";
+import { ButtonContainer } from "@/components/ButtonContainer";
 
+import Pokeball from '@/assets/images/misc/Pokeball';
 import WheelButton from '@/assets/images/buttons/WheelButton';
 import TeamButton from '@/assets/images/buttons/TeamButton';
 import MissionsButton from '@/assets/images/buttons/MissionsButton';
@@ -19,7 +19,7 @@ export default function Index() {
           <CText size={20} outline="yes">Location</CText>
         </View>
         <View style={styles.profileContainer}>
-          <CButton href="/profile" image={ProfileButton} width={90} />
+          <CButton href="/profile" image={ProfileButton} width={90}></CButton>
         </View>
       </View>
       <View style={styles.container}>

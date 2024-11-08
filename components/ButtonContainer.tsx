@@ -2,7 +2,7 @@ import { StyleSheet, View } from "react-native";
 import { PropsWithChildren } from "react";
 
 
-export default function ButtonContainer({children}: PropsWithChildren) {
+export function ButtonContainer({children}: PropsWithChildren) {
   return (
     <View style={styles.buttonContainer}>
       {children}
