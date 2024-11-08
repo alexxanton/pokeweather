@@ -14,26 +14,41 @@ import ProfileButton from '@/assets/images/buttons/ProfileButton';
 export default function Index() {
   return (
     <CBackground>
+
       <View>
         <View style={styles.locationContainer}>
           <CText size={20} outline="yes">Location</CText>
         </View>
+        
         <View style={styles.profileContainer}>
-          <CButton href="/profile" image={ProfileButton} width={90}></CButton>
+          <CButton href="/profile">
+            <ProfileButton width={90} height={90} />
+          </CButton>
         </View>
       </View>
+
       <View style={styles.container}>
         <View style={styles.degree}>
           <CText size={20} outline="yes">O</CText>
         </View>
         <CText size={75} outline="yes">23</CText>
-        <CButton href="/battle" image={Pokeball} width={200} height={200} />
+        <CButton href="/battle">
+          <Pokeball width={200} height={200} />
+        </CButton>
       </View>
+
       <ButtonContainer>
-        <CButton href="/wheel" image={WheelButton} width={90} />
-        <CButton href="/team" image={TeamButton} width={90} />
-        <CButton href="/missions" image={MissionsButton} width={90} />
+        <CButton href="/wheel">
+          <WheelButton width={90} height={90} />
+        </CButton>
+        <CButton href="/team">
+          <TeamButton width={90} height={90} />
+        </CButton>
+        <CButton href="/missions">
+          <MissionsButton width={90} height={90} />
+        </CButton>
       </ButtonContainer>
+      
     </CBackground>
   );
 }

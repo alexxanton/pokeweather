@@ -4,14 +4,11 @@ import { type ComponentProps, useState } from "react";
 
 type ButtonProps = {
   href?: string,
-  image: React.ElementType,
-  width?: number,
-  height?: number
 }
 
 type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & ButtonProps;
 
-export function CButton({href, image, width, height, ...rest}: Props) {
+export function CButton({href, ...rest}: Props) {
   const router = useRouter();
   const [buttonActive, setButtonActive] = useState(true);
   const [scale, setScale] = useState(1);
@@ -37,9 +34,6 @@ export function CButton({href, image, width, height, ...rest}: Props) {
     setScale(1);
   }
 
-  const ButtonImage = image;
-  // const ButtonImage = buttonMap[href];
-
   return (
     <Pressable
       onPress={handlePress}
@@ -47,13 +41,6 @@ export function CButton({href, image, width, height, ...rest}: Props) {
       onPressOut={scaleShrink}
       style={{ transform: [{scale}] }}
       {...rest}
-    >
-      <ButtonImage width={width} height={90} />
-    </Pressable>
+    />
   );
 }
-
-const styles = StyleSheet.create({
-  btn: {
-  },
-});

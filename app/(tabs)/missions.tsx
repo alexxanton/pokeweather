@@ -9,13 +9,18 @@ import { BackButton } from "@/components/BackButton";
 export default function Team() {
   return (
     <CBackground>
+      
       <BackButton />
       <View style={styles.container}>
 
       </View>
+
       <ButtonContainer>
-        <CButton href="/trophies" image={TrophyButton} width={270} />
+        <CButton href="/trophies">
+          <TrophyButton width={270} height={90} />
+        </CButton>
       </ButtonContainer>
+
     </CBackground>
   );
 }

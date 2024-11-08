@@ -5,11 +5,11 @@ import { CText } from '@/components/CText';
 import { View } from 'react-native';
 import { ButtonContainer } from '@/components/ButtonContainer';
 import { CButton } from '@/components/CButton';
+import { BackButton } from '@/components/BackButton';
 import { useState } from 'react';
 
 import AdButton from '@/assets/images/buttons/AdButton';
 import SpinButton from '@/assets/images/buttons/SpinButton';
-import { BackButton } from '@/components/BackButton';
 
 
 const WheelImage = require("@/assets/images/misc/wheel.png");
@@ -20,17 +20,25 @@ export default function Wheel() {
 
   return (
     <CBackground>
+
       <BackButton />
       <View style={styles.container}>
         <Image source={WheelImage} style={styles.wheel} />
       </View>
+
       <View style={styles.tries}>
         <CText size={30}>x {tries}</CText>
       </View>
+
       <ButtonContainer>
-        <CButton href="/ad" image={AdButton} width={90} />
-        <CButton image={SpinButton} width={180} />
+        <CButton href="/ad">
+          <AdButton width={90} height={90} />
+        </CButton>
+        <CButton>
+          <SpinButton width={180} height={90} />
+        </CButton>
       </ButtonContainer>
+      
     </CBackground>
   );
 }

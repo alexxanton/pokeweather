@@ -13,7 +13,9 @@ export default function Team() {
       <View style={styles.container}>
       </View>
       <ButtonContainer>
-        <CButton href="signout" image={SignoutButton} width={270} />
+        <CButton href="signout">
+          <SignoutButton width={270} height={90} />
+        </CButton>
       </ButtonContainer>
     </CBackground>
   );

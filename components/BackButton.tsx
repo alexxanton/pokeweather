@@ -5,7 +5,9 @@ import ArrowbackButton from '@/assets/images/buttons/ArrowbackButton';
 export function BackButton() {
   return (
     <View style={styles.container}>
-      <CButton href=".." image={ArrowbackButton} width={200} height={200} />
+      <CButton href="..">
+        <ArrowbackButton width={200} height={200}/>
+      </CButton>
     </View>
   );
 }
