@@ -1,6 +1,6 @@
-import { Pressable, StyleSheet, Vibration } from "react-native";
+import { Pressable, StyleSheet, Vibration, Animated } from "react-native";
 import { useRouter } from "expo-router";
-import { type ComponentProps, useState } from "react";
+import { type ComponentProps, useState, useRef } from "react";
 
 type ButtonProps = {
   href?: string,
@@ -8,10 +8,10 @@ type ButtonProps = {
 
 type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & ButtonProps;
 
-export function CButton({href, ...rest}: Props) {
+export function CButton({ href, ...rest }: Props) {
   const router = useRouter();
   const [buttonActive, setButtonActive] = useState(true);
-  const [scale, setScale] = useState(1);
+  const scaleAnim = useRef(new Animated.Value(1)).current;
 
   const handlePress = () => {
     if (href) {
@@ -27,20 +27,29 @@ export function CButton({href, ...rest}: Props) {
 
   const scaleGrow = () => {
     Vibration.vibrate(100);
-    setScale(1.03);
+    Animated.timing(scaleAnim, {
+      toValue: 1.1,
+      duration: 100,
+      useNativeDriver: true,
+    }).start();
   };
 
   const scaleShrink = () => {
-    setScale(1);
+    Animated.timing(scaleAnim, {
+      toValue: 1,
+      duration: 100,
+      useNativeDriver: true,
+    }).start();
   }
 
   return (
-    <Pressable
-      onPress={handlePress}
-      onPressIn={scaleGrow}
-      onPressOut={scaleShrink}
-      style={{ transform: [{scale}] }}
-      {...rest}
-    />
+    <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
+      <Pressable
+        onPress={handlePress}
+        onPressIn={scaleGrow}
+        onPressOut={scaleShrink}
+        {...rest}
+      />
+    </Animated.View>
   );
 }
