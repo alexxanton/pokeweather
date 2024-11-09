@@ -1,18 +1,19 @@
-import { PropsWithChildren } from "react";
+import { type ComponentProps, PropsWithChildren } from "react";
 import { View } from "react-native";
 import { Text, StyleSheet } from "react-native";
 
-type Yes = "yes"
 
-type Props = PropsWithChildren<{
+type CustomProps = PropsWithChildren<{
   size: number,
-  outline?: Yes
+  outline?: string
 }>;
 
-export function CText({ children, size, outline }: Props) {
+type Props = ComponentProps<typeof Text> & CustomProps;
+
+export function CText({ children, size, outline, ...rest }: Props) {
   if (outline == "yes") {
     return (
-      <View style={styles.container}>
+      <View style={styles.container} {...rest}>
         {/* Outline layers */}
         <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopLeft]}>{children}</Text>
         <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopRight]}>{children}</Text>
@@ -29,7 +30,7 @@ export function CText({ children, size, outline }: Props) {
   }
 
   return (
-    <Text style={[styles.text, {fontSize:size}]}>
+    <Text style={[styles.text, {fontSize:size}]} {...rest}>
       {children}
     </Text>
   );

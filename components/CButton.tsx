@@ -2,11 +2,8 @@ import { Pressable, StyleSheet, Vibration, Animated } from "react-native";
 import { useRouter } from "expo-router";
 import { type ComponentProps, useState, useRef } from "react";
 
-type ButtonProps = {
-  href?: string,
-}
 
-type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & ButtonProps;
+type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & {href?: string};
 
 export function CButton({ href, ...rest }: Props) {
   const router = useRouter();

@@ -16,22 +16,17 @@ export default function Index() {
     <CBackground>
 
       <View>
-        <View style={styles.locationContainer}>
-          <CText size={20} outline="yes">Location</CText>
-        </View>
-        
-        <View style={styles.profileContainer}>
-          <CButton href="/profile">
-            <ProfileButton width={90} height={90} />
-          </CButton>
-        </View>
+        <CText size={20} outline="yes" style={styles.location}>Location</CText>
+        <CButton href="/profile" style={styles.profile}>
+          <ProfileButton width={90} height={90} />
+        </CButton>
       </View>
 
       <View style={styles.container}>
-        <View style={styles.degree}>
-          <CText size={20} outline="yes">O</CText>
+        <View style={styles.temperature}>
+          <CText size={75} outline="yes">23</CText>
+          <CText size={20} outline="yes" style={styles.degree}>O</CText>
         </View>
-        <CText size={75} outline="yes">23</CText>
         <CButton href="/battle">
           <Pokeball width={200} height={200} />
         </CButton>
@@ -56,18 +51,23 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "center",
     alignItems: "center",
-    justifyContent: "center"
   },
-  locationContainer: {
+  temperature: {
+    flexDirection: "row",
+  },
+  degree: {
+    position: 'absolute',
+    right: -15,
+    top: 5,
+    transform: [{ translateY: -10 }],
+  },
+  location: {
     position: "absolute",
   },
-  profileContainer: {
+  profile: {
     alignSelf: "flex-end",
     position: "absolute"
   },
-  degree: {
-    right: -50,
-    top: 15
-  }
 });

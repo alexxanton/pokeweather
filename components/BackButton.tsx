@@ -6,7 +6,7 @@ export function BackButton() {
   return (
     <View style={styles.container}>
       <CButton href="..">
-        <ArrowbackButton width={200} height={200}/>
+        <ArrowbackButton width={100} height={100}/>
       </CButton>
     </View>
   );
