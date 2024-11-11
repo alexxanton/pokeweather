@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Vibration, Animated } from "react-native";
+import { Pressable, Vibration, Animated } from "react-native";
 import { useRouter } from "expo-router";
 import { type ComponentProps, useState, useRef } from "react";
 

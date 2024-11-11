@@ -1,36 +1,33 @@
-import { type ComponentProps, PropsWithChildren } from "react";
 import { View } from "react-native";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, type TextProps } from "react-native";
 
 
-type CustomProps = PropsWithChildren<{
+type CTextProps = TextProps & {
   size: number,
-  outline?: string
-}>;
+  outlined?: boolean
+};
 
-type Props = ComponentProps<typeof Text> & CustomProps;
-
-export function CText({ children, size, outline, ...rest }: Props) {
-  if (outline == "yes") {
+export function CText({ children, size, outlined, style, ...rest }: CTextProps) {
+  if (outlined) {
     return (
       <View style={styles.container} {...rest}>
         {/* Outline layers */}
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopLeft]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopRight]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottomLeft]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottomRight]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTop]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottom]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineLeft]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineRight]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopLeft, style]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopRight, style]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottomLeft, style]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottomRight, style]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTop, style]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottom, style]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineLeft, style]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineRight, style]}>{children}</Text>
         {/* Main text */}
-        <Text style={[{fontSize:size}, styles.text]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, style]}>{children}</Text>
       </View>
     );
   }
 
   return (
-    <Text style={[styles.text, {fontSize:size}]} {...rest}>
+    <Text style={[styles.text, {fontSize:size}, style]} {...rest}>
       {children}
     </Text>
   );

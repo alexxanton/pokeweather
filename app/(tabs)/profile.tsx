@@ -13,7 +13,7 @@ export default function Team() {
       <View style={styles.container}>
       </View>
       <ButtonContainer>
-        <CButton href="signout">
+        <CButton>
           <SignoutButton width={270} height={90} />
         </CButton>
       </ButtonContainer>

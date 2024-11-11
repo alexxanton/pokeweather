@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { type PropsWithChildren } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
 
 const BackgroundImage = require("@/assets/images/backgrounds/partly.png")

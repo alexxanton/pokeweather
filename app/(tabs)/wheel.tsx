@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { Image } from 'expo-image';
 import { CBackground } from '@/components/CBackground';
 import { CText } from '@/components/CText';
 import { View } from 'react-native';
@@ -10,9 +9,7 @@ import { useState } from 'react';
 
 import AdButton from '@/assets/images/buttons/AdButton';
 import SpinButton from '@/assets/images/buttons/SpinButton';
-
-
-const WheelImage = require("@/assets/images/misc/wheel.png");
+import WheelSVG from '@/assets/images/misc/Wheel';
 
 
 export default function Wheel() {
@@ -23,7 +20,7 @@ export default function Wheel() {
 
       <BackButton />
       <View style={styles.container}>
-        <Image source={WheelImage} style={styles.wheel} />
+        <WheelSVG width={300} height={300} />
       </View>
 
       <View style={styles.tries}>
@@ -34,7 +31,7 @@ export default function Wheel() {
         <CButton href="/ad">
           <AdButton width={90} height={90} />
         </CButton>
-        <CButton>
+        <CButton onPress={() => setTries(tries - 1)}>
           <SpinButton width={180} height={90} />
         </CButton>
       </ButtonContainer>
