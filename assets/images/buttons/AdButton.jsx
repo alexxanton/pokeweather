@@ -10,7 +10,7 @@ const SvgComponent = (props) => (
     {...props}
   >
     <Rect width={109.301} height={107} x={24} y={8} fill="red" rx={15} />
-    <Path fill="#FFCB11" d="M107 62.5 64.25 87.182V37.818L107 62.5Z" />
+    <Path fill="white" d="M107 62.5 64.25 87.182V37.818L107 62.5Z" />
   </Svg>
 )
 export default SvgComponent

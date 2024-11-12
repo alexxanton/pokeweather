@@ -14,7 +14,7 @@ const SvgComponent = (props) => (
       height={107}
       x={24.215}
       y={8}
-      fill="#FFCB11"
+      fill="white"
       rx={15}
     />
     <Path
@@ -26,7 +26,7 @@ const SvgComponent = (props) => (
       cy={93}
       r={10}
       fill="red"
-      stroke="#FFCB11"
+      stroke="white"
       strokeWidth={4}
     />
   </Svg>

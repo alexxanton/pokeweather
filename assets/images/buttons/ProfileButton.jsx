@@ -12,12 +12,18 @@ const SvgComponent = (props) => (
       cx={35.5}
       cy={35.5}
       r={31.5}
-      fill="#FFCB11"
-      stroke="red"
+      fill="red"
+    />
+    <Path fill="white" d="M57 63H14s9.626-23 21.5-23S57 63 57 63Z" />
+    <Circle
+      cx={35.5}
+      cy={35.5}
+      r={31.5}
+      fill="none"
+      stroke="black"
       strokeWidth={8}
     />
-    <Circle cx={36} cy={24} r={11} fill="red" />
-    <Path fill="red" d="M57 63H14s9.626-23 21.5-23S57 63 57 63Z" />
+    <Circle cx={36} cy={24} r={11} fill="white" />
   </Svg>
 )
 export default SvgComponent

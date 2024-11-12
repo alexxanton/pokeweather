@@ -10,14 +10,14 @@ const SvgComponent = (props) => (
     {...props}
   >
     <Rect width={109.301} height={107} x={24.108} y={8} fill="red" rx={15} />
-    <Circle cx={78.5} cy={61.5} r={39.5} stroke="#FFCB11" strokeWidth={8} />
-    <Path stroke="#FFCB11" strokeWidth={8} d="M40 62h78" />
+    <Circle cx={78.5} cy={61.5} r={39.5} stroke="white" strokeWidth={8} />
+    <Path stroke="white" strokeWidth={8} d="M40 62h78" />
     <Circle
       cx={79}
       cy={62}
       r={13}
       fill="red"
-      stroke="#FFCB11"
+      stroke="white"
       strokeWidth={8}
     />
   </Svg>
