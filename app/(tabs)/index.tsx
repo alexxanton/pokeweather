@@ -1,8 +1,11 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View } from 'react-native';
 import { CBackground } from '@/components/CBackground';
 import { CText } from '@/components/CText';
-import { CButton } from "@/components/CButton";
-import { ButtonContainer } from "@/components/ButtonContainer";
+import { CButton } from '@/components/CButton';
+import { ButtonContainer } from '@/components/ButtonContainer';
+import { useEffect, useState } from 'react';
+import * as Location from 'expo-location';
+import axios from 'axios';
 
 import Pokeball from '@/assets/images/misc/Pokeball';
 import WheelButton from '@/assets/images/buttons/WheelButton';
@@ -12,11 +15,36 @@ import ProfileButton from '@/assets/images/buttons/ProfileButton';
 
 
 export default function Index() {
+  const [location, setLocation] = useState(null);
+  const [error, setError] = useState("");
+  const [weather, setWeather] = useState();
+  const weatherKey = process.env.EXPO_PUBLIC_API_KEY;
+
+  const getLocation = async () => {
+    let { status } = await Location.requestForegroundPermissionsAsync();
+    if (status !== 'granted') {
+      setError('Permission to access location was denied');
+      return;
+    }
+
+    let location = await Location.getCurrentPositionAsync({});
+    setLocation(location);
+
+    const { latitude, longitude } = location.coords;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherKey}&units=metric`;
+    const response = await axios.get(url);
+    setWeather(response.data);
+  };
+
+  useEffect(() => {
+    getLocation();
+  }, []);
+
   return (
     <CBackground>
 
       <View>
-        <CText size={20} outlined style={styles.location}>Location</CText>
+        {weather ? <CText size={20} outlined>{weather.name}</CText> : <CText size={20}>Loading...</CText>}
         <View style={styles.profile}>
           <CButton href="/profile">
             <ProfileButton />
@@ -26,13 +54,21 @@ export default function Index() {
 
       <View style={styles.container}>
         <View style={styles.temperature}>
-          <CText size={75} outlined>23</CText>
-          <CText size={20} outlined style={styles.degree}>O</CText>
+          {weather ? (
+            <>
+              <CText size={75} outlined>{Math.round(weather.main.temp)}</CText>
+              <CText size={25} outlined style={styles.degree}>O</CText>
+            </>
+          ) : (
+            <CText size={45}>Loading...</CText>
+          )}
         </View>
         <CButton href="/battle">
           <Pokeball width={200} height={200} />
         </CButton>
+        {weather ? <CText outlined size={40}>{weather.weather[0].description}</CText> : <CText size={40}>Loading...</CText>}
       </View>
+
 
       <ButtonContainer>
         <CButton href="/wheel">
