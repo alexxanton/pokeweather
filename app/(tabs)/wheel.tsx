@@ -15,12 +15,18 @@ import WheelSVG from '@/assets/images/misc/Wheel';
 export default function Wheel() {
   const [tries, setTries] = useState(10);
 
+  const spin = () => {
+    setTries(tries - 1);
+  };
+
   return (
     <CBackground>
 
       <BackButton />
       <View style={styles.container}>
-        <WheelSVG width={300} height={300} />
+        <CButton onPress={spin}>
+          <WheelSVG width={300} height={300} />
+        </CButton>
       </View>
 
       <View style={styles.tries}>
@@ -31,7 +37,7 @@ export default function Wheel() {
         <CButton href="/ad">
           <AdButton width={90} height={90} />
         </CButton>
-        <CButton onPress={() => setTries(tries - 1)}>
+        <CButton onPress={spin}>
           <SpinButton width={180} height={90} />
         </CButton>
       </ButtonContainer>
