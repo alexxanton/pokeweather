@@ -17,13 +17,13 @@ import ProfileButton from '@/assets/images/buttons/ProfileButton';
 export default function Index() {
   const [location, setLocation] = useState(null);
   const [error, setError] = useState("");
-  const [weather, setWeather] = useState();
+  const [weatherData, setWeatherData] = useState();
   const weatherKey = process.env.EXPO_PUBLIC_API_KEY;
 
-  const getLocation = async () => {
+  const getWeatherData = async () => {
     let { status } = await Location.requestForegroundPermissionsAsync();
-    if (status !== 'granted') {
-      setError('Permission to access location was denied');
+    if (status !== "granted") {
+      setError("Permission to access location was denied");
       return;
     }
 
@@ -33,18 +33,18 @@ export default function Index() {
     const { latitude, longitude } = location.coords;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherKey}&units=metric`;
     const response = await axios.get(url);
-    setWeather(response.data);
+    setWeatherData(response.data);
   };
 
   useEffect(() => {
-    getLocation();
+    getWeatherData();
   }, []);
 
   return (
     <CBackground>
 
       <View>
-        {weather ? <CText size={20} outlined>{weather.name}</CText> : <CText size={20}>Loading...</CText>}
+        {weatherData ? <CText size={20} outlined>{weatherData.name}</CText> : <CText size={20}>Loading...</CText>}
         <View style={styles.profile}>
           <CButton href="/profile">
             <ProfileButton />
@@ -54,9 +54,9 @@ export default function Index() {
 
       <View style={styles.container}>
         <View style={styles.temperature}>
-          {weather ? (
+          {weatherData ? (
             <>
-              <CText size={75} outlined>{Math.round(weather.main.temp)}</CText>
+              <CText size={75} outlined>{Math.round(weatherData.main.temp)}</CText>
               <CText size={25} outlined style={styles.degree}>O</CText>
             </>
           ) : (
@@ -66,7 +66,11 @@ export default function Index() {
         <CButton href="/battle">
           <Pokeball width={200} height={200} />
         </CButton>
-        {weather ? <CText outlined size={40}>{weather.weather[0].description}</CText> : <CText size={40}>Loading...</CText>}
+        {weatherData ? (
+            <CText outlined size={40} style={styles.desc}>{weatherData.weather[0].description}</CText>
+        ) : (
+          <CText size={40}>Loading...</CText>
+        )}
       </View>
 
 
@@ -93,17 +97,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   temperature: {
-    flexDirection: "row",
+    flexDirection: "row-reverse",
   },
   degree: {
-    position: 'absolute',
-    transform: [{ translateY: -10 }],
+    position: "absolute",
+    right: -15,
   },
   location: {
     position: "absolute",
   },
   profile: {
     alignSelf: "flex-end",
+    position: "absolute",
+  },
+  desc: {
     position: "absolute",
   },
 });

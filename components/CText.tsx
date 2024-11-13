@@ -10,18 +10,18 @@ type CTextProps = TextProps & {
 export function CText({ children, size, outlined, style, ...rest }: CTextProps) {
   if (outlined) {
     return (
-      <View style={styles.container} {...rest}>
+      <View style={[styles.container, style]} {...rest}>
         {/* Outline layers */}
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopLeft, style]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopRight, style]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottomLeft, style]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottomRight, style]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTop, style]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottom, style]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineLeft, style]}>{children}</Text>
-        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineRight, style]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopLeft]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTopRight]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottomLeft]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottomRight]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineTop]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineBottom]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineLeft]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineRight]}>{children}</Text>
         {/* Main text */}
-        <Text style={[{fontSize:size}, styles.text, style]}>{children}</Text>
+        <Text style={[{fontSize:size}, styles.text]}>{children}</Text>
       </View>
     );
   }
@@ -35,15 +35,15 @@ export function CText({ children, size, outlined, style, ...rest }: CTextProps) 
 
 const styles = StyleSheet.create({
   container: {
-    position: 'relative'
+    position: "relative"
   },
   text: {
-    fontFamily: 'BlackHanSans',
+    fontFamily: "BlackHanSans",
     color: "white"
   },
   outline: {
-    color: 'black',
-    position: 'absolute'
+    color: "black",
+    position: "absolute"
   },
   outlineTopLeft: {
     top: -2,
