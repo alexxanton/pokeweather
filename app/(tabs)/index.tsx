@@ -18,7 +18,7 @@ export default function Index() {
   const [location, setLocation] = useState(null);
   const [error, setError] = useState("");
   const [weatherData, setWeatherData] = useState();
-  const weatherKey = process.env.EXPO_PUBLIC_API_KEY;
+  const weatherApiKey = process.env.EXPO_PUBLIC_API_KEY;
 
   const getWeatherData = async () => {
     let { status } = await Location.requestForegroundPermissionsAsync();
@@ -31,7 +31,7 @@ export default function Index() {
     setLocation(location);
 
     const { latitude, longitude } = location.coords;
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherKey}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherApiKey}&units=metric`;
     const response = await axios.get(url);
     setWeatherData(response.data);
   };
@@ -42,37 +42,33 @@ export default function Index() {
 
   return (
     <CBackground>
+      {weatherData ? (
+        <>
+          <View>
+            <CText size={20} outlined>{weatherData.name}</CText>
+            <View style={styles.profile}>
+              <CButton href="/profile">
+                <ProfileButton />
+              </CButton>
+            </View>
+          </View>
 
-      <View>
-        {weatherData ? <CText size={20} outlined>{weatherData.name}</CText> : <CText size={20}>Loading...</CText>}
-        <View style={styles.profile}>
-          <CButton href="/profile">
-            <ProfileButton />
-          </CButton>
-        </View>
-      </View>
-
-      <View style={styles.container}>
-        <View style={styles.temperature}>
-          {weatherData ? (
-            <>
+          <View style={styles.container}>
+            <View style={styles.temperature}>
               <CText size={75} outlined>{Math.round(weatherData.main.temp)}</CText>
               <CText size={25} outlined style={styles.degree}>O</CText>
-            </>
-          ) : (
-            <CText size={45}>Loading...</CText>
-          )}
+            </View>
+            <CButton href="/battle">
+              <Pokeball width={200} height={200} />
+            </CButton>
+            <CText outlined size={20} style={styles.desc}>{`${weatherData.weather[0].description} / ${weatherData.wind.speed} km/h`}</CText>
+          </View>
+        </>
+      ) : (
+        <View style={styles.container}>
+          <CText size={35} outlined>Loading...</CText>
         </View>
-        <CButton href="/battle">
-          <Pokeball width={200} height={200} />
-        </CButton>
-        {weatherData ? (
-            <CText outlined size={40} style={styles.desc}>{weatherData.weather[0].description}</CText>
-        ) : (
-          <CText size={40}>Loading...</CText>
-        )}
-      </View>
-
+      )}
 
       <ButtonContainer>
         <CButton href="/wheel">
@@ -101,7 +97,7 @@ const styles = StyleSheet.create({
   },
   degree: {
     position: "absolute",
-    right: -15,
+    right: -25,
   },
   location: {
     position: "absolute",
@@ -112,5 +108,6 @@ const styles = StyleSheet.create({
   },
   desc: {
     position: "absolute",
+    bottom: "10%"
   },
 });
