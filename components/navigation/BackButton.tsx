@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import { CButton } from './CButton';
+import { CButton } from '../CButton';
 import ArrowbackButton from '@/assets/images/buttons/ArrowbackButton';
 
 export function BackButton() {
