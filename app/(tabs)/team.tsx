@@ -1,11 +1,11 @@
 import { StyleSheet, View } from "react-native";
 import { CBackground } from '@/components/CBackground';
-import { ButtonContainer } from "@/components/ButtonContainer";
+import { CContainer } from "@/components/CContainer";
 import { CButton } from "@/components/CButton";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
 import BattleButton from '@/assets/images/buttons/BattleButton';
-import { BackButton } from "@/components/BackButton";
+import { BackButton } from "@/components/navigation/BackButton";
 
 export default function Team() {
   return (
@@ -16,14 +16,14 @@ export default function Team() {
         
       </View>
 
-      <ButtonContainer>
+      <CContainer>
         <CButton href="/boost">
           <BoostButton width={135} height={90} />
         </CButton>
         <CButton href="/battle">
           <BattleButton width={135} height={90} />
         </CButton>
-      </ButtonContainer>
+      </CContainer>
 
     </CBackground>
   );

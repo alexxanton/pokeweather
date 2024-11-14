@@ -1,8 +1,8 @@
 import { StyleSheet, View } from "react-native";
 import { CBackground } from '@/components/CBackground';
-import { ButtonContainer } from "@/components/ButtonContainer";
+import { CContainer } from "@/components/CContainer";
 import { CButton } from "@/components/CButton";
-import { BackButton } from "@/components/BackButton";
+import { BackButton } from "@/components/navigation/BackButton";
 
 import SignoutButton from '@/assets/images/buttons/SignoutButton';
 
@@ -12,11 +12,11 @@ export default function Team() {
       <BackButton />
       <View style={styles.container}>
       </View>
-      <ButtonContainer>
+      <CContainer>
         <CButton>
           <SignoutButton width={270} height={90} />
         </CButton>
-      </ButtonContainer>
+      </CContainer>
     </CBackground>
   );
 }

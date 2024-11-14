@@ -2,9 +2,9 @@ import { StyleSheet } from 'react-native';
 import { CBackground } from '@/components/CBackground';
 import { CText } from '@/components/CText';
 import { View } from 'react-native';
-import { ButtonContainer } from '@/components/ButtonContainer';
+import { CContainer } from '@/components/CContainer';
 import { CButton } from '@/components/CButton';
-import { BackButton } from '@/components/BackButton';
+import { BackButton } from '@/components/navigation/BackButton';
 import { useState } from 'react';
 
 import AdButton from '@/assets/images/buttons/AdButton';
@@ -33,14 +33,14 @@ export default function Wheel() {
         <CText size={30}>x {tries}</CText>
       </View>
 
-      <ButtonContainer>
+      <CContainer>
         <CButton href="/ad">
           <AdButton width={90} height={90} />
         </CButton>
         <CButton onPress={spin}>
           <SpinButton width={180} height={90} />
         </CButton>
-      </ButtonContainer>
+      </CContainer>
       
     </CBackground>
   );
