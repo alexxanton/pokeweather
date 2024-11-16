@@ -2,6 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import { CText } from '@/components/CText';
 import { CButton } from '@/components/CButton';
 import { useEffect, useState } from 'react';
+import { useData } from './CProvider';
 import * as Location from 'expo-location';
 import axios from 'axios';
 
@@ -11,8 +12,9 @@ import ProfileButton from '@/assets/images/buttons/ProfileButton';
 export function CMainScreen() {
   const [location, setLocation] = useState(null);
   const [error, setError] = useState("");
+  const {temp, setTemp, description, setDescription, windSpeed, setWindSpeed} = useData();
   const [weatherData, setWeatherData] = useState();
-  const weatherApiKey = process.env.EXPO_PUBLIC_API_KEY;
+  const apiKey = process.env.EXPO_PUBLIC_API_KEY;
 
   const getWeatherData = async () => {
     let { status } = await Location.requestForegroundPermissionsAsync();
@@ -25,43 +27,54 @@ export function CMainScreen() {
     setLocation(location);
 
     const { latitude, longitude } = location.coords;
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherApiKey}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     const response = await axios.get(url);
     setWeatherData(response.data);
+    
   };
 
   useEffect(() => {
-    getWeatherData();
+    getWeatherData()
   }, []);
+
+  useEffect(() => {
+    if (weatherData) {
+      setTemp(Math.round(weatherData.main.temp));
+      setDescription(weatherData.weather[0].description);
+      setWindSpeed(weatherData.wind.speed);
+    }
+  }, [weatherData]);
   
   return (
-    <>{weatherData ? (
-      <>
-        <View>
-          <CText size={20} outlined>{weatherData.name}</CText>
-          <View style={styles.profile}>
-            <CButton href="/profile">
-              <ProfileButton />
-            </CButton>
+    <>
+      {weatherData ? (
+        <>
+          <View>
+            <CText size={20} outlined>{weatherData.name}</CText>
+            <View style={styles.profile}>
+              <CButton href="/profile">
+                <ProfileButton />
+              </CButton>
+            </View>
           </View>
-        </View>
 
-        <View style={styles.container}>
-          <View style={styles.temperature}>
-            <CText size={75} outlined>{Math.round(weatherData.main.temp)}</CText>
-            <CText size={25} outlined style={styles.degree}>O</CText>
+          <View style={styles.container}>
+            <View style={styles.temperature}>
+              <CText size={75} outlined>{temp}</CText>
+              <CText size={25} outlined style={styles.degree}>O</CText>
+            </View>
+            <CButton href="/battle">
+              <Pokeball width={200} height={200} />
+            </CButton>
+            <CText outlined size={20} style={styles.desc}>{`${description} - ${windSpeed} km/h`}</CText>
           </View>
-          <CButton href="/battle">
-            <Pokeball width={200} height={200} />
-          </CButton>
-          <CText outlined size={20} style={styles.desc}>{`${weatherData.weather[0].description} - ${weatherData.wind.speed} km/h`}</CText>
+        </>
+      ) : (
+        <View style={styles.container}>
+          <CText size={35} outlined>Loading...</CText>
         </View>
-      </>
-    ) : (
-      <View style={styles.container}>
-        <CText size={35} outlined>Loading...</CText>
-      </View>
-    )}</>
+      )}
+    </>
   );
 }
 

@@ -6,6 +6,7 @@ import { CContainer } from '@/components/CContainer';
 import { CButton } from '@/components/CButton';
 import { BackButton } from '@/components/navigation/BackButton';
 import { useState } from 'react';
+import { useData } from '@/components/CProvider';
 
 import AdButton from '@/assets/images/buttons/AdButton';
 import SpinButton from '@/assets/images/buttons/SpinButton';
@@ -13,10 +14,10 @@ import WheelSVG from '@/assets/images/misc/Wheel';
 
 
 export default function Wheel() {
-  const [tries, setTries] = useState(10);
+  const {wheelTries, setWheelTries} = useData();
 
   const spin = () => {
-    setTries(tries - 1);
+    setWheelTries(wheelTries - 1);
   };
 
   return (
@@ -30,7 +31,7 @@ export default function Wheel() {
       </View>
 
       <View style={styles.tries}>
-        <CText size={30}>x {tries}</CText>
+        <CText size={30}>x {wheelTries}</CText>
       </View>
 
       <CContainer>

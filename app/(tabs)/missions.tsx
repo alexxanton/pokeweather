@@ -5,14 +5,25 @@ import { CButton } from "@/components/CButton";
 
 import TrophyButton from '@/assets/images/buttons/TrophyButton';
 import { BackButton } from "@/components/navigation/BackButton";
+import { CText } from "@/components/CText";
+import { useData } from "@/components/CProvider";
+import { useEffect } from "react";
 
 export default function Team() {
+  const {temp, setTemp} = useData();
+
+  useEffect(() => {
+    setTemp(temp + 1);
+  }, []);
+
   return (
     <CBackground>
       
       <BackButton />
       <View style={styles.container}>
-
+        <CText size={34}>
+          {temp}
+        </CText>
       </View>
 
       <CContainer>
