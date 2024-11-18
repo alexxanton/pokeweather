@@ -4,7 +4,7 @@ import { CContainer } from "@/components/CContainer";
 import { CButton } from "@/components/CButton";
 import { BackButton } from "@/components/navigation/BackButton";
 import { CText } from "@/components/CText";
-import { useData } from "@/components/CProvider";
+import { useData } from "@/components/CDataProvider";
 
 export default function Team() {
   const {temp, setTemp} = useData();

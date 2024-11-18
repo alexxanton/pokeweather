@@ -6,7 +6,7 @@ import { CContainer } from '@/components/CContainer';
 import { CButton } from '@/components/CButton';
 import { BackButton } from '@/components/navigation/BackButton';
 import { useState } from 'react';
-import { useData } from '@/components/CProvider';
+import { useData } from '@/components/CDataProvider';
 
 import AdButton from '@/assets/images/buttons/AdButton';
 import SpinButton from '@/assets/images/buttons/SpinButton';

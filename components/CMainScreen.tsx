@@ -2,7 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import { CText } from '@/components/CText';
 import { CButton } from '@/components/CButton';
 import { useEffect, useState } from 'react';
-import { useData } from './CProvider';
+import { useData } from './CDataProvider';
 import * as Location from 'expo-location';
 import axios from 'axios';
 
@@ -30,11 +30,10 @@ export function CMainScreen() {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     const response = await axios.get(url);
     setWeatherData(response.data);
-    
   };
 
   useEffect(() => {
-    getWeatherData()
+    getWeatherData();
   }, []);
 
   useEffect(() => {
@@ -44,7 +43,7 @@ export function CMainScreen() {
       setWindSpeed(weatherData.wind.speed);
     }
   }, [weatherData]);
-  
+
   return (
     <>
       {weatherData ? (
