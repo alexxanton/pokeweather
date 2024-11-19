@@ -8,11 +8,12 @@ import axios from 'axios';
 
 import Pokeball from '@/assets/images/misc/Pokeball';
 import ProfileButton from '@/assets/images/buttons/ProfileButton';
+import { TestingPanel } from './testing/TestingPanel'
 
 export function CMainScreen() {
   const [location, setLocation] = useState(null);
   const [error, setError] = useState("");
-  const {temp, setTemp, description, setDescription, windSpeed, setWindSpeed} = useData();
+  const {temp, setTemp, description, setDescription, windSpeed, setWindSpeed, setHour} = useData();
   const [weatherData, setWeatherData] = useState();
   const apiKey = process.env.EXPO_PUBLIC_API_KEY;
 
@@ -41,6 +42,7 @@ export function CMainScreen() {
       setTemp(Math.round(weatherData.main.temp));
       setDescription(weatherData.weather[0].description);
       setWindSpeed(weatherData.wind.speed);
+      setHour(new Date().getHours());
     }
   }, [weatherData]);
 
@@ -65,6 +67,7 @@ export function CMainScreen() {
             <CButton href="/battle">
               <Pokeball width={200} height={200} />
             </CButton>
+              <TestingPanel />
             <CText outlined size={20} style={styles.desc}>{`${description} - ${windSpeed} km/h`}</CText>
           </View>
         </>
