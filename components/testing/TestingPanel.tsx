@@ -1,17 +1,35 @@
 import Slider from '@react-native-community/slider';
 import { useData } from '../CDataProvider';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { CText } from '../CText';
 import { CButton } from '../CButton';
+import { useState } from 'react';
 
 export function TestingPanel() {
   const {setTemp, setWindSpeed, hour, setHour, setDescription} = useData();
+  const [symbol, setSymbol] = useState("⚡");
+  const [index, setIndex] = useState(0);
+
+  const changeDesc = () => {
+    const states = [
+      {symbol: "⚡", desc: "thunder"},
+      {symbol: "💧", desc: "rain"},
+      {symbol: "☀️", desc: "clear"},
+      {symbol: "☁️", desc: "cloudy"},
+      {symbol: "⛅", desc: "few clouds"},
+    ]
+    
+    const conditional = index < 4 ? index + 1 : 0;
+    setDescription(states[index]["desc"]);
+    setSymbol(states[conditional]["symbol"]);
+    setIndex(conditional);
+  };
 
   return (
     <View style={styles.container}>
       <View>
         <Slider
-          style={{ width: 300, height: 40 }}
+          style={{ width: 250, height: 35 }}
           minimumValue={0}
           maximumValue={45}
           step={1}
@@ -21,17 +39,17 @@ export function TestingPanel() {
           thumbTintColor="#1EB1FC"
         />
         <Slider
-          style={{ width: 300, height: 40 }}
+          style={{ width: 250, height: 35 }}
           minimumValue={0}
-          maximumValue={45}
-          step={0.5}
+          maximumValue={300}
+          step={1}
           onValueChange={setWindSpeed}
           minimumTrackTintColor="red"
           maximumTrackTintColor="#D3D3D3"
           thumbTintColor="red"
         />
         <Slider
-          style={{ width: 300, height: 40 }}
+          style={{ width: 250, height: 35 }}
           minimumValue={0}
           maximumValue={23}
           step={1}
@@ -41,11 +59,11 @@ export function TestingPanel() {
           thumbTintColor="#663399"
         />
       </View>
-      <View style={styles.button}>
-        <CButton onPress={() => setDescription("thunder")}>
-          <CText outlined size={50}>{"T"}</CText>
+      <View style={styles.side}>
+        <CButton onPress={changeDesc}>
+          <CText size={50} style={{lineHeight: 60}}>{symbol}</CText>
         </CButton>
-        <CText size={25}>{hour}</CText>
+        <CText outlined size={25} style={{alignSelf: "center"}}>{hour}</CText>
       </View>
     </View>
   );
@@ -56,7 +74,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
   },
-  button: {
+  side: {
     justifyContent: "center",
+    gap: 10
   }
 });
