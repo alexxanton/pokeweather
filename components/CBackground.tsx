@@ -1,18 +1,16 @@
-// import Animated, {
-//   useSharedValue,
-//   withTiming,
-//   useAnimatedStyle,
-//   FadeIn
-// } from "react-native-reanimated";
 import { useEffect, useState, type PropsWithChildren } from "react";
-import { Animated, ImageBackground, StyleSheet, View, useAnimatedValue } from "react-native";
+import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
+import {ImageBackground, StyleSheet, View } from "react-native";
+import { Image } from "expo-image";
 import { useData } from "./CDataProvider";
+import { CText } from "./CText";
 
 
 export function CBackground({ children }: PropsWithChildren) {
   const {temp, description, hour, setDescription} = useData();
   const [image, setImage] = useState();
-  const fade = useAnimatedValue(0);
+  const [cover, setCover] = useState();
+  const fade = useSharedValue(1);
   
   const imageMap = {
     "thunder": require("@/assets/images/backgrounds/storm.png"),
@@ -23,22 +21,16 @@ export function CBackground({ children }: PropsWithChildren) {
     "clear": require("@/assets/images/backgrounds/clear.png"),
     "partly": require("@/assets/images/backgrounds/partly.png"),
     "cloudy": require("@/assets/images/backgrounds/cloudy.png"),
+    "black": require("@/assets/images/backgrounds/black.png"),
   }
 
-  const fadeIn = () => {
-    Animated.timing(fade, {
-      toValue: 1,
-      duration: 500,
-      useNativeDriver: true,
-    }).start();
-  };
-
-  const fadeOut = () => {
-    Animated.timing(fade, {
-      toValue: 0,
-      duration: 500,
-      useNativeDriver: true,
-    }).start();
+  const smoothTransition = () => {
+    setCover(image);
+    setTimeout(() => {
+      fade.value = 1;
+      updateBackground();
+      fade.value = withTiming(0, {duration: 500});
+    }, 100);
   };
 
   const updateBackground = () => {
@@ -58,35 +50,42 @@ export function CBackground({ children }: PropsWithChildren) {
     }
 
     const bg = state;
-    setImage(imageMap[bg] || imageMap.clear)
+    setImage(imageMap[bg] || imageMap.black)
   }
 
   useEffect(() => {
-    fadeOut();
-    updateBackground();
-    fadeIn();
+    
+    smoothTransition();
   }, [temp, description, hour]);
 
   return (
     <View style={styles.container}>
-      <Animated.View style={[styles.container, {opacity: fade}]}>
-        <ImageBackground source={image} style={styles.bg}>
-          {children}
-        </ImageBackground>
-      </Animated.View>
+      <ImageBackground source={image} style={styles.bg}>
+        <Animated.View style={[styles.anim, {opacity: fade}]}>
+          <Image source={cover} style={[styles.cover]} />
+        </Animated.View>
+        {children}
+      </ImageBackground>
     </View>
   );
-
-  
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#181414",
   },
   bg: {
     flex: 1,
     paddingTop: 50,
     padding: 20
+  },
+  anim: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  cover: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover"
   }
 });
