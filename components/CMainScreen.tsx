@@ -11,7 +11,6 @@ import ProfileButton from '@/assets/images/buttons/ProfileButton';
 import { TestingPanel } from './testing/TestingPanel'
 
 export function CMainScreen() {
-  const [location, setLocation] = useState(null);
   const [error, setError] = useState("");
   const {temp, setTemp, description, setDescription, windSpeed, setWindSpeed, setHour} = useData();
   const [weatherData, setWeatherData] = useState();
@@ -24,9 +23,7 @@ export function CMainScreen() {
       return;
     }
 
-    let location = await Location.getCurrentPositionAsync({});
-    setLocation(location);
-
+    const location = await Location.getCurrentPositionAsync({});
     const { latitude, longitude } = location.coords;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     const response = await axios.get(url);

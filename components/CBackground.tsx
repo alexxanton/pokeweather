@@ -28,9 +28,9 @@ export function CBackground({ children }: PropsWithChildren) {
     setCover(image);
     setTimeout(() => {
       fade.value = 1;
-      updateBackground();
-      fade.value = withTiming(0, {duration: 500});
-    }, 100);
+        updateBackground();
+        fade.value = withTiming(0, {duration: 500});
+    }, 200);
   };
 
   const updateBackground = () => {
@@ -54,7 +54,6 @@ export function CBackground({ children }: PropsWithChildren) {
   }
 
   useEffect(() => {
-    
     smoothTransition();
   }, [temp, description, hour]);
 
@@ -62,7 +61,7 @@ export function CBackground({ children }: PropsWithChildren) {
     <View style={styles.container}>
       <ImageBackground source={image} style={styles.bg}>
         <Animated.View style={[styles.anim, {opacity: fade}]}>
-          <Image source={cover} style={[styles.cover]} />
+          <ImageBackground source={cover} style={[styles.cover]} />
         </Animated.View>
         {children}
       </ImageBackground>
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
   bg: {
     flex: 1,
     paddingTop: 50,
-    padding: 20
+    padding: 20,
   },
   anim: {
     ...StyleSheet.absoluteFillObject,
