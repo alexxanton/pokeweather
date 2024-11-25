@@ -64,8 +64,8 @@ export function CMainScreen() {
             <CButton href="/battle">
               <Pokeball width={200} height={200} />
             </CButton>
-              <TestingPanel />
-            <CText outlined size={20} style={styles.desc}>{`${description} - ${windSpeed} km/h`}</CText>
+            <TestingPanel />
+            <CText outlined size={20} style={styles.desc}>{`${description} - Wind: ${windSpeed} km/h`}</CText>
           </View>
         </>
       ) : (

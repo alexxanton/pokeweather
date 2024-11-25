@@ -1,15 +1,19 @@
-import { Pressable, Vibration, Animated } from "react-native";
+import { Pressable, Vibration } from "react-native";
 import { useRouter } from "expo-router";
-import { type ComponentProps, useState, useRef } from "react";
+import { type ComponentProps } from "react";
 import { useData } from "./CDataProvider";
+import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
 
-
-type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & {href?: string};
+type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & { href?: string };
 
 export function CButton({ href, ...rest }: Props) {
   const router = useRouter();
-  const {buttonActive, setButtonActive} = useData();
-  const scaleAnim = useRef(new Animated.Value(1)).current;
+  const { buttonActive, setButtonActive } = useData();
+  const scale = useSharedValue(1);
+
+  const animStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: scale.value }],
+  }));
 
   const handlePress = () => {
     if (href) {
@@ -21,27 +25,19 @@ export function CButton({ href, ...rest }: Props) {
         setButtonActive(true);
       }, 500);
     }
-  }
+  };
 
   const scaleGrow = () => {
     Vibration.vibrate(100);
-    Animated.timing(scaleAnim, {
-      toValue: 1.1,
-      duration: 100,
-      useNativeDriver: true,
-    }).start();
+    scale.value = withTiming(1.1, { duration: 100 });
   };
 
   const scaleShrink = () => {
-    Animated.timing(scaleAnim, {
-      toValue: 1,
-      duration: 100,
-      useNativeDriver: true,
-    }).start();
-  }
+    scale.value = withTiming(1, { duration: 100 });
+  };
 
   return (
-    <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
+    <Animated.View style={animStyle}>
       <Pressable
         onPress={handlePress}
         onPressIn={scaleGrow}

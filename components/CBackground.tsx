@@ -1,13 +1,11 @@
 import { useEffect, useState, type PropsWithChildren } from "react";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
 import {ImageBackground, StyleSheet, View } from "react-native";
-import { Image } from "expo-image";
 import { useData } from "./CDataProvider";
-import { CText } from "./CText";
 
 
 export function CBackground({ children }: PropsWithChildren) {
-  const {temp, description, hour, setDescription} = useData();
+  const {temp, description, hour} = useData();
   const [image, setImage] = useState();
   const [cover, setCover] = useState();
   const fade = useSharedValue(1);
