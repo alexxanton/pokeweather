@@ -9,7 +9,7 @@ type Props = {
 
 
 export function CPokemonButton({id, key}: Props) {
-  const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/${id}.png`;
+  const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/${id}.png`;
   const scale = useSharedValue(1);
 
   const animStyle = useAnimatedStyle(() => ({
@@ -21,11 +21,11 @@ export function CPokemonButton({id, key}: Props) {
 
   const scaleGrow = () => {
     Vibration.vibrate(100);
-    scale.value = withTiming(1.1, { duration: 100 });
+    scale.value = withTiming(1.3, { duration: 200 });
   };
 
   const scaleShrink = () => {
-    scale.value = withTiming(1, { duration: 100 });
+    scale.value = withTiming(1, { duration: 200 });
   }
 
   return (
@@ -50,17 +50,18 @@ const styles = StyleSheet.create({
   container: {
     height: 30,
     width: "15%",
+    marginBottom: 10
+    // backgroundColor:"black",
   },
   button: {
-    height: 30,
-    width: "100%",
+    height: 50,
     // backgroundColor:"black",
   },
   pokemon: {
     aspectRatio: 1,
-    width: "400%",
-    height: "400%",
+    width: "150%",
+    height: "150%",
     position: "absolute",
-    transform: [{translateX: "-40%"}, {translateY: "-60%"}]
+    transform: [{translateX: "-20%"}, {translateY: "-30%"}],
   },
 });

@@ -1,10 +1,10 @@
 import { StyleSheet, View } from "react-native";
-import { type PropsWithChildren } from "react";
+import { type ViewProps } from "react-native";
 
 
-export function CContainer({children}: PropsWithChildren) {
+export function CContainer({children, style, ...rest}: ViewProps) {
   return (
-    <View style={styles.buttonContainer}>
+    <View style={[styles.buttonContainer, style]} {...rest}>
       {children}
     </View>
   );

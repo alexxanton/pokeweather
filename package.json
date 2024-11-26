@@ -3,7 +3,7 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently --raw \"expo start\" \"node server/server.js\" \"lt --port 3001 --subdomain pokeweather\"",
+    "start": "concurrently --raw \"expo start\" \"node server/server.js\"",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",

@@ -15,6 +15,7 @@ create table if not exists user (
 
 create table if not exists pokemon (
     id int primary key auto_increment,
+    specie int not null,
     user_fk int not null,
     foreign key (user_fk) references user(id) on delete cascade
 );

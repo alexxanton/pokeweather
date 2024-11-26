@@ -13,7 +13,7 @@ export default function Team() {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
-    const response = await axios.get("https://pokeweather.loca.lt/user");
+    const response = await axios.get("http://localhost:3001/user");
     setUsers(response.data);
   }
 

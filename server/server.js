@@ -35,7 +35,7 @@ app.get("/user", (req, res) => {
 });
 
 app.get("/pokemon", (req, res) => {
-    db.query("SELECT * FROM pokemon WHERE id=1", (err, result) => {
+    db.query("SELECT * FROM pokemon WHERE user_fk=1", (err, result) => {
         if (err) {
             console.error("Error: ", err);
             res.status(500).send("error");
@@ -46,5 +46,5 @@ app.get("/pokemon", (req, res) => {
 });
 
 app.listen(3001, () => {
-    console.log('Server running at http://localhost:3001');
+    console.log('Server running at http://localhost:3001:3001');
 });
