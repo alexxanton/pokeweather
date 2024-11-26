@@ -3,6 +3,7 @@ import { CBackground } from '@/components/CBackground';
 import { CContainer } from '@/components/CContainer';
 import { CButton } from '@/components/CButton';
 import { BackButton } from '@/components/navigation/BackButton';
+import { uri } from '@/constants/URI';
 import axios from 'axios';
 
 import SignoutButton from '@/assets/images/buttons/SignoutButton';
@@ -13,7 +14,7 @@ export default function Team() {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
-    const response = await axios.get("http://localhost:3001/user");
+    const response = await axios.get(uri + "/user");
     setUsers(response.data);
   }
 

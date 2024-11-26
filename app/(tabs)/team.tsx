@@ -3,6 +3,7 @@ import { CBackground } from '@/components/CBackground';
 import { CContainer } from "@/components/CContainer";
 import { CButton } from "@/components/CButton";
 import { BackButton } from "@/components/navigation/BackButton";
+import { uri } from '@/constants/URI';
 import axios from "axios";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
@@ -18,7 +19,7 @@ export default function Team() {
   const {pokemon, setPokemon} = useData();
   
   const fetchPokemon = async () => {
-    const response = await axios.get("http://192.168.0.243:3001/pokemon");
+    const response = await axios.get(uri + "/pokemon");
     setPokemon(response.data);
   };
 
@@ -46,7 +47,7 @@ export default function Team() {
                   )
                 })
               ) : (
-                <CText size={50}>Loading...</CText>
+                <CText size={50}>{uri}</CText>
               )}
             </View>
           </CScrollPanel>
