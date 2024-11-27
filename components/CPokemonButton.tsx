@@ -29,7 +29,7 @@ export function CPokemonButton({id, key}: Props) {
   }
 
   return (
-    <Animated.View style={[styles.container, animStyle]}>
+    <Animated.View style={[styles.container, animStyle]} key={key}>
       <Image
         style={styles.pokemon}
         source={url}
@@ -50,18 +50,18 @@ const styles = StyleSheet.create({
   container: {
     height: 30,
     width: "15%",
-    marginBottom: 10
+    marginBottom: 30
     // backgroundColor:"black",
   },
   button: {
-    height: 50,
+    height: 60,
     // backgroundColor:"black",
   },
   pokemon: {
     aspectRatio: 1,
-    width: "150%",
-    height: "150%",
+    width: "200%",
+    height: "200%",
     position: "absolute",
-    transform: [{translateX: "-20%"}, {translateY: "-30%"}],
+    transform: [{translateX: "-30%"}, {translateY: "-30%"}],
   },
 });
