@@ -1,5 +1,4 @@
-import { ScrollView, StyleSheet, View } from "react-native";
-import { type ViewProps } from "react-native";
+import { ScrollView, StyleSheet, View, type ViewProps } from "react-native";
 
 
 export function CScrollPanel({children, style, ...rest}: ViewProps) {

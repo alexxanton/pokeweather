@@ -3,17 +3,18 @@ import { CBackground } from '@/components/CBackground';
 import { CContainer } from "@/components/CContainer";
 import { CButton } from "@/components/CButton";
 import { BackButton } from "@/components/navigation/BackButton";
+import { CText } from "@/components/CText";
+import { CPokemonButton } from "@/components/CPokemonButton";
+import { CScrollPanel } from "@/components/CScrollPanel";
+import { useData } from "@/components/CDataProvider";
+import { CLabel } from "@/components/CLabel";
+import { useEffect, useState } from "react";
 import { uri } from '@/constants/URI';
 import axios from "axios";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
 import BattleButton from '@/assets/images/buttons/BattleButton';
-import { useEffect, useState } from "react";
-import { CText } from "@/components/CText";
-import { CPokemonButton } from "@/components/CPokemonButton";
-import { CScrollPanel } from "@/components/CScrollPanel";
-import { useData } from "@/components/CDataProvider";
-import CLabel from "@/components/CLabel";
+
 
 export default function Team() {
   const {pokemon, setPokemon} = useData();

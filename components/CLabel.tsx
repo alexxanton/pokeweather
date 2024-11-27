@@ -1,12 +1,11 @@
-import { StyleSheet, View } from "react-native";
-import { type ViewProps } from "react-native";
+import { StyleSheet, View, type ViewProps } from "react-native";
 import { CText } from "./CText";
 
 type Props = ViewProps & {
   title: string
 };
 
-export default function CLabel({children, title, style, ...rest}: Props) {
+export function CLabel({children, title, style, ...rest}: Props) {
   return (
     <View style={styles.container} {...rest}>
       {children}

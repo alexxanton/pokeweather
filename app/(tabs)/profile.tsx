@@ -3,12 +3,12 @@ import { CBackground } from '@/components/CBackground';
 import { CContainer } from '@/components/CContainer';
 import { CButton } from '@/components/CButton';
 import { BackButton } from '@/components/navigation/BackButton';
+import { useEffect, useState } from 'react';
+import { CText } from '@/components/CText';
 import { uri } from '@/constants/URI';
 import axios from 'axios';
 
 import SignoutButton from '@/assets/images/buttons/SignoutButton';
-import { useEffect, useState } from 'react';
-import { CText } from '@/components/CText';
 
 export default function Team() {
   const [users, setUsers] = useState([]);

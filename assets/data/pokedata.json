@@ -6,7 +6,7 @@
             "poison"
         ],
         "evolves_into": [
-            "ivysaur"
+            2
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -18,7 +18,7 @@
             "poison"
         ],
         "evolves_into": [
-            "venusaur"
+            3
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -39,7 +39,7 @@
             "fire"
         ],
         "evolves_into": [
-            "charmeleon"
+            5
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -50,7 +50,7 @@
             "fire"
         ],
         "evolves_into": [
-            "charizard"
+            6
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -71,7 +71,7 @@
             "water"
         ],
         "evolves_into": [
-            "wartortle"
+            8
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -82,7 +82,7 @@
             "water"
         ],
         "evolves_into": [
-            "blastoise"
+            9
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -102,7 +102,7 @@
             "bug"
         ],
         "evolves_into": [
-            "metapod"
+            11
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -113,7 +113,7 @@
             "bug"
         ],
         "evolves_into": [
-            "butterfree"
+            12
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -135,7 +135,7 @@
             "poison"
         ],
         "evolves_into": [
-            "kakuna"
+            14
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -147,7 +147,7 @@
             "poison"
         ],
         "evolves_into": [
-            "beedrill"
+            15
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -169,7 +169,7 @@
             "flying"
         ],
         "evolves_into": [
-            "pidgeotto"
+            17
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -181,7 +181,7 @@
             "flying"
         ],
         "evolves_into": [
-            "pidgeot"
+            18
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -202,7 +202,7 @@
             "normal"
         ],
         "evolves_into": [
-            "raticate"
+            20
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -223,7 +223,7 @@
             "flying"
         ],
         "evolves_into": [
-            "fearow"
+            22
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -244,7 +244,7 @@
             "poison"
         ],
         "evolves_into": [
-            "arbok"
+            24
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -264,7 +264,7 @@
             "electric"
         ],
         "evolves_into": [
-            "raichu"
+            26
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -284,7 +284,7 @@
             "ground"
         ],
         "evolves_into": [
-            "sandslash"
+            28
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -304,7 +304,7 @@
             "poison"
         ],
         "evolves_into": [
-            "nidorina"
+            30
         ],
         "capture_rate": 235,
         "is_legendary": false
@@ -315,7 +315,7 @@
             "poison"
         ],
         "evolves_into": [
-            "nidoqueen"
+            31
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -336,7 +336,7 @@
             "poison"
         ],
         "evolves_into": [
-            "nidorino"
+            33
         ],
         "capture_rate": 235,
         "is_legendary": false
@@ -347,7 +347,7 @@
             "poison"
         ],
         "evolves_into": [
-            "nidoking"
+            34
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -368,7 +368,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "clefable"
+            36
         ],
         "capture_rate": 150,
         "is_legendary": false
@@ -388,7 +388,7 @@
             "fire"
         ],
         "evolves_into": [
-            "ninetales"
+            38
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -409,7 +409,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "wigglytuff"
+            40
         ],
         "capture_rate": 170,
         "is_legendary": false
@@ -431,7 +431,7 @@
             "flying"
         ],
         "evolves_into": [
-            "golbat"
+            42
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -443,7 +443,7 @@
             "flying"
         ],
         "evolves_into": [
-            "crobat"
+            169
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -455,7 +455,7 @@
             "poison"
         ],
         "evolves_into": [
-            "gloom"
+            44
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -467,8 +467,8 @@
             "poison"
         ],
         "evolves_into": [
-            "vileplume",
-            "bellossom"
+            45,
+            182
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -490,7 +490,7 @@
             "grass"
         ],
         "evolves_into": [
-            "parasect"
+            47
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -512,7 +512,7 @@
             "poison"
         ],
         "evolves_into": [
-            "venomoth"
+            49
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -533,7 +533,7 @@
             "ground"
         ],
         "evolves_into": [
-            "dugtrio"
+            51
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -553,8 +553,8 @@
             "normal"
         ],
         "evolves_into": [
-            "persian",
-            "perrserker"
+            53,
+            863
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -574,7 +574,7 @@
             "water"
         ],
         "evolves_into": [
-            "golduck"
+            55
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -594,7 +594,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "primeape"
+            57
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -605,7 +605,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "annihilape"
+            979
         ],
         "capture_rate": 75,
         "is_legendary": false
@@ -616,7 +616,7 @@
             "fire"
         ],
         "evolves_into": [
-            "arcanine"
+            59
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -636,7 +636,7 @@
             "water"
         ],
         "evolves_into": [
-            "poliwhirl"
+            61
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -647,8 +647,8 @@
             "water"
         ],
         "evolves_into": [
-            "poliwrath",
-            "politoed"
+            62,
+            186
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -669,7 +669,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "kadabra"
+            64
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -680,7 +680,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "alakazam"
+            65
         ],
         "capture_rate": 100,
         "is_legendary": false
@@ -700,7 +700,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "machoke"
+            67
         ],
         "capture_rate": 180,
         "is_legendary": false
@@ -711,7 +711,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "machamp"
+            68
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -732,7 +732,7 @@
             "poison"
         ],
         "evolves_into": [
-            "weepinbell"
+            70
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -744,7 +744,7 @@
             "poison"
         ],
         "evolves_into": [
-            "victreebel"
+            71
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -766,7 +766,7 @@
             "poison"
         ],
         "evolves_into": [
-            "tentacruel"
+            73
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -788,7 +788,7 @@
             "ground"
         ],
         "evolves_into": [
-            "graveler"
+            75
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -800,7 +800,7 @@
             "ground"
         ],
         "evolves_into": [
-            "golem"
+            76
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -821,7 +821,7 @@
             "fire"
         ],
         "evolves_into": [
-            "rapidash"
+            78
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -842,8 +842,8 @@
             "psychic"
         ],
         "evolves_into": [
-            "slowbro",
-            "slowking"
+            80,
+            199
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -865,7 +865,7 @@
             "steel"
         ],
         "evolves_into": [
-            "magneton"
+            82
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -877,7 +877,7 @@
             "steel"
         ],
         "evolves_into": [
-            "magnezone"
+            462
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -889,7 +889,7 @@
             "flying"
         ],
         "evolves_into": [
-            "sirfetchd"
+            865
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -901,7 +901,7 @@
             "flying"
         ],
         "evolves_into": [
-            "dodrio"
+            85
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -922,7 +922,7 @@
             "water"
         ],
         "evolves_into": [
-            "dewgong"
+            87
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -943,7 +943,7 @@
             "poison"
         ],
         "evolves_into": [
-            "muk"
+            89
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -963,7 +963,7 @@
             "water"
         ],
         "evolves_into": [
-            "cloyster"
+            91
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -985,7 +985,7 @@
             "poison"
         ],
         "evolves_into": [
-            "haunter"
+            93
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -997,7 +997,7 @@
             "poison"
         ],
         "evolves_into": [
-            "gengar"
+            94
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -1019,7 +1019,7 @@
             "ground"
         ],
         "evolves_into": [
-            "steelix"
+            208
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1030,7 +1030,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "hypno"
+            97
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -1050,7 +1050,7 @@
             "water"
         ],
         "evolves_into": [
-            "kingler"
+            99
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -1070,7 +1070,7 @@
             "electric"
         ],
         "evolves_into": [
-            "electrode"
+            101
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -1091,7 +1091,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "exeggutor"
+            103
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -1112,7 +1112,7 @@
             "ground"
         ],
         "evolves_into": [
-            "marowak"
+            105
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -1150,7 +1150,7 @@
             "normal"
         ],
         "evolves_into": [
-            "lickilicky"
+            463
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1161,7 +1161,7 @@
             "poison"
         ],
         "evolves_into": [
-            "weezing"
+            110
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -1182,7 +1182,7 @@
             "rock"
         ],
         "evolves_into": [
-            "rhydon"
+            112
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -1194,7 +1194,7 @@
             "rock"
         ],
         "evolves_into": [
-            "rhyperior"
+            464
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -1205,7 +1205,7 @@
             "normal"
         ],
         "evolves_into": [
-            "blissey"
+            242
         ],
         "capture_rate": 30,
         "is_legendary": false
@@ -1216,7 +1216,7 @@
             "grass"
         ],
         "evolves_into": [
-            "tangrowth"
+            465
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1236,7 +1236,7 @@
             "water"
         ],
         "evolves_into": [
-            "seadra"
+            117
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -1247,7 +1247,7 @@
             "water"
         ],
         "evolves_into": [
-            "kingdra"
+            230
         ],
         "capture_rate": 75,
         "is_legendary": false
@@ -1258,7 +1258,7 @@
             "water"
         ],
         "evolves_into": [
-            "seaking"
+            119
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -1278,7 +1278,7 @@
             "water"
         ],
         "evolves_into": [
-            "starmie"
+            121
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -1300,7 +1300,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "mr-rime"
+            866
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1312,8 +1312,8 @@
             "flying"
         ],
         "evolves_into": [
-            "scizor",
-            "kleavor"
+            212,
+            900
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1334,7 +1334,7 @@
             "electric"
         ],
         "evolves_into": [
-            "electivire"
+            466
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1345,7 +1345,7 @@
             "fire"
         ],
         "evolves_into": [
-            "magmortar"
+            467
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1374,7 +1374,7 @@
             "water"
         ],
         "evolves_into": [
-            "gyarados"
+            130
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -1414,14 +1414,14 @@
             "normal"
         ],
         "evolves_into": [
-            "vaporeon",
-            "jolteon",
-            "flareon",
-            "espeon",
-            "umbreon",
-            "leafeon",
-            "glaceon",
-            "sylveon"
+            134,
+            135,
+            136,
+            196,
+            197,
+            470,
+            471,
+            700
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1459,7 +1459,7 @@
             "normal"
         ],
         "evolves_into": [
-            "porygon2"
+            233
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1471,7 +1471,7 @@
             "water"
         ],
         "evolves_into": [
-            "omastar"
+            139
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1493,7 +1493,7 @@
             "water"
         ],
         "evolves_into": [
-            "kabutops"
+            141
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1563,7 +1563,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "dragonair"
+            148
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1574,7 +1574,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "dragonite"
+            149
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1613,7 +1613,7 @@
             "grass"
         ],
         "evolves_into": [
-            "bayleef"
+            153
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1624,7 +1624,7 @@
             "grass"
         ],
         "evolves_into": [
-            "meganium"
+            154
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1644,7 +1644,7 @@
             "fire"
         ],
         "evolves_into": [
-            "quilava"
+            156
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1655,7 +1655,7 @@
             "fire"
         ],
         "evolves_into": [
-            "typhlosion"
+            157
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1675,7 +1675,7 @@
             "water"
         ],
         "evolves_into": [
-            "croconaw"
+            159
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1686,7 +1686,7 @@
             "water"
         ],
         "evolves_into": [
-            "feraligatr"
+            160
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -1706,7 +1706,7 @@
             "normal"
         ],
         "evolves_into": [
-            "furret"
+            162
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -1727,7 +1727,7 @@
             "flying"
         ],
         "evolves_into": [
-            "noctowl"
+            164
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -1749,7 +1749,7 @@
             "flying"
         ],
         "evolves_into": [
-            "ledian"
+            166
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -1771,7 +1771,7 @@
             "poison"
         ],
         "evolves_into": [
-            "ariados"
+            168
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -1803,7 +1803,7 @@
             "electric"
         ],
         "evolves_into": [
-            "lanturn"
+            171
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -1824,7 +1824,7 @@
             "electric"
         ],
         "evolves_into": [
-            "pikachu"
+            25
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -1835,7 +1835,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "clefairy"
+            35
         ],
         "capture_rate": 150,
         "is_legendary": false
@@ -1847,7 +1847,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "jigglypuff"
+            39
         ],
         "capture_rate": 170,
         "is_legendary": false
@@ -1858,7 +1858,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "togetic"
+            176
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -1870,7 +1870,7 @@
             "flying"
         ],
         "evolves_into": [
-            "togekiss"
+            468
         ],
         "capture_rate": 75,
         "is_legendary": false
@@ -1882,7 +1882,7 @@
             "flying"
         ],
         "evolves_into": [
-            "xatu"
+            178
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -1903,7 +1903,7 @@
             "electric"
         ],
         "evolves_into": [
-            "flaaffy"
+            180
         ],
         "capture_rate": 235,
         "is_legendary": false
@@ -1914,7 +1914,7 @@
             "electric"
         ],
         "evolves_into": [
-            "ampharos"
+            181
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -1944,7 +1944,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "azumarill"
+            184
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -1984,7 +1984,7 @@
             "flying"
         ],
         "evolves_into": [
-            "skiploom"
+            188
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -1996,7 +1996,7 @@
             "flying"
         ],
         "evolves_into": [
-            "jumpluff"
+            189
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -2017,7 +2017,7 @@
             "normal"
         ],
         "evolves_into": [
-            "ambipom"
+            424
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2028,7 +2028,7 @@
             "grass"
         ],
         "evolves_into": [
-            "sunflora"
+            192
         ],
         "capture_rate": 235,
         "is_legendary": false
@@ -2049,7 +2049,7 @@
             "flying"
         ],
         "evolves_into": [
-            "yanmega"
+            469
         ],
         "capture_rate": 75,
         "is_legendary": false
@@ -2061,8 +2061,8 @@
             "ground"
         ],
         "evolves_into": [
-            "quagsire",
-            "clodsire"
+            195,
+            980
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -2102,7 +2102,7 @@
             "flying"
         ],
         "evolves_into": [
-            "honchkrow"
+            430
         ],
         "capture_rate": 30,
         "is_legendary": false
@@ -2123,7 +2123,7 @@
             "ghost"
         ],
         "evolves_into": [
-            "mismagius"
+            429
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2153,7 +2153,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "farigiraf"
+            981
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -2164,7 +2164,7 @@
             "bug"
         ],
         "evolves_into": [
-            "forretress"
+            205
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -2185,7 +2185,7 @@
             "normal"
         ],
         "evolves_into": [
-            "dudunsparce"
+            982
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -2197,7 +2197,7 @@
             "flying"
         ],
         "evolves_into": [
-            "gliscor"
+            472
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -2218,7 +2218,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "granbull"
+            210
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -2239,7 +2239,7 @@
             "poison"
         ],
         "evolves_into": [
-            "overqwil"
+            904
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2281,8 +2281,8 @@
             "ice"
         ],
         "evolves_into": [
-            "weavile",
-            "sneasler"
+            461,
+            903
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -2293,7 +2293,7 @@
             "normal"
         ],
         "evolves_into": [
-            "ursaring"
+            217
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -2304,7 +2304,7 @@
             "normal"
         ],
         "evolves_into": [
-            "ursaluna"
+            901
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -2315,7 +2315,7 @@
             "fire"
         ],
         "evolves_into": [
-            "magcargo"
+            219
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -2337,7 +2337,7 @@
             "ground"
         ],
         "evolves_into": [
-            "piloswine"
+            221
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -2349,7 +2349,7 @@
             "ground"
         ],
         "evolves_into": [
-            "mamoswine"
+            473
         ],
         "capture_rate": 75,
         "is_legendary": false
@@ -2361,7 +2361,7 @@
             "rock"
         ],
         "evolves_into": [
-            "cursola"
+            864
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -2372,7 +2372,7 @@
             "water"
         ],
         "evolves_into": [
-            "octillery"
+            224
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -2423,7 +2423,7 @@
             "fire"
         ],
         "evolves_into": [
-            "houndoom"
+            229
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -2454,7 +2454,7 @@
             "ground"
         ],
         "evolves_into": [
-            "donphan"
+            232
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -2474,7 +2474,7 @@
             "normal"
         ],
         "evolves_into": [
-            "porygon-z"
+            474
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2485,7 +2485,7 @@
             "normal"
         ],
         "evolves_into": [
-            "wyrdeer"
+            899
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2505,9 +2505,9 @@
             "fighting"
         ],
         "evolves_into": [
-            "hitmonlee",
-            "hitmonchan",
-            "hitmontop"
+            106,
+            107,
+            237
         ],
         "capture_rate": 75,
         "is_legendary": false
@@ -2528,7 +2528,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "jynx"
+            124
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2539,7 +2539,7 @@
             "electric"
         ],
         "evolves_into": [
-            "electabuzz"
+            125
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2550,7 +2550,7 @@
             "fire"
         ],
         "evolves_into": [
-            "magmar"
+            126
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2607,7 +2607,7 @@
             "ground"
         ],
         "evolves_into": [
-            "pupitar"
+            247
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2619,7 +2619,7 @@
             "ground"
         ],
         "evolves_into": [
-            "tyranitar"
+            248
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2670,7 +2670,7 @@
             "grass"
         ],
         "evolves_into": [
-            "grovyle"
+            253
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2681,7 +2681,7 @@
             "grass"
         ],
         "evolves_into": [
-            "sceptile"
+            254
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2701,7 +2701,7 @@
             "fire"
         ],
         "evolves_into": [
-            "combusken"
+            256
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2713,7 +2713,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "blaziken"
+            257
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2734,7 +2734,7 @@
             "water"
         ],
         "evolves_into": [
-            "marshtomp"
+            259
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2746,7 +2746,7 @@
             "ground"
         ],
         "evolves_into": [
-            "swampert"
+            260
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -2767,7 +2767,7 @@
             "dark"
         ],
         "evolves_into": [
-            "mightyena"
+            262
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -2787,7 +2787,7 @@
             "normal"
         ],
         "evolves_into": [
-            "linoone"
+            264
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -2798,7 +2798,7 @@
             "normal"
         ],
         "evolves_into": [
-            "obstagoon"
+            862
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -2809,8 +2809,8 @@
             "bug"
         ],
         "evolves_into": [
-            "silcoon",
-            "cascoon"
+            266,
+            268
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -2821,7 +2821,7 @@
             "bug"
         ],
         "evolves_into": [
-            "beautifly"
+            267
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -2842,7 +2842,7 @@
             "bug"
         ],
         "evolves_into": [
-            "dustox"
+            269
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -2864,7 +2864,7 @@
             "grass"
         ],
         "evolves_into": [
-            "lombre"
+            271
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -2876,7 +2876,7 @@
             "grass"
         ],
         "evolves_into": [
-            "ludicolo"
+            272
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -2897,7 +2897,7 @@
             "grass"
         ],
         "evolves_into": [
-            "nuzleaf"
+            274
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -2909,7 +2909,7 @@
             "dark"
         ],
         "evolves_into": [
-            "shiftry"
+            275
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -2931,7 +2931,7 @@
             "flying"
         ],
         "evolves_into": [
-            "swellow"
+            277
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -2953,7 +2953,7 @@
             "flying"
         ],
         "evolves_into": [
-            "pelipper"
+            279
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -2975,7 +2975,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "kirlia"
+            281
         ],
         "capture_rate": 235,
         "is_legendary": false
@@ -2987,8 +2987,8 @@
             "fairy"
         ],
         "evolves_into": [
-            "gardevoir",
-            "gallade"
+            282,
+            475
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -3010,7 +3010,7 @@
             "water"
         ],
         "evolves_into": [
-            "masquerain"
+            284
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -3031,7 +3031,7 @@
             "grass"
         ],
         "evolves_into": [
-            "breloom"
+            286
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3052,7 +3052,7 @@
             "normal"
         ],
         "evolves_into": [
-            "vigoroth"
+            288
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3063,7 +3063,7 @@
             "normal"
         ],
         "evolves_into": [
-            "slaking"
+            289
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -3084,8 +3084,8 @@
             "ground"
         ],
         "evolves_into": [
-            "ninjask",
-            "shedinja"
+            291,
+            292
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3116,7 +3116,7 @@
             "normal"
         ],
         "evolves_into": [
-            "loudred"
+            294
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -3127,7 +3127,7 @@
             "normal"
         ],
         "evolves_into": [
-            "exploud"
+            295
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -3147,7 +3147,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "hariyama"
+            297
         ],
         "capture_rate": 180,
         "is_legendary": false
@@ -3168,7 +3168,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "marill"
+            183
         ],
         "capture_rate": 150,
         "is_legendary": false
@@ -3179,7 +3179,7 @@
             "rock"
         ],
         "evolves_into": [
-            "probopass"
+            476
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3190,7 +3190,7 @@
             "normal"
         ],
         "evolves_into": [
-            "delcatty"
+            301
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3231,7 +3231,7 @@
             "rock"
         ],
         "evolves_into": [
-            "lairon"
+            305
         ],
         "capture_rate": 180,
         "is_legendary": false
@@ -3243,7 +3243,7 @@
             "rock"
         ],
         "evolves_into": [
-            "aggron"
+            306
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -3265,7 +3265,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "medicham"
+            308
         ],
         "capture_rate": 180,
         "is_legendary": false
@@ -3286,7 +3286,7 @@
             "electric"
         ],
         "evolves_into": [
-            "manectric"
+            310
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -3343,7 +3343,7 @@
             "poison"
         ],
         "evolves_into": [
-            "roserade"
+            407
         ],
         "capture_rate": 150,
         "is_legendary": false
@@ -3354,7 +3354,7 @@
             "poison"
         ],
         "evolves_into": [
-            "swalot"
+            317
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -3375,7 +3375,7 @@
             "dark"
         ],
         "evolves_into": [
-            "sharpedo"
+            319
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -3396,7 +3396,7 @@
             "water"
         ],
         "evolves_into": [
-            "wailord"
+            321
         ],
         "capture_rate": 125,
         "is_legendary": false
@@ -3417,7 +3417,7 @@
             "ground"
         ],
         "evolves_into": [
-            "camerupt"
+            323
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3447,7 +3447,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "grumpig"
+            326
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3476,7 +3476,7 @@
             "ground"
         ],
         "evolves_into": [
-            "vibrava"
+            329
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3488,7 +3488,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "flygon"
+            330
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -3509,7 +3509,7 @@
             "grass"
         ],
         "evolves_into": [
-            "cacturne"
+            332
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -3531,7 +3531,7 @@
             "flying"
         ],
         "evolves_into": [
-            "altaria"
+            334
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3591,7 +3591,7 @@
             "ground"
         ],
         "evolves_into": [
-            "whiscash"
+            340
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -3612,7 +3612,7 @@
             "water"
         ],
         "evolves_into": [
-            "crawdaunt"
+            342
         ],
         "capture_rate": 205,
         "is_legendary": false
@@ -3634,7 +3634,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "claydol"
+            344
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3656,7 +3656,7 @@
             "grass"
         ],
         "evolves_into": [
-            "cradily"
+            346
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -3678,7 +3678,7 @@
             "bug"
         ],
         "evolves_into": [
-            "armaldo"
+            348
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -3699,7 +3699,7 @@
             "water"
         ],
         "evolves_into": [
-            "milotic"
+            350
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3737,7 +3737,7 @@
             "ghost"
         ],
         "evolves_into": [
-            "banette"
+            354
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -3757,7 +3757,7 @@
             "ghost"
         ],
         "evolves_into": [
-            "dusclops"
+            356
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -3768,7 +3768,7 @@
             "ghost"
         ],
         "evolves_into": [
-            "dusknoir"
+            477
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -3807,7 +3807,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "wobbuffet"
+            202
         ],
         "capture_rate": 125,
         "is_legendary": false
@@ -3818,8 +3818,8 @@
             "ice"
         ],
         "evolves_into": [
-            "glalie",
-            "froslass"
+            362,
+            478
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -3840,7 +3840,7 @@
             "water"
         ],
         "evolves_into": [
-            "sealeo"
+            364
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3852,7 +3852,7 @@
             "water"
         ],
         "evolves_into": [
-            "walrein"
+            365
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -3873,8 +3873,8 @@
             "water"
         ],
         "evolves_into": [
-            "huntail",
-            "gorebyss"
+            367,
+            368
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -3922,7 +3922,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "shelgon"
+            372
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -3933,7 +3933,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "salamence"
+            373
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -3955,7 +3955,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "metang"
+            375
         ],
         "capture_rate": 3,
         "is_legendary": false
@@ -3967,7 +3967,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "metagross"
+            376
         ],
         "capture_rate": 3,
         "is_legendary": false
@@ -4082,7 +4082,7 @@
             "grass"
         ],
         "evolves_into": [
-            "grotle"
+            388
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4093,7 +4093,7 @@
             "grass"
         ],
         "evolves_into": [
-            "torterra"
+            389
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4114,7 +4114,7 @@
             "fire"
         ],
         "evolves_into": [
-            "monferno"
+            391
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4126,7 +4126,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "infernape"
+            392
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4147,7 +4147,7 @@
             "water"
         ],
         "evolves_into": [
-            "prinplup"
+            394
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4158,7 +4158,7 @@
             "water"
         ],
         "evolves_into": [
-            "empoleon"
+            395
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4180,7 +4180,7 @@
             "flying"
         ],
         "evolves_into": [
-            "staravia"
+            397
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -4192,7 +4192,7 @@
             "flying"
         ],
         "evolves_into": [
-            "staraptor"
+            398
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -4213,7 +4213,7 @@
             "normal"
         ],
         "evolves_into": [
-            "bibarel"
+            400
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -4234,7 +4234,7 @@
             "bug"
         ],
         "evolves_into": [
-            "kricketune"
+            402
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -4254,7 +4254,7 @@
             "electric"
         ],
         "evolves_into": [
-            "luxio"
+            404
         ],
         "capture_rate": 235,
         "is_legendary": false
@@ -4265,7 +4265,7 @@
             "electric"
         ],
         "evolves_into": [
-            "luxray"
+            405
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -4286,7 +4286,7 @@
             "poison"
         ],
         "evolves_into": [
-            "roselia"
+            315
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -4307,7 +4307,7 @@
             "rock"
         ],
         "evolves_into": [
-            "rampardos"
+            409
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4328,7 +4328,7 @@
             "steel"
         ],
         "evolves_into": [
-            "bastiodon"
+            411
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4349,8 +4349,8 @@
             "bug"
         ],
         "evolves_into": [
-            "wormadam",
-            "mothim"
+            413,
+            414
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -4382,7 +4382,7 @@
             "flying"
         ],
         "evolves_into": [
-            "vespiquen"
+            416
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -4412,7 +4412,7 @@
             "water"
         ],
         "evolves_into": [
-            "floatzel"
+            419
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -4432,7 +4432,7 @@
             "grass"
         ],
         "evolves_into": [
-            "cherrim"
+            421
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -4452,7 +4452,7 @@
             "water"
         ],
         "evolves_into": [
-            "gastrodon"
+            423
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -4483,7 +4483,7 @@
             "flying"
         ],
         "evolves_into": [
-            "drifblim"
+            426
         ],
         "capture_rate": 125,
         "is_legendary": false
@@ -4504,7 +4504,7 @@
             "normal"
         ],
         "evolves_into": [
-            "lopunny"
+            428
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -4543,7 +4543,7 @@
             "normal"
         ],
         "evolves_into": [
-            "purugly"
+            432
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -4563,7 +4563,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "chimecho"
+            358
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -4575,7 +4575,7 @@
             "dark"
         ],
         "evolves_into": [
-            "skuntank"
+            435
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -4597,7 +4597,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "bronzong"
+            437
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -4618,7 +4618,7 @@
             "rock"
         ],
         "evolves_into": [
-            "sudowoodo"
+            185
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -4630,7 +4630,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "mr-mime"
+            122
         ],
         "capture_rate": 145,
         "is_legendary": false
@@ -4641,7 +4641,7 @@
             "normal"
         ],
         "evolves_into": [
-            "chansey"
+            113
         ],
         "capture_rate": 130,
         "is_legendary": false
@@ -4673,7 +4673,7 @@
             "ground"
         ],
         "evolves_into": [
-            "gabite"
+            444
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4685,7 +4685,7 @@
             "ground"
         ],
         "evolves_into": [
-            "garchomp"
+            445
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -4706,7 +4706,7 @@
             "normal"
         ],
         "evolves_into": [
-            "snorlax"
+            143
         ],
         "capture_rate": 50,
         "is_legendary": false
@@ -4717,7 +4717,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "lucario"
+            448
         ],
         "capture_rate": 75,
         "is_legendary": false
@@ -4738,7 +4738,7 @@
             "ground"
         ],
         "evolves_into": [
-            "hippowdon"
+            450
         ],
         "capture_rate": 140,
         "is_legendary": false
@@ -4759,7 +4759,7 @@
             "bug"
         ],
         "evolves_into": [
-            "drapion"
+            452
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -4781,7 +4781,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "toxicroak"
+            454
         ],
         "capture_rate": 140,
         "is_legendary": false
@@ -4811,7 +4811,7 @@
             "water"
         ],
         "evolves_into": [
-            "lumineon"
+            457
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -4832,7 +4832,7 @@
             "flying"
         ],
         "evolves_into": [
-            "mantine"
+            226
         ],
         "capture_rate": 25,
         "is_legendary": false
@@ -4844,7 +4844,7 @@
             "ice"
         ],
         "evolves_into": [
-            "abomasnow"
+            460
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -5132,7 +5132,7 @@
             "water"
         ],
         "evolves_into": [
-            "manaphy"
+            490
         ],
         "capture_rate": 30,
         "is_legendary": false
@@ -5189,7 +5189,7 @@
             "grass"
         ],
         "evolves_into": [
-            "servine"
+            496
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -5200,7 +5200,7 @@
             "grass"
         ],
         "evolves_into": [
-            "serperior"
+            497
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -5220,7 +5220,7 @@
             "fire"
         ],
         "evolves_into": [
-            "pignite"
+            499
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -5232,7 +5232,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "emboar"
+            500
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -5253,7 +5253,7 @@
             "water"
         ],
         "evolves_into": [
-            "dewott"
+            502
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -5264,7 +5264,7 @@
             "water"
         ],
         "evolves_into": [
-            "samurott"
+            503
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -5284,7 +5284,7 @@
             "normal"
         ],
         "evolves_into": [
-            "watchog"
+            505
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -5304,7 +5304,7 @@
             "normal"
         ],
         "evolves_into": [
-            "herdier"
+            507
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -5315,7 +5315,7 @@
             "normal"
         ],
         "evolves_into": [
-            "stoutland"
+            508
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -5335,7 +5335,7 @@
             "dark"
         ],
         "evolves_into": [
-            "liepard"
+            510
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -5355,7 +5355,7 @@
             "grass"
         ],
         "evolves_into": [
-            "simisage"
+            512
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5375,7 +5375,7 @@
             "fire"
         ],
         "evolves_into": [
-            "simisear"
+            514
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5395,7 +5395,7 @@
             "water"
         ],
         "evolves_into": [
-            "simipour"
+            516
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5415,7 +5415,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "musharna"
+            518
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5436,7 +5436,7 @@
             "flying"
         ],
         "evolves_into": [
-            "tranquill"
+            520
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -5448,7 +5448,7 @@
             "flying"
         ],
         "evolves_into": [
-            "unfezant"
+            521
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -5469,7 +5469,7 @@
             "electric"
         ],
         "evolves_into": [
-            "zebstrika"
+            523
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5489,7 +5489,7 @@
             "rock"
         ],
         "evolves_into": [
-            "boldore"
+            525
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -5500,7 +5500,7 @@
             "rock"
         ],
         "evolves_into": [
-            "gigalith"
+            526
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -5521,7 +5521,7 @@
             "flying"
         ],
         "evolves_into": [
-            "swoobat"
+            528
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5542,7 +5542,7 @@
             "ground"
         ],
         "evolves_into": [
-            "excadrill"
+            530
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -5572,7 +5572,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "gurdurr"
+            533
         ],
         "capture_rate": 180,
         "is_legendary": false
@@ -5583,7 +5583,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "conkeldurr"
+            534
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -5603,7 +5603,7 @@
             "water"
         ],
         "evolves_into": [
-            "palpitoad"
+            536
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -5615,7 +5615,7 @@
             "ground"
         ],
         "evolves_into": [
-            "seismitoad"
+            537
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -5655,7 +5655,7 @@
             "grass"
         ],
         "evolves_into": [
-            "swadloon"
+            541
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -5667,7 +5667,7 @@
             "grass"
         ],
         "evolves_into": [
-            "leavanny"
+            542
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -5689,7 +5689,7 @@
             "poison"
         ],
         "evolves_into": [
-            "whirlipede"
+            544
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -5701,7 +5701,7 @@
             "poison"
         ],
         "evolves_into": [
-            "scolipede"
+            545
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -5723,7 +5723,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "whimsicott"
+            547
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5744,7 +5744,7 @@
             "grass"
         ],
         "evolves_into": [
-            "lilligant"
+            549
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5774,7 +5774,7 @@
             "dark"
         ],
         "evolves_into": [
-            "krokorok"
+            552
         ],
         "capture_rate": 180,
         "is_legendary": false
@@ -5786,7 +5786,7 @@
             "dark"
         ],
         "evolves_into": [
-            "krookodile"
+            553
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -5807,7 +5807,7 @@
             "fire"
         ],
         "evolves_into": [
-            "darmanitan"
+            555
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -5837,7 +5837,7 @@
             "rock"
         ],
         "evolves_into": [
-            "crustle"
+            558
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5859,7 +5859,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "scrafty"
+            560
         ],
         "capture_rate": 180,
         "is_legendary": false
@@ -5890,8 +5890,8 @@
             "ghost"
         ],
         "evolves_into": [
-            "cofagrigus",
-            "runerigus"
+            563,
+            867
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5912,7 +5912,7 @@
             "rock"
         ],
         "evolves_into": [
-            "carracosta"
+            565
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -5934,7 +5934,7 @@
             "flying"
         ],
         "evolves_into": [
-            "archeops"
+            567
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -5955,7 +5955,7 @@
             "poison"
         ],
         "evolves_into": [
-            "garbodor"
+            569
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -5975,7 +5975,7 @@
             "dark"
         ],
         "evolves_into": [
-            "zoroark"
+            571
         ],
         "capture_rate": 75,
         "is_legendary": false
@@ -5995,7 +5995,7 @@
             "normal"
         ],
         "evolves_into": [
-            "cinccino"
+            573
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -6015,7 +6015,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "gothorita"
+            575
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -6026,7 +6026,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "gothitelle"
+            576
         ],
         "capture_rate": 100,
         "is_legendary": false
@@ -6046,7 +6046,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "duosion"
+            578
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -6057,7 +6057,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "reuniclus"
+            579
         ],
         "capture_rate": 100,
         "is_legendary": false
@@ -6078,7 +6078,7 @@
             "flying"
         ],
         "evolves_into": [
-            "swanna"
+            581
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6099,7 +6099,7 @@
             "ice"
         ],
         "evolves_into": [
-            "vanillish"
+            583
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -6110,7 +6110,7 @@
             "ice"
         ],
         "evolves_into": [
-            "vanilluxe"
+            584
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -6131,7 +6131,7 @@
             "grass"
         ],
         "evolves_into": [
-            "sawsbuck"
+            586
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6162,7 +6162,7 @@
             "bug"
         ],
         "evolves_into": [
-            "escavalier"
+            589
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -6184,7 +6184,7 @@
             "poison"
         ],
         "evolves_into": [
-            "amoonguss"
+            591
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6206,7 +6206,7 @@
             "ghost"
         ],
         "evolves_into": [
-            "jellicent"
+            593
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6237,7 +6237,7 @@
             "electric"
         ],
         "evolves_into": [
-            "galvantula"
+            596
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6259,7 +6259,7 @@
             "steel"
         ],
         "evolves_into": [
-            "ferrothorn"
+            598
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -6280,7 +6280,7 @@
             "steel"
         ],
         "evolves_into": [
-            "klang"
+            600
         ],
         "capture_rate": 130,
         "is_legendary": false
@@ -6291,7 +6291,7 @@
             "steel"
         ],
         "evolves_into": [
-            "klinklang"
+            601
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -6311,7 +6311,7 @@
             "electric"
         ],
         "evolves_into": [
-            "eelektrik"
+            603
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6322,7 +6322,7 @@
             "electric"
         ],
         "evolves_into": [
-            "eelektross"
+            604
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -6342,7 +6342,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "beheeyem"
+            606
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -6363,7 +6363,7 @@
             "fire"
         ],
         "evolves_into": [
-            "lampent"
+            608
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6375,7 +6375,7 @@
             "fire"
         ],
         "evolves_into": [
-            "chandelure"
+            609
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -6396,7 +6396,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "fraxure"
+            611
         ],
         "capture_rate": 75,
         "is_legendary": false
@@ -6407,7 +6407,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "haxorus"
+            612
         ],
         "capture_rate": 60,
         "is_legendary": false
@@ -6427,7 +6427,7 @@
             "ice"
         ],
         "evolves_into": [
-            "beartic"
+            614
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -6456,7 +6456,7 @@
             "bug"
         ],
         "evolves_into": [
-            "accelgor"
+            617
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -6486,7 +6486,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "mienshao"
+            620
         ],
         "capture_rate": 180,
         "is_legendary": false
@@ -6516,7 +6516,7 @@
             "ghost"
         ],
         "evolves_into": [
-            "golurk"
+            623
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6538,7 +6538,7 @@
             "steel"
         ],
         "evolves_into": [
-            "bisharp"
+            625
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -6550,7 +6550,7 @@
             "steel"
         ],
         "evolves_into": [
-            "kingambit"
+            983
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6571,7 +6571,7 @@
             "flying"
         ],
         "evolves_into": [
-            "braviary"
+            628
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6593,7 +6593,7 @@
             "flying"
         ],
         "evolves_into": [
-            "mandibuzz"
+            630
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -6634,7 +6634,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "zweilous"
+            634
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6646,7 +6646,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "hydreigon"
+            635
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6668,7 +6668,7 @@
             "fire"
         ],
         "evolves_into": [
-            "volcarona"
+            637
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6808,7 +6808,7 @@
             "grass"
         ],
         "evolves_into": [
-            "quilladin"
+            651
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6819,7 +6819,7 @@
             "grass"
         ],
         "evolves_into": [
-            "chesnaught"
+            652
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6840,7 +6840,7 @@
             "fire"
         ],
         "evolves_into": [
-            "braixen"
+            654
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6851,7 +6851,7 @@
             "fire"
         ],
         "evolves_into": [
-            "delphox"
+            655
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6872,7 +6872,7 @@
             "water"
         ],
         "evolves_into": [
-            "frogadier"
+            657
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6883,7 +6883,7 @@
             "water"
         ],
         "evolves_into": [
-            "greninja"
+            658
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -6904,7 +6904,7 @@
             "normal"
         ],
         "evolves_into": [
-            "diggersby"
+            660
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -6926,7 +6926,7 @@
             "flying"
         ],
         "evolves_into": [
-            "fletchinder"
+            662
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -6938,7 +6938,7 @@
             "flying"
         ],
         "evolves_into": [
-            "talonflame"
+            663
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -6959,7 +6959,7 @@
             "bug"
         ],
         "evolves_into": [
-            "spewpa"
+            665
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -6970,7 +6970,7 @@
             "bug"
         ],
         "evolves_into": [
-            "vivillon"
+            666
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -6992,7 +6992,7 @@
             "normal"
         ],
         "evolves_into": [
-            "pyroar"
+            668
         ],
         "capture_rate": 220,
         "is_legendary": false
@@ -7013,7 +7013,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "floette"
+            670
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -7024,7 +7024,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "florges"
+            671
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -7044,7 +7044,7 @@
             "grass"
         ],
         "evolves_into": [
-            "gogoat"
+            673
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -7064,7 +7064,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "pangoro"
+            675
         ],
         "capture_rate": 220,
         "is_legendary": false
@@ -7094,7 +7094,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "meowstic"
+            678
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7115,7 +7115,7 @@
             "ghost"
         ],
         "evolves_into": [
-            "doublade"
+            680
         ],
         "capture_rate": 180,
         "is_legendary": false
@@ -7127,7 +7127,7 @@
             "ghost"
         ],
         "evolves_into": [
-            "aegislash"
+            681
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -7148,7 +7148,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "aromatisse"
+            683
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -7168,7 +7168,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "slurpuff"
+            685
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -7189,7 +7189,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "malamar"
+            687
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7211,7 +7211,7 @@
             "water"
         ],
         "evolves_into": [
-            "barbaracle"
+            689
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -7233,7 +7233,7 @@
             "water"
         ],
         "evolves_into": [
-            "dragalge"
+            691
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -7254,7 +7254,7 @@
             "water"
         ],
         "evolves_into": [
-            "clawitzer"
+            693
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -7275,7 +7275,7 @@
             "normal"
         ],
         "evolves_into": [
-            "heliolisk"
+            695
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7297,7 +7297,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "tyrantrum"
+            697
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7319,7 +7319,7 @@
             "ice"
         ],
         "evolves_into": [
-            "aurorus"
+            699
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7379,7 +7379,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "sliggoo"
+            705
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7390,7 +7390,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "goodra"
+            706
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7421,7 +7421,7 @@
             "grass"
         ],
         "evolves_into": [
-            "trevenant"
+            709
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -7462,7 +7462,7 @@
             "ice"
         ],
         "evolves_into": [
-            "avalugg"
+            713
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7483,7 +7483,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "noivern"
+            715
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7564,7 +7564,7 @@
             "flying"
         ],
         "evolves_into": [
-            "dartrix"
+            723
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7576,7 +7576,7 @@
             "flying"
         ],
         "evolves_into": [
-            "decidueye"
+            724
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7597,7 +7597,7 @@
             "fire"
         ],
         "evolves_into": [
-            "torracat"
+            726
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7608,7 +7608,7 @@
             "fire"
         ],
         "evolves_into": [
-            "incineroar"
+            727
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7629,7 +7629,7 @@
             "water"
         ],
         "evolves_into": [
-            "brionne"
+            729
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7640,7 +7640,7 @@
             "water"
         ],
         "evolves_into": [
-            "primarina"
+            730
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -7662,7 +7662,7 @@
             "flying"
         ],
         "evolves_into": [
-            "trumbeak"
+            732
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -7674,7 +7674,7 @@
             "flying"
         ],
         "evolves_into": [
-            "toucannon"
+            733
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -7695,7 +7695,7 @@
             "normal"
         ],
         "evolves_into": [
-            "gumshoos"
+            735
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -7715,7 +7715,7 @@
             "bug"
         ],
         "evolves_into": [
-            "charjabug"
+            737
         ],
         "capture_rate": 255,
         "is_legendary": false
@@ -7727,7 +7727,7 @@
             "electric"
         ],
         "evolves_into": [
-            "vikavolt"
+            738
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -7748,7 +7748,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "crabominable"
+            740
         ],
         "capture_rate": 225,
         "is_legendary": false
@@ -7780,7 +7780,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "ribombee"
+            743
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7801,7 +7801,7 @@
             "rock"
         ],
         "evolves_into": [
-            "lycanroc"
+            745
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7831,7 +7831,7 @@
             "water"
         ],
         "evolves_into": [
-            "toxapex"
+            748
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7852,7 +7852,7 @@
             "ground"
         ],
         "evolves_into": [
-            "mudsdale"
+            750
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7873,7 +7873,7 @@
             "bug"
         ],
         "evolves_into": [
-            "araquanid"
+            752
         ],
         "capture_rate": 200,
         "is_legendary": false
@@ -7894,7 +7894,7 @@
             "grass"
         ],
         "evolves_into": [
-            "lurantis"
+            754
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7915,7 +7915,7 @@
             "fairy"
         ],
         "evolves_into": [
-            "shiinotic"
+            756
         ],
         "capture_rate": 190,
         "is_legendary": false
@@ -7937,7 +7937,7 @@
             "fire"
         ],
         "evolves_into": [
-            "salazzle"
+            758
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -7959,7 +7959,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "bewear"
+            760
         ],
         "capture_rate": 140,
         "is_legendary": false
@@ -7980,7 +7980,7 @@
             "grass"
         ],
         "evolves_into": [
-            "steenee"
+            762
         ],
         "capture_rate": 235,
         "is_legendary": false
@@ -7991,7 +7991,7 @@
             "grass"
         ],
         "evolves_into": [
-            "tsareena"
+            763
         ],
         "capture_rate": 120,
         "is_legendary": false
@@ -8040,7 +8040,7 @@
             "water"
         ],
         "evolves_into": [
-            "golisopod"
+            768
         ],
         "capture_rate": 90,
         "is_legendary": false
@@ -8062,7 +8062,7 @@
             "ground"
         ],
         "evolves_into": [
-            "palossand"
+            770
         ],
         "capture_rate": 140,
         "is_legendary": false
@@ -8092,7 +8092,7 @@
             "normal"
         ],
         "evolves_into": [
-            "silvally"
+            773
         ],
         "capture_rate": 3,
         "is_legendary": false
@@ -8191,7 +8191,7 @@
             "dragon"
         ],
         "evolves_into": [
-            "hakamo-o"
+            783
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -8203,7 +8203,7 @@
             "fighting"
         ],
         "evolves_into": [
-            "kommo-o"
+            784
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -8264,7 +8264,7 @@
             "psychic"
         ],
         "evolves_into": [
-            "cosmoem"
+            790
         ],
         "capture_rate": 45,
         "is_legendary": true
@@ -8275,8 +8275,8 @@
             "psychic"
         ],
         "evolves_into": [
-            "solgaleo",
-            "lunala"
+            791,
+            792
         ],
         "capture_rate": 45,
         "is_legendary": true
@@ -8405,7 +8405,7 @@
             "poison"
         ],
         "evolves_into": [
-            "naganadel"
+            804
         ],
         "capture_rate": 45,
         "is_legendary": false
@@ -8444,2244 +8444,6 @@
         "name": "zeraora",
         "types": [
             "electric"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": false
-    },
-    "808": {
-        "name": "meltan",
-        "types": [
-            "steel"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": false
-    },
-    "809": {
-        "name": "melmetal",
-        "types": [
-            "steel"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": false
-    },
-    "810": {
-        "name": "grookey",
-        "types": [
-            "grass"
-        ],
-        "evolves_into": [
-            "thwackey"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "811": {
-        "name": "thwackey",
-        "types": [
-            "grass"
-        ],
-        "evolves_into": [
-            "rillaboom"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "812": {
-        "name": "rillaboom",
-        "types": [
-            "grass"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "813": {
-        "name": "scorbunny",
-        "types": [
-            "fire"
-        ],
-        "evolves_into": [
-            "raboot"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "814": {
-        "name": "raboot",
-        "types": [
-            "fire"
-        ],
-        "evolves_into": [
-            "cinderace"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "815": {
-        "name": "cinderace",
-        "types": [
-            "fire"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "816": {
-        "name": "sobble",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [
-            "drizzile"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "817": {
-        "name": "drizzile",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [
-            "inteleon"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "818": {
-        "name": "inteleon",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "819": {
-        "name": "skwovet",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [
-            "greedent"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "820": {
-        "name": "greedent",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "821": {
-        "name": "rookidee",
-        "types": [
-            "flying"
-        ],
-        "evolves_into": [
-            "corvisquire"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "822": {
-        "name": "corvisquire",
-        "types": [
-            "flying"
-        ],
-        "evolves_into": [
-            "corviknight"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "823": {
-        "name": "corviknight",
-        "types": [
-            "flying",
-            "steel"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "824": {
-        "name": "blipbug",
-        "types": [
-            "bug"
-        ],
-        "evolves_into": [
-            "dottler"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "825": {
-        "name": "dottler",
-        "types": [
-            "bug",
-            "psychic"
-        ],
-        "evolves_into": [
-            "orbeetle"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "826": {
-        "name": "orbeetle",
-        "types": [
-            "bug",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "827": {
-        "name": "nickit",
-        "types": [
-            "dark"
-        ],
-        "evolves_into": [
-            "thievul"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "828": {
-        "name": "thievul",
-        "types": [
-            "dark"
-        ],
-        "evolves_into": [],
-        "capture_rate": 127,
-        "is_legendary": false
-    },
-    "829": {
-        "name": "gossifleur",
-        "types": [
-            "grass"
-        ],
-        "evolves_into": [
-            "eldegoss"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "830": {
-        "name": "eldegoss",
-        "types": [
-            "grass"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "831": {
-        "name": "wooloo",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [
-            "dubwool"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "832": {
-        "name": "dubwool",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 127,
-        "is_legendary": false
-    },
-    "833": {
-        "name": "chewtle",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [
-            "drednaw"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "834": {
-        "name": "drednaw",
-        "types": [
-            "water",
-            "rock"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "835": {
-        "name": "yamper",
-        "types": [
-            "electric"
-        ],
-        "evolves_into": [
-            "boltund"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "836": {
-        "name": "boltund",
-        "types": [
-            "electric"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "837": {
-        "name": "rolycoly",
-        "types": [
-            "rock"
-        ],
-        "evolves_into": [
-            "carkol"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "838": {
-        "name": "carkol",
-        "types": [
-            "rock",
-            "fire"
-        ],
-        "evolves_into": [
-            "coalossal"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "839": {
-        "name": "coalossal",
-        "types": [
-            "rock",
-            "fire"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "840": {
-        "name": "applin",
-        "types": [
-            "grass",
-            "dragon"
-        ],
-        "evolves_into": [
-            "flapple",
-            "appletun",
-            "dipplin"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "841": {
-        "name": "flapple",
-        "types": [
-            "grass",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "842": {
-        "name": "appletun",
-        "types": [
-            "grass",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "843": {
-        "name": "silicobra",
-        "types": [
-            "ground"
-        ],
-        "evolves_into": [
-            "sandaconda"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "844": {
-        "name": "sandaconda",
-        "types": [
-            "ground"
-        ],
-        "evolves_into": [],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "845": {
-        "name": "cramorant",
-        "types": [
-            "flying",
-            "water"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "846": {
-        "name": "arrokuda",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [
-            "barraskewda"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "847": {
-        "name": "barraskewda",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [],
-        "capture_rate": 60,
-        "is_legendary": false
-    },
-    "848": {
-        "name": "toxel",
-        "types": [
-            "electric",
-            "poison"
-        ],
-        "evolves_into": [
-            "toxtricity"
-        ],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "849": {
-        "name": "toxtricity-amped",
-        "types": [
-            "electric",
-            "poison"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "850": {
-        "name": "sizzlipede",
-        "types": [
-            "fire",
-            "bug"
-        ],
-        "evolves_into": [
-            "centiskorch"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "851": {
-        "name": "centiskorch",
-        "types": [
-            "fire",
-            "bug"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "852": {
-        "name": "clobbopus",
-        "types": [
-            "fighting"
-        ],
-        "evolves_into": [
-            "grapploct"
-        ],
-        "capture_rate": 180,
-        "is_legendary": false
-    },
-    "853": {
-        "name": "grapploct",
-        "types": [
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "854": {
-        "name": "sinistea",
-        "types": [
-            "ghost"
-        ],
-        "evolves_into": [
-            "polteageist"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "855": {
-        "name": "polteageist",
-        "types": [
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 60,
-        "is_legendary": false
-    },
-    "856": {
-        "name": "hatenna",
-        "types": [
-            "psychic"
-        ],
-        "evolves_into": [
-            "hattrem"
-        ],
-        "capture_rate": 235,
-        "is_legendary": false
-    },
-    "857": {
-        "name": "hattrem",
-        "types": [
-            "psychic"
-        ],
-        "evolves_into": [
-            "hatterene"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "858": {
-        "name": "hatterene",
-        "types": [
-            "psychic",
-            "fairy"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "859": {
-        "name": "impidimp",
-        "types": [
-            "dark",
-            "fairy"
-        ],
-        "evolves_into": [
-            "morgrem"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "860": {
-        "name": "morgrem",
-        "types": [
-            "dark",
-            "fairy"
-        ],
-        "evolves_into": [
-            "grimmsnarl"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "861": {
-        "name": "grimmsnarl",
-        "types": [
-            "dark",
-            "fairy"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "862": {
-        "name": "obstagoon",
-        "types": [
-            "dark",
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "863": {
-        "name": "perrserker",
-        "types": [
-            "steel"
-        ],
-        "evolves_into": [],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "864": {
-        "name": "cursola",
-        "types": [
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "865": {
-        "name": "sirfetchd",
-        "types": [
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "866": {
-        "name": "mr-rime",
-        "types": [
-            "ice",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "867": {
-        "name": "runerigus",
-        "types": [
-            "ground",
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "868": {
-        "name": "milcery",
-        "types": [
-            "fairy"
-        ],
-        "evolves_into": [
-            "alcremie"
-        ],
-        "capture_rate": 200,
-        "is_legendary": false
-    },
-    "869": {
-        "name": "alcremie",
-        "types": [
-            "fairy"
-        ],
-        "evolves_into": [],
-        "capture_rate": 100,
-        "is_legendary": false
-    },
-    "870": {
-        "name": "falinks",
-        "types": [
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "871": {
-        "name": "pincurchin",
-        "types": [
-            "electric"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "872": {
-        "name": "snom",
-        "types": [
-            "ice",
-            "bug"
-        ],
-        "evolves_into": [
-            "frosmoth"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "873": {
-        "name": "frosmoth",
-        "types": [
-            "ice",
-            "bug"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "874": {
-        "name": "stonjourner",
-        "types": [
-            "rock"
-        ],
-        "evolves_into": [],
-        "capture_rate": 60,
-        "is_legendary": false
-    },
-    "875": {
-        "name": "eiscue-ice",
-        "types": [
-            "ice"
-        ],
-        "evolves_into": [],
-        "capture_rate": 60,
-        "is_legendary": false
-    },
-    "876": {
-        "name": "indeedee-male",
-        "types": [
-            "psychic",
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "877": {
-        "name": "morpeko-full-belly",
-        "types": [
-            "electric",
-            "dark"
-        ],
-        "evolves_into": [],
-        "capture_rate": 180,
-        "is_legendary": false
-    },
-    "878": {
-        "name": "cufant",
-        "types": [
-            "steel"
-        ],
-        "evolves_into": [
-            "copperajah"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "879": {
-        "name": "copperajah",
-        "types": [
-            "steel"
-        ],
-        "evolves_into": [],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "880": {
-        "name": "dracozolt",
-        "types": [
-            "electric",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "881": {
-        "name": "arctozolt",
-        "types": [
-            "electric",
-            "ice"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "882": {
-        "name": "dracovish",
-        "types": [
-            "water",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "883": {
-        "name": "arctovish",
-        "types": [
-            "water",
-            "ice"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "884": {
-        "name": "duraludon",
-        "types": [
-            "steel",
-            "dragon"
-        ],
-        "evolves_into": [
-            "archaludon"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "885": {
-        "name": "dreepy",
-        "types": [
-            "dragon",
-            "ghost"
-        ],
-        "evolves_into": [
-            "drakloak"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "886": {
-        "name": "drakloak",
-        "types": [
-            "dragon",
-            "ghost"
-        ],
-        "evolves_into": [
-            "dragapult"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "887": {
-        "name": "dragapult",
-        "types": [
-            "dragon",
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "888": {
-        "name": "zacian",
-        "types": [
-            "fairy"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": true
-    },
-    "889": {
-        "name": "zamazenta",
-        "types": [
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": true
-    },
-    "890": {
-        "name": "eternatus",
-        "types": [
-            "poison",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 255,
-        "is_legendary": true
-    },
-    "891": {
-        "name": "kubfu",
-        "types": [
-            "fighting"
-        ],
-        "evolves_into": [
-            "urshifu"
-        ],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "892": {
-        "name": "urshifu-single-strike",
-        "types": [
-            "fighting",
-            "dark"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "893": {
-        "name": "zarude",
-        "types": [
-            "dark",
-            "grass"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": false
-    },
-    "894": {
-        "name": "regieleki",
-        "types": [
-            "electric"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "895": {
-        "name": "regidrago",
-        "types": [
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "896": {
-        "name": "glastrier",
-        "types": [
-            "ice"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "897": {
-        "name": "spectrier",
-        "types": [
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "898": {
-        "name": "calyrex",
-        "types": [
-            "psychic",
-            "grass"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "899": {
-        "name": "wyrdeer",
-        "types": [
-            "normal",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 135,
-        "is_legendary": false
-    },
-    "900": {
-        "name": "kleavor",
-        "types": [
-            "bug",
-            "rock"
-        ],
-        "evolves_into": [],
-        "capture_rate": 115,
-        "is_legendary": false
-    },
-    "901": {
-        "name": "ursaluna",
-        "types": [
-            "ground",
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "902": {
-        "name": "basculegion-male",
-        "types": [
-            "water",
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 135,
-        "is_legendary": false
-    },
-    "903": {
-        "name": "sneasler",
-        "types": [
-            "fighting",
-            "poison"
-        ],
-        "evolves_into": [],
-        "capture_rate": 135,
-        "is_legendary": false
-    },
-    "904": {
-        "name": "overqwil",
-        "types": [
-            "dark",
-            "poison"
-        ],
-        "evolves_into": [],
-        "capture_rate": 135,
-        "is_legendary": false
-    },
-    "905": {
-        "name": "enamorus-incarnate",
-        "types": [
-            "fairy",
-            "flying"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "906": {
-        "name": "sprigatito",
-        "types": [
-            "grass"
-        ],
-        "evolves_into": [
-            "floragato"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "907": {
-        "name": "floragato",
-        "types": [
-            "grass"
-        ],
-        "evolves_into": [
-            "meowscarada"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "908": {
-        "name": "meowscarada",
-        "types": [
-            "grass",
-            "dark"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "909": {
-        "name": "fuecoco",
-        "types": [
-            "fire"
-        ],
-        "evolves_into": [
-            "crocalor"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "910": {
-        "name": "crocalor",
-        "types": [
-            "fire"
-        ],
-        "evolves_into": [
-            "skeledirge"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "911": {
-        "name": "skeledirge",
-        "types": [
-            "fire",
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "912": {
-        "name": "quaxly",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [
-            "quaxwell"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "913": {
-        "name": "quaxwell",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [
-            "quaquaval"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "914": {
-        "name": "quaquaval",
-        "types": [
-            "water",
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "915": {
-        "name": "lechonk",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [
-            "oinkologne"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "916": {
-        "name": "oinkologne-male",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 100,
-        "is_legendary": false
-    },
-    "917": {
-        "name": "tarountula",
-        "types": [
-            "bug"
-        ],
-        "evolves_into": [
-            "spidops"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "918": {
-        "name": "spidops",
-        "types": [
-            "bug"
-        ],
-        "evolves_into": [],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "919": {
-        "name": "nymble",
-        "types": [
-            "bug"
-        ],
-        "evolves_into": [
-            "lokix"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "920": {
-        "name": "lokix",
-        "types": [
-            "bug",
-            "dark"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "921": {
-        "name": "pawmi",
-        "types": [
-            "electric"
-        ],
-        "evolves_into": [
-            "pawmo"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "922": {
-        "name": "pawmo",
-        "types": [
-            "electric",
-            "fighting"
-        ],
-        "evolves_into": [
-            "pawmot"
-        ],
-        "capture_rate": 80,
-        "is_legendary": false
-    },
-    "923": {
-        "name": "pawmot",
-        "types": [
-            "electric",
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "924": {
-        "name": "tandemaus",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [
-            "maushold"
-        ],
-        "capture_rate": 150,
-        "is_legendary": false
-    },
-    "925": {
-        "name": "maushold-family-of-four",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "926": {
-        "name": "fidough",
-        "types": [
-            "fairy"
-        ],
-        "evolves_into": [
-            "dachsbun"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "927": {
-        "name": "dachsbun",
-        "types": [
-            "fairy"
-        ],
-        "evolves_into": [],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "928": {
-        "name": "smoliv",
-        "types": [
-            "grass",
-            "normal"
-        ],
-        "evolves_into": [
-            "dolliv"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "929": {
-        "name": "dolliv",
-        "types": [
-            "grass",
-            "normal"
-        ],
-        "evolves_into": [
-            "arboliva"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "930": {
-        "name": "arboliva",
-        "types": [
-            "grass",
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "931": {
-        "name": "squawkabilly-green-plumage",
-        "types": [
-            "normal",
-            "flying"
-        ],
-        "evolves_into": [],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "932": {
-        "name": "nacli",
-        "types": [
-            "rock"
-        ],
-        "evolves_into": [
-            "naclstack"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "933": {
-        "name": "naclstack",
-        "types": [
-            "rock"
-        ],
-        "evolves_into": [
-            "garganacl"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "934": {
-        "name": "garganacl",
-        "types": [
-            "rock"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "935": {
-        "name": "charcadet",
-        "types": [
-            "fire"
-        ],
-        "evolves_into": [
-            "armarouge",
-            "ceruledge"
-        ],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "936": {
-        "name": "armarouge",
-        "types": [
-            "fire",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 25,
-        "is_legendary": false
-    },
-    "937": {
-        "name": "ceruledge",
-        "types": [
-            "fire",
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 25,
-        "is_legendary": false
-    },
-    "938": {
-        "name": "tadbulb",
-        "types": [
-            "electric"
-        ],
-        "evolves_into": [
-            "bellibolt"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "939": {
-        "name": "bellibolt",
-        "types": [
-            "electric"
-        ],
-        "evolves_into": [],
-        "capture_rate": 50,
-        "is_legendary": false
-    },
-    "940": {
-        "name": "wattrel",
-        "types": [
-            "electric",
-            "flying"
-        ],
-        "evolves_into": [
-            "kilowattrel"
-        ],
-        "capture_rate": 180,
-        "is_legendary": false
-    },
-    "941": {
-        "name": "kilowattrel",
-        "types": [
-            "electric",
-            "flying"
-        ],
-        "evolves_into": [],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "942": {
-        "name": "maschiff",
-        "types": [
-            "dark"
-        ],
-        "evolves_into": [
-            "mabosstiff"
-        ],
-        "capture_rate": 150,
-        "is_legendary": false
-    },
-    "943": {
-        "name": "mabosstiff",
-        "types": [
-            "dark"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "944": {
-        "name": "shroodle",
-        "types": [
-            "poison",
-            "normal"
-        ],
-        "evolves_into": [
-            "grafaiai"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "945": {
-        "name": "grafaiai",
-        "types": [
-            "poison",
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "946": {
-        "name": "bramblin",
-        "types": [
-            "grass",
-            "ghost"
-        ],
-        "evolves_into": [
-            "brambleghast"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "947": {
-        "name": "brambleghast",
-        "types": [
-            "grass",
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "948": {
-        "name": "toedscool",
-        "types": [
-            "ground",
-            "grass"
-        ],
-        "evolves_into": [
-            "toedscruel"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "949": {
-        "name": "toedscruel",
-        "types": [
-            "ground",
-            "grass"
-        ],
-        "evolves_into": [],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "950": {
-        "name": "klawf",
-        "types": [
-            "rock"
-        ],
-        "evolves_into": [],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "951": {
-        "name": "capsakid",
-        "types": [
-            "grass"
-        ],
-        "evolves_into": [
-            "scovillain"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "952": {
-        "name": "scovillain",
-        "types": [
-            "grass",
-            "fire"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "953": {
-        "name": "rellor",
-        "types": [
-            "bug"
-        ],
-        "evolves_into": [
-            "rabsca"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "954": {
-        "name": "rabsca",
-        "types": [
-            "bug",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "955": {
-        "name": "flittle",
-        "types": [
-            "psychic"
-        ],
-        "evolves_into": [
-            "espathra"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "956": {
-        "name": "espathra",
-        "types": [
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 60,
-        "is_legendary": false
-    },
-    "957": {
-        "name": "tinkatink",
-        "types": [
-            "fairy",
-            "steel"
-        ],
-        "evolves_into": [
-            "tinkatuff"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "958": {
-        "name": "tinkatuff",
-        "types": [
-            "fairy",
-            "steel"
-        ],
-        "evolves_into": [
-            "tinkaton"
-        ],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "959": {
-        "name": "tinkaton",
-        "types": [
-            "fairy",
-            "steel"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "960": {
-        "name": "wiglett",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [
-            "wugtrio"
-        ],
-        "capture_rate": 255,
-        "is_legendary": false
-    },
-    "961": {
-        "name": "wugtrio",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [],
-        "capture_rate": 50,
-        "is_legendary": false
-    },
-    "962": {
-        "name": "bombirdier",
-        "types": [
-            "flying",
-            "dark"
-        ],
-        "evolves_into": [],
-        "capture_rate": 25,
-        "is_legendary": false
-    },
-    "963": {
-        "name": "finizen",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [
-            "palafin"
-        ],
-        "capture_rate": 200,
-        "is_legendary": false
-    },
-    "964": {
-        "name": "palafin-zero",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "965": {
-        "name": "varoom",
-        "types": [
-            "steel",
-            "poison"
-        ],
-        "evolves_into": [
-            "revavroom"
-        ],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "966": {
-        "name": "revavroom",
-        "types": [
-            "steel",
-            "poison"
-        ],
-        "evolves_into": [],
-        "capture_rate": 75,
-        "is_legendary": false
-    },
-    "967": {
-        "name": "cyclizar",
-        "types": [
-            "dragon",
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 190,
-        "is_legendary": false
-    },
-    "968": {
-        "name": "orthworm",
-        "types": [
-            "steel"
-        ],
-        "evolves_into": [],
-        "capture_rate": 25,
-        "is_legendary": false
-    },
-    "969": {
-        "name": "glimmet",
-        "types": [
-            "rock",
-            "poison"
-        ],
-        "evolves_into": [
-            "glimmora"
-        ],
-        "capture_rate": 70,
-        "is_legendary": false
-    },
-    "970": {
-        "name": "glimmora",
-        "types": [
-            "rock",
-            "poison"
-        ],
-        "evolves_into": [],
-        "capture_rate": 25,
-        "is_legendary": false
-    },
-    "971": {
-        "name": "greavard",
-        "types": [
-            "ghost"
-        ],
-        "evolves_into": [
-            "houndstone"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "972": {
-        "name": "houndstone",
-        "types": [
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 60,
-        "is_legendary": false
-    },
-    "973": {
-        "name": "flamigo",
-        "types": [
-            "flying",
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 100,
-        "is_legendary": false
-    },
-    "974": {
-        "name": "cetoddle",
-        "types": [
-            "ice"
-        ],
-        "evolves_into": [
-            "cetitan"
-        ],
-        "capture_rate": 150,
-        "is_legendary": false
-    },
-    "975": {
-        "name": "cetitan",
-        "types": [
-            "ice"
-        ],
-        "evolves_into": [],
-        "capture_rate": 50,
-        "is_legendary": false
-    },
-    "976": {
-        "name": "veluza",
-        "types": [
-            "water",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 100,
-        "is_legendary": false
-    },
-    "977": {
-        "name": "dondozo",
-        "types": [
-            "water"
-        ],
-        "evolves_into": [],
-        "capture_rate": 25,
-        "is_legendary": false
-    },
-    "978": {
-        "name": "tatsugiri-curly",
-        "types": [
-            "dragon",
-            "water"
-        ],
-        "evolves_into": [],
-        "capture_rate": 100,
-        "is_legendary": false
-    },
-    "979": {
-        "name": "annihilape",
-        "types": [
-            "fighting",
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "980": {
-        "name": "clodsire",
-        "types": [
-            "poison",
-            "ground"
-        ],
-        "evolves_into": [],
-        "capture_rate": 90,
-        "is_legendary": false
-    },
-    "981": {
-        "name": "farigiraf",
-        "types": [
-            "normal",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "982": {
-        "name": "dudunsparce-two-segment",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "983": {
-        "name": "kingambit",
-        "types": [
-            "dark",
-            "steel"
-        ],
-        "evolves_into": [],
-        "capture_rate": 25,
-        "is_legendary": false
-    },
-    "984": {
-        "name": "great-tusk",
-        "types": [
-            "ground",
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "985": {
-        "name": "scream-tail",
-        "types": [
-            "fairy",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 50,
-        "is_legendary": false
-    },
-    "986": {
-        "name": "brute-bonnet",
-        "types": [
-            "grass",
-            "dark"
-        ],
-        "evolves_into": [],
-        "capture_rate": 50,
-        "is_legendary": false
-    },
-    "987": {
-        "name": "flutter-mane",
-        "types": [
-            "ghost",
-            "fairy"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "988": {
-        "name": "slither-wing",
-        "types": [
-            "bug",
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "989": {
-        "name": "sandy-shocks",
-        "types": [
-            "electric",
-            "ground"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "990": {
-        "name": "iron-treads",
-        "types": [
-            "ground",
-            "steel"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "991": {
-        "name": "iron-bundle",
-        "types": [
-            "ice",
-            "water"
-        ],
-        "evolves_into": [],
-        "capture_rate": 50,
-        "is_legendary": false
-    },
-    "992": {
-        "name": "iron-hands",
-        "types": [
-            "fighting",
-            "electric"
-        ],
-        "evolves_into": [],
-        "capture_rate": 50,
-        "is_legendary": false
-    },
-    "993": {
-        "name": "iron-jugulis",
-        "types": [
-            "dark",
-            "flying"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "994": {
-        "name": "iron-moth",
-        "types": [
-            "fire",
-            "poison"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "995": {
-        "name": "iron-thorns",
-        "types": [
-            "rock",
-            "electric"
-        ],
-        "evolves_into": [],
-        "capture_rate": 30,
-        "is_legendary": false
-    },
-    "996": {
-        "name": "frigibax",
-        "types": [
-            "dragon",
-            "ice"
-        ],
-        "evolves_into": [
-            "arctibax"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "997": {
-        "name": "arctibax",
-        "types": [
-            "dragon",
-            "ice"
-        ],
-        "evolves_into": [
-            "baxcalibur"
-        ],
-        "capture_rate": 25,
-        "is_legendary": false
-    },
-    "998": {
-        "name": "baxcalibur",
-        "types": [
-            "dragon",
-            "ice"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": false
-    },
-    "999": {
-        "name": "gimmighoul",
-        "types": [
-            "ghost"
-        ],
-        "evolves_into": [
-            "gholdengo"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "1000": {
-        "name": "gholdengo",
-        "types": [
-            "steel",
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "1001": {
-        "name": "wo-chien",
-        "types": [
-            "dark",
-            "grass"
-        ],
-        "evolves_into": [],
-        "capture_rate": 6,
-        "is_legendary": true
-    },
-    "1002": {
-        "name": "chien-pao",
-        "types": [
-            "dark",
-            "ice"
-        ],
-        "evolves_into": [],
-        "capture_rate": 6,
-        "is_legendary": true
-    },
-    "1003": {
-        "name": "ting-lu",
-        "types": [
-            "dark",
-            "ground"
-        ],
-        "evolves_into": [],
-        "capture_rate": 6,
-        "is_legendary": true
-    },
-    "1004": {
-        "name": "chi-yu",
-        "types": [
-            "dark",
-            "fire"
-        ],
-        "evolves_into": [],
-        "capture_rate": 6,
-        "is_legendary": true
-    },
-    "1005": {
-        "name": "roaring-moon",
-        "types": [
-            "dragon",
-            "dark"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": false
-    },
-    "1006": {
-        "name": "iron-valiant",
-        "types": [
-            "fairy",
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": false
-    },
-    "1007": {
-        "name": "koraidon",
-        "types": [
-            "fighting",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "1008": {
-        "name": "miraidon",
-        "types": [
-            "electric",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "1009": {
-        "name": "walking-wake",
-        "types": [
-            "water",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 5,
-        "is_legendary": false
-    },
-    "1010": {
-        "name": "iron-leaves",
-        "types": [
-            "grass",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 5,
-        "is_legendary": false
-    },
-    "1011": {
-        "name": "dipplin",
-        "types": [
-            "grass",
-            "dragon"
-        ],
-        "evolves_into": [
-            "hydrapple"
-        ],
-        "capture_rate": 45,
-        "is_legendary": false
-    },
-    "1012": {
-        "name": "poltchageist",
-        "types": [
-            "grass",
-            "ghost"
-        ],
-        "evolves_into": [
-            "sinistcha"
-        ],
-        "capture_rate": 120,
-        "is_legendary": false
-    },
-    "1013": {
-        "name": "sinistcha",
-        "types": [
-            "grass",
-            "ghost"
-        ],
-        "evolves_into": [],
-        "capture_rate": 60,
-        "is_legendary": false
-    },
-    "1014": {
-        "name": "okidogi",
-        "types": [
-            "poison",
-            "fighting"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "1015": {
-        "name": "munkidori",
-        "types": [
-            "poison",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "1016": {
-        "name": "fezandipiti",
-        "types": [
-            "poison",
-            "fairy"
-        ],
-        "evolves_into": [],
-        "capture_rate": 3,
-        "is_legendary": true
-    },
-    "1017": {
-        "name": "ogerpon",
-        "types": [
-            "grass"
-        ],
-        "evolves_into": [],
-        "capture_rate": 5,
-        "is_legendary": true
-    },
-    "1018": {
-        "name": "archaludon",
-        "types": [
-            "steel",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": false
-    },
-    "1019": {
-        "name": "hydrapple",
-        "types": [
-            "grass",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": false
-    },
-    "1020": {
-        "name": "gouging-fire",
-        "types": [
-            "fire",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": false
-    },
-    "1021": {
-        "name": "raging-bolt",
-        "types": [
-            "electric",
-            "dragon"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": false
-    },
-    "1022": {
-        "name": "iron-boulder",
-        "types": [
-            "rock",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": false
-    },
-    "1023": {
-        "name": "iron-crown",
-        "types": [
-            "steel",
-            "psychic"
-        ],
-        "evolves_into": [],
-        "capture_rate": 10,
-        "is_legendary": false
-    },
-    "1024": {
-        "name": "terapagos",
-        "types": [
-            "normal"
-        ],
-        "evolves_into": [],
-        "capture_rate": 255,
-        "is_legendary": true
-    },
-    "1025": {
-        "name": "pecharunt",
-        "types": [
-            "poison",
-            "ghost"
         ],
         "evolves_into": [],
         "capture_rate": 3,
