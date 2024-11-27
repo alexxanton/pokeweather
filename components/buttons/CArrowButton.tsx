@@ -2,7 +2,7 @@ import { View, StyleSheet } from 'react-native';
 import { CButton } from './CButton';
 import ArrowbackButton from '@/assets/images/buttons/ArrowbackButton';
 
-export function BackButton() {
+export function CArrowButton() {
   return (
     <View style={styles.container}>
       <CButton href="..">

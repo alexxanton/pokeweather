@@ -4,13 +4,13 @@ import { CContainer } from "@/components/containers/CContainer";
 import { CButton } from "@/components/buttons/CButton";
 
 import TrophyButton from '@/assets/images/buttons/TrophyButton';
-import { BackButton } from "@/components/buttons/BackButton";
+import { CArrowButton } from "@/components/buttons/CArrowButton";
 import { CText } from "@/components/text/CText";
 
 export default function Team() {
   return (
     <CBackground>
-      <BackButton />
+      <CArrowButton />
       <View style={styles.container}>
       </View>
       <CContainer>

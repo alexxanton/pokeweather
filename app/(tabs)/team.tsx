@@ -2,7 +2,7 @@ import { StyleSheet, View } from "react-native";
 import { CBackground } from '@/components/containers/CBackground';
 import { CContainer } from "@/components/containers/CContainer";
 import { CButton } from "@/components/buttons/CButton";
-import { BackButton } from "@/components/buttons/BackButton";
+import { CArrowButton } from "@/components/buttons/CArrowButton";
 import { CText } from "@/components/text/CText";
 import { CPokemonButton } from "@/components/buttons/CPokemonButton";
 import { CScrollPanel } from "@/components/containers/CScrollPanel";
@@ -10,7 +10,6 @@ import { useData } from "@/components/CDataProvider";
 import { CLabel } from "@/components/text/CLabel";
 import { useEffect, useState } from "react";
 import { uri } from '@/constants/URI';
-import { lazy } from "react";
 import axios from "axios";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
@@ -33,7 +32,7 @@ export default function Team() {
 
   return (
     <CBackground>
-      <BackButton />
+      <CArrowButton />
       <View style={styles.container}>
         <CLabel title="Team">
           <CContainer style={styles.team}>

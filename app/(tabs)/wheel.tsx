@@ -4,7 +4,7 @@ import { CText } from '@/components/text/CText';
 import { View } from 'react-native';
 import { CContainer } from '@/components/containers/CContainer';
 import { CButton } from '@/components/buttons/CButton';
-import { BackButton } from '@/components/buttons/BackButton';
+import { CArrowButton } from '@/components/buttons/CArrowButton';
 import { useState } from 'react';
 import { useData } from '@/components/CDataProvider';
 
@@ -23,7 +23,7 @@ export default function Wheel() {
   return (
     <CBackground>
 
-      <BackButton />
+      <CArrowButton />
       <View style={styles.container}>
         <CButton onPress={spin}>
           <WheelSVG width={300} height={300} />

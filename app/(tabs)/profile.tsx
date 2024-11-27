@@ -2,7 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import { CBackground } from '@/components/containers/CBackground';
 import { CContainer } from '@/components/containers/CContainer';
 import { CButton } from '@/components/buttons/CButton';
-import { BackButton } from '@/components/buttons/BackButton';
+import { CArrowButton } from '@/components/buttons/CArrowButton';
 import { useEffect, useState } from 'react';
 import { CText } from '@/components/text/CText';
 import { uri } from '@/constants/URI';
@@ -24,7 +24,7 @@ export default function Team() {
 
   return (
     <CBackground>
-      <BackButton />
+      <CArrowButton />
       <View style={styles.container}>
         {users ? users.map((user, idx) => {
           return <CText size={45} key={idx}>{user.mail}</CText>
