@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
-import { CText } from '@/components/CText';
-import { CButton } from '@/components/CButton';
+import { CText } from '@/components/text/CText';
+import { CButton } from '@/components/buttons/CButton';
 import { useEffect, useState } from 'react';
 import { useData } from './CDataProvider';
 import * as Location from 'expo-location';

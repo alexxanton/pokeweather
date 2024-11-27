@@ -1,6 +1,6 @@
-import { CBackground } from '@/components/CBackground';
-import { CButton } from '@/components/CButton';
-import { CContainer } from '@/components/CContainer';
+import { CBackground } from '@/components/containers/CBackground';
+import { CButton } from '@/components/buttons/CButton';
+import { CContainer } from '@/components/containers/CContainer';
 import { CMainScreen } from '@/components/CMainScreen';
 
 import WheelButton from '@/assets/images/buttons/WheelButton';

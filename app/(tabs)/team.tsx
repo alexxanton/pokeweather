@@ -1,15 +1,16 @@
 import { StyleSheet, View } from "react-native";
-import { CBackground } from '@/components/CBackground';
-import { CContainer } from "@/components/CContainer";
-import { CButton } from "@/components/CButton";
-import { BackButton } from "@/components/navigation/BackButton";
-import { CText } from "@/components/CText";
-import { CPokemonButton } from "@/components/CPokemonButton";
-import { CScrollPanel } from "@/components/CScrollPanel";
+import { CBackground } from '@/components/containers/CBackground';
+import { CContainer } from "@/components/containers/CContainer";
+import { CButton } from "@/components/buttons/CButton";
+import { BackButton } from "@/components/buttons/BackButton";
+import { CText } from "@/components/text/CText";
+import { CPokemonButton } from "@/components/buttons/CPokemonButton";
+import { CScrollPanel } from "@/components/containers/CScrollPanel";
 import { useData } from "@/components/CDataProvider";
-import { CLabel } from "@/components/CLabel";
+import { CLabel } from "@/components/text/CLabel";
 import { useEffect, useState } from "react";
 import { uri } from '@/constants/URI';
+import { lazy } from "react";
 import axios from "axios";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
@@ -26,7 +27,7 @@ export default function Team() {
 
   useEffect(() => {
     if (pokemon.length < 0) {
-    }
+    };
     fetchPokemon();
   }, []);
 
@@ -38,14 +39,12 @@ export default function Team() {
           <CContainer style={styles.team}>
           </CContainer>
         </CLabel>
-        <CLabel title="Caught">
-          <CScrollPanel style={styles.scroll}>
+        <CLabel title="Caught" style={styles.scroll}>
+          <CScrollPanel>
             <View style={styles.grid}>
               {pokemon.length > 0 ? (
-                pokemon.map((pkmn, key) => {
-                  return (
-                    <CPokemonButton id={pkmn.specie} key={key} />
-                  )
+                pokemon.map((pkmn, idx) => {
+                  return <CPokemonButton specie={pkmn.specie} key={idx} />
                 })
               ) : (
                 <CText size={50}>{uri}</CText>
@@ -72,17 +71,18 @@ const styles = StyleSheet.create({
     paddingTop: "20%",
   },
   team: {
-    padding:40,
-    marginBottom: 20
+    padding: 40,
+    marginBottom: 30
   },
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: "center",
-    marginBottom: 100,
+    marginBottom: 30,
     gap: 10
   },
   scroll: {
+    flex: 1,
     marginBottom: 20
   },
 });

@@ -1,8 +1,8 @@
 import Slider from '@react-native-community/slider';
 import { useData } from '../CDataProvider';
 import { StyleSheet, View } from 'react-native';
-import { CText } from '../CText';
-import { CButton } from '../CButton';
+import { CText } from '../text/CText';
+import { CButton } from '../buttons/CButton';
 import { useState } from 'react';
 
 export function TestingPanel() {

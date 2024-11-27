@@ -1,7 +1,7 @@
 import { useEffect, useState, type PropsWithChildren } from "react";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
 import {ImageBackground, StyleSheet, View } from "react-native";
-import { useData } from "./CDataProvider";
+import { useData } from "../CDataProvider";
 
 
 export function CBackground({ children }: PropsWithChildren) {

@@ -1,10 +1,10 @@
 import { StyleSheet, View } from 'react-native';
-import { CBackground } from '@/components/CBackground';
-import { CContainer } from '@/components/CContainer';
-import { CButton } from '@/components/CButton';
-import { BackButton } from '@/components/navigation/BackButton';
+import { CBackground } from '@/components/containers/CBackground';
+import { CContainer } from '@/components/containers/CContainer';
+import { CButton } from '@/components/buttons/CButton';
+import { BackButton } from '@/components/buttons/BackButton';
 import { useEffect, useState } from 'react';
-import { CText } from '@/components/CText';
+import { CText } from '@/components/text/CText';
 import { uri } from '@/constants/URI';
 import axios from 'axios';
 

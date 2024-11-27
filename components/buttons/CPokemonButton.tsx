@@ -1,15 +1,14 @@
 import { Image } from "expo-image";
-import { StyleSheet, Pressable, Vibration } from "react-native";
+import { StyleSheet, Pressable, Vibration, type ViewProps } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
 
-type Props = {
-  id: number,
-  key: number
+type Props = ViewProps & {
+  specie: number,
 };
 
 
-export function CPokemonButton({id, key}: Props) {
-  const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/${id}.png`;
+export function CPokemonButton({specie, ...rest}: Props) {
+  const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/${specie}.png`;
   const scale = useSharedValue(1);
 
   const animStyle = useAnimatedStyle(() => ({
@@ -29,7 +28,7 @@ export function CPokemonButton({id, key}: Props) {
   }
 
   return (
-    <Animated.View style={[styles.container, animStyle]} key={key}>
+    <Animated.View style={[styles.container, animStyle]} {...rest}>
       <Image
         style={styles.pokemon}
         source={url}
@@ -37,7 +36,6 @@ export function CPokemonButton({id, key}: Props) {
       />
       <Pressable
         style={styles.button}
-        key={key}
         onPress={handlePress}
         onPressIn={scaleGrow}
         onPressOut={scaleShrink}
@@ -50,7 +48,7 @@ const styles = StyleSheet.create({
   container: {
     height: 30,
     width: "15%",
-    marginBottom: 30
+    marginBottom: 30,
     // backgroundColor:"black",
   },
   button: {
