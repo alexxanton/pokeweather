@@ -1,5 +1,5 @@
-{
-    "1": {
+[
+    {
         "name": "bulbasaur",
         "types": [
             "grass",
@@ -11,7 +11,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "2": {
+    {
         "name": "ivysaur",
         "types": [
             "grass",
@@ -23,7 +23,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "3": {
+    {
         "name": "venusaur",
         "types": [
             "grass",
@@ -33,7 +33,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "4": {
+    {
         "name": "charmander",
         "types": [
             "fire"
@@ -44,7 +44,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "5": {
+    {
         "name": "charmeleon",
         "types": [
             "fire"
@@ -55,7 +55,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "6": {
+    {
         "name": "charizard",
         "types": [
             "fire",
@@ -65,7 +65,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "7": {
+    {
         "name": "squirtle",
         "types": [
             "water"
@@ -76,7 +76,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "8": {
+    {
         "name": "wartortle",
         "types": [
             "water"
@@ -87,7 +87,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "9": {
+    {
         "name": "blastoise",
         "types": [
             "water"
@@ -96,7 +96,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "10": {
+    {
         "name": "caterpie",
         "types": [
             "bug"
@@ -107,7 +107,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "11": {
+    {
         "name": "metapod",
         "types": [
             "bug"
@@ -118,7 +118,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "12": {
+    {
         "name": "butterfree",
         "types": [
             "bug",
@@ -128,7 +128,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "13": {
+    {
         "name": "weedle",
         "types": [
             "bug",
@@ -140,7 +140,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "14": {
+    {
         "name": "kakuna",
         "types": [
             "bug",
@@ -152,7 +152,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "15": {
+    {
         "name": "beedrill",
         "types": [
             "bug",
@@ -162,7 +162,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "16": {
+    {
         "name": "pidgey",
         "types": [
             "normal",
@@ -174,7 +174,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "17": {
+    {
         "name": "pidgeotto",
         "types": [
             "normal",
@@ -186,7 +186,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "18": {
+    {
         "name": "pidgeot",
         "types": [
             "normal",
@@ -196,7 +196,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "19": {
+    {
         "name": "rattata",
         "types": [
             "normal"
@@ -207,7 +207,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "20": {
+    {
         "name": "raticate",
         "types": [
             "normal"
@@ -216,7 +216,7 @@
         "capture_rate": 127,
         "is_legendary": false
     },
-    "21": {
+    {
         "name": "spearow",
         "types": [
             "normal",
@@ -228,7 +228,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "22": {
+    {
         "name": "fearow",
         "types": [
             "normal",
@@ -238,7 +238,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "23": {
+    {
         "name": "ekans",
         "types": [
             "poison"
@@ -249,7 +249,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "24": {
+    {
         "name": "arbok",
         "types": [
             "poison"
@@ -258,7 +258,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "25": {
+    {
         "name": "pikachu",
         "types": [
             "electric"
@@ -269,7 +269,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "26": {
+    {
         "name": "raichu",
         "types": [
             "electric"
@@ -278,7 +278,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "27": {
+    {
         "name": "sandshrew",
         "types": [
             "ground"
@@ -289,7 +289,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "28": {
+    {
         "name": "sandslash",
         "types": [
             "ground"
@@ -298,7 +298,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "29": {
+    {
         "name": "nidoran-f",
         "types": [
             "poison"
@@ -309,7 +309,7 @@
         "capture_rate": 235,
         "is_legendary": false
     },
-    "30": {
+    {
         "name": "nidorina",
         "types": [
             "poison"
@@ -320,7 +320,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "31": {
+    {
         "name": "nidoqueen",
         "types": [
             "poison",
@@ -330,7 +330,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "32": {
+    {
         "name": "nidoran-m",
         "types": [
             "poison"
@@ -341,7 +341,7 @@
         "capture_rate": 235,
         "is_legendary": false
     },
-    "33": {
+    {
         "name": "nidorino",
         "types": [
             "poison"
@@ -352,7 +352,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "34": {
+    {
         "name": "nidoking",
         "types": [
             "poison",
@@ -362,7 +362,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "35": {
+    {
         "name": "clefairy",
         "types": [
             "fairy"
@@ -373,7 +373,7 @@
         "capture_rate": 150,
         "is_legendary": false
     },
-    "36": {
+    {
         "name": "clefable",
         "types": [
             "fairy"
@@ -382,7 +382,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "37": {
+    {
         "name": "vulpix",
         "types": [
             "fire"
@@ -393,7 +393,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "38": {
+    {
         "name": "ninetales",
         "types": [
             "fire"
@@ -402,7 +402,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "39": {
+    {
         "name": "jigglypuff",
         "types": [
             "normal",
@@ -414,7 +414,7 @@
         "capture_rate": 170,
         "is_legendary": false
     },
-    "40": {
+    {
         "name": "wigglytuff",
         "types": [
             "normal",
@@ -424,7 +424,7 @@
         "capture_rate": 50,
         "is_legendary": false
     },
-    "41": {
+    {
         "name": "zubat",
         "types": [
             "poison",
@@ -436,7 +436,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "42": {
+    {
         "name": "golbat",
         "types": [
             "poison",
@@ -448,7 +448,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "43": {
+    {
         "name": "oddish",
         "types": [
             "grass",
@@ -460,7 +460,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "44": {
+    {
         "name": "gloom",
         "types": [
             "grass",
@@ -473,7 +473,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "45": {
+    {
         "name": "vileplume",
         "types": [
             "grass",
@@ -483,7 +483,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "46": {
+    {
         "name": "paras",
         "types": [
             "bug",
@@ -495,7 +495,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "47": {
+    {
         "name": "parasect",
         "types": [
             "bug",
@@ -505,7 +505,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "48": {
+    {
         "name": "venonat",
         "types": [
             "bug",
@@ -517,7 +517,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "49": {
+    {
         "name": "venomoth",
         "types": [
             "bug",
@@ -527,7 +527,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "50": {
+    {
         "name": "diglett",
         "types": [
             "ground"
@@ -538,7 +538,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "51": {
+    {
         "name": "dugtrio",
         "types": [
             "ground"
@@ -547,7 +547,7 @@
         "capture_rate": 50,
         "is_legendary": false
     },
-    "52": {
+    {
         "name": "meowth",
         "types": [
             "normal"
@@ -559,7 +559,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "53": {
+    {
         "name": "persian",
         "types": [
             "normal"
@@ -568,7 +568,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "54": {
+    {
         "name": "psyduck",
         "types": [
             "water"
@@ -579,7 +579,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "55": {
+    {
         "name": "golduck",
         "types": [
             "water"
@@ -588,7 +588,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "56": {
+    {
         "name": "mankey",
         "types": [
             "fighting"
@@ -599,7 +599,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "57": {
+    {
         "name": "primeape",
         "types": [
             "fighting"
@@ -610,7 +610,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "58": {
+    {
         "name": "growlithe",
         "types": [
             "fire"
@@ -621,7 +621,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "59": {
+    {
         "name": "arcanine",
         "types": [
             "fire"
@@ -630,7 +630,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "60": {
+    {
         "name": "poliwag",
         "types": [
             "water"
@@ -641,7 +641,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "61": {
+    {
         "name": "poliwhirl",
         "types": [
             "water"
@@ -653,7 +653,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "62": {
+    {
         "name": "poliwrath",
         "types": [
             "water",
@@ -663,7 +663,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "63": {
+    {
         "name": "abra",
         "types": [
             "psychic"
@@ -674,7 +674,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "64": {
+    {
         "name": "kadabra",
         "types": [
             "psychic"
@@ -685,7 +685,7 @@
         "capture_rate": 100,
         "is_legendary": false
     },
-    "65": {
+    {
         "name": "alakazam",
         "types": [
             "psychic"
@@ -694,7 +694,7 @@
         "capture_rate": 50,
         "is_legendary": false
     },
-    "66": {
+    {
         "name": "machop",
         "types": [
             "fighting"
@@ -705,7 +705,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "67": {
+    {
         "name": "machoke",
         "types": [
             "fighting"
@@ -716,7 +716,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "68": {
+    {
         "name": "machamp",
         "types": [
             "fighting"
@@ -725,7 +725,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "69": {
+    {
         "name": "bellsprout",
         "types": [
             "grass",
@@ -737,7 +737,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "70": {
+    {
         "name": "weepinbell",
         "types": [
             "grass",
@@ -749,7 +749,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "71": {
+    {
         "name": "victreebel",
         "types": [
             "grass",
@@ -759,7 +759,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "72": {
+    {
         "name": "tentacool",
         "types": [
             "water",
@@ -771,7 +771,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "73": {
+    {
         "name": "tentacruel",
         "types": [
             "water",
@@ -781,7 +781,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "74": {
+    {
         "name": "geodude",
         "types": [
             "rock",
@@ -793,7 +793,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "75": {
+    {
         "name": "graveler",
         "types": [
             "rock",
@@ -805,7 +805,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "76": {
+    {
         "name": "golem",
         "types": [
             "rock",
@@ -815,7 +815,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "77": {
+    {
         "name": "ponyta",
         "types": [
             "fire"
@@ -826,7 +826,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "78": {
+    {
         "name": "rapidash",
         "types": [
             "fire"
@@ -835,7 +835,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "79": {
+    {
         "name": "slowpoke",
         "types": [
             "water",
@@ -848,7 +848,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "80": {
+    {
         "name": "slowbro",
         "types": [
             "water",
@@ -858,7 +858,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "81": {
+    {
         "name": "magnemite",
         "types": [
             "electric",
@@ -870,7 +870,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "82": {
+    {
         "name": "magneton",
         "types": [
             "electric",
@@ -882,7 +882,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "83": {
+    {
         "name": "farfetchd",
         "types": [
             "normal",
@@ -894,7 +894,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "84": {
+    {
         "name": "doduo",
         "types": [
             "normal",
@@ -906,7 +906,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "85": {
+    {
         "name": "dodrio",
         "types": [
             "normal",
@@ -916,7 +916,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "86": {
+    {
         "name": "seel",
         "types": [
             "water"
@@ -927,7 +927,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "87": {
+    {
         "name": "dewgong",
         "types": [
             "water",
@@ -937,7 +937,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "88": {
+    {
         "name": "grimer",
         "types": [
             "poison"
@@ -948,7 +948,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "89": {
+    {
         "name": "muk",
         "types": [
             "poison"
@@ -957,7 +957,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "90": {
+    {
         "name": "shellder",
         "types": [
             "water"
@@ -968,7 +968,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "91": {
+    {
         "name": "cloyster",
         "types": [
             "water",
@@ -978,7 +978,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "92": {
+    {
         "name": "gastly",
         "types": [
             "ghost",
@@ -990,7 +990,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "93": {
+    {
         "name": "haunter",
         "types": [
             "ghost",
@@ -1002,7 +1002,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "94": {
+    {
         "name": "gengar",
         "types": [
             "ghost",
@@ -1012,7 +1012,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "95": {
+    {
         "name": "onix",
         "types": [
             "rock",
@@ -1024,7 +1024,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "96": {
+    {
         "name": "drowzee",
         "types": [
             "psychic"
@@ -1035,7 +1035,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "97": {
+    {
         "name": "hypno",
         "types": [
             "psychic"
@@ -1044,7 +1044,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "98": {
+    {
         "name": "krabby",
         "types": [
             "water"
@@ -1055,7 +1055,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "99": {
+    {
         "name": "kingler",
         "types": [
             "water"
@@ -1064,7 +1064,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "100": {
+    {
         "name": "voltorb",
         "types": [
             "electric"
@@ -1075,7 +1075,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "101": {
+    {
         "name": "electrode",
         "types": [
             "electric"
@@ -1084,7 +1084,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "102": {
+    {
         "name": "exeggcute",
         "types": [
             "grass",
@@ -1096,7 +1096,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "103": {
+    {
         "name": "exeggutor",
         "types": [
             "grass",
@@ -1106,7 +1106,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "104": {
+    {
         "name": "cubone",
         "types": [
             "ground"
@@ -1117,7 +1117,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "105": {
+    {
         "name": "marowak",
         "types": [
             "ground"
@@ -1126,7 +1126,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "106": {
+    {
         "name": "hitmonlee",
         "types": [
             "fighting"
@@ -1135,7 +1135,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "107": {
+    {
         "name": "hitmonchan",
         "types": [
             "fighting"
@@ -1144,7 +1144,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "108": {
+    {
         "name": "lickitung",
         "types": [
             "normal"
@@ -1155,7 +1155,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "109": {
+    {
         "name": "koffing",
         "types": [
             "poison"
@@ -1166,7 +1166,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "110": {
+    {
         "name": "weezing",
         "types": [
             "poison"
@@ -1175,7 +1175,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "111": {
+    {
         "name": "rhyhorn",
         "types": [
             "ground",
@@ -1187,7 +1187,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "112": {
+    {
         "name": "rhydon",
         "types": [
             "ground",
@@ -1199,7 +1199,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "113": {
+    {
         "name": "chansey",
         "types": [
             "normal"
@@ -1210,7 +1210,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "114": {
+    {
         "name": "tangela",
         "types": [
             "grass"
@@ -1221,7 +1221,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "115": {
+    {
         "name": "kangaskhan",
         "types": [
             "normal"
@@ -1230,7 +1230,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "116": {
+    {
         "name": "horsea",
         "types": [
             "water"
@@ -1241,7 +1241,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "117": {
+    {
         "name": "seadra",
         "types": [
             "water"
@@ -1252,7 +1252,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "118": {
+    {
         "name": "goldeen",
         "types": [
             "water"
@@ -1263,7 +1263,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "119": {
+    {
         "name": "seaking",
         "types": [
             "water"
@@ -1272,7 +1272,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "120": {
+    {
         "name": "staryu",
         "types": [
             "water"
@@ -1283,7 +1283,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "121": {
+    {
         "name": "starmie",
         "types": [
             "water",
@@ -1293,7 +1293,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "122": {
+    {
         "name": "mr-mime",
         "types": [
             "psychic",
@@ -1305,7 +1305,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "123": {
+    {
         "name": "scyther",
         "types": [
             "bug",
@@ -1318,7 +1318,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "124": {
+    {
         "name": "jynx",
         "types": [
             "ice",
@@ -1328,7 +1328,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "125": {
+    {
         "name": "electabuzz",
         "types": [
             "electric"
@@ -1339,7 +1339,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "126": {
+    {
         "name": "magmar",
         "types": [
             "fire"
@@ -1350,7 +1350,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "127": {
+    {
         "name": "pinsir",
         "types": [
             "bug"
@@ -1359,7 +1359,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "128": {
+    {
         "name": "tauros",
         "types": [
             "normal"
@@ -1368,7 +1368,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "129": {
+    {
         "name": "magikarp",
         "types": [
             "water"
@@ -1379,7 +1379,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "130": {
+    {
         "name": "gyarados",
         "types": [
             "water",
@@ -1389,7 +1389,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "131": {
+    {
         "name": "lapras",
         "types": [
             "water",
@@ -1399,7 +1399,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "132": {
+    {
         "name": "ditto",
         "types": [
             "normal"
@@ -1408,7 +1408,7 @@
         "capture_rate": 35,
         "is_legendary": false
     },
-    "133": {
+    {
         "name": "eevee",
         "types": [
             "normal"
@@ -1426,7 +1426,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "134": {
+    {
         "name": "vaporeon",
         "types": [
             "water"
@@ -1435,7 +1435,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "135": {
+    {
         "name": "jolteon",
         "types": [
             "electric"
@@ -1444,7 +1444,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "136": {
+    {
         "name": "flareon",
         "types": [
             "fire"
@@ -1453,7 +1453,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "137": {
+    {
         "name": "porygon",
         "types": [
             "normal"
@@ -1464,7 +1464,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "138": {
+    {
         "name": "omanyte",
         "types": [
             "rock",
@@ -1476,7 +1476,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "139": {
+    {
         "name": "omastar",
         "types": [
             "rock",
@@ -1486,7 +1486,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "140": {
+    {
         "name": "kabuto",
         "types": [
             "rock",
@@ -1498,7 +1498,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "141": {
+    {
         "name": "kabutops",
         "types": [
             "rock",
@@ -1508,7 +1508,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "142": {
+    {
         "name": "aerodactyl",
         "types": [
             "rock",
@@ -1518,7 +1518,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "143": {
+    {
         "name": "snorlax",
         "types": [
             "normal"
@@ -1527,7 +1527,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "144": {
+    {
         "name": "articuno",
         "types": [
             "ice",
@@ -1537,7 +1537,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "145": {
+    {
         "name": "zapdos",
         "types": [
             "electric",
@@ -1547,7 +1547,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "146": {
+    {
         "name": "moltres",
         "types": [
             "fire",
@@ -1557,7 +1557,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "147": {
+    {
         "name": "dratini",
         "types": [
             "dragon"
@@ -1568,7 +1568,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "148": {
+    {
         "name": "dragonair",
         "types": [
             "dragon"
@@ -1579,7 +1579,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "149": {
+    {
         "name": "dragonite",
         "types": [
             "dragon",
@@ -1589,7 +1589,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "150": {
+    {
         "name": "mewtwo",
         "types": [
             "psychic"
@@ -1598,7 +1598,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "151": {
+    {
         "name": "mew",
         "types": [
             "psychic"
@@ -1607,7 +1607,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "152": {
+    {
         "name": "chikorita",
         "types": [
             "grass"
@@ -1618,7 +1618,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "153": {
+    {
         "name": "bayleef",
         "types": [
             "grass"
@@ -1629,7 +1629,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "154": {
+    {
         "name": "meganium",
         "types": [
             "grass"
@@ -1638,7 +1638,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "155": {
+    {
         "name": "cyndaquil",
         "types": [
             "fire"
@@ -1649,7 +1649,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "156": {
+    {
         "name": "quilava",
         "types": [
             "fire"
@@ -1660,7 +1660,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "157": {
+    {
         "name": "typhlosion",
         "types": [
             "fire"
@@ -1669,7 +1669,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "158": {
+    {
         "name": "totodile",
         "types": [
             "water"
@@ -1680,7 +1680,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "159": {
+    {
         "name": "croconaw",
         "types": [
             "water"
@@ -1691,7 +1691,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "160": {
+    {
         "name": "feraligatr",
         "types": [
             "water"
@@ -1700,7 +1700,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "161": {
+    {
         "name": "sentret",
         "types": [
             "normal"
@@ -1711,7 +1711,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "162": {
+    {
         "name": "furret",
         "types": [
             "normal"
@@ -1720,7 +1720,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "163": {
+    {
         "name": "hoothoot",
         "types": [
             "normal",
@@ -1732,7 +1732,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "164": {
+    {
         "name": "noctowl",
         "types": [
             "normal",
@@ -1742,7 +1742,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "165": {
+    {
         "name": "ledyba",
         "types": [
             "bug",
@@ -1754,7 +1754,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "166": {
+    {
         "name": "ledian",
         "types": [
             "bug",
@@ -1764,7 +1764,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "167": {
+    {
         "name": "spinarak",
         "types": [
             "bug",
@@ -1776,7 +1776,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "168": {
+    {
         "name": "ariados",
         "types": [
             "bug",
@@ -1786,7 +1786,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "169": {
+    {
         "name": "crobat",
         "types": [
             "poison",
@@ -1796,7 +1796,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "170": {
+    {
         "name": "chinchou",
         "types": [
             "water",
@@ -1808,7 +1808,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "171": {
+    {
         "name": "lanturn",
         "types": [
             "water",
@@ -1818,7 +1818,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "172": {
+    {
         "name": "pichu",
         "types": [
             "electric"
@@ -1829,7 +1829,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "173": {
+    {
         "name": "cleffa",
         "types": [
             "fairy"
@@ -1840,7 +1840,7 @@
         "capture_rate": 150,
         "is_legendary": false
     },
-    "174": {
+    {
         "name": "igglybuff",
         "types": [
             "normal",
@@ -1852,7 +1852,7 @@
         "capture_rate": 170,
         "is_legendary": false
     },
-    "175": {
+    {
         "name": "togepi",
         "types": [
             "fairy"
@@ -1863,7 +1863,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "176": {
+    {
         "name": "togetic",
         "types": [
             "fairy",
@@ -1875,7 +1875,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "177": {
+    {
         "name": "natu",
         "types": [
             "psychic",
@@ -1887,7 +1887,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "178": {
+    {
         "name": "xatu",
         "types": [
             "psychic",
@@ -1897,7 +1897,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "179": {
+    {
         "name": "mareep",
         "types": [
             "electric"
@@ -1908,7 +1908,7 @@
         "capture_rate": 235,
         "is_legendary": false
     },
-    "180": {
+    {
         "name": "flaaffy",
         "types": [
             "electric"
@@ -1919,7 +1919,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "181": {
+    {
         "name": "ampharos",
         "types": [
             "electric"
@@ -1928,7 +1928,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "182": {
+    {
         "name": "bellossom",
         "types": [
             "grass"
@@ -1937,7 +1937,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "183": {
+    {
         "name": "marill",
         "types": [
             "water",
@@ -1949,7 +1949,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "184": {
+    {
         "name": "azumarill",
         "types": [
             "water",
@@ -1959,7 +1959,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "185": {
+    {
         "name": "sudowoodo",
         "types": [
             "rock"
@@ -1968,7 +1968,7 @@
         "capture_rate": 65,
         "is_legendary": false
     },
-    "186": {
+    {
         "name": "politoed",
         "types": [
             "water"
@@ -1977,7 +1977,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "187": {
+    {
         "name": "hoppip",
         "types": [
             "grass",
@@ -1989,7 +1989,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "188": {
+    {
         "name": "skiploom",
         "types": [
             "grass",
@@ -2001,7 +2001,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "189": {
+    {
         "name": "jumpluff",
         "types": [
             "grass",
@@ -2011,7 +2011,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "190": {
+    {
         "name": "aipom",
         "types": [
             "normal"
@@ -2022,7 +2022,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "191": {
+    {
         "name": "sunkern",
         "types": [
             "grass"
@@ -2033,7 +2033,7 @@
         "capture_rate": 235,
         "is_legendary": false
     },
-    "192": {
+    {
         "name": "sunflora",
         "types": [
             "grass"
@@ -2042,7 +2042,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "193": {
+    {
         "name": "yanma",
         "types": [
             "bug",
@@ -2054,7 +2054,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "194": {
+    {
         "name": "wooper",
         "types": [
             "water",
@@ -2067,7 +2067,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "195": {
+    {
         "name": "quagsire",
         "types": [
             "water",
@@ -2077,7 +2077,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "196": {
+    {
         "name": "espeon",
         "types": [
             "psychic"
@@ -2086,7 +2086,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "197": {
+    {
         "name": "umbreon",
         "types": [
             "dark"
@@ -2095,7 +2095,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "198": {
+    {
         "name": "murkrow",
         "types": [
             "dark",
@@ -2107,7 +2107,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "199": {
+    {
         "name": "slowking",
         "types": [
             "water",
@@ -2117,7 +2117,7 @@
         "capture_rate": 70,
         "is_legendary": false
     },
-    "200": {
+    {
         "name": "misdreavus",
         "types": [
             "ghost"
@@ -2128,7 +2128,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "201": {
+    {
         "name": "unown",
         "types": [
             "psychic"
@@ -2137,7 +2137,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "202": {
+    {
         "name": "wobbuffet",
         "types": [
             "psychic"
@@ -2146,7 +2146,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "203": {
+    {
         "name": "girafarig",
         "types": [
             "normal",
@@ -2158,7 +2158,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "204": {
+    {
         "name": "pineco",
         "types": [
             "bug"
@@ -2169,7 +2169,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "205": {
+    {
         "name": "forretress",
         "types": [
             "bug",
@@ -2179,7 +2179,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "206": {
+    {
         "name": "dunsparce",
         "types": [
             "normal"
@@ -2190,7 +2190,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "207": {
+    {
         "name": "gligar",
         "types": [
             "ground",
@@ -2202,7 +2202,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "208": {
+    {
         "name": "steelix",
         "types": [
             "steel",
@@ -2212,7 +2212,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "209": {
+    {
         "name": "snubbull",
         "types": [
             "fairy"
@@ -2223,7 +2223,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "210": {
+    {
         "name": "granbull",
         "types": [
             "fairy"
@@ -2232,7 +2232,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "211": {
+    {
         "name": "qwilfish",
         "types": [
             "water",
@@ -2244,7 +2244,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "212": {
+    {
         "name": "scizor",
         "types": [
             "bug",
@@ -2254,7 +2254,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "213": {
+    {
         "name": "shuckle",
         "types": [
             "bug",
@@ -2264,7 +2264,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "214": {
+    {
         "name": "heracross",
         "types": [
             "bug",
@@ -2274,7 +2274,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "215": {
+    {
         "name": "sneasel",
         "types": [
             "dark",
@@ -2287,7 +2287,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "216": {
+    {
         "name": "teddiursa",
         "types": [
             "normal"
@@ -2298,7 +2298,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "217": {
+    {
         "name": "ursaring",
         "types": [
             "normal"
@@ -2309,7 +2309,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "218": {
+    {
         "name": "slugma",
         "types": [
             "fire"
@@ -2320,7 +2320,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "219": {
+    {
         "name": "magcargo",
         "types": [
             "fire",
@@ -2330,7 +2330,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "220": {
+    {
         "name": "swinub",
         "types": [
             "ice",
@@ -2342,7 +2342,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "221": {
+    {
         "name": "piloswine",
         "types": [
             "ice",
@@ -2354,7 +2354,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "222": {
+    {
         "name": "corsola",
         "types": [
             "water",
@@ -2366,7 +2366,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "223": {
+    {
         "name": "remoraid",
         "types": [
             "water"
@@ -2377,7 +2377,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "224": {
+    {
         "name": "octillery",
         "types": [
             "water"
@@ -2386,7 +2386,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "225": {
+    {
         "name": "delibird",
         "types": [
             "ice",
@@ -2396,7 +2396,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "226": {
+    {
         "name": "mantine",
         "types": [
             "water",
@@ -2406,7 +2406,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "227": {
+    {
         "name": "skarmory",
         "types": [
             "steel",
@@ -2416,7 +2416,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "228": {
+    {
         "name": "houndour",
         "types": [
             "dark",
@@ -2428,7 +2428,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "229": {
+    {
         "name": "houndoom",
         "types": [
             "dark",
@@ -2438,7 +2438,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "230": {
+    {
         "name": "kingdra",
         "types": [
             "water",
@@ -2448,7 +2448,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "231": {
+    {
         "name": "phanpy",
         "types": [
             "ground"
@@ -2459,7 +2459,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "232": {
+    {
         "name": "donphan",
         "types": [
             "ground"
@@ -2468,7 +2468,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "233": {
+    {
         "name": "porygon2",
         "types": [
             "normal"
@@ -2479,7 +2479,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "234": {
+    {
         "name": "stantler",
         "types": [
             "normal"
@@ -2490,7 +2490,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "235": {
+    {
         "name": "smeargle",
         "types": [
             "normal"
@@ -2499,7 +2499,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "236": {
+    {
         "name": "tyrogue",
         "types": [
             "fighting"
@@ -2512,7 +2512,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "237": {
+    {
         "name": "hitmontop",
         "types": [
             "fighting"
@@ -2521,7 +2521,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "238": {
+    {
         "name": "smoochum",
         "types": [
             "ice",
@@ -2533,7 +2533,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "239": {
+    {
         "name": "elekid",
         "types": [
             "electric"
@@ -2544,7 +2544,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "240": {
+    {
         "name": "magby",
         "types": [
             "fire"
@@ -2555,7 +2555,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "241": {
+    {
         "name": "miltank",
         "types": [
             "normal"
@@ -2564,7 +2564,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "242": {
+    {
         "name": "blissey",
         "types": [
             "normal"
@@ -2573,7 +2573,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "243": {
+    {
         "name": "raikou",
         "types": [
             "electric"
@@ -2582,7 +2582,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "244": {
+    {
         "name": "entei",
         "types": [
             "fire"
@@ -2591,7 +2591,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "245": {
+    {
         "name": "suicune",
         "types": [
             "water"
@@ -2600,7 +2600,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "246": {
+    {
         "name": "larvitar",
         "types": [
             "rock",
@@ -2612,7 +2612,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "247": {
+    {
         "name": "pupitar",
         "types": [
             "rock",
@@ -2624,7 +2624,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "248": {
+    {
         "name": "tyranitar",
         "types": [
             "rock",
@@ -2634,7 +2634,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "249": {
+    {
         "name": "lugia",
         "types": [
             "psychic",
@@ -2644,7 +2644,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "250": {
+    {
         "name": "ho-oh",
         "types": [
             "fire",
@@ -2654,7 +2654,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "251": {
+    {
         "name": "celebi",
         "types": [
             "psychic",
@@ -2664,7 +2664,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "252": {
+    {
         "name": "treecko",
         "types": [
             "grass"
@@ -2675,7 +2675,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "253": {
+    {
         "name": "grovyle",
         "types": [
             "grass"
@@ -2686,7 +2686,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "254": {
+    {
         "name": "sceptile",
         "types": [
             "grass"
@@ -2695,7 +2695,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "255": {
+    {
         "name": "torchic",
         "types": [
             "fire"
@@ -2706,7 +2706,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "256": {
+    {
         "name": "combusken",
         "types": [
             "fire",
@@ -2718,7 +2718,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "257": {
+    {
         "name": "blaziken",
         "types": [
             "fire",
@@ -2728,7 +2728,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "258": {
+    {
         "name": "mudkip",
         "types": [
             "water"
@@ -2739,7 +2739,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "259": {
+    {
         "name": "marshtomp",
         "types": [
             "water",
@@ -2751,7 +2751,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "260": {
+    {
         "name": "swampert",
         "types": [
             "water",
@@ -2761,7 +2761,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "261": {
+    {
         "name": "poochyena",
         "types": [
             "dark"
@@ -2772,7 +2772,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "262": {
+    {
         "name": "mightyena",
         "types": [
             "dark"
@@ -2781,7 +2781,7 @@
         "capture_rate": 127,
         "is_legendary": false
     },
-    "263": {
+    {
         "name": "zigzagoon",
         "types": [
             "normal"
@@ -2792,7 +2792,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "264": {
+    {
         "name": "linoone",
         "types": [
             "normal"
@@ -2803,7 +2803,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "265": {
+    {
         "name": "wurmple",
         "types": [
             "bug"
@@ -2815,7 +2815,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "266": {
+    {
         "name": "silcoon",
         "types": [
             "bug"
@@ -2826,7 +2826,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "267": {
+    {
         "name": "beautifly",
         "types": [
             "bug",
@@ -2836,7 +2836,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "268": {
+    {
         "name": "cascoon",
         "types": [
             "bug"
@@ -2847,7 +2847,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "269": {
+    {
         "name": "dustox",
         "types": [
             "bug",
@@ -2857,7 +2857,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "270": {
+    {
         "name": "lotad",
         "types": [
             "water",
@@ -2869,7 +2869,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "271": {
+    {
         "name": "lombre",
         "types": [
             "water",
@@ -2881,7 +2881,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "272": {
+    {
         "name": "ludicolo",
         "types": [
             "water",
@@ -2891,7 +2891,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "273": {
+    {
         "name": "seedot",
         "types": [
             "grass"
@@ -2902,7 +2902,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "274": {
+    {
         "name": "nuzleaf",
         "types": [
             "grass",
@@ -2914,7 +2914,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "275": {
+    {
         "name": "shiftry",
         "types": [
             "grass",
@@ -2924,7 +2924,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "276": {
+    {
         "name": "taillow",
         "types": [
             "normal",
@@ -2936,7 +2936,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "277": {
+    {
         "name": "swellow",
         "types": [
             "normal",
@@ -2946,7 +2946,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "278": {
+    {
         "name": "wingull",
         "types": [
             "water",
@@ -2958,7 +2958,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "279": {
+    {
         "name": "pelipper",
         "types": [
             "water",
@@ -2968,7 +2968,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "280": {
+    {
         "name": "ralts",
         "types": [
             "psychic",
@@ -2980,7 +2980,7 @@
         "capture_rate": 235,
         "is_legendary": false
     },
-    "281": {
+    {
         "name": "kirlia",
         "types": [
             "psychic",
@@ -2993,7 +2993,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "282": {
+    {
         "name": "gardevoir",
         "types": [
             "psychic",
@@ -3003,7 +3003,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "283": {
+    {
         "name": "surskit",
         "types": [
             "bug",
@@ -3015,7 +3015,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "284": {
+    {
         "name": "masquerain",
         "types": [
             "bug",
@@ -3025,7 +3025,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "285": {
+    {
         "name": "shroomish",
         "types": [
             "grass"
@@ -3036,7 +3036,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "286": {
+    {
         "name": "breloom",
         "types": [
             "grass",
@@ -3046,7 +3046,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "287": {
+    {
         "name": "slakoth",
         "types": [
             "normal"
@@ -3057,7 +3057,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "288": {
+    {
         "name": "vigoroth",
         "types": [
             "normal"
@@ -3068,7 +3068,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "289": {
+    {
         "name": "slaking",
         "types": [
             "normal"
@@ -3077,7 +3077,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "290": {
+    {
         "name": "nincada",
         "types": [
             "bug",
@@ -3090,7 +3090,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "291": {
+    {
         "name": "ninjask",
         "types": [
             "bug",
@@ -3100,7 +3100,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "292": {
+    {
         "name": "shedinja",
         "types": [
             "bug",
@@ -3110,7 +3110,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "293": {
+    {
         "name": "whismur",
         "types": [
             "normal"
@@ -3121,7 +3121,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "294": {
+    {
         "name": "loudred",
         "types": [
             "normal"
@@ -3132,7 +3132,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "295": {
+    {
         "name": "exploud",
         "types": [
             "normal"
@@ -3141,7 +3141,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "296": {
+    {
         "name": "makuhita",
         "types": [
             "fighting"
@@ -3152,7 +3152,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "297": {
+    {
         "name": "hariyama",
         "types": [
             "fighting"
@@ -3161,7 +3161,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "298": {
+    {
         "name": "azurill",
         "types": [
             "normal",
@@ -3173,7 +3173,7 @@
         "capture_rate": 150,
         "is_legendary": false
     },
-    "299": {
+    {
         "name": "nosepass",
         "types": [
             "rock"
@@ -3184,7 +3184,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "300": {
+    {
         "name": "skitty",
         "types": [
             "normal"
@@ -3195,7 +3195,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "301": {
+    {
         "name": "delcatty",
         "types": [
             "normal"
@@ -3204,7 +3204,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "302": {
+    {
         "name": "sableye",
         "types": [
             "dark",
@@ -3214,7 +3214,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "303": {
+    {
         "name": "mawile",
         "types": [
             "steel",
@@ -3224,7 +3224,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "304": {
+    {
         "name": "aron",
         "types": [
             "steel",
@@ -3236,7 +3236,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "305": {
+    {
         "name": "lairon",
         "types": [
             "steel",
@@ -3248,7 +3248,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "306": {
+    {
         "name": "aggron",
         "types": [
             "steel",
@@ -3258,7 +3258,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "307": {
+    {
         "name": "meditite",
         "types": [
             "fighting",
@@ -3270,7 +3270,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "308": {
+    {
         "name": "medicham",
         "types": [
             "fighting",
@@ -3280,7 +3280,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "309": {
+    {
         "name": "electrike",
         "types": [
             "electric"
@@ -3291,7 +3291,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "310": {
+    {
         "name": "manectric",
         "types": [
             "electric"
@@ -3300,7 +3300,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "311": {
+    {
         "name": "plusle",
         "types": [
             "electric"
@@ -3309,7 +3309,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "312": {
+    {
         "name": "minun",
         "types": [
             "electric"
@@ -3318,7 +3318,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "313": {
+    {
         "name": "volbeat",
         "types": [
             "bug"
@@ -3327,7 +3327,7 @@
         "capture_rate": 150,
         "is_legendary": false
     },
-    "314": {
+    {
         "name": "illumise",
         "types": [
             "bug"
@@ -3336,7 +3336,7 @@
         "capture_rate": 150,
         "is_legendary": false
     },
-    "315": {
+    {
         "name": "roselia",
         "types": [
             "grass",
@@ -3348,7 +3348,7 @@
         "capture_rate": 150,
         "is_legendary": false
     },
-    "316": {
+    {
         "name": "gulpin",
         "types": [
             "poison"
@@ -3359,7 +3359,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "317": {
+    {
         "name": "swalot",
         "types": [
             "poison"
@@ -3368,7 +3368,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "318": {
+    {
         "name": "carvanha",
         "types": [
             "water",
@@ -3380,7 +3380,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "319": {
+    {
         "name": "sharpedo",
         "types": [
             "water",
@@ -3390,7 +3390,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "320": {
+    {
         "name": "wailmer",
         "types": [
             "water"
@@ -3401,7 +3401,7 @@
         "capture_rate": 125,
         "is_legendary": false
     },
-    "321": {
+    {
         "name": "wailord",
         "types": [
             "water"
@@ -3410,7 +3410,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "322": {
+    {
         "name": "numel",
         "types": [
             "fire",
@@ -3422,7 +3422,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "323": {
+    {
         "name": "camerupt",
         "types": [
             "fire",
@@ -3432,7 +3432,7 @@
         "capture_rate": 150,
         "is_legendary": false
     },
-    "324": {
+    {
         "name": "torkoal",
         "types": [
             "fire"
@@ -3441,7 +3441,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "325": {
+    {
         "name": "spoink",
         "types": [
             "psychic"
@@ -3452,7 +3452,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "326": {
+    {
         "name": "grumpig",
         "types": [
             "psychic"
@@ -3461,7 +3461,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "327": {
+    {
         "name": "spinda",
         "types": [
             "normal"
@@ -3470,7 +3470,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "328": {
+    {
         "name": "trapinch",
         "types": [
             "ground"
@@ -3481,7 +3481,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "329": {
+    {
         "name": "vibrava",
         "types": [
             "ground",
@@ -3493,7 +3493,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "330": {
+    {
         "name": "flygon",
         "types": [
             "ground",
@@ -3503,7 +3503,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "331": {
+    {
         "name": "cacnea",
         "types": [
             "grass"
@@ -3514,7 +3514,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "332": {
+    {
         "name": "cacturne",
         "types": [
             "grass",
@@ -3524,7 +3524,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "333": {
+    {
         "name": "swablu",
         "types": [
             "normal",
@@ -3536,7 +3536,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "334": {
+    {
         "name": "altaria",
         "types": [
             "dragon",
@@ -3546,7 +3546,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "335": {
+    {
         "name": "zangoose",
         "types": [
             "normal"
@@ -3555,7 +3555,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "336": {
+    {
         "name": "seviper",
         "types": [
             "poison"
@@ -3564,7 +3564,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "337": {
+    {
         "name": "lunatone",
         "types": [
             "rock",
@@ -3574,7 +3574,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "338": {
+    {
         "name": "solrock",
         "types": [
             "rock",
@@ -3584,7 +3584,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "339": {
+    {
         "name": "barboach",
         "types": [
             "water",
@@ -3596,7 +3596,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "340": {
+    {
         "name": "whiscash",
         "types": [
             "water",
@@ -3606,7 +3606,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "341": {
+    {
         "name": "corphish",
         "types": [
             "water"
@@ -3617,7 +3617,7 @@
         "capture_rate": 205,
         "is_legendary": false
     },
-    "342": {
+    {
         "name": "crawdaunt",
         "types": [
             "water",
@@ -3627,7 +3627,7 @@
         "capture_rate": 155,
         "is_legendary": false
     },
-    "343": {
+    {
         "name": "baltoy",
         "types": [
             "ground",
@@ -3639,7 +3639,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "344": {
+    {
         "name": "claydol",
         "types": [
             "ground",
@@ -3649,7 +3649,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "345": {
+    {
         "name": "lileep",
         "types": [
             "rock",
@@ -3661,7 +3661,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "346": {
+    {
         "name": "cradily",
         "types": [
             "rock",
@@ -3671,7 +3671,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "347": {
+    {
         "name": "anorith",
         "types": [
             "rock",
@@ -3683,7 +3683,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "348": {
+    {
         "name": "armaldo",
         "types": [
             "rock",
@@ -3693,7 +3693,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "349": {
+    {
         "name": "feebas",
         "types": [
             "water"
@@ -3704,7 +3704,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "350": {
+    {
         "name": "milotic",
         "types": [
             "water"
@@ -3713,7 +3713,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "351": {
+    {
         "name": "castform",
         "types": [
             "normal"
@@ -3722,7 +3722,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "352": {
+    {
         "name": "kecleon",
         "types": [
             "normal"
@@ -3731,7 +3731,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "353": {
+    {
         "name": "shuppet",
         "types": [
             "ghost"
@@ -3742,7 +3742,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "354": {
+    {
         "name": "banette",
         "types": [
             "ghost"
@@ -3751,7 +3751,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "355": {
+    {
         "name": "duskull",
         "types": [
             "ghost"
@@ -3762,7 +3762,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "356": {
+    {
         "name": "dusclops",
         "types": [
             "ghost"
@@ -3773,7 +3773,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "357": {
+    {
         "name": "tropius",
         "types": [
             "grass",
@@ -3783,7 +3783,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "358": {
+    {
         "name": "chimecho",
         "types": [
             "psychic"
@@ -3792,7 +3792,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "359": {
+    {
         "name": "absol",
         "types": [
             "dark"
@@ -3801,7 +3801,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "360": {
+    {
         "name": "wynaut",
         "types": [
             "psychic"
@@ -3812,7 +3812,7 @@
         "capture_rate": 125,
         "is_legendary": false
     },
-    "361": {
+    {
         "name": "snorunt",
         "types": [
             "ice"
@@ -3824,7 +3824,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "362": {
+    {
         "name": "glalie",
         "types": [
             "ice"
@@ -3833,7 +3833,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "363": {
+    {
         "name": "spheal",
         "types": [
             "ice",
@@ -3845,7 +3845,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "364": {
+    {
         "name": "sealeo",
         "types": [
             "ice",
@@ -3857,7 +3857,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "365": {
+    {
         "name": "walrein",
         "types": [
             "ice",
@@ -3867,7 +3867,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "366": {
+    {
         "name": "clamperl",
         "types": [
             "water"
@@ -3879,7 +3879,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "367": {
+    {
         "name": "huntail",
         "types": [
             "water"
@@ -3888,7 +3888,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "368": {
+    {
         "name": "gorebyss",
         "types": [
             "water"
@@ -3897,7 +3897,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "369": {
+    {
         "name": "relicanth",
         "types": [
             "water",
@@ -3907,7 +3907,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "370": {
+    {
         "name": "luvdisc",
         "types": [
             "water"
@@ -3916,7 +3916,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "371": {
+    {
         "name": "bagon",
         "types": [
             "dragon"
@@ -3927,7 +3927,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "372": {
+    {
         "name": "shelgon",
         "types": [
             "dragon"
@@ -3938,7 +3938,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "373": {
+    {
         "name": "salamence",
         "types": [
             "dragon",
@@ -3948,7 +3948,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "374": {
+    {
         "name": "beldum",
         "types": [
             "steel",
@@ -3960,7 +3960,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "375": {
+    {
         "name": "metang",
         "types": [
             "steel",
@@ -3972,7 +3972,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "376": {
+    {
         "name": "metagross",
         "types": [
             "steel",
@@ -3982,7 +3982,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "377": {
+    {
         "name": "regirock",
         "types": [
             "rock"
@@ -3991,7 +3991,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "378": {
+    {
         "name": "regice",
         "types": [
             "ice"
@@ -4000,7 +4000,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "379": {
+    {
         "name": "registeel",
         "types": [
             "steel"
@@ -4009,7 +4009,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "380": {
+    {
         "name": "latias",
         "types": [
             "dragon",
@@ -4019,7 +4019,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "381": {
+    {
         "name": "latios",
         "types": [
             "dragon",
@@ -4029,7 +4029,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "382": {
+    {
         "name": "kyogre",
         "types": [
             "water"
@@ -4038,7 +4038,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "383": {
+    {
         "name": "groudon",
         "types": [
             "ground"
@@ -4047,7 +4047,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "384": {
+    {
         "name": "rayquaza",
         "types": [
             "dragon",
@@ -4057,7 +4057,7 @@
         "capture_rate": 45,
         "is_legendary": true
     },
-    "385": {
+    {
         "name": "jirachi",
         "types": [
             "steel",
@@ -4067,7 +4067,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "386": {
+    {
         "name": "deoxys-normal",
         "types": [
             "psychic"
@@ -4076,7 +4076,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "387": {
+    {
         "name": "turtwig",
         "types": [
             "grass"
@@ -4087,7 +4087,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "388": {
+    {
         "name": "grotle",
         "types": [
             "grass"
@@ -4098,7 +4098,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "389": {
+    {
         "name": "torterra",
         "types": [
             "grass",
@@ -4108,7 +4108,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "390": {
+    {
         "name": "chimchar",
         "types": [
             "fire"
@@ -4119,7 +4119,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "391": {
+    {
         "name": "monferno",
         "types": [
             "fire",
@@ -4131,7 +4131,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "392": {
+    {
         "name": "infernape",
         "types": [
             "fire",
@@ -4141,7 +4141,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "393": {
+    {
         "name": "piplup",
         "types": [
             "water"
@@ -4152,7 +4152,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "394": {
+    {
         "name": "prinplup",
         "types": [
             "water"
@@ -4163,7 +4163,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "395": {
+    {
         "name": "empoleon",
         "types": [
             "water",
@@ -4173,7 +4173,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "396": {
+    {
         "name": "starly",
         "types": [
             "normal",
@@ -4185,7 +4185,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "397": {
+    {
         "name": "staravia",
         "types": [
             "normal",
@@ -4197,7 +4197,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "398": {
+    {
         "name": "staraptor",
         "types": [
             "normal",
@@ -4207,7 +4207,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "399": {
+    {
         "name": "bidoof",
         "types": [
             "normal"
@@ -4218,7 +4218,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "400": {
+    {
         "name": "bibarel",
         "types": [
             "normal",
@@ -4228,7 +4228,7 @@
         "capture_rate": 127,
         "is_legendary": false
     },
-    "401": {
+    {
         "name": "kricketot",
         "types": [
             "bug"
@@ -4239,7 +4239,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "402": {
+    {
         "name": "kricketune",
         "types": [
             "bug"
@@ -4248,7 +4248,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "403": {
+    {
         "name": "shinx",
         "types": [
             "electric"
@@ -4259,7 +4259,7 @@
         "capture_rate": 235,
         "is_legendary": false
     },
-    "404": {
+    {
         "name": "luxio",
         "types": [
             "electric"
@@ -4270,7 +4270,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "405": {
+    {
         "name": "luxray",
         "types": [
             "electric"
@@ -4279,7 +4279,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "406": {
+    {
         "name": "budew",
         "types": [
             "grass",
@@ -4291,7 +4291,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "407": {
+    {
         "name": "roserade",
         "types": [
             "grass",
@@ -4301,7 +4301,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "408": {
+    {
         "name": "cranidos",
         "types": [
             "rock"
@@ -4312,7 +4312,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "409": {
+    {
         "name": "rampardos",
         "types": [
             "rock"
@@ -4321,7 +4321,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "410": {
+    {
         "name": "shieldon",
         "types": [
             "rock",
@@ -4333,7 +4333,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "411": {
+    {
         "name": "bastiodon",
         "types": [
             "rock",
@@ -4343,7 +4343,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "412": {
+    {
         "name": "burmy",
         "types": [
             "bug"
@@ -4355,7 +4355,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "413": {
+    {
         "name": "wormadam-plant",
         "types": [
             "bug",
@@ -4365,7 +4365,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "414": {
+    {
         "name": "mothim",
         "types": [
             "bug",
@@ -4375,7 +4375,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "415": {
+    {
         "name": "combee",
         "types": [
             "bug",
@@ -4387,7 +4387,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "416": {
+    {
         "name": "vespiquen",
         "types": [
             "bug",
@@ -4397,7 +4397,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "417": {
+    {
         "name": "pachirisu",
         "types": [
             "electric"
@@ -4406,7 +4406,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "418": {
+    {
         "name": "buizel",
         "types": [
             "water"
@@ -4417,7 +4417,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "419": {
+    {
         "name": "floatzel",
         "types": [
             "water"
@@ -4426,7 +4426,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "420": {
+    {
         "name": "cherubi",
         "types": [
             "grass"
@@ -4437,7 +4437,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "421": {
+    {
         "name": "cherrim",
         "types": [
             "grass"
@@ -4446,7 +4446,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "422": {
+    {
         "name": "shellos",
         "types": [
             "water"
@@ -4457,7 +4457,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "423": {
+    {
         "name": "gastrodon",
         "types": [
             "water",
@@ -4467,7 +4467,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "424": {
+    {
         "name": "ambipom",
         "types": [
             "normal"
@@ -4476,7 +4476,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "425": {
+    {
         "name": "drifloon",
         "types": [
             "ghost",
@@ -4488,7 +4488,7 @@
         "capture_rate": 125,
         "is_legendary": false
     },
-    "426": {
+    {
         "name": "drifblim",
         "types": [
             "ghost",
@@ -4498,7 +4498,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "427": {
+    {
         "name": "buneary",
         "types": [
             "normal"
@@ -4509,7 +4509,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "428": {
+    {
         "name": "lopunny",
         "types": [
             "normal"
@@ -4518,7 +4518,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "429": {
+    {
         "name": "mismagius",
         "types": [
             "ghost"
@@ -4527,7 +4527,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "430": {
+    {
         "name": "honchkrow",
         "types": [
             "dark",
@@ -4537,7 +4537,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "431": {
+    {
         "name": "glameow",
         "types": [
             "normal"
@@ -4548,7 +4548,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "432": {
+    {
         "name": "purugly",
         "types": [
             "normal"
@@ -4557,7 +4557,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "433": {
+    {
         "name": "chingling",
         "types": [
             "psychic"
@@ -4568,7 +4568,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "434": {
+    {
         "name": "stunky",
         "types": [
             "poison",
@@ -4580,7 +4580,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "435": {
+    {
         "name": "skuntank",
         "types": [
             "poison",
@@ -4590,7 +4590,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "436": {
+    {
         "name": "bronzor",
         "types": [
             "steel",
@@ -4602,7 +4602,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "437": {
+    {
         "name": "bronzong",
         "types": [
             "steel",
@@ -4612,7 +4612,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "438": {
+    {
         "name": "bonsly",
         "types": [
             "rock"
@@ -4623,7 +4623,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "439": {
+    {
         "name": "mime-jr",
         "types": [
             "psychic",
@@ -4635,7 +4635,7 @@
         "capture_rate": 145,
         "is_legendary": false
     },
-    "440": {
+    {
         "name": "happiny",
         "types": [
             "normal"
@@ -4646,7 +4646,7 @@
         "capture_rate": 130,
         "is_legendary": false
     },
-    "441": {
+    {
         "name": "chatot",
         "types": [
             "normal",
@@ -4656,7 +4656,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "442": {
+    {
         "name": "spiritomb",
         "types": [
             "ghost",
@@ -4666,7 +4666,7 @@
         "capture_rate": 100,
         "is_legendary": false
     },
-    "443": {
+    {
         "name": "gible",
         "types": [
             "dragon",
@@ -4678,7 +4678,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "444": {
+    {
         "name": "gabite",
         "types": [
             "dragon",
@@ -4690,7 +4690,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "445": {
+    {
         "name": "garchomp",
         "types": [
             "dragon",
@@ -4700,7 +4700,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "446": {
+    {
         "name": "munchlax",
         "types": [
             "normal"
@@ -4711,7 +4711,7 @@
         "capture_rate": 50,
         "is_legendary": false
     },
-    "447": {
+    {
         "name": "riolu",
         "types": [
             "fighting"
@@ -4722,7 +4722,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "448": {
+    {
         "name": "lucario",
         "types": [
             "fighting",
@@ -4732,7 +4732,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "449": {
+    {
         "name": "hippopotas",
         "types": [
             "ground"
@@ -4743,7 +4743,7 @@
         "capture_rate": 140,
         "is_legendary": false
     },
-    "450": {
+    {
         "name": "hippowdon",
         "types": [
             "ground"
@@ -4752,7 +4752,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "451": {
+    {
         "name": "skorupi",
         "types": [
             "poison",
@@ -4764,7 +4764,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "452": {
+    {
         "name": "drapion",
         "types": [
             "poison",
@@ -4774,7 +4774,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "453": {
+    {
         "name": "croagunk",
         "types": [
             "poison",
@@ -4786,7 +4786,7 @@
         "capture_rate": 140,
         "is_legendary": false
     },
-    "454": {
+    {
         "name": "toxicroak",
         "types": [
             "poison",
@@ -4796,7 +4796,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "455": {
+    {
         "name": "carnivine",
         "types": [
             "grass"
@@ -4805,7 +4805,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "456": {
+    {
         "name": "finneon",
         "types": [
             "water"
@@ -4816,7 +4816,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "457": {
+    {
         "name": "lumineon",
         "types": [
             "water"
@@ -4825,7 +4825,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "458": {
+    {
         "name": "mantyke",
         "types": [
             "water",
@@ -4837,7 +4837,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "459": {
+    {
         "name": "snover",
         "types": [
             "grass",
@@ -4849,7 +4849,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "460": {
+    {
         "name": "abomasnow",
         "types": [
             "grass",
@@ -4859,7 +4859,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "461": {
+    {
         "name": "weavile",
         "types": [
             "dark",
@@ -4869,7 +4869,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "462": {
+    {
         "name": "magnezone",
         "types": [
             "electric",
@@ -4879,7 +4879,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "463": {
+    {
         "name": "lickilicky",
         "types": [
             "normal"
@@ -4888,7 +4888,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "464": {
+    {
         "name": "rhyperior",
         "types": [
             "ground",
@@ -4898,7 +4898,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "465": {
+    {
         "name": "tangrowth",
         "types": [
             "grass"
@@ -4907,7 +4907,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "466": {
+    {
         "name": "electivire",
         "types": [
             "electric"
@@ -4916,7 +4916,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "467": {
+    {
         "name": "magmortar",
         "types": [
             "fire"
@@ -4925,7 +4925,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "468": {
+    {
         "name": "togekiss",
         "types": [
             "fairy",
@@ -4935,7 +4935,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "469": {
+    {
         "name": "yanmega",
         "types": [
             "bug",
@@ -4945,7 +4945,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "470": {
+    {
         "name": "leafeon",
         "types": [
             "grass"
@@ -4954,7 +4954,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "471": {
+    {
         "name": "glaceon",
         "types": [
             "ice"
@@ -4963,7 +4963,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "472": {
+    {
         "name": "gliscor",
         "types": [
             "ground",
@@ -4973,7 +4973,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "473": {
+    {
         "name": "mamoswine",
         "types": [
             "ice",
@@ -4983,7 +4983,7 @@
         "capture_rate": 50,
         "is_legendary": false
     },
-    "474": {
+    {
         "name": "porygon-z",
         "types": [
             "normal"
@@ -4992,7 +4992,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "475": {
+    {
         "name": "gallade",
         "types": [
             "psychic",
@@ -5002,7 +5002,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "476": {
+    {
         "name": "probopass",
         "types": [
             "rock",
@@ -5012,7 +5012,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "477": {
+    {
         "name": "dusknoir",
         "types": [
             "ghost"
@@ -5021,7 +5021,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "478": {
+    {
         "name": "froslass",
         "types": [
             "ice",
@@ -5031,7 +5031,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "479": {
+    {
         "name": "rotom",
         "types": [
             "electric",
@@ -5041,7 +5041,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "480": {
+    {
         "name": "uxie",
         "types": [
             "psychic"
@@ -5050,7 +5050,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "481": {
+    {
         "name": "mesprit",
         "types": [
             "psychic"
@@ -5059,7 +5059,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "482": {
+    {
         "name": "azelf",
         "types": [
             "psychic"
@@ -5068,7 +5068,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "483": {
+    {
         "name": "dialga",
         "types": [
             "steel",
@@ -5078,7 +5078,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "484": {
+    {
         "name": "palkia",
         "types": [
             "water",
@@ -5088,7 +5088,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "485": {
+    {
         "name": "heatran",
         "types": [
             "fire",
@@ -5098,7 +5098,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "486": {
+    {
         "name": "regigigas",
         "types": [
             "normal"
@@ -5107,7 +5107,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "487": {
+    {
         "name": "giratina-altered",
         "types": [
             "ghost",
@@ -5117,7 +5117,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "488": {
+    {
         "name": "cresselia",
         "types": [
             "psychic"
@@ -5126,7 +5126,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "489": {
+    {
         "name": "phione",
         "types": [
             "water"
@@ -5137,7 +5137,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "490": {
+    {
         "name": "manaphy",
         "types": [
             "water"
@@ -5146,7 +5146,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "491": {
+    {
         "name": "darkrai",
         "types": [
             "dark"
@@ -5155,7 +5155,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "492": {
+    {
         "name": "shaymin-land",
         "types": [
             "grass"
@@ -5164,7 +5164,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "493": {
+    {
         "name": "arceus",
         "types": [
             "normal"
@@ -5173,7 +5173,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "494": {
+    {
         "name": "victini",
         "types": [
             "psychic",
@@ -5183,7 +5183,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "495": {
+    {
         "name": "snivy",
         "types": [
             "grass"
@@ -5194,7 +5194,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "496": {
+    {
         "name": "servine",
         "types": [
             "grass"
@@ -5205,7 +5205,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "497": {
+    {
         "name": "serperior",
         "types": [
             "grass"
@@ -5214,7 +5214,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "498": {
+    {
         "name": "tepig",
         "types": [
             "fire"
@@ -5225,7 +5225,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "499": {
+    {
         "name": "pignite",
         "types": [
             "fire",
@@ -5237,7 +5237,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "500": {
+    {
         "name": "emboar",
         "types": [
             "fire",
@@ -5247,7 +5247,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "501": {
+    {
         "name": "oshawott",
         "types": [
             "water"
@@ -5258,7 +5258,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "502": {
+    {
         "name": "dewott",
         "types": [
             "water"
@@ -5269,7 +5269,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "503": {
+    {
         "name": "samurott",
         "types": [
             "water"
@@ -5278,7 +5278,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "504": {
+    {
         "name": "patrat",
         "types": [
             "normal"
@@ -5289,7 +5289,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "505": {
+    {
         "name": "watchog",
         "types": [
             "normal"
@@ -5298,7 +5298,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "506": {
+    {
         "name": "lillipup",
         "types": [
             "normal"
@@ -5309,7 +5309,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "507": {
+    {
         "name": "herdier",
         "types": [
             "normal"
@@ -5320,7 +5320,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "508": {
+    {
         "name": "stoutland",
         "types": [
             "normal"
@@ -5329,7 +5329,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "509": {
+    {
         "name": "purrloin",
         "types": [
             "dark"
@@ -5340,7 +5340,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "510": {
+    {
         "name": "liepard",
         "types": [
             "dark"
@@ -5349,7 +5349,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "511": {
+    {
         "name": "pansage",
         "types": [
             "grass"
@@ -5360,7 +5360,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "512": {
+    {
         "name": "simisage",
         "types": [
             "grass"
@@ -5369,7 +5369,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "513": {
+    {
         "name": "pansear",
         "types": [
             "fire"
@@ -5380,7 +5380,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "514": {
+    {
         "name": "simisear",
         "types": [
             "fire"
@@ -5389,7 +5389,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "515": {
+    {
         "name": "panpour",
         "types": [
             "water"
@@ -5400,7 +5400,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "516": {
+    {
         "name": "simipour",
         "types": [
             "water"
@@ -5409,7 +5409,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "517": {
+    {
         "name": "munna",
         "types": [
             "psychic"
@@ -5420,7 +5420,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "518": {
+    {
         "name": "musharna",
         "types": [
             "psychic"
@@ -5429,7 +5429,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "519": {
+    {
         "name": "pidove",
         "types": [
             "normal",
@@ -5441,7 +5441,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "520": {
+    {
         "name": "tranquill",
         "types": [
             "normal",
@@ -5453,7 +5453,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "521": {
+    {
         "name": "unfezant",
         "types": [
             "normal",
@@ -5463,7 +5463,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "522": {
+    {
         "name": "blitzle",
         "types": [
             "electric"
@@ -5474,7 +5474,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "523": {
+    {
         "name": "zebstrika",
         "types": [
             "electric"
@@ -5483,7 +5483,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "524": {
+    {
         "name": "roggenrola",
         "types": [
             "rock"
@@ -5494,7 +5494,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "525": {
+    {
         "name": "boldore",
         "types": [
             "rock"
@@ -5505,7 +5505,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "526": {
+    {
         "name": "gigalith",
         "types": [
             "rock"
@@ -5514,7 +5514,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "527": {
+    {
         "name": "woobat",
         "types": [
             "psychic",
@@ -5526,7 +5526,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "528": {
+    {
         "name": "swoobat",
         "types": [
             "psychic",
@@ -5536,7 +5536,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "529": {
+    {
         "name": "drilbur",
         "types": [
             "ground"
@@ -5547,7 +5547,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "530": {
+    {
         "name": "excadrill",
         "types": [
             "ground",
@@ -5557,7 +5557,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "531": {
+    {
         "name": "audino",
         "types": [
             "normal"
@@ -5566,7 +5566,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "532": {
+    {
         "name": "timburr",
         "types": [
             "fighting"
@@ -5577,7 +5577,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "533": {
+    {
         "name": "gurdurr",
         "types": [
             "fighting"
@@ -5588,7 +5588,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "534": {
+    {
         "name": "conkeldurr",
         "types": [
             "fighting"
@@ -5597,7 +5597,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "535": {
+    {
         "name": "tympole",
         "types": [
             "water"
@@ -5608,7 +5608,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "536": {
+    {
         "name": "palpitoad",
         "types": [
             "water",
@@ -5620,7 +5620,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "537": {
+    {
         "name": "seismitoad",
         "types": [
             "water",
@@ -5630,7 +5630,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "538": {
+    {
         "name": "throh",
         "types": [
             "fighting"
@@ -5639,7 +5639,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "539": {
+    {
         "name": "sawk",
         "types": [
             "fighting"
@@ -5648,7 +5648,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "540": {
+    {
         "name": "sewaddle",
         "types": [
             "bug",
@@ -5660,7 +5660,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "541": {
+    {
         "name": "swadloon",
         "types": [
             "bug",
@@ -5672,7 +5672,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "542": {
+    {
         "name": "leavanny",
         "types": [
             "bug",
@@ -5682,7 +5682,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "543": {
+    {
         "name": "venipede",
         "types": [
             "bug",
@@ -5694,7 +5694,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "544": {
+    {
         "name": "whirlipede",
         "types": [
             "bug",
@@ -5706,7 +5706,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "545": {
+    {
         "name": "scolipede",
         "types": [
             "bug",
@@ -5716,7 +5716,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "546": {
+    {
         "name": "cottonee",
         "types": [
             "grass",
@@ -5728,7 +5728,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "547": {
+    {
         "name": "whimsicott",
         "types": [
             "grass",
@@ -5738,7 +5738,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "548": {
+    {
         "name": "petilil",
         "types": [
             "grass"
@@ -5749,7 +5749,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "549": {
+    {
         "name": "lilligant",
         "types": [
             "grass"
@@ -5758,7 +5758,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "550": {
+    {
         "name": "basculin-red-striped",
         "types": [
             "water"
@@ -5767,7 +5767,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "551": {
+    {
         "name": "sandile",
         "types": [
             "ground",
@@ -5779,7 +5779,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "552": {
+    {
         "name": "krokorok",
         "types": [
             "ground",
@@ -5791,7 +5791,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "553": {
+    {
         "name": "krookodile",
         "types": [
             "ground",
@@ -5801,7 +5801,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "554": {
+    {
         "name": "darumaka",
         "types": [
             "fire"
@@ -5812,7 +5812,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "555": {
+    {
         "name": "darmanitan-standard",
         "types": [
             "fire"
@@ -5821,7 +5821,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "556": {
+    {
         "name": "maractus",
         "types": [
             "grass"
@@ -5830,7 +5830,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "557": {
+    {
         "name": "dwebble",
         "types": [
             "bug",
@@ -5842,7 +5842,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "558": {
+    {
         "name": "crustle",
         "types": [
             "bug",
@@ -5852,7 +5852,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "559": {
+    {
         "name": "scraggy",
         "types": [
             "dark",
@@ -5864,7 +5864,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "560": {
+    {
         "name": "scrafty",
         "types": [
             "dark",
@@ -5874,7 +5874,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "561": {
+    {
         "name": "sigilyph",
         "types": [
             "psychic",
@@ -5884,7 +5884,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "562": {
+    {
         "name": "yamask",
         "types": [
             "ghost"
@@ -5896,7 +5896,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "563": {
+    {
         "name": "cofagrigus",
         "types": [
             "ghost"
@@ -5905,7 +5905,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "564": {
+    {
         "name": "tirtouga",
         "types": [
             "water",
@@ -5917,7 +5917,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "565": {
+    {
         "name": "carracosta",
         "types": [
             "water",
@@ -5927,7 +5927,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "566": {
+    {
         "name": "archen",
         "types": [
             "rock",
@@ -5939,7 +5939,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "567": {
+    {
         "name": "archeops",
         "types": [
             "rock",
@@ -5949,7 +5949,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "568": {
+    {
         "name": "trubbish",
         "types": [
             "poison"
@@ -5960,7 +5960,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "569": {
+    {
         "name": "garbodor",
         "types": [
             "poison"
@@ -5969,7 +5969,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "570": {
+    {
         "name": "zorua",
         "types": [
             "dark"
@@ -5980,7 +5980,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "571": {
+    {
         "name": "zoroark",
         "types": [
             "dark"
@@ -5989,7 +5989,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "572": {
+    {
         "name": "minccino",
         "types": [
             "normal"
@@ -6000,7 +6000,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "573": {
+    {
         "name": "cinccino",
         "types": [
             "normal"
@@ -6009,7 +6009,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "574": {
+    {
         "name": "gothita",
         "types": [
             "psychic"
@@ -6020,7 +6020,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "575": {
+    {
         "name": "gothorita",
         "types": [
             "psychic"
@@ -6031,7 +6031,7 @@
         "capture_rate": 100,
         "is_legendary": false
     },
-    "576": {
+    {
         "name": "gothitelle",
         "types": [
             "psychic"
@@ -6040,7 +6040,7 @@
         "capture_rate": 50,
         "is_legendary": false
     },
-    "577": {
+    {
         "name": "solosis",
         "types": [
             "psychic"
@@ -6051,7 +6051,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "578": {
+    {
         "name": "duosion",
         "types": [
             "psychic"
@@ -6062,7 +6062,7 @@
         "capture_rate": 100,
         "is_legendary": false
     },
-    "579": {
+    {
         "name": "reuniclus",
         "types": [
             "psychic"
@@ -6071,7 +6071,7 @@
         "capture_rate": 50,
         "is_legendary": false
     },
-    "580": {
+    {
         "name": "ducklett",
         "types": [
             "water",
@@ -6083,7 +6083,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "581": {
+    {
         "name": "swanna",
         "types": [
             "water",
@@ -6093,7 +6093,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "582": {
+    {
         "name": "vanillite",
         "types": [
             "ice"
@@ -6104,7 +6104,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "583": {
+    {
         "name": "vanillish",
         "types": [
             "ice"
@@ -6115,7 +6115,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "584": {
+    {
         "name": "vanilluxe",
         "types": [
             "ice"
@@ -6124,7 +6124,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "585": {
+    {
         "name": "deerling",
         "types": [
             "normal",
@@ -6136,7 +6136,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "586": {
+    {
         "name": "sawsbuck",
         "types": [
             "normal",
@@ -6146,7 +6146,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "587": {
+    {
         "name": "emolga",
         "types": [
             "electric",
@@ -6156,7 +6156,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "588": {
+    {
         "name": "karrablast",
         "types": [
             "bug"
@@ -6167,7 +6167,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "589": {
+    {
         "name": "escavalier",
         "types": [
             "bug",
@@ -6177,7 +6177,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "590": {
+    {
         "name": "foongus",
         "types": [
             "grass",
@@ -6189,7 +6189,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "591": {
+    {
         "name": "amoonguss",
         "types": [
             "grass",
@@ -6199,7 +6199,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "592": {
+    {
         "name": "frillish",
         "types": [
             "water",
@@ -6211,7 +6211,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "593": {
+    {
         "name": "jellicent",
         "types": [
             "water",
@@ -6221,7 +6221,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "594": {
+    {
         "name": "alomomola",
         "types": [
             "water"
@@ -6230,7 +6230,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "595": {
+    {
         "name": "joltik",
         "types": [
             "bug",
@@ -6242,7 +6242,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "596": {
+    {
         "name": "galvantula",
         "types": [
             "bug",
@@ -6252,7 +6252,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "597": {
+    {
         "name": "ferroseed",
         "types": [
             "grass",
@@ -6264,7 +6264,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "598": {
+    {
         "name": "ferrothorn",
         "types": [
             "grass",
@@ -6274,7 +6274,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "599": {
+    {
         "name": "klink",
         "types": [
             "steel"
@@ -6285,7 +6285,7 @@
         "capture_rate": 130,
         "is_legendary": false
     },
-    "600": {
+    {
         "name": "klang",
         "types": [
             "steel"
@@ -6296,7 +6296,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "601": {
+    {
         "name": "klinklang",
         "types": [
             "steel"
@@ -6305,7 +6305,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "602": {
+    {
         "name": "tynamo",
         "types": [
             "electric"
@@ -6316,7 +6316,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "603": {
+    {
         "name": "eelektrik",
         "types": [
             "electric"
@@ -6327,7 +6327,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "604": {
+    {
         "name": "eelektross",
         "types": [
             "electric"
@@ -6336,7 +6336,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "605": {
+    {
         "name": "elgyem",
         "types": [
             "psychic"
@@ -6347,7 +6347,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "606": {
+    {
         "name": "beheeyem",
         "types": [
             "psychic"
@@ -6356,7 +6356,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "607": {
+    {
         "name": "litwick",
         "types": [
             "ghost",
@@ -6368,7 +6368,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "608": {
+    {
         "name": "lampent",
         "types": [
             "ghost",
@@ -6380,7 +6380,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "609": {
+    {
         "name": "chandelure",
         "types": [
             "ghost",
@@ -6390,7 +6390,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "610": {
+    {
         "name": "axew",
         "types": [
             "dragon"
@@ -6401,7 +6401,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "611": {
+    {
         "name": "fraxure",
         "types": [
             "dragon"
@@ -6412,7 +6412,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "612": {
+    {
         "name": "haxorus",
         "types": [
             "dragon"
@@ -6421,7 +6421,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "613": {
+    {
         "name": "cubchoo",
         "types": [
             "ice"
@@ -6432,7 +6432,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "614": {
+    {
         "name": "beartic",
         "types": [
             "ice"
@@ -6441,7 +6441,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "615": {
+    {
         "name": "cryogonal",
         "types": [
             "ice"
@@ -6450,7 +6450,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "616": {
+    {
         "name": "shelmet",
         "types": [
             "bug"
@@ -6461,7 +6461,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "617": {
+    {
         "name": "accelgor",
         "types": [
             "bug"
@@ -6470,7 +6470,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "618": {
+    {
         "name": "stunfisk",
         "types": [
             "ground",
@@ -6480,7 +6480,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "619": {
+    {
         "name": "mienfoo",
         "types": [
             "fighting"
@@ -6491,7 +6491,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "620": {
+    {
         "name": "mienshao",
         "types": [
             "fighting"
@@ -6500,7 +6500,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "621": {
+    {
         "name": "druddigon",
         "types": [
             "dragon"
@@ -6509,7 +6509,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "622": {
+    {
         "name": "golett",
         "types": [
             "ground",
@@ -6521,7 +6521,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "623": {
+    {
         "name": "golurk",
         "types": [
             "ground",
@@ -6531,7 +6531,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "624": {
+    {
         "name": "pawniard",
         "types": [
             "dark",
@@ -6543,7 +6543,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "625": {
+    {
         "name": "bisharp",
         "types": [
             "dark",
@@ -6555,7 +6555,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "626": {
+    {
         "name": "bouffalant",
         "types": [
             "normal"
@@ -6564,7 +6564,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "627": {
+    {
         "name": "rufflet",
         "types": [
             "normal",
@@ -6576,7 +6576,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "628": {
+    {
         "name": "braviary",
         "types": [
             "normal",
@@ -6586,7 +6586,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "629": {
+    {
         "name": "vullaby",
         "types": [
             "dark",
@@ -6598,7 +6598,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "630": {
+    {
         "name": "mandibuzz",
         "types": [
             "dark",
@@ -6608,7 +6608,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "631": {
+    {
         "name": "heatmor",
         "types": [
             "fire"
@@ -6617,7 +6617,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "632": {
+    {
         "name": "durant",
         "types": [
             "bug",
@@ -6627,7 +6627,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "633": {
+    {
         "name": "deino",
         "types": [
             "dark",
@@ -6639,7 +6639,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "634": {
+    {
         "name": "zweilous",
         "types": [
             "dark",
@@ -6651,7 +6651,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "635": {
+    {
         "name": "hydreigon",
         "types": [
             "dark",
@@ -6661,7 +6661,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "636": {
+    {
         "name": "larvesta",
         "types": [
             "bug",
@@ -6673,7 +6673,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "637": {
+    {
         "name": "volcarona",
         "types": [
             "bug",
@@ -6683,7 +6683,7 @@
         "capture_rate": 15,
         "is_legendary": false
     },
-    "638": {
+    {
         "name": "cobalion",
         "types": [
             "steel",
@@ -6693,7 +6693,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "639": {
+    {
         "name": "terrakion",
         "types": [
             "rock",
@@ -6703,7 +6703,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "640": {
+    {
         "name": "virizion",
         "types": [
             "grass",
@@ -6713,7 +6713,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "641": {
+    {
         "name": "tornadus-incarnate",
         "types": [
             "flying"
@@ -6722,7 +6722,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "642": {
+    {
         "name": "thundurus-incarnate",
         "types": [
             "electric",
@@ -6732,7 +6732,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "643": {
+    {
         "name": "reshiram",
         "types": [
             "dragon",
@@ -6742,7 +6742,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "644": {
+    {
         "name": "zekrom",
         "types": [
             "dragon",
@@ -6752,7 +6752,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "645": {
+    {
         "name": "landorus-incarnate",
         "types": [
             "ground",
@@ -6762,7 +6762,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "646": {
+    {
         "name": "kyurem",
         "types": [
             "dragon",
@@ -6772,7 +6772,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "647": {
+    {
         "name": "keldeo-ordinary",
         "types": [
             "water",
@@ -6782,7 +6782,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "648": {
+    {
         "name": "meloetta-aria",
         "types": [
             "normal",
@@ -6792,7 +6792,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "649": {
+    {
         "name": "genesect",
         "types": [
             "bug",
@@ -6802,7 +6802,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "650": {
+    {
         "name": "chespin",
         "types": [
             "grass"
@@ -6813,7 +6813,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "651": {
+    {
         "name": "quilladin",
         "types": [
             "grass"
@@ -6824,7 +6824,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "652": {
+    {
         "name": "chesnaught",
         "types": [
             "grass",
@@ -6834,7 +6834,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "653": {
+    {
         "name": "fennekin",
         "types": [
             "fire"
@@ -6845,7 +6845,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "654": {
+    {
         "name": "braixen",
         "types": [
             "fire"
@@ -6856,7 +6856,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "655": {
+    {
         "name": "delphox",
         "types": [
             "fire",
@@ -6866,7 +6866,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "656": {
+    {
         "name": "froakie",
         "types": [
             "water"
@@ -6877,7 +6877,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "657": {
+    {
         "name": "frogadier",
         "types": [
             "water"
@@ -6888,7 +6888,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "658": {
+    {
         "name": "greninja",
         "types": [
             "water",
@@ -6898,7 +6898,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "659": {
+    {
         "name": "bunnelby",
         "types": [
             "normal"
@@ -6909,7 +6909,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "660": {
+    {
         "name": "diggersby",
         "types": [
             "normal",
@@ -6919,7 +6919,7 @@
         "capture_rate": 127,
         "is_legendary": false
     },
-    "661": {
+    {
         "name": "fletchling",
         "types": [
             "normal",
@@ -6931,7 +6931,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "662": {
+    {
         "name": "fletchinder",
         "types": [
             "fire",
@@ -6943,7 +6943,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "663": {
+    {
         "name": "talonflame",
         "types": [
             "fire",
@@ -6953,7 +6953,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "664": {
+    {
         "name": "scatterbug",
         "types": [
             "bug"
@@ -6964,7 +6964,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "665": {
+    {
         "name": "spewpa",
         "types": [
             "bug"
@@ -6975,7 +6975,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "666": {
+    {
         "name": "vivillon",
         "types": [
             "bug",
@@ -6985,7 +6985,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "667": {
+    {
         "name": "litleo",
         "types": [
             "fire",
@@ -6997,7 +6997,7 @@
         "capture_rate": 220,
         "is_legendary": false
     },
-    "668": {
+    {
         "name": "pyroar",
         "types": [
             "fire",
@@ -7007,7 +7007,7 @@
         "capture_rate": 65,
         "is_legendary": false
     },
-    "669": {
+    {
         "name": "flabebe",
         "types": [
             "fairy"
@@ -7018,7 +7018,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "670": {
+    {
         "name": "floette",
         "types": [
             "fairy"
@@ -7029,7 +7029,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "671": {
+    {
         "name": "florges",
         "types": [
             "fairy"
@@ -7038,7 +7038,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "672": {
+    {
         "name": "skiddo",
         "types": [
             "grass"
@@ -7049,7 +7049,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "673": {
+    {
         "name": "gogoat",
         "types": [
             "grass"
@@ -7058,7 +7058,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "674": {
+    {
         "name": "pancham",
         "types": [
             "fighting"
@@ -7069,7 +7069,7 @@
         "capture_rate": 220,
         "is_legendary": false
     },
-    "675": {
+    {
         "name": "pangoro",
         "types": [
             "fighting",
@@ -7079,7 +7079,7 @@
         "capture_rate": 65,
         "is_legendary": false
     },
-    "676": {
+    {
         "name": "furfrou",
         "types": [
             "normal"
@@ -7088,7 +7088,7 @@
         "capture_rate": 160,
         "is_legendary": false
     },
-    "677": {
+    {
         "name": "espurr",
         "types": [
             "psychic"
@@ -7099,7 +7099,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "678": {
+    {
         "name": "meowstic-male",
         "types": [
             "psychic"
@@ -7108,7 +7108,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "679": {
+    {
         "name": "honedge",
         "types": [
             "steel",
@@ -7120,7 +7120,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "680": {
+    {
         "name": "doublade",
         "types": [
             "steel",
@@ -7132,7 +7132,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "681": {
+    {
         "name": "aegislash-shield",
         "types": [
             "steel",
@@ -7142,7 +7142,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "682": {
+    {
         "name": "spritzee",
         "types": [
             "fairy"
@@ -7153,7 +7153,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "683": {
+    {
         "name": "aromatisse",
         "types": [
             "fairy"
@@ -7162,7 +7162,7 @@
         "capture_rate": 140,
         "is_legendary": false
     },
-    "684": {
+    {
         "name": "swirlix",
         "types": [
             "fairy"
@@ -7173,7 +7173,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "685": {
+    {
         "name": "slurpuff",
         "types": [
             "fairy"
@@ -7182,7 +7182,7 @@
         "capture_rate": 140,
         "is_legendary": false
     },
-    "686": {
+    {
         "name": "inkay",
         "types": [
             "dark",
@@ -7194,7 +7194,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "687": {
+    {
         "name": "malamar",
         "types": [
             "dark",
@@ -7204,7 +7204,7 @@
         "capture_rate": 80,
         "is_legendary": false
     },
-    "688": {
+    {
         "name": "binacle",
         "types": [
             "rock",
@@ -7216,7 +7216,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "689": {
+    {
         "name": "barbaracle",
         "types": [
             "rock",
@@ -7226,7 +7226,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "690": {
+    {
         "name": "skrelp",
         "types": [
             "poison",
@@ -7238,7 +7238,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "691": {
+    {
         "name": "dragalge",
         "types": [
             "poison",
@@ -7248,7 +7248,7 @@
         "capture_rate": 55,
         "is_legendary": false
     },
-    "692": {
+    {
         "name": "clauncher",
         "types": [
             "water"
@@ -7259,7 +7259,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "693": {
+    {
         "name": "clawitzer",
         "types": [
             "water"
@@ -7268,7 +7268,7 @@
         "capture_rate": 55,
         "is_legendary": false
     },
-    "694": {
+    {
         "name": "helioptile",
         "types": [
             "electric",
@@ -7280,7 +7280,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "695": {
+    {
         "name": "heliolisk",
         "types": [
             "electric",
@@ -7290,7 +7290,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "696": {
+    {
         "name": "tyrunt",
         "types": [
             "rock",
@@ -7302,7 +7302,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "697": {
+    {
         "name": "tyrantrum",
         "types": [
             "rock",
@@ -7312,7 +7312,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "698": {
+    {
         "name": "amaura",
         "types": [
             "rock",
@@ -7324,7 +7324,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "699": {
+    {
         "name": "aurorus",
         "types": [
             "rock",
@@ -7334,7 +7334,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "700": {
+    {
         "name": "sylveon",
         "types": [
             "fairy"
@@ -7343,7 +7343,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "701": {
+    {
         "name": "hawlucha",
         "types": [
             "fighting",
@@ -7353,7 +7353,7 @@
         "capture_rate": 100,
         "is_legendary": false
     },
-    "702": {
+    {
         "name": "dedenne",
         "types": [
             "electric",
@@ -7363,7 +7363,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "703": {
+    {
         "name": "carbink",
         "types": [
             "rock",
@@ -7373,7 +7373,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "704": {
+    {
         "name": "goomy",
         "types": [
             "dragon"
@@ -7384,7 +7384,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "705": {
+    {
         "name": "sliggoo",
         "types": [
             "dragon"
@@ -7395,7 +7395,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "706": {
+    {
         "name": "goodra",
         "types": [
             "dragon"
@@ -7404,7 +7404,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "707": {
+    {
         "name": "klefki",
         "types": [
             "steel",
@@ -7414,7 +7414,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "708": {
+    {
         "name": "phantump",
         "types": [
             "ghost",
@@ -7426,7 +7426,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "709": {
+    {
         "name": "trevenant",
         "types": [
             "ghost",
@@ -7436,7 +7436,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "710": {
+    {
         "name": "pumpkaboo-average",
         "types": [
             "ghost",
@@ -7446,7 +7446,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "711": {
+    {
         "name": "gourgeist-average",
         "types": [
             "ghost",
@@ -7456,7 +7456,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "712": {
+    {
         "name": "bergmite",
         "types": [
             "ice"
@@ -7467,7 +7467,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "713": {
+    {
         "name": "avalugg",
         "types": [
             "ice"
@@ -7476,7 +7476,7 @@
         "capture_rate": 55,
         "is_legendary": false
     },
-    "714": {
+    {
         "name": "noibat",
         "types": [
             "flying",
@@ -7488,7 +7488,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "715": {
+    {
         "name": "noivern",
         "types": [
             "flying",
@@ -7498,7 +7498,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "716": {
+    {
         "name": "xerneas",
         "types": [
             "fairy"
@@ -7507,7 +7507,7 @@
         "capture_rate": 45,
         "is_legendary": true
     },
-    "717": {
+    {
         "name": "yveltal",
         "types": [
             "dark",
@@ -7517,7 +7517,7 @@
         "capture_rate": 45,
         "is_legendary": true
     },
-    "718": {
+    {
         "name": "zygarde-50",
         "types": [
             "dragon",
@@ -7527,7 +7527,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "719": {
+    {
         "name": "diancie",
         "types": [
             "rock",
@@ -7537,7 +7537,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "720": {
+    {
         "name": "hoopa",
         "types": [
             "psychic",
@@ -7547,7 +7547,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "721": {
+    {
         "name": "volcanion",
         "types": [
             "fire",
@@ -7557,7 +7557,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "722": {
+    {
         "name": "rowlet",
         "types": [
             "grass",
@@ -7569,7 +7569,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "723": {
+    {
         "name": "dartrix",
         "types": [
             "grass",
@@ -7581,7 +7581,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "724": {
+    {
         "name": "decidueye",
         "types": [
             "grass",
@@ -7591,7 +7591,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "725": {
+    {
         "name": "litten",
         "types": [
             "fire"
@@ -7602,7 +7602,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "726": {
+    {
         "name": "torracat",
         "types": [
             "fire"
@@ -7613,7 +7613,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "727": {
+    {
         "name": "incineroar",
         "types": [
             "fire",
@@ -7623,7 +7623,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "728": {
+    {
         "name": "popplio",
         "types": [
             "water"
@@ -7634,7 +7634,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "729": {
+    {
         "name": "brionne",
         "types": [
             "water"
@@ -7645,7 +7645,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "730": {
+    {
         "name": "primarina",
         "types": [
             "water",
@@ -7655,7 +7655,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "731": {
+    {
         "name": "pikipek",
         "types": [
             "normal",
@@ -7667,7 +7667,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "732": {
+    {
         "name": "trumbeak",
         "types": [
             "normal",
@@ -7679,7 +7679,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "733": {
+    {
         "name": "toucannon",
         "types": [
             "normal",
@@ -7689,7 +7689,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "734": {
+    {
         "name": "yungoos",
         "types": [
             "normal"
@@ -7700,7 +7700,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "735": {
+    {
         "name": "gumshoos",
         "types": [
             "normal"
@@ -7709,7 +7709,7 @@
         "capture_rate": 127,
         "is_legendary": false
     },
-    "736": {
+    {
         "name": "grubbin",
         "types": [
             "bug"
@@ -7720,7 +7720,7 @@
         "capture_rate": 255,
         "is_legendary": false
     },
-    "737": {
+    {
         "name": "charjabug",
         "types": [
             "bug",
@@ -7732,7 +7732,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "738": {
+    {
         "name": "vikavolt",
         "types": [
             "bug",
@@ -7742,7 +7742,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "739": {
+    {
         "name": "crabrawler",
         "types": [
             "fighting"
@@ -7753,7 +7753,7 @@
         "capture_rate": 225,
         "is_legendary": false
     },
-    "740": {
+    {
         "name": "crabominable",
         "types": [
             "fighting",
@@ -7763,7 +7763,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "741": {
+    {
         "name": "oricorio-baile",
         "types": [
             "fire",
@@ -7773,7 +7773,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "742": {
+    {
         "name": "cutiefly",
         "types": [
             "bug",
@@ -7785,7 +7785,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "743": {
+    {
         "name": "ribombee",
         "types": [
             "bug",
@@ -7795,7 +7795,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "744": {
+    {
         "name": "rockruff",
         "types": [
             "rock"
@@ -7806,7 +7806,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "745": {
+    {
         "name": "lycanroc-midday",
         "types": [
             "rock"
@@ -7815,7 +7815,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "746": {
+    {
         "name": "wishiwashi-solo",
         "types": [
             "water"
@@ -7824,7 +7824,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "747": {
+    {
         "name": "mareanie",
         "types": [
             "poison",
@@ -7836,7 +7836,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "748": {
+    {
         "name": "toxapex",
         "types": [
             "poison",
@@ -7846,7 +7846,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "749": {
+    {
         "name": "mudbray",
         "types": [
             "ground"
@@ -7857,7 +7857,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "750": {
+    {
         "name": "mudsdale",
         "types": [
             "ground"
@@ -7866,7 +7866,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "751": {
+    {
         "name": "dewpider",
         "types": [
             "water",
@@ -7878,7 +7878,7 @@
         "capture_rate": 200,
         "is_legendary": false
     },
-    "752": {
+    {
         "name": "araquanid",
         "types": [
             "water",
@@ -7888,7 +7888,7 @@
         "capture_rate": 100,
         "is_legendary": false
     },
-    "753": {
+    {
         "name": "fomantis",
         "types": [
             "grass"
@@ -7899,7 +7899,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "754": {
+    {
         "name": "lurantis",
         "types": [
             "grass"
@@ -7908,7 +7908,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "755": {
+    {
         "name": "morelull",
         "types": [
             "grass",
@@ -7920,7 +7920,7 @@
         "capture_rate": 190,
         "is_legendary": false
     },
-    "756": {
+    {
         "name": "shiinotic",
         "types": [
             "grass",
@@ -7930,7 +7930,7 @@
         "capture_rate": 75,
         "is_legendary": false
     },
-    "757": {
+    {
         "name": "salandit",
         "types": [
             "poison",
@@ -7942,7 +7942,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "758": {
+    {
         "name": "salazzle",
         "types": [
             "poison",
@@ -7952,7 +7952,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "759": {
+    {
         "name": "stufful",
         "types": [
             "normal",
@@ -7964,7 +7964,7 @@
         "capture_rate": 140,
         "is_legendary": false
     },
-    "760": {
+    {
         "name": "bewear",
         "types": [
             "normal",
@@ -7974,7 +7974,7 @@
         "capture_rate": 70,
         "is_legendary": false
     },
-    "761": {
+    {
         "name": "bounsweet",
         "types": [
             "grass"
@@ -7985,7 +7985,7 @@
         "capture_rate": 235,
         "is_legendary": false
     },
-    "762": {
+    {
         "name": "steenee",
         "types": [
             "grass"
@@ -7996,7 +7996,7 @@
         "capture_rate": 120,
         "is_legendary": false
     },
-    "763": {
+    {
         "name": "tsareena",
         "types": [
             "grass"
@@ -8005,7 +8005,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "764": {
+    {
         "name": "comfey",
         "types": [
             "fairy"
@@ -8014,7 +8014,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "765": {
+    {
         "name": "oranguru",
         "types": [
             "normal",
@@ -8024,7 +8024,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "766": {
+    {
         "name": "passimian",
         "types": [
             "fighting"
@@ -8033,7 +8033,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "767": {
+    {
         "name": "wimpod",
         "types": [
             "bug",
@@ -8045,7 +8045,7 @@
         "capture_rate": 90,
         "is_legendary": false
     },
-    "768": {
+    {
         "name": "golisopod",
         "types": [
             "bug",
@@ -8055,7 +8055,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "769": {
+    {
         "name": "sandygast",
         "types": [
             "ghost",
@@ -8067,7 +8067,7 @@
         "capture_rate": 140,
         "is_legendary": false
     },
-    "770": {
+    {
         "name": "palossand",
         "types": [
             "ghost",
@@ -8077,7 +8077,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "771": {
+    {
         "name": "pyukumuku",
         "types": [
             "water"
@@ -8086,7 +8086,7 @@
         "capture_rate": 60,
         "is_legendary": false
     },
-    "772": {
+    {
         "name": "type-null",
         "types": [
             "normal"
@@ -8097,7 +8097,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "773": {
+    {
         "name": "silvally",
         "types": [
             "normal"
@@ -8106,7 +8106,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "774": {
+    {
         "name": "minior-red-meteor",
         "types": [
             "rock",
@@ -8116,7 +8116,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "775": {
+    {
         "name": "komala",
         "types": [
             "normal"
@@ -8125,7 +8125,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "776": {
+    {
         "name": "turtonator",
         "types": [
             "fire",
@@ -8135,7 +8135,7 @@
         "capture_rate": 70,
         "is_legendary": false
     },
-    "777": {
+    {
         "name": "togedemaru",
         "types": [
             "electric",
@@ -8145,7 +8145,7 @@
         "capture_rate": 180,
         "is_legendary": false
     },
-    "778": {
+    {
         "name": "mimikyu-disguised",
         "types": [
             "ghost",
@@ -8155,7 +8155,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "779": {
+    {
         "name": "bruxish",
         "types": [
             "water",
@@ -8165,7 +8165,7 @@
         "capture_rate": 80,
         "is_legendary": false
     },
-    "780": {
+    {
         "name": "drampa",
         "types": [
             "normal",
@@ -8175,7 +8175,7 @@
         "capture_rate": 70,
         "is_legendary": false
     },
-    "781": {
+    {
         "name": "dhelmise",
         "types": [
             "ghost",
@@ -8185,7 +8185,7 @@
         "capture_rate": 25,
         "is_legendary": false
     },
-    "782": {
+    {
         "name": "jangmo-o",
         "types": [
             "dragon"
@@ -8196,7 +8196,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "783": {
+    {
         "name": "hakamo-o",
         "types": [
             "dragon",
@@ -8208,7 +8208,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "784": {
+    {
         "name": "kommo-o",
         "types": [
             "dragon",
@@ -8218,7 +8218,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "785": {
+    {
         "name": "tapu-koko",
         "types": [
             "electric",
@@ -8228,7 +8228,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "786": {
+    {
         "name": "tapu-lele",
         "types": [
             "psychic",
@@ -8238,7 +8238,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "787": {
+    {
         "name": "tapu-bulu",
         "types": [
             "grass",
@@ -8248,7 +8248,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "788": {
+    {
         "name": "tapu-fini",
         "types": [
             "water",
@@ -8258,7 +8258,7 @@
         "capture_rate": 3,
         "is_legendary": true
     },
-    "789": {
+    {
         "name": "cosmog",
         "types": [
             "psychic"
@@ -8269,7 +8269,7 @@
         "capture_rate": 45,
         "is_legendary": true
     },
-    "790": {
+    {
         "name": "cosmoem",
         "types": [
             "psychic"
@@ -8281,7 +8281,7 @@
         "capture_rate": 45,
         "is_legendary": true
     },
-    "791": {
+    {
         "name": "solgaleo",
         "types": [
             "psychic",
@@ -8291,7 +8291,7 @@
         "capture_rate": 45,
         "is_legendary": true
     },
-    "792": {
+    {
         "name": "lunala",
         "types": [
             "psychic",
@@ -8301,7 +8301,7 @@
         "capture_rate": 45,
         "is_legendary": true
     },
-    "793": {
+    {
         "name": "nihilego",
         "types": [
             "rock",
@@ -8311,7 +8311,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "794": {
+    {
         "name": "buzzwole",
         "types": [
             "bug",
@@ -8321,7 +8321,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "795": {
+    {
         "name": "pheromosa",
         "types": [
             "bug",
@@ -8331,7 +8331,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "796": {
+    {
         "name": "xurkitree",
         "types": [
             "electric"
@@ -8340,7 +8340,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "797": {
+    {
         "name": "celesteela",
         "types": [
             "steel",
@@ -8350,7 +8350,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "798": {
+    {
         "name": "kartana",
         "types": [
             "grass",
@@ -8360,7 +8360,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "799": {
+    {
         "name": "guzzlord",
         "types": [
             "dark",
@@ -8370,7 +8370,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "800": {
+    {
         "name": "necrozma",
         "types": [
             "psychic"
@@ -8379,7 +8379,7 @@
         "capture_rate": 255,
         "is_legendary": true
     },
-    "801": {
+    {
         "name": "magearna",
         "types": [
             "steel",
@@ -8389,7 +8389,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "802": {
+    {
         "name": "marshadow",
         "types": [
             "fighting",
@@ -8399,7 +8399,7 @@
         "capture_rate": 3,
         "is_legendary": false
     },
-    "803": {
+    {
         "name": "poipole",
         "types": [
             "poison"
@@ -8410,7 +8410,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "804": {
+    {
         "name": "naganadel",
         "types": [
             "poison",
@@ -8420,7 +8420,7 @@
         "capture_rate": 45,
         "is_legendary": false
     },
-    "805": {
+    {
         "name": "stakataka",
         "types": [
             "rock",
@@ -8430,7 +8430,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "806": {
+    {
         "name": "blacephalon",
         "types": [
             "fire",
@@ -8440,7 +8440,7 @@
         "capture_rate": 30,
         "is_legendary": false
     },
-    "807": {
+    {
         "name": "zeraora",
         "types": [
             "electric"
@@ -8449,4 +8449,4 @@
         "capture_rate": 3,
         "is_legendary": false
     }
-}
+]
