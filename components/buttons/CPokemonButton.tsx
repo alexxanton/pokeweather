@@ -47,19 +47,19 @@ export function CPokemonButton({specie, ...rest}: Props) {
 const styles = StyleSheet.create({
   container: {
     height: 30,
-    width: "15%",
+    width: 50,
     marginBottom: 30,
     // backgroundColor:"black",
   },
   button: {
     height: 60,
-    // backgroundColor:"black",
+    // backgroundColor:"#000000AA",
   },
   pokemon: {
     aspectRatio: 1,
     width: "200%",
     height: "200%",
     position: "absolute",
-    transform: [{translateX: "-30%"}, {translateY: "-30%"}],
+    transform: [{translateX: "-25%"}, {translateY: "-10%"}],
   },
 });

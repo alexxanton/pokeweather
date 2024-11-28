@@ -3,7 +3,6 @@ import { CBackground } from '@/components/containers/CBackground';
 import { CContainer } from "@/components/containers/CContainer";
 import { CButton } from "@/components/buttons/CButton";
 import { CArrowButton } from "@/components/buttons/CArrowButton";
-import { CText } from "@/components/text/CText";
 import { CPokemonButton } from "@/components/buttons/CPokemonButton";
 import { CScrollPanel } from "@/components/containers/CScrollPanel";
 import { useData } from "@/components/CDataProvider";
@@ -39,17 +38,15 @@ export default function Team() {
           </CContainer>
         </CLabel>
         <CLabel title="Caught" style={styles.scroll}>
-          <CScrollPanel>
-            <View style={styles.grid}>
-              {pokemon.length > 0 ? (
-                pokemon.map((pkmn, idx) => {
-                  return <CPokemonButton specie={pkmn.specie} key={idx} />
-                })
-              ) : (
-                <CText size={50}>{uri}</CText>
-              )}
-            </View>
-          </CScrollPanel>
+          <CScrollPanel
+            style={styles.grid}
+            data={pokemon}
+            numColumns={5}
+            initialNumToRender={1}
+            renderItem={({ item }) => (
+              <CPokemonButton specie={item.specie} />
+            )}
+          />
         </CLabel>
       </View>
       <CContainer>
@@ -74,11 +71,11 @@ const styles = StyleSheet.create({
     marginBottom: 30
   },
   grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: "center",
-    marginBottom: 30,
-    gap: 10
+    // flexDirection: 'row',
+    // flexWrap: 'wrap',
+    // justifyContent: "center",
+    // marginBottom: 30,
+    // gap: 10
   },
   scroll: {
     flex: 1,

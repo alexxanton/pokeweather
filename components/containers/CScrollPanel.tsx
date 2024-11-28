@@ -1,23 +1,27 @@
-import { ScrollView, StyleSheet, View, type ViewProps } from "react-native";
+import { ScrollView, StyleSheet, View, FlatList, type FlatListProps } from "react-native";
 
 
-export function CScrollPanel({children, style, ...rest}: ViewProps) {
+export function CScrollPanel<T>({...rest}: FlatListProps<T>) {
   return (
-    <ScrollView
-      style={[styles.scroll, style]}
-      overScrollMode="always"
-      {...rest}
-    >
-      {children}
-    </ScrollView>
+    <View style={styles.container}>
+      <FlatList
+        {...rest}
+        contentContainerStyle={{
+          alignItems: "center",
+          paddingTop: 30,
+          gap: 10
+        }}
+        columnWrapperStyle={{
+          gap: 10
+        }}
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  scroll: {
-    // flex: 1,
-    paddingTop: 30,
+  container: {
     borderRadius: 15,
     backgroundColor: "#0C0C0D33",
-  }
+  },
 });
