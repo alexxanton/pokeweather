@@ -3,8 +3,9 @@ use pokeweather;
 
 create table if not exists user (
     id int primary key auto_increment,
-    mail varchar(255) not null unique,
-    coins int default 0,
+    name varchar(255) not null unique,
+    password varchar(255) not null,
+    coins int default 1000,
     pokemon1 int,
     pokemon2 int,
     pokemon3 int,
