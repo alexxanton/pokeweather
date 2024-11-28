@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, View, FlatList, type FlatListProps } from "react-native";
+import { StyleSheet, View, FlatList, type FlatListProps } from "react-native";
 
 
 export function CScrollPanel<T>({...rest}: FlatListProps<T>) {

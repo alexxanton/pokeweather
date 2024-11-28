@@ -60,6 +60,6 @@ const styles = StyleSheet.create({
     width: "200%",
     height: "200%",
     position: "absolute",
-    transform: [{translateX: "-25%"}, {translateY: "-10%"}],
+    transform: [{translateX: "-25%"}, {translateY: "-30%"}],
   },
 });
