@@ -1,5 +1,4 @@
 import { StyleSheet, View } from "react-native";
-import { CBackground } from '@/components/containers/CBackground';
 import { CContainer } from "@/components/containers/CContainer";
 import { CButton } from "@/components/buttons/CButton";
 import { CArrowButton } from "@/components/buttons/CArrowButton";
@@ -30,7 +29,7 @@ export default function Team() {
   }, []);
 
   return (
-    <CBackground>
+    <>
       <CArrowButton />
       <View style={styles.container}>
         <CLabel title="Team">
@@ -41,7 +40,7 @@ export default function Team() {
           <CScrollPanel
             style={styles.grid}
             data={pokemon}
-            numColumns={5}
+            numColumns={6}
             initialNumToRender={1}
             renderItem={({ item }) => (
               <CPokemonButton specie={item.specie} />
@@ -57,7 +56,7 @@ export default function Team() {
           <BattleButton width={135} height={90} />
         </CButton>
       </CContainer>
-    </CBackground>
+    </>
   );
 }
 

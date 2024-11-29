@@ -10,7 +10,7 @@ import MissionsButton from '@/assets/images/buttons/MissionsButton';
 
 export default function Index() {
   return (
-    <CBackground>
+    <>
       <CMainScreen />
       <CContainer>
         <CButton href="/wheel">
@@ -23,6 +23,6 @@ export default function Index() {
           <MissionsButton width={90} height={90} />
         </CButton>
       </CContainer>
-    </CBackground>
+    </>
   );
 }

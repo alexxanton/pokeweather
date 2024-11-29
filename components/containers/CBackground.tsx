@@ -26,8 +26,8 @@ export function CBackground({ children }: PropsWithChildren) {
     setCover(image);
     setTimeout(() => {
       fade.value = 1;
-        updateBackground();
-        fade.value = withTiming(0, {duration: 500});
+      updateBackground();
+      fade.value = withTiming(0, {duration: 500});
     }, 200);
   };
 

@@ -8,11 +8,10 @@ export function CScrollPanel<T>({...rest}: FlatListProps<T>) {
         {...rest}
         contentContainerStyle={{
           alignItems: "center",
-          paddingTop: 30,
           gap: 10
         }}
         columnWrapperStyle={{
-          gap: 10
+          gap: 5
         }}
       />
     </View>
