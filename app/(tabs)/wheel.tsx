@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
 import { CText } from '@/components/text/CText';
 import { View } from 'react-native';
-import { CContainer } from '@/components/containers/CContainer';
+import { CControlPanel } from '@/components/containers/CControlPanel';
 import { CButton } from '@/components/buttons/CButton';
 import { CArrowButton } from '@/components/buttons/CArrowButton';
 import { useState } from 'react';
 import { useData } from '@/components/CDataProvider';
+import { CPadding } from '@/components/containers/CPadding';
 
 import AdButton from '@/assets/images/buttons/AdButton';
 import SpinButton from '@/assets/images/buttons/SpinButton';
@@ -20,7 +21,7 @@ export default function Wheel() {
   };
 
   return (
-    <>
+    <CPadding>
 
       <CArrowButton />
       <View style={styles.container}>
@@ -33,16 +34,16 @@ export default function Wheel() {
         <CText size={30}>x {wheelTries}</CText>
       </View>
 
-      <CContainer>
+      <CControlPanel>
         <CButton href="/ad">
           <AdButton width={90} height={90} />
         </CButton>
         <CButton onPress={spin}>
           <SpinButton width={180} height={90} />
         </CButton>
-      </CContainer>
+      </CControlPanel>
       
-    </>
+    </CPadding>
   );
 }
 

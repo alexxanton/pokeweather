@@ -1,10 +1,11 @@
 import { StyleSheet, View } from 'react-native';
-import { CContainer } from '@/components/containers/CContainer';
+import { CControlPanel } from '@/components/containers/CControlPanel';
 import { CButton } from '@/components/buttons/CButton';
 import { CArrowButton } from '@/components/buttons/CArrowButton';
 import { useEffect, useState } from 'react';
 import { CText } from '@/components/text/CText';
 import { uri } from '@/constants/URI';
+import { CPadding } from '@/components/containers/CPadding';
 import axios from 'axios';
 
 import SignoutButton from '@/assets/images/buttons/SignoutButton';
@@ -22,19 +23,19 @@ export default function Team() {
   }, []);
 
   return (
-    <>
+    <CPadding>
       <CArrowButton />
       <View style={styles.container}>
         {users ? users.map((user, idx) => {
           return <CText size={45} key={idx}>{user.mail}</CText>
         }) : <CText size={45}>e</CText>}
       </View>
-      <CContainer>
+      <CControlPanel>
         <CButton>
           <SignoutButton width={270} height={90} />
         </CButton>
-      </CContainer>
-    </>
+      </CControlPanel>
+    </CPadding>
   );
 }
 

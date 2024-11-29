@@ -2,7 +2,7 @@ import { StyleSheet, View } from "react-native";
 import { type ViewProps } from "react-native";
 
 
-export function CContainer({children, style, ...rest}: ViewProps) {
+export function CControlPanel({children, style, ...rest}: ViewProps) {
   return (
     <View style={[styles.buttonContainer, style]} {...rest}>
       {children}

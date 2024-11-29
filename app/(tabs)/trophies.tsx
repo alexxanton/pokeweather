@@ -3,15 +3,16 @@ import { CButton } from "@/components/buttons/CButton";
 import { CArrowButton } from "@/components/buttons/CArrowButton";
 import { CText } from "@/components/text/CText";
 import { useData } from "@/components/CDataProvider";
+import { CPadding } from '@/components/containers/CPadding';
 
 export default function Team() {
   const {temp, setTemp} = useData();
   return (
-    <>
+    <CPadding>
       <CArrowButton />
       <View style={styles.container}>
       </View>
-    </>
+    </CPadding>
   );
 }
 

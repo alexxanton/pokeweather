@@ -74,8 +74,6 @@ const styles = StyleSheet.create({
   },
   bg: {
     flex: 1,
-    paddingTop: 50,
-    padding: 20,
   },
   anim: {
     ...StyleSheet.absoluteFillObject,

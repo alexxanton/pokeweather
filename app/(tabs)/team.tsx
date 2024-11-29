@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { CContainer } from "@/components/containers/CContainer";
+import { CControlPanel } from "@/components/containers/CControlPanel";
 import { CButton } from "@/components/buttons/CButton";
 import { CArrowButton } from "@/components/buttons/CArrowButton";
 import { CPokemonButton } from "@/components/buttons/CPokemonButton";
@@ -8,6 +8,7 @@ import { useData } from "@/components/CDataProvider";
 import { CLabel } from "@/components/text/CLabel";
 import { useEffect, useState } from "react";
 import { uri } from '@/constants/URI';
+import { CPadding } from '@/components/containers/CPadding';
 import axios from "axios";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
@@ -29,12 +30,12 @@ export default function Team() {
   }, []);
 
   return (
-    <>
+    <CPadding>
       <CArrowButton />
       <View style={styles.container}>
         <CLabel title="Team">
-          <CContainer style={styles.team}>
-          </CContainer>
+          <CControlPanel style={styles.team}>
+          </CControlPanel>
         </CLabel>
         <CLabel title="Caught" style={styles.scroll}>
           <CScrollPanel
@@ -48,15 +49,15 @@ export default function Team() {
           />
         </CLabel>
       </View>
-      <CContainer>
+      <CControlPanel>
         <CButton href="/boost">
           <BoostButton width={135} height={90} />
         </CButton>
         <CButton href="/battle">
           <BattleButton width={135} height={90} />
         </CButton>
-      </CContainer>
-    </>
+      </CControlPanel>
+    </CPadding>
   );
 }
 
