@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { CBackground } from '@/components/containers/CBackground';
 import { CText } from '@/components/text/CText';
 import { View } from 'react-native';
 import { CContainer } from '@/components/containers/CContainer';
@@ -21,7 +20,7 @@ export default function Wheel() {
   };
 
   return (
-    <CBackground>
+    <>
 
       <CArrowButton />
       <View style={styles.container}>
@@ -43,7 +42,7 @@ export default function Wheel() {
         </CButton>
       </CContainer>
       
-    </CBackground>
+    </>
   );
 }
 

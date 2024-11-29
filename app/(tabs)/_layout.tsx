@@ -11,7 +11,13 @@ export default function RootLayout() {
       <CDataProvider>
         <CBackground>
           <StatusBar translucent backgroundColor="transparent" />
-          <Stack screenOptions={{ headerShown: false, contentStyle: {backgroundColor: "transparent"} }} />
+          <Stack
+            screenOptions={{
+              headerShown: false,
+              contentStyle: {backgroundColor: "transparent"},
+              animation: "slide_from_right"
+            }}
+          />
         </CBackground>
       </CDataProvider>
     </GestureHandlerRootView>

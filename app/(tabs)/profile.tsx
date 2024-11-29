@@ -1,5 +1,4 @@
 import { StyleSheet, View } from 'react-native';
-import { CBackground } from '@/components/containers/CBackground';
 import { CContainer } from '@/components/containers/CContainer';
 import { CButton } from '@/components/buttons/CButton';
 import { CArrowButton } from '@/components/buttons/CArrowButton';
@@ -23,7 +22,7 @@ export default function Team() {
   }, []);
 
   return (
-    <CBackground>
+    <>
       <CArrowButton />
       <View style={styles.container}>
         {users ? users.map((user, idx) => {
@@ -35,7 +34,7 @@ export default function Team() {
           <SignoutButton width={270} height={90} />
         </CButton>
       </CContainer>
-    </CBackground>
+    </>
   );
 }
 

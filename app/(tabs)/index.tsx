@@ -1,4 +1,3 @@
-import { CBackground } from '@/components/containers/CBackground';
 import { CButton } from '@/components/buttons/CButton';
 import { CContainer } from '@/components/containers/CContainer';
 import { CMainScreen } from '@/components/CMainScreen';
