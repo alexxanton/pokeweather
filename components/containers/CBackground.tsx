@@ -9,6 +9,7 @@ export function CBackground({ children }: PropsWithChildren) {
   const [image, setImage] = useState();
   const [cover, setCover] = useState();
   const fade = useSharedValue(1);
+  const [firstTime, setFirstTime] = useState(true);
   
   const imageMap = {
     "thunder": require("@/assets/images/backgrounds/storm.png"),
@@ -33,7 +34,9 @@ export function CBackground({ children }: PropsWithChildren) {
 
   const updateBackground = () => {
     let state = "";
-    if (description.includes("thunder")) state = "thunder";
+    
+    if (firstTime) setFirstTime(false);
+    else if (description.includes("thunder")) state = "thunder";
     else if (description.includes("rain") || description.includes("drizzle")) state = "rain";
     else if (hour > 19 || hour < 6) state = "night";
     else if (temp < 10) state = "cold";
