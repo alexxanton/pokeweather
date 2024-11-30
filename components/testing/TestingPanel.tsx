@@ -14,15 +14,16 @@ export function TestingPanel() {
     const states = [
       {symbol: "⚡", desc: "thunder"},
       {symbol: "💧", desc: "rain"},
+      {symbol: "❄️", desc: "snow"},
       {symbol: "☀️", desc: "clear"},
       {symbol: "☁️", desc: "cloudy"},
       {symbol: "⛅", desc: "few clouds"},
     ]
     
-    const conditional = index < 4 ? index + 1 : 0;
+    const nextIndex = index < 4 ? index + 1 : 0;
     setDescription(states[index]["desc"]);
-    setSymbol(states[conditional]["symbol"]);
-    setIndex(conditional);
+    setSymbol(states[nextIndex]["symbol"]);
+    setIndex(nextIndex);
   };
 
   return (

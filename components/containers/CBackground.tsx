@@ -15,6 +15,7 @@ export function CBackground({ children }: PropsWithChildren) {
     "thunder": require("@/assets/images/backgrounds/storm.png"),
     "rain": require("@/assets/images/backgrounds/rain.png"),
     "night": require("@/assets/images/backgrounds/night.png"),
+    "snow": require("@/assets/images/backgrounds/snow.png"),
     "cold": require("@/assets/images/backgrounds/cold.png"),
     "hot": require("@/assets/images/backgrounds/hot.png"),
     "clear": require("@/assets/images/backgrounds/clear.png"),
@@ -38,6 +39,7 @@ export function CBackground({ children }: PropsWithChildren) {
     if (firstTime) setFirstTime(false);
     else if (description.includes("thunder")) state = "thunder";
     else if (description.includes("rain") || description.includes("drizzle")) state = "rain";
+    else if (description.includes("snow")) state = "snow";
     else if (hour > 19 || hour < 6) state = "night";
     else if (temp < 10) state = "cold";
     else if (temp > 35) state = "hot";
