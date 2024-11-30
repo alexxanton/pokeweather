@@ -7,7 +7,7 @@ import { CScrollPanel } from "@/components/containers/CScrollPanel";
 import { useData } from "@/components/CDataProvider";
 import { CLabel } from "@/components/text/CLabel";
 import { useEffect, useState } from "react";
-import { uri } from '@/constants/URI';
+import { DATABASE_SERVER_URI } from '@/constants/URI';
 import { CPadding } from '@/components/containers/CPadding';
 import axios from "axios";
 
@@ -19,7 +19,7 @@ export default function Team() {
   const {pokemon, setPokemon} = useData();
   
   const fetchPokemon = async () => {
-    const response = await axios.get(uri + "/pokemon");
+    const response = await axios.get(DATABASE_SERVER_URI + "/pokemon");
     setPokemon(response.data);
   };
 
@@ -37,9 +37,9 @@ export default function Team() {
           <CControlPanel style={styles.team}>
           </CControlPanel>
         </CLabel>
-        <CLabel title="Caught" style={styles.scroll}>
+        <CLabel title="Caught" style={styles.label}>
           <CScrollPanel
-            style={styles.grid}
+            style={styles.scroll}
             data={pokemon}
             numColumns={6}
             initialNumToRender={1}
@@ -70,14 +70,10 @@ const styles = StyleSheet.create({
     padding: 40,
     marginBottom: 30
   },
-  grid: {
-    // flexDirection: 'row',
-    // flexWrap: 'wrap',
-    // justifyContent: "center",
-    // marginBottom: 30,
-    // gap: 10
-  },
   scroll: {
+    // paddingTop: 20,
+  },
+  label: {
     flex: 1,
     marginBottom: 20
   },

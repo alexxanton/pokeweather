@@ -3,4 +3,4 @@
 
 import Constants from 'expo-constants';
 const debuggerHost = Constants.manifest2?.extra?.expoGo?.debuggerHost;
-export const uri = "http://" + debuggerHost?.split(":")[0] + ":3001";
+export const DATABASE_SERVER_URI = "http://" + debuggerHost?.split(":")[0] + ":3001";

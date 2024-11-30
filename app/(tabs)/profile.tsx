@@ -4,7 +4,7 @@ import { CButton } from '@/components/buttons/CButton';
 import { CArrowButton } from '@/components/buttons/CArrowButton';
 import { useEffect, useState } from 'react';
 import { CText } from '@/components/text/CText';
-import { uri } from '@/constants/URI';
+import { DATABASE_SERVER_URI } from '@/constants/URI';
 import { CPadding } from '@/components/containers/CPadding';
 import axios from 'axios';
 
@@ -14,7 +14,7 @@ export default function Team() {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
-    const response = await axios.get(uri + "/user");
+    const response = await axios.get(DATABASE_SERVER_URI + "/user");
     setUsers(response.data);
   }
 
