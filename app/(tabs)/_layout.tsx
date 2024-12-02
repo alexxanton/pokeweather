@@ -15,9 +15,12 @@ export default function RootLayout() {
             screenOptions={{
               headerShown: false,
               contentStyle: {backgroundColor: "transparent"},
-              animation: "slide_from_right"
+              animation: "fade",
+              gestureEnabled: true
             }}
-          />
+          >
+            <Stack.Screen name="ad" options={{animation: "slide_from_bottom"}} />
+          </Stack>
         </CBackground>
       </CDataProvider>
     </GestureHandlerRootView>
