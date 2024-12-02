@@ -14,7 +14,6 @@ export function CPokemonButton({specie}: Props) {
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [{ scale: scale.value }, {translateY: y.value}]
-    
   }));
   
   const handlePress = () => {
@@ -53,13 +52,11 @@ export function CPokemonButton({specie}: Props) {
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
-    marginBottom: 30,
-    // backgroundColor:"black",
+    transform: [{translateY: "-15%"}]
   },
   button: {
-    height: 60,
+    height: 45,
     width: 45,
-    // backgroundColor:"#000000AA",
   },
   pokemon: {
     aspectRatio: 1,
