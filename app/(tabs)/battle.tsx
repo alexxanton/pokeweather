@@ -17,13 +17,19 @@ export default function Team() {
       <CPreventBackButton />
       <CVar name="ho-oh" hp={10} />
       <View style={styles.container}>
-        <CText outlined size={20}>LVL 6999</CText>
-        <CPokemon />
-        <CPokemon />
+        <CText outlined size={20}>LVL 42</CText>
+        <CPokemon specie={6} front style={styles.front} />
+        <CPokemon specie={6} style={styles.back} />
         <CText outlined size={20} style={styles.level}>LVL 40</CText>
       </View>
       <CVar name="urmom" hp={50} />
-      <CControlPanel>
+      <CControlPanel style={styles.buttons}>
+        <CButton>
+          <Pokeball width={100} height={100} />
+        </CButton>
+        <CButton>
+          <Pokeball width={100} height={100} />
+        </CButton>
         <CButton>
           <Pokeball width={100} height={100} />
         </CButton>
@@ -42,4 +48,17 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 0
   },
+  buttons: {
+    marginTop: 10
+  },
+  front: {
+    position: "absolute",
+    top: 0,
+    right: -25,
+  },
+  back: {
+    position: "absolute",
+    bottom: 0,
+    left: -25
+  }
 });
