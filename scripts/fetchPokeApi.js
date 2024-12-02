@@ -43,7 +43,8 @@ const fetchApi = async () => {
             `"types": [${types}],` +
             `"evolves_into": [${evolvesInto.join(',')}],` +
             `"capture_rate": ${speciesData.capture_rate},` +
-            `"is_legendary": ${speciesData.is_legendary}` +
+            `"is_legendary": ${speciesData.is_legendary},` +
+            `"height": ${pkmnData.height}` +
             `},`;
           console.log(i);
         } catch (error) {
