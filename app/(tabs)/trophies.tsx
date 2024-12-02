@@ -5,7 +5,7 @@ import { CText } from "@/components/text/CText";
 import { useData } from "@/components/CDataProvider";
 import { CPadding } from '@/components/containers/CPadding';
 
-export default function Team() {
+export default function Trophies() {
   const {temp, setTemp} = useData();
   return (
     <CPadding>

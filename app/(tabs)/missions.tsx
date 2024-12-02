@@ -7,7 +7,7 @@ import TrophyButton from '@/assets/images/buttons/TrophyButton';
 import { CArrowButton } from "@/components/buttons/CArrowButton";
 import { CText } from "@/components/text/CText";
 
-export default function Team() {
+export default function Missions() {
   return (
     <CPadding>
       <CArrowButton />

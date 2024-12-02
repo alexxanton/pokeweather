@@ -10,7 +10,7 @@ import axios from 'axios';
 
 import SignoutButton from '@/assets/images/buttons/SignoutButton';
 
-export default function Team() {
+export default function Profile() {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
