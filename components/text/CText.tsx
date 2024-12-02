@@ -1,9 +1,9 @@
 import { View } from "react-native";
-import { Text, StyleSheet, type TextProps } from "react-native";
+import { Text, StyleSheet, type TextProps, type ViewProps } from "react-native";
 
 
-type CTextProps = TextProps & {
-  size: number,
+type CTextProps = TextProps & ViewProps & {
+  size?: number,
   outlined?: boolean
 };
 

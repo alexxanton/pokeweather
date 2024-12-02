@@ -1,5 +1,5 @@
 import { useEffect, useState, type PropsWithChildren } from "react";
-import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
+import Animated, { useSharedValue, withTiming } from "react-native-reanimated";
 import {ImageBackground, StyleSheet, View } from "react-native";
 import { useData } from "../CDataProvider";
 
@@ -8,8 +8,8 @@ export function CBackground({ children }: PropsWithChildren) {
   const {temp, description, hour} = useData();
   const [image, setImage] = useState();
   const [cover, setCover] = useState();
-  const fade = useSharedValue(1);
   const [firstTime, setFirstTime] = useState(true);
+  const fade = useSharedValue(1);
   
   const imageMap = {
     "thunder": require("@/assets/images/backgrounds/storm.png"),

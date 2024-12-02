@@ -1,13 +1,13 @@
 import { StyleSheet, View, type ViewProps } from "react-native";
 import { CText } from "./CText";
 
-type Props = ViewProps & {
+type CLabelProps = ViewProps & {
   title: string
 };
 
-export function CLabel({children, title, style, ...rest}: Props) {
+export function CLabel({children, title, ...rest}: CLabelProps) {
   return (
-    <View style={[styles.container, style]} {...rest}>
+    <View {...rest}>
       {children}
       <CText outlined size={25} style={styles.label}>{title}</CText>
     </View>
@@ -20,8 +20,4 @@ const styles = StyleSheet.create({
     top: -15,
     right: 15
   },
-  container: {
-    // flex: 1,
-    // flexDirection: "row-reverse"
-  }
 });

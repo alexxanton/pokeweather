@@ -39,7 +39,6 @@ export default function Team() {
         </CLabel>
         <CLabel title="Caught" style={styles.label}>
           <CScrollPanel
-            style={styles.scroll}
             data={pokemon}
             numColumns={6}
             initialNumToRender={1}
@@ -69,9 +68,6 @@ const styles = StyleSheet.create({
   team: {
     padding: 40,
     marginBottom: 30
-  },
-  scroll: {
-    // paddingTop: 20,
   },
   label: {
     flex: 1,
