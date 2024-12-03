@@ -31,8 +31,7 @@ export default function Battle() {
     "windy": ["flying", "dragon", "bug", "fairy"]
   };
 
-  const index = condition;
-  const states = map[index];
+  const states = map[condition];
   const candidates = states.flatMap((state: number) => typesdata[state].pokemon)
 
   const arr = [1, 2, 3, 4, 5];
@@ -58,7 +57,6 @@ export default function Battle() {
         <CPokemon specie={25} front style={styles.front} />
         <CPokemon specie={25} style={styles.back} />
         <CText outlined size={20} style={styles.level}>LVL 40</CText>
-        <CText>{candidates}</CText>
       </View>
       <CVar name="urmom" hp={50} />
       <CControlPanel style={styles.buttons}>

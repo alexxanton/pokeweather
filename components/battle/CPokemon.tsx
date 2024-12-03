@@ -21,17 +21,17 @@ export function CPokemon({specie, front, style}: CPokemonProps) {
   const frontSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const sprite = front ? frontSprite : backSprite;
   const pokedata = require("@/assets/data/pokedata.json");
-  const y = useSharedValue(0);
+  const yPos = useSharedValue(0);
+  const yAttack = useSharedValue(0);
   const offset = pokedata[specie].height < 10 ? 30 : 0;
 
   const animStyle = useAnimatedStyle(() => ({
-    transform: [{translateY: y.value}],
+    transform: [{translateY: yPos.value }, {translateY: yAttack.value}],
   }));
 
   const startAnim = () => {
     const delay = front ? 900 : 0;
-
-    y.value = withDelay(
+    yPos.value = withDelay(
       delay,
       withRepeat(
         withTiming(-5, { duration: 2000 }),
@@ -41,8 +41,18 @@ export function CPokemon({specie, front, style}: CPokemonProps) {
     );
   };
 
+  const attackAnim = () => {
+    yAttack.value = withTiming(-20, { duration: 200 });
+    setTimeout(() => {
+      yAttack.value = withTiming(0, { duration: 200 });
+    }, 200);
+  };
+
   useEffect(() => {
     startAnim();
+    setInterval(() => {
+      attackAnim();
+    }, 2000);
   });
 
   return(
@@ -50,7 +60,6 @@ export function CPokemon({specie, front, style}: CPokemonProps) {
       <View style={styles.shadow} />
       <Animated.View style={animStyle}>
         <Image source={sprite} style={[styles.image, { transform: [{translateY: offset}] }]} />
-        {/* <CText>{pokedata[specie].height}</CText> */}
       </Animated.View>
     </View>
   );

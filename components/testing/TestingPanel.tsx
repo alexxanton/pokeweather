@@ -18,9 +18,9 @@ export function TestingPanel() {
       {symbol: "☀️", desc: "clear"},
       {symbol: "☁️", desc: "cloudy"},
       {symbol: "⛅", desc: "few clouds"},
-    ]
+    ];
     
-    const nextIndex = index < 4 ? index + 1 : 0;
+    const nextIndex = index < states.length - 1 ? index + 1 : 0;
     setDescription(states[index]["desc"]);
     setSymbol(states[nextIndex]["symbol"]);
     setIndex(nextIndex);
