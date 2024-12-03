@@ -5,7 +5,7 @@ import { useData } from "../CDataProvider";
 
 
 export function CBackground({ children }: PropsWithChildren) {
-  const {temp, description, hour} = useData();
+  const {temp, description, hour, windSpeed, setCondition} = useData();
   const [image, setImage] = useState();
   const [cover, setCover] = useState();
   const [firstTime, setFirstTime] = useState(true);
@@ -21,8 +21,9 @@ export function CBackground({ children }: PropsWithChildren) {
     "clear": require("@/assets/images/backgrounds/clear.png"),
     "partly": require("@/assets/images/backgrounds/partly.png"),
     "cloudy": require("@/assets/images/backgrounds/cloudy.png"),
+    "windy": require("@/assets/images/backgrounds/windy.png"),
     "black": require("@/assets/images/backgrounds/black.png"),
-  }
+  };
 
   const smoothTransition = () => {
     setCover(image);
@@ -40,6 +41,7 @@ export function CBackground({ children }: PropsWithChildren) {
     else if (description.includes("thunder")) state = "thunder";
     else if (description.includes("rain") || description.includes("drizzle")) state = "rain";
     else if (description.includes("snow")) state = "snow";
+    else if (windSpeed > 30) state = "windy";
     else if (hour > 19 || hour < 6) state = "night";
     else if (temp < 10) state = "cold";
     else if (temp > 35) state = "hot";
@@ -53,12 +55,13 @@ export function CBackground({ children }: PropsWithChildren) {
     }
 
     const bg = state;
-    setImage(imageMap[bg] || imageMap.black)
+    setCondition(state);
+    setImage(imageMap[bg] || imageMap.black);
   }
 
   useEffect(() => {
     smoothTransition();
-  }, [temp, description, hour]);
+  }, [temp, description, hour, windSpeed]);
 
   return (
     <View style={styles.container}>
