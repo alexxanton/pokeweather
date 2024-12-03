@@ -19,10 +19,6 @@ create table if not exists pokemon (
     specie int not null,
     level int not null,
     exp int not null,
-    hp int not null,
-    attack int not null,
-    defense int not null,
-    speed int not null,
     user_fk int not null,
     foreign key (user_fk) references user(id) on delete cascade
 );
