@@ -20,8 +20,9 @@ export function CPokemon({specie, front, style}: CPokemonProps) {
   const backSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const sprite = front ? frontSprite : backSprite;
-  const y = useSharedValue(0);
   const pokedata = require("@/assets/data/pokedata.json");
+  const y = useSharedValue(0);
+  const offset = pokedata[specie].height < 10 ? 30 : 0;
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [{translateY: y.value}],
@@ -48,8 +49,8 @@ export function CPokemon({specie, front, style}: CPokemonProps) {
     <View style={[styles.continer, style]}>
       <View style={styles.shadow} />
       <Animated.View style={animStyle}>
-        <Image source={sprite} style={styles.image} />
-        <CText>{pokedata[specie].height}</CText>
+        <Image source={sprite} style={[styles.image, { transform: [{translateY: offset}] }]} />
+        {/* <CText>{pokedata[specie].height}</CText> */}
       </Animated.View>
     </View>
   );

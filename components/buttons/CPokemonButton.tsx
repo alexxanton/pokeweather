@@ -13,7 +13,7 @@ export function CPokemonButton({specie}: Props) {
   const y = useSharedValue(1);
 
   const animStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }, {translateY: y.value}]
+    transform: [{ scale: scale.value }, { translateY: y.value }]
   }));
   
   const handlePress = () => {

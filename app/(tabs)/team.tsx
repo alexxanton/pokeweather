@@ -16,15 +16,15 @@ import BattleButton from '@/assets/images/buttons/BattleButton';
 
 
 export default function Team() {
-  const {pokemon, setPokemon} = useData();
+  const {collection, setCollection} = useData();
   
   const fetchPokemon = async () => {
     const response = await axios.get(DATABASE_SERVER_URI + "/pokemon");
-    setPokemon(response.data);
+    setCollection(response.data);
   };
 
   useEffect(() => {
-    if (pokemon.length < 0) {
+    if (collection.length < 0) {
     };
     fetchPokemon();
   }, []);
@@ -39,7 +39,7 @@ export default function Team() {
         </CLabel>
         <CLabel title="Caught" style={styles.label}>
           <CScrollPanel
-            data={pokemon}
+            data={collection}
             numColumns={6}
             initialNumToRender={1}
             renderItem={({ item }) => (

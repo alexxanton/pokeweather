@@ -17,8 +17,8 @@ type CDataProviderType = {
   setCondition: React.Dispatch<React.SetStateAction<string>>;
   buttonActive: boolean;
   setButtonActive: React.Dispatch<React.SetStateAction<boolean>>;
-  pokemon: Record<string, any>;
-  setPokemon: React.Dispatch<React.SetStateAction<Record<string, any>>>;
+  collection: Record<string, any>;
+  setCollection: React.Dispatch<React.SetStateAction<Record<string, any>>>;
 }
 
 const DataContext = createContext<CDataProviderType | undefined>(undefined);
@@ -32,7 +32,7 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
   const [wheelTries, setWheelTries] = useState<number>(10);
   const [description, setDescription] = useState<string>("");
   const [buttonActive, setButtonActive] = useState<boolean>(true);
-  const [pokemon, setPokemon] = useState<Record<string, any>>([]);
+  const [collection, setCollection] = useState<Record<string, any>>([]);
 
   return (
     <DataContext.Provider value={{
@@ -52,8 +52,8 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
       setWheelTries,
       buttonActive,
       setButtonActive,
-      pokemon,
-      setPokemon
+      collection,
+      setCollection
     }}>
       {children}
     </DataContext.Provider>
