@@ -17,6 +17,7 @@ export default function Battle() {
   const {condition} = useData();
   const pokedata = require("@/assets/data/pokedata.json");
   const typesdata = require("@/assets/data/typesdata.json");
+  const [trigger, setAction] = useState(true);
 
   const map = {
     "thunder": ["electric", "steel", "dragon"],
@@ -55,7 +56,7 @@ export default function Battle() {
       <View style={styles.container}>
         <CText outlined size={20}>LVL 42</CText>
         <CPokemon specie={25} front style={styles.front} />
-        <CPokemon specie={25} style={styles.back} />
+        <CPokemon specie={25} style={styles.back} trigger={trigger} />
         <CText outlined size={20} style={styles.level}>LVL 40</CText>
       </View>
       <CVar name="urmom" hp={50} />
@@ -66,7 +67,7 @@ export default function Battle() {
         <CButton>
           <Pokeball width={100} height={100} />
         </CButton>
-        <CButton>
+        <CButton onPress={() => setAction(!trigger)}>
           <Pokeball width={100} height={100} />
         </CButton>
       </CControlPanel>

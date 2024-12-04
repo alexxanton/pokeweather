@@ -1,5 +1,5 @@
 import { Image } from "expo-image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { StyleSheet, View, type ViewProps } from "react-native";
 import Animated, {
   useSharedValue,
@@ -12,11 +12,12 @@ import { CText } from "../text/CText";
 
 type CPokemonProps = ViewProps & {
   specie: number,
-  front?: boolean
+  front?: boolean,
+  trigger?: boolean
 };
 
 
-export function CPokemon({specie, front, style}: CPokemonProps) {
+export function CPokemon({specie, front, trigger, style}: CPokemonProps) {
   const backSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const sprite = front ? frontSprite : backSprite;
@@ -42,18 +43,18 @@ export function CPokemon({specie, front, style}: CPokemonProps) {
   };
 
   const attackAnim = () => {
-    yAttack.value = withTiming(-20, { duration: 200 });
-    setTimeout(() => {
-      yAttack.value = withTiming(0, { duration: 200 });
-    }, 200);
+    yAttack.value = withTiming(-20, { duration: 100 }, () => {
+      yAttack.value = withTiming(0, { duration: 100 });
+    });
   };
 
   useEffect(() => {
     startAnim();
-    setInterval(() => {
-      attackAnim();
-    }, 2000);
-  });
+  }, []);
+
+  useEffect(() => {
+    attackAnim();
+  }, [trigger]);
 
   return(
     <View style={[styles.continer, style]}>
