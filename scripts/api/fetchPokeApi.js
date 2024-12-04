@@ -12,54 +12,72 @@ const fetchApi = async () => {
     fetchPromises.push(
       (async () => {
         try {
-          const pkmn = await fetch(pkmnUrl);
-          const species = await fetch(speciesUrl);
-          const pkmnData = await pkmn.json();
-          const speciesData = await species.json();
+         
+          const pkmnResponse = await fetch(pkmnUrl);
+          const speciesResponse = await fetch(speciesUrl);
+          const pkmnData = await pkmnResponse.json();
+          const speciesData = await speciesResponse.json();
 
+         
           const evoUrl = speciesData.evolution_chain.url;
-          const evo = await fetch(evoUrl);
-          const evoData = await evo.json();
+          const evoResponse = await fetch(evoUrl);
+          const evoData = await evoResponse.json();
 
-          const getEvolvesInto = (chain, name) => {
+         
+          const getEvolvesTo = (chain, name) => {
             if (chain.species.name === name) {
               return chain.evolves_to.map(evo => {
                 const urlParts = evo.species.url.split('/');
-                return parseInt(urlParts[urlParts.length - 2]);
+                const id = parseInt(urlParts[urlParts.length - 2]);
+                const minLevel = evo.evolution_details[0]?.min_level || null;
+                return { id, minLevel };
               });
             }
+
+           
             for (const next of chain.evolves_to) {
-              const result = getEvolvesInto(next, name);
+              const result = getEvolvesTo(next, name);
               if (result) return result;
             }
+
             return null;
           };
 
+         
           const types = pkmnData.types.map(t => `"${t.type.name}"`);
-          const evolvesInto = getEvolvesInto(evoData.chain, pkmnData.name) || [];
+          const evolvesTo = getEvolvesTo(evoData.chain, pkmnData.name) || [];
 
+         
           txt +=
             `"${pkmnData.id}": {"name":"${pkmnData.name}",` +
             `"types": [${types}],` +
-            `"evolves_into": [${evolvesInto.join(',')}],` +
+            `"evolves_to": [${evolvesTo.map(evo => evo.id).join(',')}],` +
+            `"min_level": ${evolvesTo[0]?.minLevel || null},` +
             `"capture_rate": ${speciesData.capture_rate},` +
             `"is_legendary": ${speciesData.is_legendary},` +
             `"height": ${pkmnData.height}` +
             `},`;
-          console.log(i);
+
+          console.log(`Fetched data for Pokémon ID ${i}`);
         } catch (error) {
-          console.error('Error:', error);
+          console.error(`Error fetching data for Pokémon ID ${i}:`, error);
         }
       })()
     );
   }
 
   await Promise.all(fetchPromises);
-  txt = txt.slice(0, txt.length - 1);
+  txt = txt.slice(0, -1);
   txt += '}';
   console.log(txt);
-  const pkmnData = JSON.parse(txt);
-  console.log(pkmnData);
+
+ 
+  try {
+    const pkmnData = JSON.parse(txt);
+    console.log('Parsed Pokémon Data:', pkmnData);
+  } catch (error) {
+    console.error('Error parsing JSON:', error);
+  }
 };
 
 fetchApi();
