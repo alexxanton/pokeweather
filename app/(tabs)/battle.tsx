@@ -8,16 +8,17 @@ import { CButton } from "@/components/buttons/CButton";
 import { CPreventBackButton } from "@/components/battle/CPreventBackButton";
 import { useData } from "@/components/CDataProvider";
 import { useEffect, useState } from "react";
+import { random } from "../utils/random";
 
 import Pokeball from '@/assets/images/misc/Pokeball'
 
 
 export default function Battle() {
   const [pokemon, setPokemon] = useState<number[]>();
+  const [trigger, setAction] = useState(true);
   const {condition} = useData();
   const pokedata = require("@/assets/data/pokedata.json");
   const typesdata = require("@/assets/data/typesdata.json");
-  const [trigger, setAction] = useState(true);
 
   const map = {
     "thunder": ["electric", "steel", "dragon"],
@@ -33,20 +34,42 @@ export default function Battle() {
   };
 
   const states = map[condition];
-  const candidates = states.flatMap((state: number) => typesdata[state].pokemon)
+  const candidates = states.flatMap((state: number) => typesdata[state].pokemon);
+  let randomPokemon: number[] = [];
 
-  const arr = [1, 2, 3, 4, 5];
+  const pickRandomPokemon = () => {
+    const randomPick = random(0, candidates.length);
+    const candidate = candidates[randomPick];
+    let accepted = true;
+    
+    if (pokedata[candidate].is_legendary) {
+      if (random(0, 100) != 1) {
+        accepted = false;
+      }
+    }
+    
+    if (accepted) {
+      randomPokemon.push(candidate);
+    } else {
+      pickRandomPokemon();
+    }
+  };
+  
+  for (let i = 0; i < 6; i++) {
+    pickRandomPokemon();
+  }
+
   let stats = [];
 
   const getLevelAvg = () => {};
 
 
-  arr.forEach(pkmn => {
+  randomPokemon.forEach(pkmn => {
     stats.push({});
   });
 
   useEffect(() => {
-    setPokemon(arr);
+    setPokemon(randomPokemon);
   }, []);
   
   return (
@@ -56,6 +79,7 @@ export default function Battle() {
       <View style={styles.container}>
         <CText outlined size={20}>LVL 42</CText>
         <CPokemon specie={25} front style={styles.front} />
+        <CText>{randomPokemon.join(",")}</CText>
         <CPokemon specie={25} style={styles.back} trigger={trigger} />
         <CText outlined size={20} style={styles.level}>LVL 40</CText>
       </View>

@@ -8,7 +8,6 @@ import Animated, {
   withRepeat,
   withDelay
 } from "react-native-reanimated";
-import { CText } from "../text/CText";
 
 type CPokemonProps = ViewProps & {
   specie: number,
@@ -74,10 +73,11 @@ const styles = StyleSheet.create({
     position: "absolute",
     backgroundColor: "black",
     opacity: 0.3,
-    width: "100%",
+    width: "75%",
     height: "35%",
     borderRadius: "100%",
-    bottom: 0
+    bottom: 0,
+    alignSelf: "center"
   },
   image: {
     aspectRatio: 1,
