@@ -8,7 +8,7 @@ import { CButton } from "@/components/buttons/CButton";
 import { CPreventBackButton } from "@/components/battle/CPreventBackButton";
 import { useData } from "@/components/CDataProvider";
 import { useEffect, useState } from "react";
-import { random } from "../utils/random";
+import { randint } from "../utils/randint";
 
 import Pokeball from '@/assets/images/misc/Pokeball'
 
@@ -20,7 +20,7 @@ export default function Battle() {
   const pokedata = require("@/assets/data/pokedata.json");
   const typesdata = require("@/assets/data/typesdata.json");
 
-  const map = {
+  const typeMap = {
     "thunder": ["electric", "steel", "dragon"],
     "rain": ["water", "grass", "electric", "psychic"],
     "night": ["dark", "fairy", "ghost", "psychic"],
@@ -33,17 +33,17 @@ export default function Battle() {
     "windy": ["flying", "dragon", "bug", "fairy"]
   };
 
-  const states = map[condition];
+  const states = typeMap[condition];
   const candidates = states.flatMap((state: number) => typesdata[state].pokemon);
   let randomPokemon: number[] = [];
 
   const pickRandomPokemon = () => {
-    const randomPick = random(0, candidates.length);
+    const randomPick = randint(0, candidates.length - 1);
     const candidate = candidates[randomPick];
     let accepted = true;
-    
+    console.log(candidate)
     if (pokedata[candidate].is_legendary) {
-      if (random(0, 100) != 1) {
+      if (randint(0, 100) != 1) {
         accepted = false;
       }
     }
@@ -51,7 +51,7 @@ export default function Battle() {
     if (accepted) {
       randomPokemon.push(candidate);
     } else {
-      pickRandomPokemon();
+      // pickRandomPokemon();
     }
   };
   
