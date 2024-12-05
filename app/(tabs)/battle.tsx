@@ -6,9 +6,11 @@ import { CText } from "@/components/text/CText";
 import { CControlPanel } from "@/components/containers/CControlPanel";
 import { CButton } from "@/components/buttons/CButton";
 import { CPreventBackButton } from "@/components/battle/CPreventBackButton";
+import { CAttack } from "@/components/battle/CAttack";
+import { CEffect } from "@/components/battle/CEffect";
 import { useData } from "@/components/CDataProvider";
 import { useEffect, useState } from "react";
-import { randint } from "../utils/randint";
+import { randint } from "@/utils/randint";
 
 import Pokeball from '@/assets/images/misc/Pokeball'
 
@@ -19,19 +21,7 @@ export default function Battle() {
   const {condition} = useData();
   const pokedata = require("@/assets/data/pokedata.json");
   const typesdata = require("@/assets/data/typesdata.json");
-
-  const typeMap = {
-    "thunder": ["electric", "steel", "dragon"],
-    "rain": ["water", "grass", "electric", "psychic"],
-    "night": ["dark", "fairy", "ghost", "psychic"],
-    "snow": ["ice", "steel", "water", "fairy"],
-    "cold": ["ice", "ground", "ghost", "rock"],
-    "hot": ["fire", "dragon", "fighting", "rock"],
-    "clear": ["normal", "grass", "fire", "flying"],
-    "partly": ["bug", "normal", "grass", "rock"],
-    "cloudy": ["poison", "dark", "fighting"],
-    "windy": ["flying", "dragon", "bug", "fairy"]
-  };
+  const typeMap = require("@/assets/data/typemap.json")
 
   const states = typeMap[condition];
   const candidates = states.flatMap((state: number) => typesdata[state].pokemon);
@@ -51,22 +41,35 @@ export default function Battle() {
     if (accepted) {
       randomPokemon.push(candidate);
     } else {
-      // pickRandomPokemon();
+      pickRandomPokemon();
     }
   };
   
   for (let i = 0; i < 6; i++) {
     pickRandomPokemon();
   }
+  
+  const getLevelAvg = () => {
+    const avg = 10;
+    const max = 15;
+    return {avg, max};
+  };
 
-  let stats = [];
+  const avg = getLevelAvg().avg;
+  const max = getLevelAvg().max;
+  
+  const generateStats = (arr: number[]) => {
+    let stats: object[] = [];
+    arr.forEach(pkmn => {
+      const level = randint(avg, max);
+      const hp = level * 10;
+      const attack = level * 2;
+      stats.push({pkmn, hp, attack});
+    });
+    return stats;
+  };
 
-  const getLevelAvg = () => {};
-
-
-  randomPokemon.forEach(pkmn => {
-    stats.push({});
-  });
+  generateStats(randomPokemon);
 
   useEffect(() => {
     setPokemon(randomPokemon);
