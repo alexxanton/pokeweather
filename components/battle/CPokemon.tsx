@@ -8,17 +8,17 @@ import Animated, {
   withRepeat,
   withDelay
 } from "react-native-reanimated";
-import { CEffect } from "./CEffect";
 import { CAttack } from "./CAttack";
 
 type CPokemonProps = ViewProps & {
   specie: number,
   front?: boolean,
-  trigger?: boolean
+  trigger?: boolean,
+  action?: string
 };
 
 
-export function CPokemon({specie, front, trigger, style}: CPokemonProps) {
+export function CPokemon({specie, front, trigger, action, style}: CPokemonProps) {
   const backSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const sprite = front ? frontSprite : backSprite;
@@ -54,7 +54,7 @@ export function CPokemon({specie, front, trigger, style}: CPokemonProps) {
   }, []);
 
   useEffect(() => {
-    attackAnim();
+      attackAnim();
   }, [trigger]);
 
   return(
@@ -64,7 +64,6 @@ export function CPokemon({specie, front, trigger, style}: CPokemonProps) {
         <Image source={sprite} style={[styles.image, { transform: [{translateY: offset}] }]} />
       </Animated.View>
       <CAttack />
-      <CEffect />
     </View>
   );
 }
@@ -72,6 +71,7 @@ export function CPokemon({specie, front, trigger, style}: CPokemonProps) {
 const styles = StyleSheet.create({
   continer: {
     flex: 1,
+    justifyContent: "center"
   },
   shadow: {
     position: "absolute",

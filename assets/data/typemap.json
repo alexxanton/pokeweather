@@ -1,12 +1,12 @@
 {
-    "thunder": ["electric", "steel", "dragon"],
+    "thunder": ["electric", "steel", "poison", "water"],
     "rain": ["water", "grass", "electric", "psychic"],
     "night": ["dark", "fairy", "ghost", "psychic"],
     "snow": ["ice", "steel", "water", "fairy"],
     "cold": ["ice", "ground", "ghost", "rock"],
     "hot": ["fire", "dragon", "fighting", "rock"],
     "clear": ["normal", "grass", "fire", "flying"],
-    "partly": ["bug", "normal", "grass", "rock"],
+    "partly": ["bug", "normal", "grass", "ground"],
     "cloudy": ["poison", "dark", "fighting"],
     "windy": ["flying", "dragon", "bug", "fairy"]
 }

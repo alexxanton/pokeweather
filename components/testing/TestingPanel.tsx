@@ -42,7 +42,7 @@ export function TestingPanel() {
         <Slider
           style={{ width: 250, height: 35 }}
           minimumValue={0}
-          maximumValue={300}
+          maximumValue={60}
           step={1}
           onValueChange={setWindSpeed}
           minimumTrackTintColor="red"
