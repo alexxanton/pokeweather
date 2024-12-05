@@ -12,11 +12,15 @@ export function CAttack() {
   const opacity = useSharedValue(0);
 
   const animStyle = useAnimatedStyle(() => ({
-    transform: [{ translateX: xPos.value }, { translateY: yPos.value }]
+    transform: [{ translateX: xPos.value }, { translateY: yPos.value }],
+    opacity: opacity.value,
   }));
 
+  
+
   return (
-    <Animated.View style={[styles.container, {opacity: opacity.value}]}>
+    // <Animated.View style={[styles.container, {opacity: opacity.value}]}>
+    <Animated.View style={[styles.container, animStyle]}>
       <Image source="" />
     </Animated.View>
   );
