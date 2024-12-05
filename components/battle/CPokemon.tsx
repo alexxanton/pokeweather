@@ -8,6 +8,8 @@ import Animated, {
   withRepeat,
   withDelay
 } from "react-native-reanimated";
+import { CEffect } from "./CEffect";
+import { CAttack } from "./CAttack";
 
 type CPokemonProps = ViewProps & {
   specie: number,
@@ -61,6 +63,8 @@ export function CPokemon({specie, front, trigger, style}: CPokemonProps) {
       <Animated.View style={animStyle}>
         <Image source={sprite} style={[styles.image, { transform: [{translateY: offset}] }]} />
       </Animated.View>
+      <CAttack />
+      <CEffect />
     </View>
   );
 }

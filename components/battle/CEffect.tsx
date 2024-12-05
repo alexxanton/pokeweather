@@ -1,8 +1,8 @@
-import { StyleSheet, View } from "react-native";
 import { Image } from "expo-image";
+import { StyleSheet, View } from "react-native";
 import Animated from "react-native-reanimated";
 
-export function CAttack() {
+export function CEffect() {
   return (
     <Animated.View style={styles.container}>
       <Image source="" />
