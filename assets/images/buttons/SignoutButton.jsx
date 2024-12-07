@@ -9,18 +9,18 @@ const SvgComponent = (props) => (
     viewBox="24 8 275.517 106"
     {...props}
   >
-    <Rect width={275.517} height={106} x={24} y={8} fill="red" rx={15} />
+    <Rect width={275.517} height={106} x={24} y={8} fill="#FF1C1C" rx={15} />
     <Circle
       cx={261}
       cy={64}
       r={23}
-      fill="red"
+      fill="#FF1C1C"
       stroke="white"
       strokeWidth={8}
     />
     <Path
       fill="white"
-      stroke="red"
+      stroke="#FF1C1C"
       strokeWidth={8}
       d="M253 66v4h16V27h-16v39Z"
     />

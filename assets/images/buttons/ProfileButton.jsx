@@ -12,7 +12,7 @@ const SvgComponent = (props) => (
       cx={35.5}
       cy={35.5}
       r={31.5}
-      fill="red"
+      fill="#FF1C1C"
     />
     <Path fill="white" d="M57 63H14s9.626-23 21.5-23S57 63 57 63Z" />
     <Circle

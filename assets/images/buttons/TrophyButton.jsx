@@ -9,7 +9,7 @@ const SvgComponent = (props) => (
     viewBox="24 8 326 107"
     {...props}
   >
-    <Rect width={326} height={107} x={24} y={8} fill="red" rx={15} />
+    <Rect width={326} height={107} x={24} y={8} fill="#FF1C1C" rx={15} />
     <Rect
       width={31.324}
       height={10.695}
