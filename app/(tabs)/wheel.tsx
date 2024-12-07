@@ -7,6 +7,7 @@ import { CArrowButton } from '@/components/buttons/CArrowButton';
 import { useState } from 'react';
 import { useData } from '@/components/CDataProvider';
 import { CPadding } from '@/components/containers/CPadding';
+import { TransparentBlack } from "@/constants/TransparentBlack";
 
 import AdButton from '@/assets/images/buttons/AdButton';
 import SpinButton from '@/assets/images/buttons/SpinButton';
@@ -66,6 +67,6 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 15,
     gap: 10,
-    backgroundColor: "#0C0C0D33"
+    backgroundColor: TransparentBlack
   }
 });

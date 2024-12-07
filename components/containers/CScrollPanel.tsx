@@ -1,4 +1,5 @@
 import { StyleSheet, View, FlatList, type FlatListProps } from "react-native";
+import { TransparentBlack } from "@/constants/TransparentBlack";
 
 
 export function CScrollPanel<T>({...rest}: FlatListProps<T>) {
@@ -21,6 +22,6 @@ export function CScrollPanel<T>({...rest}: FlatListProps<T>) {
 const styles = StyleSheet.create({
   container: {
     borderRadius: 15,
-    backgroundColor: "#0C0C0D33",
+    backgroundColor: TransparentBlack,
   },
 });
