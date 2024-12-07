@@ -12,7 +12,7 @@ import { TestingPanel } from './testing/TestingPanel'
 
 export function CMainScreen() {
   const [error, setError] = useState("");
-  const {temp, setTemp, description, setDescription, windSpeed, setWindSpeed, setHour} = useData();
+  const {temp, setTemp, setDescription, setWindSpeed, setHour} = useData();
   const [weatherData, setWeatherData] = useState();
   const apiKey = process.env.EXPO_PUBLIC_API_KEY;
 
@@ -65,7 +65,6 @@ export function CMainScreen() {
               <Pokeball width={200} height={200} />
             </CButton>
             <TestingPanel />
-            <CText outlined size={20} style={styles.desc}>{`${description} - Wind: ${windSpeed} km/h`}</CText>
           </View>
         </>
       ) : (

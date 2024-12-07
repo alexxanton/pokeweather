@@ -41,7 +41,7 @@ export function CBackground({ children }: PropsWithChildren) {
     else if (description.includes("thunder")) state = "thunder";
     else if (description.includes("rain") || description.includes("drizzle")) state = "rain";
     else if (description.includes("snow")) state = "snow";
-    else if (windSpeed > 30) state = "windy";
+    else if (windSpeed > 10) state = "windy";
     else if (hour > 19 || hour < 6) state = "night";
     else if (temp < 10) state = "cold";
     else if (temp > 35) state = "hot";
