@@ -5,9 +5,9 @@ type CLabelProps = ViewProps & {
   title: string
 };
 
-export function CLabel({children, title, ...rest}: CLabelProps) {
+export function CLabel({children, title, style}: CLabelProps) {
   return (
-    <View {...rest}>
+    <View style={style}>
       {children}
       <CText outlined size={25} style={styles.label}>{title}</CText>
     </View>
