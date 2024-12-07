@@ -15,7 +15,7 @@ export function generateWildPokemon() {
     const randomPick = randint(0, candidates.length - 1);
     const candidate = candidates[randomPick];
     let accepted = true;
-    console.log(candidate)
+
     if (pokedata[candidate].is_legendary) {
       if (randint(0, 100) != 1) {
         accepted = false;

@@ -8,7 +8,7 @@ import Animated, {
   withRepeat,
   withDelay
 } from "react-native-reanimated";
-import { CAttack } from "./CAttack";
+import { CAttackEffect } from "./CAttackEffect";
 
 type CPokemonProps = ViewProps & {
   specie: number,
@@ -54,16 +54,18 @@ export function CPokemon({specie, front, trigger, action, style}: CPokemonProps)
   }, []);
 
   useEffect(() => {
-      attackAnim();
+    switch (action) {
+      case "attack": attackAnim();
+    }
   }, [trigger]);
 
   return(
     <View style={[styles.continer, style]}>
       <View style={styles.shadow} />
-      <Animated.View style={animStyle}>
-        <Image source={sprite} style={[styles.image, { transform: [{translateY: offset}] }]} />
-      </Animated.View>
-      <CAttack />
+        <Animated.View style={animStyle}>
+          <Image source={sprite} style={[styles.image, { transform: [{translateY: offset}] }]} />
+        </Animated.View>
+      <CAttackEffect trigger={trigger} />
     </View>
   );
 }

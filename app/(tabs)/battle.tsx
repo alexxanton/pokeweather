@@ -15,7 +15,7 @@ import { generateWildPokemon } from "@/utils/generateWildPokemon";
 
 
 export default function Battle() {
-  const [pokemon, setPokemon] = useState<number[]>();
+  const [pokemon] = useState(generateWildPokemon());
   const [trigger, setTrigger] = useState(true);
   const [action, setAction] = useState("");
   
@@ -23,16 +23,9 @@ export default function Battle() {
   const typesdata = require("@/assets/data/typesdata.json");
   const typeMap = require("@/assets/data/typemap.json")
 
-  // const randomPokemon = generateWildPokemon();
-  
-
-  // useEffect(() => {
-  //   setPokemon(randomPokemon);
-  // }, []);
-
-  const attack = () => {
-    setTrigger(!trigger);
-    // setAction("attack");
+  const sendAction = (action:string) => {
+    setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
+    setAction(action);
   };
   
   return (
@@ -46,7 +39,7 @@ export default function Battle() {
           front
           style={styles.front}
         />
-        {/* <CText>{randomPokemon.join(",")}</CText> */}
+        <CText>{pokemon?.join(",")}</CText>
         <CPokemon
           specie={25}
           style={styles.back}
@@ -60,7 +53,7 @@ export default function Battle() {
         <CButton>
           <Pokeball width={100} height={100} />
         </CButton>
-        <CButton onPress={() => setTrigger(!trigger)}>
+        <CButton onPress={() => sendAction("attack")}>
           <Pokeball width={100} height={100} />
         </CButton>
         <CButton>
