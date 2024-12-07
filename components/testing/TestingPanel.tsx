@@ -6,7 +6,7 @@ import { CButton } from '../buttons/CButton';
 import { useState } from 'react';
 
 export function TestingPanel() {
-  const {setTemp, setWindSpeed, hour, setHour, setDescription} = useData();
+  const {setTemp, windSpeed, setWindSpeed, hour, setHour, description, setDescription} = useData();
   const [symbol, setSymbol] = useState("⚡");
   const [index, setIndex] = useState(0);
 
@@ -42,7 +42,7 @@ export function TestingPanel() {
         <Slider
           style={{ width: 250, height: 35 }}
           minimumValue={0}
-          maximumValue={60}
+          maximumValue={30}
           step={1}
           onValueChange={setWindSpeed}
           minimumTrackTintColor="red"
@@ -59,6 +59,8 @@ export function TestingPanel() {
           maximumTrackTintColor="#D3D3D3"
           thumbTintColor="#663399"
         />
+      <CText outlined size={20} style={styles.desc}>{description}</CText>
+      <CText outlined size={20} style={styles.desc}>{`Wind: ${windSpeed} km/h`}</CText>
       </View>
       <View style={styles.side}>
         <CButton onPress={changeDesc}>
