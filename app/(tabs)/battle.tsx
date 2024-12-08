@@ -18,14 +18,32 @@ export default function Battle() {
   const [pokemon] = useState(generateWildPokemon());
   const [trigger, setTrigger] = useState(true);
   const [action, setAction] = useState("");
+  const [oppTrigger, setOppTrigger] = useState(true);
+  const [oppAction, setOppAction] = useState("");
+  const hurtBuffer: (() => void)[] = [];
+  
+
+  // useEffect(() => {
+  //   setTrigger(!trigger);
+  // }, [trigger]);
   
   const pokedata = require("@/assets/data/pokedata.json");
   const typesdata = require("@/assets/data/typesdata.json");
   const typeMap = require("@/assets/data/typemap.json")
 
-  const sendAction = (action:string) => {
+  const sendSignal = (action:string) => {
     setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
     setAction(action);
+  };
+
+  const sendOppSignal = (action:string) => {
+    setOppTrigger(!oppTrigger);
+    setOppAction(action);
+  };
+
+  const sendAttack = () => {
+    sendSignal("attack");
+    sendOppSignal("attack");
   };
   
   return (
@@ -36,8 +54,10 @@ export default function Battle() {
         <CText outlined size={20}>LVL 42</CText>
         <CPokemon
           specie={25}
-          front
           style={styles.front}
+          trigger={oppTrigger}
+          action={oppAction}
+          opponent
         />
         <CText>{pokemon?.join(",")}</CText>
         <CPokemon
@@ -48,12 +68,12 @@ export default function Battle() {
         />
         <CText outlined size={20} style={styles.level}>LVL 40</CText>
       </View>
-      <CVar name="urmom" hp={50} />
-      <CControlPanel style={styles.buttons}>
+      <CVar name="urmom" hp={50}  style={styles.bottomVar} />
+      <CControlPanel>
         <CButton>
           <Pokeball width={100} height={100} />
         </CButton>
-        <CButton onPress={() => sendAction("attack")}>
+        <CButton onPress={sendAttack}>
           <Pokeball width={100} height={100} />
         </CButton>
         <CButton>
@@ -74,8 +94,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 0
   },
-  buttons: {
-    marginTop: 10
+  bottomVar: {
+    marginBottom: 20
   },
   front: {
     position: "absolute",

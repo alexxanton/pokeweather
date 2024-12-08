@@ -13,6 +13,7 @@ import axios from "axios";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
 import BattleButton from '@/assets/images/buttons/BattleButton';
+import { TransparentBlack } from "@/constants/TransparentBlack";
 
 
 export default function Team() {
@@ -34,8 +35,8 @@ export default function Team() {
       <CArrowButton />
       <View style={styles.container}>
         <CLabel title="Team">
-          <CControlPanel style={styles.team}>
-          </CControlPanel>
+          <View style={styles.team}>
+          </View>
         </CLabel>
         <CLabel title="Caught" style={styles.label}>
           <CScrollPanel
@@ -49,7 +50,7 @@ export default function Team() {
         </CLabel>
       </View>
       <CControlPanel>
-        <CButton href="/boost">
+        <CButton>
           <BoostButton width={135} height={90} />
         </CButton>
         <CButton href="/battle">
@@ -67,7 +68,10 @@ const styles = StyleSheet.create({
   },
   team: {
     padding: 40,
-    marginBottom: 30
+    marginBottom: 30,
+    backgroundColor: TransparentBlack,
+    flexDirection: "row",
+    borderRadius: 15,
   },
   label: {
     flex: 1,

@@ -12,16 +12,16 @@ import { CAttackEffect } from "./CAttackEffect";
 
 type CPokemonProps = ViewProps & {
   specie: number,
-  front?: boolean,
+  opponent?: boolean,
   trigger?: boolean,
   action?: string
 };
 
 
-export function CPokemon({specie, front, trigger, action, style}: CPokemonProps) {
+export function CPokemon({specie, opponent, trigger, action, style}: CPokemonProps) {
   const backSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
-  const sprite = front ? frontSprite : backSprite;
+  const sprite = opponent ? frontSprite : backSprite;
   const pokedata = require("@/assets/data/pokedata.json");
   const yPos = useSharedValue(0);
   const yAttack = useSharedValue(0);
@@ -32,7 +32,7 @@ export function CPokemon({specie, front, trigger, action, style}: CPokemonProps)
   }));
 
   const startAnim = () => {
-    const delay = front ? 900 : 0;
+    const delay = opponent ? 900 : 0;
     yPos.value = withDelay(
       delay,
       withRepeat(
