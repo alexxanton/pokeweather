@@ -15,21 +15,28 @@ import { generateWildPokemon } from "@/utils/generateWildPokemon";
 
 
 export default function Battle() {
-  const [pokemon] = useState(generateWildPokemon());
+  const pokedata = require("@/assets/data/pokedata.json");
+  const typesdata = require("@/assets/data/typesdata.json");
+  const {weatherCondition} = useData();
+  const [pokemon, setPokemon] = useState(generateWildPokemon(weatherCondition));
   const [trigger, setTrigger] = useState(true);
   const [action, setAction] = useState("");
   const [oppTrigger, setOppTrigger] = useState(true);
   const [oppAction, setOppAction] = useState("");
   const hurtBuffer: (() => void)[] = [];
+  let currentOpponent = 0;
+  let currentMember = 0;
+
+  const opponentName = pokedata[pokemon[currentOpponent].pkmn].name;
+  const opponentHp = pokemon[currentOpponent].hp;
+  const opponentLevel = pokemon[currentOpponent].level;
+  const opponentSpecie = pokemon[currentOpponent].pkmn;
   
 
   // useEffect(() => {
   //   setTrigger(!trigger);
   // }, [trigger]);
   
-  const pokedata = require("@/assets/data/pokedata.json");
-  const typesdata = require("@/assets/data/typesdata.json");
-  const typeMap = require("@/assets/data/typemap.json")
 
   const sendSignal = (action:string) => {
     setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
@@ -43,23 +50,39 @@ export default function Battle() {
 
   const sendAttack = () => {
     sendSignal("attack");
-    sendOppSignal("attack");
+    updatePokemon(0, opponentHp - 1);
+    setTimeout(() => {
+      
+      // sendOppSignal("attack");
+    }, 300);
+  };
+
+  const updatePokemon = (id:number, newHp:number) => {
+    setPokemon((prev) =>
+      prev.map((pkmn, i) =>
+        i === id ? {...pkmn, hp: newHp} : pkmn
+      )
+    );
   };
   
   return (
     <CPadding>
       <CPreventBackButton />
-      <CVar name="ho-oh" hp={10} />
+      <CVar
+        name={opponentName}
+        hp={opponentHp}
+      />
+      <CText>{opponentHp}</CText>
       <View style={styles.container}>
-        <CText outlined size={20}>LVL 42</CText>
+        <CText outlined size={20}>LVL {opponentLevel}</CText>
         <CPokemon
-          specie={25}
+          specie={opponentSpecie}
           style={styles.front}
           trigger={oppTrigger}
           action={oppAction}
           opponent
         />
-        <CText>{pokemon?.join(",")}</CText>
+        <CText>{}</CText>
         <CPokemon
           specie={25}
           style={styles.back}

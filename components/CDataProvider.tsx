@@ -29,8 +29,6 @@ type CDataProviderType = {
   // Pokemon
   collection: Record<string, any>;
   setCollection: React.Dispatch<React.SetStateAction<Record<string, any>>>;
-  pokemon: Record<string, any>;
-  setPokemon: React.Dispatch<React.SetStateAction<Record<string, any>>>;
 }
 
 const DataContext = createContext<CDataProviderType | undefined>(undefined);
@@ -49,7 +47,6 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
   const [attackTrigger, setAttackTrigger] = useState<boolean>(true);
 
   const [collection, setCollection] = useState<Record<string, any>>([]);
-  const [pokemon, setPokemon] = useState<Record<string, any>>(generateWildPokemon("rain"));
 
   return (
     <DataContext.Provider value={{
@@ -76,8 +73,6 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
 
       collection,
       setCollection,
-      pokemon,
-      setPokemon
     }}>
       {children}
     </DataContext.Provider>

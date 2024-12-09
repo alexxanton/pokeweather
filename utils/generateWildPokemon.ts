@@ -1,4 +1,3 @@
-// import { useData } from "@/components/CDataProvider";s
 import { randint } from "./randint";
 
 
@@ -43,12 +42,15 @@ export function generateWildPokemon(weatherCondition:string) {
   
   const generateStats = (arr: number[]) => {
     let pokemonWithStats: object[] = [];
+    let id = 0;
     arr.forEach(pkmn => {
+      id++;
       const level = randint(avg, max);
       const hp = level * 10;
+      const baseHp = hp;
       const attack = level * 2;
       const defense = level * 3;
-      pokemonWithStats.push({pkmn, level, hp, attack, defense});
+      pokemonWithStats.push({id, pkmn, level, hp, baseHp, attack, defense});
     });
     return pokemonWithStats;
   };
