@@ -12,6 +12,7 @@ import { randint } from "@/utils/randint";
 
 import Pokeball from '@/assets/images/misc/Pokeball'
 import { generateWildPokemon } from "@/utils/generateWildPokemon";
+import { CAttackEffect } from "@/components/battle/CAttackEffect";
 
 
 export default function Battle() {
@@ -24,11 +25,12 @@ export default function Battle() {
   const [oppTrigger, setOppTrigger] = useState(true);
   const [oppAction, setOppAction] = useState("");
   const hurtBuffer: (() => void)[] = [];
-  let currentOpponent = 0;
-  let currentMember = 0;
+  const [currentOpponent, setCurrentOpponent] = useState(0);
+  const [currentMember, setCurrentMember] = useState(0);
 
   const opponentName = pokedata[pokemon[currentOpponent].pkmn].name;
   const opponentHp = pokemon[currentOpponent].hp;
+  const opponentBaseHp = pokemon[currentOpponent].baseHp;
   const opponentLevel = pokemon[currentOpponent].level;
   const opponentSpecie = pokemon[currentOpponent].pkmn;
   
@@ -50,19 +52,27 @@ export default function Battle() {
 
   const sendAttack = () => {
     sendSignal("attack");
-    updatePokemon(0, opponentHp - 1);
+    updateOpponentHealth(currentOpponent, opponentHp - 1);
     setTimeout(() => {
       
       // sendOppSignal("attack");
     }, 300);
   };
 
-  const updatePokemon = (id:number, newHp:number) => {
+  const updateOpponentHealth = (id:number, newHp:number) => {
     setPokemon((prev) =>
       prev.map((pkmn, i) =>
         i === id ? {...pkmn, hp: newHp} : pkmn
       )
     );
+  };
+
+  const nextPokemon = () => {
+    setCurrentOpponent(currentOpponent < pokemon.length - 1 ? currentOpponent + 1 : 0);
+  };
+
+  const prevPokemon = () => {
+    setCurrentOpponent(currentOpponent > 0 ? currentOpponent - 1 : pokemon.length - 1);
   };
   
   return (
@@ -70,7 +80,7 @@ export default function Battle() {
       <CPreventBackButton />
       <CVar
         name={opponentName}
-        hp={opponentHp}
+        hp={opponentHp / opponentBaseHp * 100}
       />
       <CText>{opponentHp}</CText>
       <View style={styles.container}>
@@ -81,25 +91,29 @@ export default function Battle() {
           trigger={oppTrigger}
           action={oppAction}
           opponent
-        />
+        >
+          <CAttackEffect trigger={trigger} />
+        </CPokemon>
         <CText>{}</CText>
         <CPokemon
           specie={25}
           style={styles.back}
           trigger={trigger}
           action={action}
-        />
+        >
+          <CAttackEffect trigger={oppTrigger} />
+        </CPokemon>
         <CText outlined size={20} style={styles.level}>LVL 40</CText>
       </View>
       <CVar name="urmom" hp={50}  style={styles.bottomVar} />
       <CControlPanel>
-        <CButton>
+        <CButton onPress={prevPokemon}>
           <Pokeball width={100} height={100} />
         </CButton>
         <CButton onPress={sendAttack}>
           <Pokeball width={100} height={100} />
         </CButton>
-        <CButton>
+        <CButton onPress={nextPokemon}>
           <Pokeball width={100} height={100} />
         </CButton>
       </CControlPanel>

@@ -7,6 +7,7 @@ import Animated, {
   runOnJS
 } from "react-native-reanimated";
 import { useEffect, useState } from "react";
+import { randint } from "@/utils/randint";
 
 type CAttackEffectProps = {
   trigger?: boolean
@@ -26,16 +27,18 @@ const EffectAnim = ({startY, startX, onComplete}: EffectAnimProps) => {
   const attackImage = require("@/assets/images/battle/attack.png");
 
   useEffect(() => {
-    translateX.value = 0;
-    translateY.value = 0;
+    translateX.value = randint(-50, 50);
+    translateY.value = randint(-50, 50);
     scale.value = 1;
-    opacity.value = withTiming(1, { duration: 200 });
-  
-    translateY.value = withTiming(-200, { duration: 300 });
-    translateX.value = withTiming(150, { duration: 300 }, () => {
+    opacity.value = withTiming(1, { duration: 100 }, () => {
       scale.value = withTiming(2, { duration: 200 });
       opacity.value = withTiming(0, { duration: 200 }, () => runOnJS(onComplete)());
     });
+  
+    // translateY.value = withTiming(-200, { duration: 300 });
+    // translateX.value = withTiming(150, { duration: 300 }, () => {
+    // });
+    
   }, []);
 
   const animStyle = useAnimatedStyle(() => ({

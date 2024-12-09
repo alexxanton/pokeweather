@@ -18,7 +18,7 @@ type CPokemonProps = ViewProps & {
 };
 
 
-export function CPokemon({specie, opponent, trigger, action, style}: CPokemonProps) {
+export function CPokemon({children, specie, opponent, trigger, action, style}: CPokemonProps) {
   const backSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const sprite = opponent ? frontSprite : backSprite;
@@ -62,10 +62,10 @@ export function CPokemon({specie, opponent, trigger, action, style}: CPokemonPro
   return(
     <View style={[styles.continer, style]}>
       <View style={styles.shadow} />
-        <Animated.View style={animStyle}>
-          <Image source={sprite} style={[styles.image, { transform: [{translateY: offset}] }]} />
-        </Animated.View>
-      <CAttackEffect trigger={trigger} />
+      <Animated.View style={animStyle}>
+        <Image source={sprite} style={[styles.image, { transform: [{translateY: offset}] }]} />
+      </Animated.View>
+      {children}
     </View>
   );
 }
