@@ -1,13 +1,12 @@
-import { useData } from "@/components/CDataProvider";
+// import { useData } from "@/components/CDataProvider";s
 import { randint } from "./randint";
 
 
-export function generateWildPokemon() {
+export function generateWildPokemon(weatherCondition:string) {
   const pokedata = require("@/assets/data/pokedata.json");
   const typesdata = require("@/assets/data/typesdata.json");
   const typeMap = require("@/assets/data/typemap.json");
-  const {condition} = useData();
-  const states = typeMap[condition];
+  const states = typeMap[weatherCondition];
   const candidates = states.flatMap((state: number) => typesdata[state].pokemon);
   let randomPokemon: number[] = [];
 
@@ -43,16 +42,16 @@ export function generateWildPokemon() {
   const max = getLevelAvg().max;
   
   const generateStats = (arr: number[]) => {
-    let stats: object[] = [];
+    let pokemonWithStats: object[] = [];
     arr.forEach(pkmn => {
       const level = randint(avg, max);
       const hp = level * 10;
       const attack = level * 2;
-      stats.push({pkmn, hp, attack});
+      const defense = level * 3;
+      pokemonWithStats.push({pkmn, level, hp, attack, defense});
     });
-    return stats;
+    return pokemonWithStats;
   };
 
-  generateStats(randomPokemon);
-  return randomPokemon;
+  return generateStats(randomPokemon);
 }

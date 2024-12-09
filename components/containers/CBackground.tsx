@@ -5,7 +5,7 @@ import { useData } from "../CDataProvider";
 
 
 export function CBackground({ children }: PropsWithChildren) {
-  const {temp, description, hour, windSpeed, setCondition} = useData();
+  const {temp, description, hour, windSpeed, setWeatherCondition} = useData();
   const [image, setImage] = useState();
   const [cover, setCover] = useState();
   const [firstTime, setFirstTime] = useState(true);
@@ -55,7 +55,7 @@ export function CBackground({ children }: PropsWithChildren) {
     }
 
     const bg = state;
-    setCondition(state);
+    setWeatherCondition(state);
     setImage(imageMap[bg] || imageMap.black);
   }
 
