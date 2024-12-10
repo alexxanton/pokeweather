@@ -10,8 +10,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "2": {
         "name": "ivysaur",
@@ -24,8 +23,7 @@
         ],
         "min_level": 32,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "3": {
         "name": "venusaur",
@@ -36,8 +34,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "4": {
         "name": "charmander",
@@ -49,8 +46,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "5": {
         "name": "charmeleon",
@@ -62,8 +58,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "6": {
         "name": "charizard",
@@ -74,8 +69,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "7": {
         "name": "squirtle",
@@ -87,8 +81,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "8": {
         "name": "wartortle",
@@ -100,8 +93,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "9": {
         "name": "blastoise",
@@ -111,8 +103,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "10": {
         "name": "caterpie",
@@ -124,8 +115,7 @@
         ],
         "min_level": 7,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "11": {
         "name": "metapod",
@@ -137,8 +127,7 @@
         ],
         "min_level": 10,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "12": {
         "name": "butterfree",
@@ -149,8 +138,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "13": {
         "name": "weedle",
@@ -163,8 +151,7 @@
         ],
         "min_level": 7,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "14": {
         "name": "kakuna",
@@ -177,8 +164,7 @@
         ],
         "min_level": 10,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "15": {
         "name": "beedrill",
@@ -189,8 +175,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "16": {
         "name": "pidgey",
@@ -203,8 +188,7 @@
         ],
         "min_level": 18,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "17": {
         "name": "pidgeotto",
@@ -217,8 +201,7 @@
         ],
         "min_level": 36,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "18": {
         "name": "pidgeot",
@@ -229,8 +212,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "19": {
         "name": "rattata",
@@ -242,8 +224,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "20": {
         "name": "raticate",
@@ -253,8 +234,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 127,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "21": {
         "name": "spearow",
@@ -267,8 +247,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "22": {
         "name": "fearow",
@@ -279,8 +258,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "23": {
         "name": "ekans",
@@ -292,8 +270,7 @@
         ],
         "min_level": 22,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "24": {
         "name": "arbok",
@@ -303,8 +280,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 35
+        "is_legendary": false
     },
     "25": {
         "name": "pikachu",
@@ -316,8 +292,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "26": {
         "name": "raichu",
@@ -327,8 +302,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "27": {
         "name": "sandshrew",
@@ -340,8 +314,7 @@
         ],
         "min_level": 22,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "28": {
         "name": "sandslash",
@@ -351,8 +324,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "29": {
         "name": "nidoran-f",
@@ -364,8 +336,7 @@
         ],
         "min_level": 16,
         "capture_rate": 235,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "30": {
         "name": "nidorina",
@@ -377,8 +348,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "31": {
         "name": "nidoqueen",
@@ -389,8 +359,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "32": {
         "name": "nidoran-m",
@@ -402,8 +371,7 @@
         ],
         "min_level": 16,
         "capture_rate": 235,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "33": {
         "name": "nidorino",
@@ -415,8 +383,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "34": {
         "name": "nidoking",
@@ -427,8 +394,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "35": {
         "name": "clefairy",
@@ -440,8 +406,7 @@
         ],
         "min_level": null,
         "capture_rate": 150,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "36": {
         "name": "clefable",
@@ -451,8 +416,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "37": {
         "name": "vulpix",
@@ -464,8 +428,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "38": {
         "name": "ninetales",
@@ -475,8 +438,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "39": {
         "name": "jigglypuff",
@@ -489,8 +451,7 @@
         ],
         "min_level": null,
         "capture_rate": 170,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "40": {
         "name": "wigglytuff",
@@ -501,8 +462,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 50,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "41": {
         "name": "zubat",
@@ -515,8 +475,7 @@
         ],
         "min_level": 22,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "42": {
         "name": "golbat",
@@ -529,8 +488,7 @@
         ],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "43": {
         "name": "oddish",
@@ -543,8 +501,7 @@
         ],
         "min_level": 21,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "44": {
         "name": "gloom",
@@ -558,8 +515,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "45": {
         "name": "vileplume",
@@ -570,8 +526,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "46": {
         "name": "paras",
@@ -584,8 +539,7 @@
         ],
         "min_level": 24,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "47": {
         "name": "parasect",
@@ -596,8 +550,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "48": {
         "name": "venonat",
@@ -610,8 +563,7 @@
         ],
         "min_level": 31,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "49": {
         "name": "venomoth",
@@ -622,8 +574,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "50": {
         "name": "diglett",
@@ -635,8 +586,7 @@
         ],
         "min_level": 26,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "51": {
         "name": "dugtrio",
@@ -646,8 +596,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 50,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "52": {
         "name": "meowth",
@@ -660,8 +609,7 @@
         ],
         "min_level": 28,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "53": {
         "name": "persian",
@@ -671,8 +619,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "54": {
         "name": "psyduck",
@@ -684,8 +631,7 @@
         ],
         "min_level": 33,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "55": {
         "name": "golduck",
@@ -695,8 +641,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "56": {
         "name": "mankey",
@@ -708,8 +653,7 @@
         ],
         "min_level": 28,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "57": {
         "name": "primeape",
@@ -721,8 +665,7 @@
         ],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "58": {
         "name": "growlithe",
@@ -734,8 +677,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "59": {
         "name": "arcanine",
@@ -745,8 +687,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 19
+        "is_legendary": false
     },
     "60": {
         "name": "poliwag",
@@ -758,8 +699,7 @@
         ],
         "min_level": 25,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "61": {
         "name": "poliwhirl",
@@ -772,8 +712,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "62": {
         "name": "poliwrath",
@@ -784,8 +723,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "63": {
         "name": "abra",
@@ -797,8 +735,7 @@
         ],
         "min_level": 16,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "64": {
         "name": "kadabra",
@@ -810,8 +747,7 @@
         ],
         "min_level": null,
         "capture_rate": 100,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "65": {
         "name": "alakazam",
@@ -821,8 +757,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 50,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "66": {
         "name": "machop",
@@ -834,8 +769,7 @@
         ],
         "min_level": 28,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "67": {
         "name": "machoke",
@@ -847,8 +781,7 @@
         ],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "68": {
         "name": "machamp",
@@ -858,8 +791,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "69": {
         "name": "bellsprout",
@@ -872,8 +804,7 @@
         ],
         "min_level": 21,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "70": {
         "name": "weepinbell",
@@ -886,8 +817,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "71": {
         "name": "victreebel",
@@ -898,8 +828,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "72": {
         "name": "tentacool",
@@ -912,8 +841,7 @@
         ],
         "min_level": 30,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "73": {
         "name": "tentacruel",
@@ -924,8 +852,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "74": {
         "name": "geodude",
@@ -938,8 +865,7 @@
         ],
         "min_level": 25,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "75": {
         "name": "graveler",
@@ -952,8 +878,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "76": {
         "name": "golem",
@@ -964,8 +889,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "77": {
         "name": "ponyta",
@@ -977,8 +901,7 @@
         ],
         "min_level": 40,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "78": {
         "name": "rapidash",
@@ -988,8 +911,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "79": {
         "name": "slowpoke",
@@ -1003,8 +925,7 @@
         ],
         "min_level": 37,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "80": {
         "name": "slowbro",
@@ -1015,8 +936,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "81": {
         "name": "magnemite",
@@ -1029,8 +949,7 @@
         ],
         "min_level": 30,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "82": {
         "name": "magneton",
@@ -1043,8 +962,7 @@
         ],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "83": {
         "name": "farfetchd",
@@ -1057,8 +975,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "84": {
         "name": "doduo",
@@ -1071,8 +988,7 @@
         ],
         "min_level": 31,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "85": {
         "name": "dodrio",
@@ -1083,8 +999,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "86": {
         "name": "seel",
@@ -1096,8 +1011,7 @@
         ],
         "min_level": 34,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "87": {
         "name": "dewgong",
@@ -1108,8 +1022,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "88": {
         "name": "grimer",
@@ -1121,8 +1034,7 @@
         ],
         "min_level": 38,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "89": {
         "name": "muk",
@@ -1132,8 +1044,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "90": {
         "name": "shellder",
@@ -1145,8 +1056,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "91": {
         "name": "cloyster",
@@ -1157,8 +1067,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "92": {
         "name": "gastly",
@@ -1171,8 +1080,7 @@
         ],
         "min_level": 25,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "93": {
         "name": "haunter",
@@ -1185,8 +1093,7 @@
         ],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "94": {
         "name": "gengar",
@@ -1197,8 +1104,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "95": {
         "name": "onix",
@@ -1211,8 +1117,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 88
+        "is_legendary": false
     },
     "96": {
         "name": "drowzee",
@@ -1224,8 +1129,7 @@
         ],
         "min_level": 26,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "97": {
         "name": "hypno",
@@ -1235,8 +1139,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "98": {
         "name": "krabby",
@@ -1248,8 +1151,7 @@
         ],
         "min_level": 28,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "99": {
         "name": "kingler",
@@ -1259,8 +1161,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "100": {
         "name": "voltorb",
@@ -1272,8 +1173,7 @@
         ],
         "min_level": 30,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "101": {
         "name": "electrode",
@@ -1283,8 +1183,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "102": {
         "name": "exeggcute",
@@ -1297,8 +1196,7 @@
         ],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "103": {
         "name": "exeggutor",
@@ -1309,8 +1207,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "104": {
         "name": "cubone",
@@ -1322,8 +1219,7 @@
         ],
         "min_level": 28,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "105": {
         "name": "marowak",
@@ -1333,8 +1229,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "106": {
         "name": "hitmonlee",
@@ -1344,8 +1239,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "107": {
         "name": "hitmonchan",
@@ -1355,8 +1249,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "108": {
         "name": "lickitung",
@@ -1368,8 +1261,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "109": {
         "name": "koffing",
@@ -1381,8 +1273,7 @@
         ],
         "min_level": 35,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "110": {
         "name": "weezing",
@@ -1392,8 +1283,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "111": {
         "name": "rhyhorn",
@@ -1406,8 +1296,7 @@
         ],
         "min_level": 42,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "112": {
         "name": "rhydon",
@@ -1420,8 +1309,7 @@
         ],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 19
+        "is_legendary": false
     },
     "113": {
         "name": "chansey",
@@ -1433,8 +1321,7 @@
         ],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "114": {
         "name": "tangela",
@@ -1446,8 +1333,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "115": {
         "name": "kangaskhan",
@@ -1457,8 +1343,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 22
+        "is_legendary": false
     },
     "116": {
         "name": "horsea",
@@ -1470,8 +1355,7 @@
         ],
         "min_level": 32,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "117": {
         "name": "seadra",
@@ -1483,8 +1367,7 @@
         ],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "118": {
         "name": "goldeen",
@@ -1496,8 +1379,7 @@
         ],
         "min_level": 33,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "119": {
         "name": "seaking",
@@ -1507,8 +1389,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "120": {
         "name": "staryu",
@@ -1520,8 +1401,7 @@
         ],
         "min_level": null,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "121": {
         "name": "starmie",
@@ -1532,8 +1412,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "122": {
         "name": "mr-mime",
@@ -1546,8 +1425,7 @@
         ],
         "min_level": 42,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "123": {
         "name": "scyther",
@@ -1561,8 +1439,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "124": {
         "name": "jynx",
@@ -1573,8 +1450,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "125": {
         "name": "electabuzz",
@@ -1586,8 +1462,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "126": {
         "name": "magmar",
@@ -1599,8 +1474,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "127": {
         "name": "pinsir",
@@ -1610,8 +1484,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "128": {
         "name": "tauros",
@@ -1621,8 +1494,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "129": {
         "name": "magikarp",
@@ -1634,8 +1506,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "130": {
         "name": "gyarados",
@@ -1646,8 +1517,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 65
+        "is_legendary": false
     },
     "131": {
         "name": "lapras",
@@ -1658,8 +1528,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 25
+        "is_legendary": false
     },
     "132": {
         "name": "ditto",
@@ -1669,8 +1538,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 35,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "133": {
         "name": "eevee",
@@ -1689,8 +1557,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "134": {
         "name": "vaporeon",
@@ -1700,8 +1567,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "135": {
         "name": "jolteon",
@@ -1711,8 +1577,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "136": {
         "name": "flareon",
@@ -1722,8 +1587,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "137": {
         "name": "porygon",
@@ -1735,8 +1599,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "138": {
         "name": "omanyte",
@@ -1749,8 +1612,7 @@
         ],
         "min_level": 40,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "139": {
         "name": "omastar",
@@ -1761,8 +1623,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "140": {
         "name": "kabuto",
@@ -1775,8 +1636,7 @@
         ],
         "min_level": 40,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "141": {
         "name": "kabutops",
@@ -1787,8 +1647,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "142": {
         "name": "aerodactyl",
@@ -1799,8 +1658,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "143": {
         "name": "snorlax",
@@ -1810,8 +1668,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 21
+        "is_legendary": false
     },
     "144": {
         "name": "articuno",
@@ -1822,8 +1679,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 17
+        "is_legendary": true
     },
     "145": {
         "name": "zapdos",
@@ -1834,8 +1690,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 16
+        "is_legendary": true
     },
     "146": {
         "name": "moltres",
@@ -1846,8 +1701,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 20
+        "is_legendary": true
     },
     "147": {
         "name": "dratini",
@@ -1859,8 +1713,7 @@
         ],
         "min_level": 30,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "148": {
         "name": "dragonair",
@@ -1872,8 +1725,7 @@
         ],
         "min_level": 55,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 40
+        "is_legendary": false
     },
     "149": {
         "name": "dragonite",
@@ -1884,8 +1736,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 22
+        "is_legendary": false
     },
     "150": {
         "name": "mewtwo",
@@ -1895,8 +1746,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 20
+        "is_legendary": true
     },
     "151": {
         "name": "mew",
@@ -1906,8 +1756,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "152": {
         "name": "chikorita",
@@ -1919,8 +1768,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "153": {
         "name": "bayleef",
@@ -1932,8 +1780,7 @@
         ],
         "min_level": 32,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "154": {
         "name": "meganium",
@@ -1943,8 +1790,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "155": {
         "name": "cyndaquil",
@@ -1956,8 +1802,7 @@
         ],
         "min_level": 14,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "156": {
         "name": "quilava",
@@ -1969,8 +1814,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "157": {
         "name": "typhlosion",
@@ -1980,8 +1824,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "158": {
         "name": "totodile",
@@ -1993,8 +1836,7 @@
         ],
         "min_level": 18,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "159": {
         "name": "croconaw",
@@ -2006,8 +1848,7 @@
         ],
         "min_level": 30,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "160": {
         "name": "feraligatr",
@@ -2017,8 +1858,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 23
+        "is_legendary": false
     },
     "161": {
         "name": "sentret",
@@ -2030,8 +1870,7 @@
         ],
         "min_level": 15,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "162": {
         "name": "furret",
@@ -2041,8 +1880,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "163": {
         "name": "hoothoot",
@@ -2055,8 +1893,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "164": {
         "name": "noctowl",
@@ -2067,8 +1904,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "165": {
         "name": "ledyba",
@@ -2081,8 +1917,7 @@
         ],
         "min_level": 18,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "166": {
         "name": "ledian",
@@ -2093,8 +1928,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "167": {
         "name": "spinarak",
@@ -2107,8 +1941,7 @@
         ],
         "min_level": 22,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "168": {
         "name": "ariados",
@@ -2119,8 +1952,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "169": {
         "name": "crobat",
@@ -2131,8 +1963,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "170": {
         "name": "chinchou",
@@ -2145,8 +1976,7 @@
         ],
         "min_level": 27,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "171": {
         "name": "lanturn",
@@ -2157,8 +1987,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "172": {
         "name": "pichu",
@@ -2170,8 +1999,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "173": {
         "name": "cleffa",
@@ -2183,8 +2011,7 @@
         ],
         "min_level": null,
         "capture_rate": 150,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "174": {
         "name": "igglybuff",
@@ -2197,8 +2024,7 @@
         ],
         "min_level": null,
         "capture_rate": 170,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "175": {
         "name": "togepi",
@@ -2210,8 +2036,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "176": {
         "name": "togetic",
@@ -2224,8 +2049,7 @@
         ],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "177": {
         "name": "natu",
@@ -2238,8 +2062,7 @@
         ],
         "min_level": 25,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "178": {
         "name": "xatu",
@@ -2250,8 +2073,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "179": {
         "name": "mareep",
@@ -2263,8 +2085,7 @@
         ],
         "min_level": 15,
         "capture_rate": 235,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "180": {
         "name": "flaaffy",
@@ -2276,8 +2097,7 @@
         ],
         "min_level": 30,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "181": {
         "name": "ampharos",
@@ -2287,8 +2107,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "182": {
         "name": "bellossom",
@@ -2298,8 +2117,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "183": {
         "name": "marill",
@@ -2312,8 +2130,7 @@
         ],
         "min_level": 18,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "184": {
         "name": "azumarill",
@@ -2324,8 +2141,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "185": {
         "name": "sudowoodo",
@@ -2335,8 +2151,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 65,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "186": {
         "name": "politoed",
@@ -2346,8 +2161,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "187": {
         "name": "hoppip",
@@ -2360,8 +2174,7 @@
         ],
         "min_level": 18,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "188": {
         "name": "skiploom",
@@ -2374,8 +2187,7 @@
         ],
         "min_level": 27,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "189": {
         "name": "jumpluff",
@@ -2386,8 +2198,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "190": {
         "name": "aipom",
@@ -2399,8 +2210,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "191": {
         "name": "sunkern",
@@ -2412,8 +2222,7 @@
         ],
         "min_level": null,
         "capture_rate": 235,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "192": {
         "name": "sunflora",
@@ -2423,8 +2232,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "193": {
         "name": "yanma",
@@ -2437,8 +2245,7 @@
         ],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "194": {
         "name": "wooper",
@@ -2452,8 +2259,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "195": {
         "name": "quagsire",
@@ -2464,8 +2270,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "196": {
         "name": "espeon",
@@ -2475,8 +2280,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "197": {
         "name": "umbreon",
@@ -2486,8 +2290,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "198": {
         "name": "murkrow",
@@ -2500,8 +2303,7 @@
         ],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "199": {
         "name": "slowking",
@@ -2512,8 +2314,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 70,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "200": {
         "name": "misdreavus",
@@ -2525,8 +2326,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "201": {
         "name": "unown",
@@ -2536,8 +2336,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "202": {
         "name": "wobbuffet",
@@ -2547,8 +2346,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "203": {
         "name": "girafarig",
@@ -2561,8 +2359,7 @@
         ],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "204": {
         "name": "pineco",
@@ -2574,8 +2371,7 @@
         ],
         "min_level": 31,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "205": {
         "name": "forretress",
@@ -2586,8 +2382,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "206": {
         "name": "dunsparce",
@@ -2599,8 +2394,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "207": {
         "name": "gligar",
@@ -2613,8 +2407,7 @@
         ],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "208": {
         "name": "steelix",
@@ -2625,8 +2418,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 92
+        "is_legendary": false
     },
     "209": {
         "name": "snubbull",
@@ -2638,8 +2430,7 @@
         ],
         "min_level": 23,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "210": {
         "name": "granbull",
@@ -2649,8 +2440,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "211": {
         "name": "qwilfish",
@@ -2663,8 +2453,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "212": {
         "name": "scizor",
@@ -2675,8 +2464,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "213": {
         "name": "shuckle",
@@ -2687,8 +2475,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "214": {
         "name": "heracross",
@@ -2699,8 +2486,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "215": {
         "name": "sneasel",
@@ -2714,8 +2500,7 @@
         ],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "216": {
         "name": "teddiursa",
@@ -2727,8 +2512,7 @@
         ],
         "min_level": 30,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "217": {
         "name": "ursaring",
@@ -2740,8 +2524,7 @@
         ],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "218": {
         "name": "slugma",
@@ -2753,8 +2536,7 @@
         ],
         "min_level": 38,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "219": {
         "name": "magcargo",
@@ -2765,8 +2547,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "220": {
         "name": "swinub",
@@ -2779,8 +2560,7 @@
         ],
         "min_level": 33,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "221": {
         "name": "piloswine",
@@ -2793,8 +2573,7 @@
         ],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "222": {
         "name": "corsola",
@@ -2807,8 +2586,7 @@
         ],
         "min_level": 38,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "223": {
         "name": "remoraid",
@@ -2820,8 +2598,7 @@
         ],
         "min_level": 25,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "224": {
         "name": "octillery",
@@ -2831,8 +2608,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "225": {
         "name": "delibird",
@@ -2843,8 +2619,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "226": {
         "name": "mantine",
@@ -2855,8 +2630,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 21
+        "is_legendary": false
     },
     "227": {
         "name": "skarmory",
@@ -2867,8 +2641,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "228": {
         "name": "houndour",
@@ -2881,8 +2654,7 @@
         ],
         "min_level": 24,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "229": {
         "name": "houndoom",
@@ -2893,8 +2665,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "230": {
         "name": "kingdra",
@@ -2905,8 +2676,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "231": {
         "name": "phanpy",
@@ -2918,8 +2688,7 @@
         ],
         "min_level": 25,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "232": {
         "name": "donphan",
@@ -2929,8 +2698,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "233": {
         "name": "porygon2",
@@ -2942,8 +2710,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "234": {
         "name": "stantler",
@@ -2955,8 +2722,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "235": {
         "name": "smeargle",
@@ -2966,8 +2732,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "236": {
         "name": "tyrogue",
@@ -2981,8 +2746,7 @@
         ],
         "min_level": 20,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "237": {
         "name": "hitmontop",
@@ -2992,8 +2756,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "238": {
         "name": "smoochum",
@@ -3006,8 +2769,7 @@
         ],
         "min_level": 30,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "239": {
         "name": "elekid",
@@ -3019,8 +2781,7 @@
         ],
         "min_level": 30,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "240": {
         "name": "magby",
@@ -3032,8 +2793,7 @@
         ],
         "min_level": 30,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "241": {
         "name": "miltank",
@@ -3043,8 +2803,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "242": {
         "name": "blissey",
@@ -3054,8 +2813,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "243": {
         "name": "raikou",
@@ -3065,8 +2823,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 19
+        "is_legendary": true
     },
     "244": {
         "name": "entei",
@@ -3076,8 +2833,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 21
+        "is_legendary": true
     },
     "245": {
         "name": "suicune",
@@ -3087,8 +2843,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 20
+        "is_legendary": true
     },
     "246": {
         "name": "larvitar",
@@ -3101,8 +2856,7 @@
         ],
         "min_level": 30,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "247": {
         "name": "pupitar",
@@ -3115,8 +2869,7 @@
         ],
         "min_level": 55,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "248": {
         "name": "tyranitar",
@@ -3127,8 +2880,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "249": {
         "name": "lugia",
@@ -3139,8 +2891,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 52
+        "is_legendary": true
     },
     "250": {
         "name": "ho-oh",
@@ -3151,8 +2902,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 38
+        "is_legendary": true
     },
     "251": {
         "name": "celebi",
@@ -3163,8 +2913,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "252": {
         "name": "treecko",
@@ -3176,8 +2925,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "253": {
         "name": "grovyle",
@@ -3189,8 +2937,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "254": {
         "name": "sceptile",
@@ -3200,8 +2947,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "255": {
         "name": "torchic",
@@ -3213,8 +2959,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "256": {
         "name": "combusken",
@@ -3227,8 +2972,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "257": {
         "name": "blaziken",
@@ -3239,8 +2983,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 19
+        "is_legendary": false
     },
     "258": {
         "name": "mudkip",
@@ -3252,8 +2995,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "259": {
         "name": "marshtomp",
@@ -3266,8 +3008,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "260": {
         "name": "swampert",
@@ -3278,8 +3019,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "261": {
         "name": "poochyena",
@@ -3291,8 +3031,7 @@
         ],
         "min_level": 18,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "262": {
         "name": "mightyena",
@@ -3302,8 +3041,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 127,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "263": {
         "name": "zigzagoon",
@@ -3315,8 +3053,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "264": {
         "name": "linoone",
@@ -3328,8 +3065,7 @@
         ],
         "min_level": 35,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "265": {
         "name": "wurmple",
@@ -3342,8 +3078,7 @@
         ],
         "min_level": 7,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "266": {
         "name": "silcoon",
@@ -3355,8 +3090,7 @@
         ],
         "min_level": 10,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "267": {
         "name": "beautifly",
@@ -3367,8 +3101,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "268": {
         "name": "cascoon",
@@ -3380,8 +3113,7 @@
         ],
         "min_level": 10,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "269": {
         "name": "dustox",
@@ -3392,8 +3124,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "270": {
         "name": "lotad",
@@ -3406,8 +3137,7 @@
         ],
         "min_level": 14,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "271": {
         "name": "lombre",
@@ -3420,8 +3150,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "272": {
         "name": "ludicolo",
@@ -3432,8 +3161,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "273": {
         "name": "seedot",
@@ -3445,8 +3173,7 @@
         ],
         "min_level": 14,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "274": {
         "name": "nuzleaf",
@@ -3459,8 +3186,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "275": {
         "name": "shiftry",
@@ -3471,8 +3197,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "276": {
         "name": "taillow",
@@ -3485,8 +3210,7 @@
         ],
         "min_level": 22,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "277": {
         "name": "swellow",
@@ -3497,8 +3221,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "278": {
         "name": "wingull",
@@ -3511,8 +3234,7 @@
         ],
         "min_level": 25,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "279": {
         "name": "pelipper",
@@ -3523,8 +3245,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "280": {
         "name": "ralts",
@@ -3537,8 +3258,7 @@
         ],
         "min_level": 20,
         "capture_rate": 235,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "281": {
         "name": "kirlia",
@@ -3552,8 +3272,7 @@
         ],
         "min_level": 30,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "282": {
         "name": "gardevoir",
@@ -3564,8 +3283,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "283": {
         "name": "surskit",
@@ -3578,8 +3296,7 @@
         ],
         "min_level": 22,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "284": {
         "name": "masquerain",
@@ -3590,8 +3307,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "285": {
         "name": "shroomish",
@@ -3603,8 +3319,7 @@
         ],
         "min_level": 23,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "286": {
         "name": "breloom",
@@ -3615,8 +3330,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "287": {
         "name": "slakoth",
@@ -3628,8 +3342,7 @@
         ],
         "min_level": 18,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "288": {
         "name": "vigoroth",
@@ -3641,8 +3354,7 @@
         ],
         "min_level": 36,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "289": {
         "name": "slaking",
@@ -3652,8 +3364,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "290": {
         "name": "nincada",
@@ -3667,8 +3378,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "291": {
         "name": "ninjask",
@@ -3679,8 +3389,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "292": {
         "name": "shedinja",
@@ -3691,8 +3400,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "293": {
         "name": "whismur",
@@ -3704,8 +3412,7 @@
         ],
         "min_level": 20,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "294": {
         "name": "loudred",
@@ -3717,8 +3424,7 @@
         ],
         "min_level": 40,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "295": {
         "name": "exploud",
@@ -3728,8 +3434,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "296": {
         "name": "makuhita",
@@ -3741,8 +3446,7 @@
         ],
         "min_level": 24,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "297": {
         "name": "hariyama",
@@ -3752,8 +3456,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 23
+        "is_legendary": false
     },
     "298": {
         "name": "azurill",
@@ -3766,8 +3469,7 @@
         ],
         "min_level": null,
         "capture_rate": 150,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "299": {
         "name": "nosepass",
@@ -3779,8 +3481,7 @@
         ],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "300": {
         "name": "skitty",
@@ -3792,8 +3493,7 @@
         ],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "301": {
         "name": "delcatty",
@@ -3803,8 +3503,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "302": {
         "name": "sableye",
@@ -3815,8 +3514,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "303": {
         "name": "mawile",
@@ -3827,8 +3525,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "304": {
         "name": "aron",
@@ -3841,8 +3538,7 @@
         ],
         "min_level": 32,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "305": {
         "name": "lairon",
@@ -3855,8 +3551,7 @@
         ],
         "min_level": 42,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "306": {
         "name": "aggron",
@@ -3867,8 +3562,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 21
+        "is_legendary": false
     },
     "307": {
         "name": "meditite",
@@ -3881,8 +3575,7 @@
         ],
         "min_level": 37,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "308": {
         "name": "medicham",
@@ -3893,8 +3586,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "309": {
         "name": "electrike",
@@ -3906,8 +3598,7 @@
         ],
         "min_level": 26,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "310": {
         "name": "manectric",
@@ -3917,8 +3608,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "311": {
         "name": "plusle",
@@ -3928,8 +3618,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "312": {
         "name": "minun",
@@ -3939,8 +3628,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "313": {
         "name": "volbeat",
@@ -3950,8 +3638,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 150,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "314": {
         "name": "illumise",
@@ -3961,8 +3648,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 150,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "315": {
         "name": "roselia",
@@ -3975,8 +3661,7 @@
         ],
         "min_level": null,
         "capture_rate": 150,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "316": {
         "name": "gulpin",
@@ -3988,8 +3673,7 @@
         ],
         "min_level": 26,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "317": {
         "name": "swalot",
@@ -3999,8 +3683,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "318": {
         "name": "carvanha",
@@ -4013,8 +3696,7 @@
         ],
         "min_level": 30,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "319": {
         "name": "sharpedo",
@@ -4025,8 +3707,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "320": {
         "name": "wailmer",
@@ -4038,8 +3719,7 @@
         ],
         "min_level": 40,
         "capture_rate": 125,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "321": {
         "name": "wailord",
@@ -4049,8 +3729,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 145
+        "is_legendary": false
     },
     "322": {
         "name": "numel",
@@ -4063,8 +3742,7 @@
         ],
         "min_level": 33,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "323": {
         "name": "camerupt",
@@ -4075,8 +3753,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 150,
-        "is_legendary": false,
-        "height": 19
+        "is_legendary": false
     },
     "324": {
         "name": "torkoal",
@@ -4086,8 +3763,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "325": {
         "name": "spoink",
@@ -4099,8 +3775,7 @@
         ],
         "min_level": 32,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "326": {
         "name": "grumpig",
@@ -4110,8 +3785,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "327": {
         "name": "spinda",
@@ -4121,8 +3795,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "328": {
         "name": "trapinch",
@@ -4134,8 +3807,7 @@
         ],
         "min_level": 35,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "329": {
         "name": "vibrava",
@@ -4148,8 +3820,7 @@
         ],
         "min_level": 45,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "330": {
         "name": "flygon",
@@ -4160,8 +3831,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "331": {
         "name": "cacnea",
@@ -4173,8 +3843,7 @@
         ],
         "min_level": 32,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "332": {
         "name": "cacturne",
@@ -4185,8 +3854,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "333": {
         "name": "swablu",
@@ -4199,8 +3867,7 @@
         ],
         "min_level": 35,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "334": {
         "name": "altaria",
@@ -4211,8 +3878,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "335": {
         "name": "zangoose",
@@ -4222,8 +3888,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "336": {
         "name": "seviper",
@@ -4233,8 +3898,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 27
+        "is_legendary": false
     },
     "337": {
         "name": "lunatone",
@@ -4245,8 +3909,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "338": {
         "name": "solrock",
@@ -4257,8 +3920,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "339": {
         "name": "barboach",
@@ -4271,8 +3933,7 @@
         ],
         "min_level": 30,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "340": {
         "name": "whiscash",
@@ -4283,8 +3944,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "341": {
         "name": "corphish",
@@ -4296,8 +3956,7 @@
         ],
         "min_level": 30,
         "capture_rate": 205,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "342": {
         "name": "crawdaunt",
@@ -4308,8 +3967,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 155,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "343": {
         "name": "baltoy",
@@ -4322,8 +3980,7 @@
         ],
         "min_level": 36,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "344": {
         "name": "claydol",
@@ -4334,8 +3991,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "345": {
         "name": "lileep",
@@ -4348,8 +4004,7 @@
         ],
         "min_level": 40,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "346": {
         "name": "cradily",
@@ -4360,8 +4015,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "347": {
         "name": "anorith",
@@ -4374,8 +4028,7 @@
         ],
         "min_level": 40,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "348": {
         "name": "armaldo",
@@ -4386,8 +4039,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "349": {
         "name": "feebas",
@@ -4399,8 +4051,7 @@
         ],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "350": {
         "name": "milotic",
@@ -4410,8 +4061,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 62
+        "is_legendary": false
     },
     "351": {
         "name": "castform",
@@ -4421,8 +4071,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "352": {
         "name": "kecleon",
@@ -4432,8 +4081,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "353": {
         "name": "shuppet",
@@ -4445,8 +4093,7 @@
         ],
         "min_level": 37,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "354": {
         "name": "banette",
@@ -4456,8 +4103,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "355": {
         "name": "duskull",
@@ -4469,8 +4115,7 @@
         ],
         "min_level": 37,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "356": {
         "name": "dusclops",
@@ -4482,8 +4127,7 @@
         ],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "357": {
         "name": "tropius",
@@ -4494,8 +4138,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "358": {
         "name": "chimecho",
@@ -4505,8 +4148,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "359": {
         "name": "absol",
@@ -4516,8 +4158,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "360": {
         "name": "wynaut",
@@ -4529,8 +4170,7 @@
         ],
         "min_level": 15,
         "capture_rate": 125,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "361": {
         "name": "snorunt",
@@ -4543,8 +4183,7 @@
         ],
         "min_level": 42,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "362": {
         "name": "glalie",
@@ -4554,8 +4193,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "363": {
         "name": "spheal",
@@ -4568,8 +4206,7 @@
         ],
         "min_level": 32,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "364": {
         "name": "sealeo",
@@ -4582,8 +4219,7 @@
         ],
         "min_level": 44,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "365": {
         "name": "walrein",
@@ -4594,8 +4230,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "366": {
         "name": "clamperl",
@@ -4608,8 +4243,7 @@
         ],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "367": {
         "name": "huntail",
@@ -4619,8 +4253,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "368": {
         "name": "gorebyss",
@@ -4630,8 +4263,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "369": {
         "name": "relicanth",
@@ -4642,8 +4274,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "370": {
         "name": "luvdisc",
@@ -4653,8 +4284,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "371": {
         "name": "bagon",
@@ -4666,8 +4296,7 @@
         ],
         "min_level": 30,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "372": {
         "name": "shelgon",
@@ -4679,8 +4308,7 @@
         ],
         "min_level": 50,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "373": {
         "name": "salamence",
@@ -4691,8 +4319,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "374": {
         "name": "beldum",
@@ -4705,8 +4332,7 @@
         ],
         "min_level": 20,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "375": {
         "name": "metang",
@@ -4719,8 +4345,7 @@
         ],
         "min_level": 45,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "376": {
         "name": "metagross",
@@ -4731,8 +4356,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "377": {
         "name": "regirock",
@@ -4742,8 +4366,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 17
+        "is_legendary": true
     },
     "378": {
         "name": "regice",
@@ -4753,8 +4376,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 18
+        "is_legendary": true
     },
     "379": {
         "name": "registeel",
@@ -4764,8 +4386,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 19
+        "is_legendary": true
     },
     "380": {
         "name": "latias",
@@ -4776,8 +4397,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 14
+        "is_legendary": true
     },
     "381": {
         "name": "latios",
@@ -4788,8 +4408,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 20
+        "is_legendary": true
     },
     "382": {
         "name": "kyogre",
@@ -4799,8 +4418,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 45
+        "is_legendary": true
     },
     "383": {
         "name": "groudon",
@@ -4810,8 +4428,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 35
+        "is_legendary": true
     },
     "384": {
         "name": "rayquaza",
@@ -4822,8 +4439,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": true,
-        "height": 70
+        "is_legendary": true
     },
     "385": {
         "name": "jirachi",
@@ -4834,8 +4450,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "386": {
         "name": "deoxys-normal",
@@ -4845,8 +4460,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "387": {
         "name": "turtwig",
@@ -4858,8 +4472,7 @@
         ],
         "min_level": 18,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "388": {
         "name": "grotle",
@@ -4871,8 +4484,7 @@
         ],
         "min_level": 32,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "389": {
         "name": "torterra",
@@ -4883,8 +4495,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 22
+        "is_legendary": false
     },
     "390": {
         "name": "chimchar",
@@ -4896,8 +4507,7 @@
         ],
         "min_level": 14,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "391": {
         "name": "monferno",
@@ -4910,8 +4520,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "392": {
         "name": "infernape",
@@ -4922,8 +4531,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "393": {
         "name": "piplup",
@@ -4935,8 +4543,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "394": {
         "name": "prinplup",
@@ -4948,8 +4555,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "395": {
         "name": "empoleon",
@@ -4960,8 +4566,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "396": {
         "name": "starly",
@@ -4974,8 +4579,7 @@
         ],
         "min_level": 14,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "397": {
         "name": "staravia",
@@ -4988,8 +4592,7 @@
         ],
         "min_level": 34,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "398": {
         "name": "staraptor",
@@ -5000,8 +4603,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "399": {
         "name": "bidoof",
@@ -5013,8 +4615,7 @@
         ],
         "min_level": 15,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "400": {
         "name": "bibarel",
@@ -5025,8 +4626,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 127,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "401": {
         "name": "kricketot",
@@ -5038,8 +4638,7 @@
         ],
         "min_level": 10,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "402": {
         "name": "kricketune",
@@ -5049,8 +4648,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "403": {
         "name": "shinx",
@@ -5062,8 +4660,7 @@
         ],
         "min_level": 15,
         "capture_rate": 235,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "404": {
         "name": "luxio",
@@ -5075,8 +4672,7 @@
         ],
         "min_level": 30,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "405": {
         "name": "luxray",
@@ -5086,8 +4682,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "406": {
         "name": "budew",
@@ -5100,8 +4695,7 @@
         ],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "407": {
         "name": "roserade",
@@ -5112,8 +4706,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "408": {
         "name": "cranidos",
@@ -5125,8 +4718,7 @@
         ],
         "min_level": 30,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "409": {
         "name": "rampardos",
@@ -5136,8 +4728,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "410": {
         "name": "shieldon",
@@ -5150,8 +4741,7 @@
         ],
         "min_level": 30,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "411": {
         "name": "bastiodon",
@@ -5162,8 +4752,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "412": {
         "name": "burmy",
@@ -5176,8 +4765,7 @@
         ],
         "min_level": 20,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "413": {
         "name": "wormadam-plant",
@@ -5188,8 +4776,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "414": {
         "name": "mothim",
@@ -5200,8 +4787,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "415": {
         "name": "combee",
@@ -5214,8 +4800,7 @@
         ],
         "min_level": 21,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "416": {
         "name": "vespiquen",
@@ -5226,8 +4811,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "417": {
         "name": "pachirisu",
@@ -5237,8 +4821,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "418": {
         "name": "buizel",
@@ -5250,8 +4833,7 @@
         ],
         "min_level": 26,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "419": {
         "name": "floatzel",
@@ -5261,8 +4843,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "420": {
         "name": "cherubi",
@@ -5274,8 +4855,7 @@
         ],
         "min_level": 25,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "421": {
         "name": "cherrim",
@@ -5285,8 +4865,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "422": {
         "name": "shellos",
@@ -5298,8 +4877,7 @@
         ],
         "min_level": 30,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "423": {
         "name": "gastrodon",
@@ -5310,8 +4888,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "424": {
         "name": "ambipom",
@@ -5321,8 +4898,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "425": {
         "name": "drifloon",
@@ -5335,8 +4911,7 @@
         ],
         "min_level": 28,
         "capture_rate": 125,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "426": {
         "name": "drifblim",
@@ -5347,8 +4922,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "427": {
         "name": "buneary",
@@ -5360,8 +4934,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "428": {
         "name": "lopunny",
@@ -5371,8 +4944,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "429": {
         "name": "mismagius",
@@ -5382,8 +4954,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "430": {
         "name": "honchkrow",
@@ -5394,8 +4965,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "431": {
         "name": "glameow",
@@ -5407,8 +4977,7 @@
         ],
         "min_level": 38,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "432": {
         "name": "purugly",
@@ -5418,8 +4987,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "433": {
         "name": "chingling",
@@ -5431,8 +4999,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "434": {
         "name": "stunky",
@@ -5445,8 +5012,7 @@
         ],
         "min_level": 34,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "435": {
         "name": "skuntank",
@@ -5457,8 +5023,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "436": {
         "name": "bronzor",
@@ -5471,8 +5036,7 @@
         ],
         "min_level": 33,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "437": {
         "name": "bronzong",
@@ -5483,8 +5047,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "438": {
         "name": "bonsly",
@@ -5496,8 +5059,7 @@
         ],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "439": {
         "name": "mime-jr",
@@ -5510,8 +5072,7 @@
         ],
         "min_level": null,
         "capture_rate": 145,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "440": {
         "name": "happiny",
@@ -5523,8 +5084,7 @@
         ],
         "min_level": null,
         "capture_rate": 130,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "441": {
         "name": "chatot",
@@ -5535,8 +5095,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "442": {
         "name": "spiritomb",
@@ -5547,8 +5106,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 100,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "443": {
         "name": "gible",
@@ -5561,8 +5119,7 @@
         ],
         "min_level": 24,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "444": {
         "name": "gabite",
@@ -5575,8 +5132,7 @@
         ],
         "min_level": 48,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "445": {
         "name": "garchomp",
@@ -5587,8 +5143,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 19
+        "is_legendary": false
     },
     "446": {
         "name": "munchlax",
@@ -5600,8 +5155,7 @@
         ],
         "min_level": null,
         "capture_rate": 50,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "447": {
         "name": "riolu",
@@ -5613,8 +5167,7 @@
         ],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "448": {
         "name": "lucario",
@@ -5625,8 +5178,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "449": {
         "name": "hippopotas",
@@ -5638,8 +5190,7 @@
         ],
         "min_level": 34,
         "capture_rate": 140,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "450": {
         "name": "hippowdon",
@@ -5649,8 +5200,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "451": {
         "name": "skorupi",
@@ -5663,8 +5213,7 @@
         ],
         "min_level": 40,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "452": {
         "name": "drapion",
@@ -5675,8 +5224,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "453": {
         "name": "croagunk",
@@ -5689,8 +5237,7 @@
         ],
         "min_level": 37,
         "capture_rate": 140,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "454": {
         "name": "toxicroak",
@@ -5701,8 +5248,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "455": {
         "name": "carnivine",
@@ -5712,8 +5258,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "456": {
         "name": "finneon",
@@ -5725,8 +5270,7 @@
         ],
         "min_level": 31,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "457": {
         "name": "lumineon",
@@ -5736,8 +5280,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "458": {
         "name": "mantyke",
@@ -5750,8 +5293,7 @@
         ],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "459": {
         "name": "snover",
@@ -5764,8 +5306,7 @@
         ],
         "min_level": 40,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "460": {
         "name": "abomasnow",
@@ -5776,8 +5317,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 22
+        "is_legendary": false
     },
     "461": {
         "name": "weavile",
@@ -5788,8 +5328,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "462": {
         "name": "magnezone",
@@ -5800,8 +5339,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "463": {
         "name": "lickilicky",
@@ -5811,8 +5349,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "464": {
         "name": "rhyperior",
@@ -5823,8 +5360,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 24
+        "is_legendary": false
     },
     "465": {
         "name": "tangrowth",
@@ -5834,8 +5370,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "466": {
         "name": "electivire",
@@ -5845,8 +5380,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "467": {
         "name": "magmortar",
@@ -5856,8 +5390,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "468": {
         "name": "togekiss",
@@ -5868,8 +5401,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "469": {
         "name": "yanmega",
@@ -5880,8 +5412,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 19
+        "is_legendary": false
     },
     "470": {
         "name": "leafeon",
@@ -5891,8 +5422,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "471": {
         "name": "glaceon",
@@ -5902,8 +5432,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "472": {
         "name": "gliscor",
@@ -5914,8 +5443,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "473": {
         "name": "mamoswine",
@@ -5926,8 +5454,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 50,
-        "is_legendary": false,
-        "height": 25
+        "is_legendary": false
     },
     "474": {
         "name": "porygon-z",
@@ -5937,8 +5464,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "475": {
         "name": "gallade",
@@ -5949,8 +5475,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "476": {
         "name": "probopass",
@@ -5961,8 +5486,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "477": {
         "name": "dusknoir",
@@ -5972,8 +5496,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 22
+        "is_legendary": false
     },
     "478": {
         "name": "froslass",
@@ -5984,8 +5507,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "479": {
         "name": "rotom",
@@ -5996,8 +5518,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "480": {
         "name": "uxie",
@@ -6007,8 +5528,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 3
+        "is_legendary": true
     },
     "481": {
         "name": "mesprit",
@@ -6018,8 +5538,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 3
+        "is_legendary": true
     },
     "482": {
         "name": "azelf",
@@ -6029,8 +5548,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 3
+        "is_legendary": true
     },
     "483": {
         "name": "dialga",
@@ -6041,8 +5559,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 54
+        "is_legendary": true
     },
     "484": {
         "name": "palkia",
@@ -6053,8 +5570,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 42
+        "is_legendary": true
     },
     "485": {
         "name": "heatran",
@@ -6065,8 +5581,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 17
+        "is_legendary": true
     },
     "486": {
         "name": "regigigas",
@@ -6076,8 +5591,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 37
+        "is_legendary": true
     },
     "487": {
         "name": "giratina-altered",
@@ -6088,8 +5602,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 45
+        "is_legendary": true
     },
     "488": {
         "name": "cresselia",
@@ -6099,8 +5612,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 15
+        "is_legendary": true
     },
     "489": {
         "name": "phione",
@@ -6112,8 +5624,7 @@
         ],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "490": {
         "name": "manaphy",
@@ -6123,8 +5634,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "491": {
         "name": "darkrai",
@@ -6134,8 +5644,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "492": {
         "name": "shaymin-land",
@@ -6145,8 +5654,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "493": {
         "name": "arceus",
@@ -6156,8 +5664,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 32
+        "is_legendary": false
     },
     "494": {
         "name": "victini",
@@ -6168,8 +5675,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "495": {
         "name": "snivy",
@@ -6181,8 +5687,7 @@
         ],
         "min_level": 17,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "496": {
         "name": "servine",
@@ -6194,8 +5699,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "497": {
         "name": "serperior",
@@ -6205,8 +5709,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 33
+        "is_legendary": false
     },
     "498": {
         "name": "tepig",
@@ -6218,8 +5721,7 @@
         ],
         "min_level": 17,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "499": {
         "name": "pignite",
@@ -6232,8 +5734,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "500": {
         "name": "emboar",
@@ -6244,8 +5745,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "501": {
         "name": "oshawott",
@@ -6257,8 +5757,7 @@
         ],
         "min_level": 17,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "502": {
         "name": "dewott",
@@ -6270,8 +5769,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "503": {
         "name": "samurott",
@@ -6281,8 +5779,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "504": {
         "name": "patrat",
@@ -6294,8 +5791,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "505": {
         "name": "watchog",
@@ -6305,8 +5801,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "506": {
         "name": "lillipup",
@@ -6318,8 +5813,7 @@
         ],
         "min_level": 16,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "507": {
         "name": "herdier",
@@ -6331,8 +5825,7 @@
         ],
         "min_level": 32,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "508": {
         "name": "stoutland",
@@ -6342,8 +5835,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "509": {
         "name": "purrloin",
@@ -6355,8 +5847,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "510": {
         "name": "liepard",
@@ -6366,8 +5857,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "511": {
         "name": "pansage",
@@ -6379,8 +5869,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "512": {
         "name": "simisage",
@@ -6390,8 +5879,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "513": {
         "name": "pansear",
@@ -6403,8 +5891,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "514": {
         "name": "simisear",
@@ -6414,8 +5901,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "515": {
         "name": "panpour",
@@ -6427,8 +5913,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "516": {
         "name": "simipour",
@@ -6438,8 +5923,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "517": {
         "name": "munna",
@@ -6451,8 +5935,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "518": {
         "name": "musharna",
@@ -6462,8 +5945,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "519": {
         "name": "pidove",
@@ -6476,8 +5958,7 @@
         ],
         "min_level": 21,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "520": {
         "name": "tranquill",
@@ -6490,8 +5971,7 @@
         ],
         "min_level": 32,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "521": {
         "name": "unfezant",
@@ -6502,8 +5982,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "522": {
         "name": "blitzle",
@@ -6515,8 +5994,7 @@
         ],
         "min_level": 27,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "523": {
         "name": "zebstrika",
@@ -6526,8 +6004,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "524": {
         "name": "roggenrola",
@@ -6539,8 +6016,7 @@
         ],
         "min_level": 25,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "525": {
         "name": "boldore",
@@ -6552,8 +6028,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "526": {
         "name": "gigalith",
@@ -6563,8 +6038,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "527": {
         "name": "woobat",
@@ -6577,8 +6051,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "528": {
         "name": "swoobat",
@@ -6589,8 +6062,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "529": {
         "name": "drilbur",
@@ -6602,8 +6074,7 @@
         ],
         "min_level": 31,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "530": {
         "name": "excadrill",
@@ -6614,8 +6085,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "531": {
         "name": "audino",
@@ -6625,8 +6095,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "532": {
         "name": "timburr",
@@ -6638,8 +6107,7 @@
         ],
         "min_level": 25,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "533": {
         "name": "gurdurr",
@@ -6651,8 +6119,7 @@
         ],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "534": {
         "name": "conkeldurr",
@@ -6662,8 +6129,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "535": {
         "name": "tympole",
@@ -6675,8 +6141,7 @@
         ],
         "min_level": 25,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "536": {
         "name": "palpitoad",
@@ -6689,8 +6154,7 @@
         ],
         "min_level": 36,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "537": {
         "name": "seismitoad",
@@ -6701,8 +6165,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "538": {
         "name": "throh",
@@ -6712,8 +6175,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "539": {
         "name": "sawk",
@@ -6723,8 +6185,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "540": {
         "name": "sewaddle",
@@ -6737,8 +6198,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "541": {
         "name": "swadloon",
@@ -6751,8 +6211,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "542": {
         "name": "leavanny",
@@ -6763,8 +6222,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "543": {
         "name": "venipede",
@@ -6777,8 +6235,7 @@
         ],
         "min_level": 22,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "544": {
         "name": "whirlipede",
@@ -6791,8 +6248,7 @@
         ],
         "min_level": 30,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "545": {
         "name": "scolipede",
@@ -6803,8 +6259,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 25
+        "is_legendary": false
     },
     "546": {
         "name": "cottonee",
@@ -6817,8 +6272,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "547": {
         "name": "whimsicott",
@@ -6829,8 +6283,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "548": {
         "name": "petilil",
@@ -6842,8 +6295,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "549": {
         "name": "lilligant",
@@ -6853,8 +6305,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "550": {
         "name": "basculin-red-striped",
@@ -6864,8 +6315,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "551": {
         "name": "sandile",
@@ -6878,8 +6328,7 @@
         ],
         "min_level": 29,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "552": {
         "name": "krokorok",
@@ -6892,8 +6341,7 @@
         ],
         "min_level": 40,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "553": {
         "name": "krookodile",
@@ -6904,8 +6352,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "554": {
         "name": "darumaka",
@@ -6917,8 +6364,7 @@
         ],
         "min_level": 35,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "555": {
         "name": "darmanitan-standard",
@@ -6928,8 +6374,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "556": {
         "name": "maractus",
@@ -6939,8 +6384,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "557": {
         "name": "dwebble",
@@ -6953,8 +6397,7 @@
         ],
         "min_level": 34,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "558": {
         "name": "crustle",
@@ -6965,8 +6408,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "559": {
         "name": "scraggy",
@@ -6979,8 +6421,7 @@
         ],
         "min_level": 39,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "560": {
         "name": "scrafty",
@@ -6991,8 +6432,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "561": {
         "name": "sigilyph",
@@ -7003,8 +6443,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "562": {
         "name": "yamask",
@@ -7017,8 +6456,7 @@
         ],
         "min_level": 34,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "563": {
         "name": "cofagrigus",
@@ -7028,8 +6466,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "564": {
         "name": "tirtouga",
@@ -7042,8 +6479,7 @@
         ],
         "min_level": 37,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "565": {
         "name": "carracosta",
@@ -7054,8 +6490,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "566": {
         "name": "archen",
@@ -7068,8 +6503,7 @@
         ],
         "min_level": 37,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "567": {
         "name": "archeops",
@@ -7080,8 +6514,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "568": {
         "name": "trubbish",
@@ -7093,8 +6526,7 @@
         ],
         "min_level": 36,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "569": {
         "name": "garbodor",
@@ -7104,8 +6536,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 19
+        "is_legendary": false
     },
     "570": {
         "name": "zorua",
@@ -7117,8 +6548,7 @@
         ],
         "min_level": 30,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "571": {
         "name": "zoroark",
@@ -7128,8 +6558,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "572": {
         "name": "minccino",
@@ -7141,8 +6570,7 @@
         ],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "573": {
         "name": "cinccino",
@@ -7152,8 +6580,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "574": {
         "name": "gothita",
@@ -7165,8 +6592,7 @@
         ],
         "min_level": 32,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "575": {
         "name": "gothorita",
@@ -7178,8 +6604,7 @@
         ],
         "min_level": 41,
         "capture_rate": 100,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "576": {
         "name": "gothitelle",
@@ -7189,8 +6614,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 50,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "577": {
         "name": "solosis",
@@ -7202,8 +6626,7 @@
         ],
         "min_level": 32,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "578": {
         "name": "duosion",
@@ -7215,8 +6638,7 @@
         ],
         "min_level": 41,
         "capture_rate": 100,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "579": {
         "name": "reuniclus",
@@ -7226,8 +6648,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 50,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "580": {
         "name": "ducklett",
@@ -7240,8 +6661,7 @@
         ],
         "min_level": 35,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "581": {
         "name": "swanna",
@@ -7252,8 +6672,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "582": {
         "name": "vanillite",
@@ -7265,8 +6684,7 @@
         ],
         "min_level": 35,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "583": {
         "name": "vanillish",
@@ -7278,8 +6696,7 @@
         ],
         "min_level": 47,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "584": {
         "name": "vanilluxe",
@@ -7289,8 +6706,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "585": {
         "name": "deerling",
@@ -7303,8 +6719,7 @@
         ],
         "min_level": 34,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "586": {
         "name": "sawsbuck",
@@ -7315,8 +6730,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 19
+        "is_legendary": false
     },
     "587": {
         "name": "emolga",
@@ -7327,8 +6741,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "588": {
         "name": "karrablast",
@@ -7340,8 +6753,7 @@
         ],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "589": {
         "name": "escavalier",
@@ -7352,8 +6764,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "590": {
         "name": "foongus",
@@ -7366,8 +6777,7 @@
         ],
         "min_level": 39,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "591": {
         "name": "amoonguss",
@@ -7378,8 +6788,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "592": {
         "name": "frillish",
@@ -7392,8 +6801,7 @@
         ],
         "min_level": 40,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "593": {
         "name": "jellicent",
@@ -7404,8 +6812,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 22
+        "is_legendary": false
     },
     "594": {
         "name": "alomomola",
@@ -7415,8 +6822,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "595": {
         "name": "joltik",
@@ -7429,8 +6835,7 @@
         ],
         "min_level": 36,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 1
+        "is_legendary": false
     },
     "596": {
         "name": "galvantula",
@@ -7441,8 +6846,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "597": {
         "name": "ferroseed",
@@ -7455,8 +6859,7 @@
         ],
         "min_level": 40,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "598": {
         "name": "ferrothorn",
@@ -7467,8 +6870,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "599": {
         "name": "klink",
@@ -7480,8 +6882,7 @@
         ],
         "min_level": 38,
         "capture_rate": 130,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "600": {
         "name": "klang",
@@ -7493,8 +6894,7 @@
         ],
         "min_level": 49,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "601": {
         "name": "klinklang",
@@ -7504,8 +6904,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "602": {
         "name": "tynamo",
@@ -7517,8 +6916,7 @@
         ],
         "min_level": 39,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "603": {
         "name": "eelektrik",
@@ -7530,8 +6928,7 @@
         ],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "604": {
         "name": "eelektross",
@@ -7541,8 +6938,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 21
+        "is_legendary": false
     },
     "605": {
         "name": "elgyem",
@@ -7554,8 +6950,7 @@
         ],
         "min_level": 42,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "606": {
         "name": "beheeyem",
@@ -7565,8 +6960,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "607": {
         "name": "litwick",
@@ -7579,8 +6973,7 @@
         ],
         "min_level": 41,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "608": {
         "name": "lampent",
@@ -7593,8 +6986,7 @@
         ],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "609": {
         "name": "chandelure",
@@ -7605,8 +6997,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "610": {
         "name": "axew",
@@ -7618,8 +7009,7 @@
         ],
         "min_level": 38,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "611": {
         "name": "fraxure",
@@ -7631,8 +7021,7 @@
         ],
         "min_level": 48,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "612": {
         "name": "haxorus",
@@ -7642,8 +7031,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "613": {
         "name": "cubchoo",
@@ -7655,8 +7043,7 @@
         ],
         "min_level": 37,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "614": {
         "name": "beartic",
@@ -7666,8 +7053,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 26
+        "is_legendary": false
     },
     "615": {
         "name": "cryogonal",
@@ -7677,8 +7063,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "616": {
         "name": "shelmet",
@@ -7690,8 +7075,7 @@
         ],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "617": {
         "name": "accelgor",
@@ -7701,8 +7085,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "618": {
         "name": "stunfisk",
@@ -7713,8 +7096,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "619": {
         "name": "mienfoo",
@@ -7726,8 +7108,7 @@
         ],
         "min_level": 50,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "620": {
         "name": "mienshao",
@@ -7737,8 +7118,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "621": {
         "name": "druddigon",
@@ -7748,8 +7128,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "622": {
         "name": "golett",
@@ -7762,8 +7141,7 @@
         ],
         "min_level": 43,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "623": {
         "name": "golurk",
@@ -7774,8 +7152,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 28
+        "is_legendary": false
     },
     "624": {
         "name": "pawniard",
@@ -7788,8 +7165,7 @@
         ],
         "min_level": 52,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "625": {
         "name": "bisharp",
@@ -7802,8 +7178,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "626": {
         "name": "bouffalant",
@@ -7813,8 +7188,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "627": {
         "name": "rufflet",
@@ -7827,8 +7201,7 @@
         ],
         "min_level": 54,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "628": {
         "name": "braviary",
@@ -7839,8 +7212,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "629": {
         "name": "vullaby",
@@ -7853,8 +7225,7 @@
         ],
         "min_level": 54,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "630": {
         "name": "mandibuzz",
@@ -7865,8 +7236,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "631": {
         "name": "heatmor",
@@ -7876,8 +7246,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "632": {
         "name": "durant",
@@ -7888,8 +7257,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "633": {
         "name": "deino",
@@ -7902,8 +7270,7 @@
         ],
         "min_level": 50,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "634": {
         "name": "zweilous",
@@ -7916,8 +7283,7 @@
         ],
         "min_level": 64,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "635": {
         "name": "hydreigon",
@@ -7928,8 +7294,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "636": {
         "name": "larvesta",
@@ -7942,8 +7307,7 @@
         ],
         "min_level": 59,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "637": {
         "name": "volcarona",
@@ -7954,8 +7318,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 15,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "638": {
         "name": "cobalion",
@@ -7966,8 +7329,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 21
+        "is_legendary": true
     },
     "639": {
         "name": "terrakion",
@@ -7978,8 +7340,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 19
+        "is_legendary": true
     },
     "640": {
         "name": "virizion",
@@ -7990,8 +7351,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 20
+        "is_legendary": true
     },
     "641": {
         "name": "tornadus-incarnate",
@@ -8001,8 +7361,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 15
+        "is_legendary": true
     },
     "642": {
         "name": "thundurus-incarnate",
@@ -8013,8 +7372,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 15
+        "is_legendary": true
     },
     "643": {
         "name": "reshiram",
@@ -8025,8 +7383,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 32
+        "is_legendary": true
     },
     "644": {
         "name": "zekrom",
@@ -8037,8 +7394,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 29
+        "is_legendary": true
     },
     "645": {
         "name": "landorus-incarnate",
@@ -8049,8 +7405,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 15
+        "is_legendary": true
     },
     "646": {
         "name": "kyurem",
@@ -8061,8 +7416,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 30
+        "is_legendary": true
     },
     "647": {
         "name": "keldeo-ordinary",
@@ -8073,8 +7427,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 14
+        "is_legendary": false
     },
     "648": {
         "name": "meloetta-aria",
@@ -8085,8 +7438,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "649": {
         "name": "genesect",
@@ -8097,8 +7449,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "650": {
         "name": "chespin",
@@ -8110,8 +7461,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "651": {
         "name": "quilladin",
@@ -8123,8 +7473,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "652": {
         "name": "chesnaught",
@@ -8135,8 +7484,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "653": {
         "name": "fennekin",
@@ -8148,8 +7496,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "654": {
         "name": "braixen",
@@ -8161,8 +7508,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "655": {
         "name": "delphox",
@@ -8173,8 +7519,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "656": {
         "name": "froakie",
@@ -8186,8 +7531,7 @@
         ],
         "min_level": 16,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "657": {
         "name": "frogadier",
@@ -8199,8 +7543,7 @@
         ],
         "min_level": 36,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "658": {
         "name": "greninja",
@@ -8211,8 +7554,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "659": {
         "name": "bunnelby",
@@ -8224,8 +7566,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "660": {
         "name": "diggersby",
@@ -8236,8 +7577,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 127,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "661": {
         "name": "fletchling",
@@ -8250,8 +7590,7 @@
         ],
         "min_level": 17,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "662": {
         "name": "fletchinder",
@@ -8264,8 +7603,7 @@
         ],
         "min_level": 35,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "663": {
         "name": "talonflame",
@@ -8276,8 +7614,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "664": {
         "name": "scatterbug",
@@ -8289,8 +7626,7 @@
         ],
         "min_level": 9,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "665": {
         "name": "spewpa",
@@ -8302,8 +7638,7 @@
         ],
         "min_level": 12,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "666": {
         "name": "vivillon",
@@ -8314,8 +7649,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "667": {
         "name": "litleo",
@@ -8328,8 +7662,7 @@
         ],
         "min_level": 35,
         "capture_rate": 220,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "668": {
         "name": "pyroar",
@@ -8340,8 +7673,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 65,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "669": {
         "name": "flabebe",
@@ -8353,8 +7685,7 @@
         ],
         "min_level": 19,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 1
+        "is_legendary": false
     },
     "670": {
         "name": "floette",
@@ -8366,8 +7697,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "671": {
         "name": "florges",
@@ -8377,8 +7707,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "672": {
         "name": "skiddo",
@@ -8390,8 +7719,7 @@
         ],
         "min_level": 32,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "673": {
         "name": "gogoat",
@@ -8401,8 +7729,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "674": {
         "name": "pancham",
@@ -8414,8 +7741,7 @@
         ],
         "min_level": 32,
         "capture_rate": 220,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "675": {
         "name": "pangoro",
@@ -8426,8 +7752,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 65,
-        "is_legendary": false,
-        "height": 21
+        "is_legendary": false
     },
     "676": {
         "name": "furfrou",
@@ -8437,8 +7762,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 160,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "677": {
         "name": "espurr",
@@ -8450,8 +7774,7 @@
         ],
         "min_level": 25,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "678": {
         "name": "meowstic-male",
@@ -8461,8 +7784,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "679": {
         "name": "honedge",
@@ -8475,8 +7797,7 @@
         ],
         "min_level": 35,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "680": {
         "name": "doublade",
@@ -8489,8 +7810,7 @@
         ],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "681": {
         "name": "aegislash-shield",
@@ -8501,8 +7821,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "682": {
         "name": "spritzee",
@@ -8514,8 +7833,7 @@
         ],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "683": {
         "name": "aromatisse",
@@ -8525,8 +7843,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 140,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "684": {
         "name": "swirlix",
@@ -8538,8 +7855,7 @@
         ],
         "min_level": null,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "685": {
         "name": "slurpuff",
@@ -8549,8 +7865,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 140,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "686": {
         "name": "inkay",
@@ -8563,8 +7878,7 @@
         ],
         "min_level": 30,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "687": {
         "name": "malamar",
@@ -8575,8 +7889,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 80,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "688": {
         "name": "binacle",
@@ -8589,8 +7902,7 @@
         ],
         "min_level": 39,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "689": {
         "name": "barbaracle",
@@ -8601,8 +7913,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "690": {
         "name": "skrelp",
@@ -8615,8 +7926,7 @@
         ],
         "min_level": 48,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "691": {
         "name": "dragalge",
@@ -8627,8 +7937,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 55,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "692": {
         "name": "clauncher",
@@ -8640,8 +7949,7 @@
         ],
         "min_level": 37,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "693": {
         "name": "clawitzer",
@@ -8651,8 +7959,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 55,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "694": {
         "name": "helioptile",
@@ -8665,8 +7972,7 @@
         ],
         "min_level": null,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "695": {
         "name": "heliolisk",
@@ -8677,8 +7983,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "696": {
         "name": "tyrunt",
@@ -8691,8 +7996,7 @@
         ],
         "min_level": 39,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "697": {
         "name": "tyrantrum",
@@ -8703,8 +8007,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 25
+        "is_legendary": false
     },
     "698": {
         "name": "amaura",
@@ -8717,8 +8020,7 @@
         ],
         "min_level": 39,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "699": {
         "name": "aurorus",
@@ -8729,8 +8031,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 27
+        "is_legendary": false
     },
     "700": {
         "name": "sylveon",
@@ -8740,8 +8041,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "701": {
         "name": "hawlucha",
@@ -8752,8 +8052,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 100,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "702": {
         "name": "dedenne",
@@ -8764,8 +8063,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "703": {
         "name": "carbink",
@@ -8776,8 +8074,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "704": {
         "name": "goomy",
@@ -8789,8 +8086,7 @@
         ],
         "min_level": 40,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "705": {
         "name": "sliggoo",
@@ -8802,8 +8098,7 @@
         ],
         "min_level": 50,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "706": {
         "name": "goodra",
@@ -8813,8 +8108,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "707": {
         "name": "klefki",
@@ -8825,8 +8119,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "708": {
         "name": "phantump",
@@ -8839,8 +8132,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "709": {
         "name": "trevenant",
@@ -8851,8 +8143,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "710": {
         "name": "pumpkaboo-average",
@@ -8863,8 +8154,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "711": {
         "name": "gourgeist-average",
@@ -8875,8 +8165,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "712": {
         "name": "bergmite",
@@ -8888,8 +8177,7 @@
         ],
         "min_level": 37,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "713": {
         "name": "avalugg",
@@ -8899,8 +8187,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 55,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "714": {
         "name": "noibat",
@@ -8913,8 +8200,7 @@
         ],
         "min_level": 48,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "715": {
         "name": "noivern",
@@ -8925,8 +8211,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "716": {
         "name": "xerneas",
@@ -8936,8 +8221,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": true,
-        "height": 30
+        "is_legendary": true
     },
     "717": {
         "name": "yveltal",
@@ -8948,8 +8232,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": true,
-        "height": 58
+        "is_legendary": true
     },
     "718": {
         "name": "zygarde-50",
@@ -8960,8 +8243,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 50
+        "is_legendary": true
     },
     "719": {
         "name": "diancie",
@@ -8972,8 +8254,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "720": {
         "name": "hoopa",
@@ -8984,8 +8265,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "721": {
         "name": "volcanion",
@@ -8996,8 +8276,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "722": {
         "name": "rowlet",
@@ -9010,8 +8289,7 @@
         ],
         "min_level": 17,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "723": {
         "name": "dartrix",
@@ -9024,8 +8302,7 @@
         ],
         "min_level": 34,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "724": {
         "name": "decidueye",
@@ -9036,8 +8313,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "725": {
         "name": "litten",
@@ -9049,8 +8325,7 @@
         ],
         "min_level": 17,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "726": {
         "name": "torracat",
@@ -9062,8 +8337,7 @@
         ],
         "min_level": 34,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "727": {
         "name": "incineroar",
@@ -9074,8 +8348,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "728": {
         "name": "popplio",
@@ -9087,8 +8360,7 @@
         ],
         "min_level": 17,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "729": {
         "name": "brionne",
@@ -9100,8 +8372,7 @@
         ],
         "min_level": 34,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "730": {
         "name": "primarina",
@@ -9112,8 +8383,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "731": {
         "name": "pikipek",
@@ -9126,8 +8396,7 @@
         ],
         "min_level": 14,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "732": {
         "name": "trumbeak",
@@ -9140,8 +8409,7 @@
         ],
         "min_level": 28,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "733": {
         "name": "toucannon",
@@ -9152,8 +8420,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 11
+        "is_legendary": false
     },
     "734": {
         "name": "yungoos",
@@ -9165,8 +8432,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "735": {
         "name": "gumshoos",
@@ -9176,8 +8442,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 127,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "736": {
         "name": "grubbin",
@@ -9189,8 +8454,7 @@
         ],
         "min_level": 20,
         "capture_rate": 255,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "737": {
         "name": "charjabug",
@@ -9203,8 +8467,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "738": {
         "name": "vikavolt",
@@ -9215,8 +8478,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "739": {
         "name": "crabrawler",
@@ -9228,8 +8490,7 @@
         ],
         "min_level": null,
         "capture_rate": 225,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "740": {
         "name": "crabominable",
@@ -9240,8 +8501,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 17
+        "is_legendary": false
     },
     "741": {
         "name": "oricorio-baile",
@@ -9252,8 +8512,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "742": {
         "name": "cutiefly",
@@ -9266,8 +8525,7 @@
         ],
         "min_level": 25,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 1
+        "is_legendary": false
     },
     "743": {
         "name": "ribombee",
@@ -9278,8 +8536,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "744": {
         "name": "rockruff",
@@ -9291,8 +8548,7 @@
         ],
         "min_level": 25,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "745": {
         "name": "lycanroc-midday",
@@ -9302,8 +8558,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 8
+        "is_legendary": false
     },
     "746": {
         "name": "wishiwashi-solo",
@@ -9313,8 +8568,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "747": {
         "name": "mareanie",
@@ -9327,8 +8581,7 @@
         ],
         "min_level": 38,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "748": {
         "name": "toxapex",
@@ -9339,8 +8592,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "749": {
         "name": "mudbray",
@@ -9352,8 +8604,7 @@
         ],
         "min_level": 30,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "750": {
         "name": "mudsdale",
@@ -9363,8 +8614,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 25
+        "is_legendary": false
     },
     "751": {
         "name": "dewpider",
@@ -9377,8 +8627,7 @@
         ],
         "min_level": 22,
         "capture_rate": 200,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "752": {
         "name": "araquanid",
@@ -9389,8 +8638,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 100,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "753": {
         "name": "fomantis",
@@ -9402,8 +8650,7 @@
         ],
         "min_level": 34,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "754": {
         "name": "lurantis",
@@ -9413,8 +8660,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "755": {
         "name": "morelull",
@@ -9427,8 +8673,7 @@
         ],
         "min_level": 24,
         "capture_rate": 190,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "756": {
         "name": "shiinotic",
@@ -9439,8 +8684,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 75,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "757": {
         "name": "salandit",
@@ -9453,8 +8697,7 @@
         ],
         "min_level": 33,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "758": {
         "name": "salazzle",
@@ -9465,8 +8708,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "759": {
         "name": "stufful",
@@ -9479,8 +8721,7 @@
         ],
         "min_level": 27,
         "capture_rate": 140,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "760": {
         "name": "bewear",
@@ -9491,8 +8732,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 70,
-        "is_legendary": false,
-        "height": 21
+        "is_legendary": false
     },
     "761": {
         "name": "bounsweet",
@@ -9504,8 +8744,7 @@
         ],
         "min_level": 18,
         "capture_rate": 235,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "762": {
         "name": "steenee",
@@ -9517,8 +8756,7 @@
         ],
         "min_level": null,
         "capture_rate": 120,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "763": {
         "name": "tsareena",
@@ -9528,8 +8766,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "764": {
         "name": "comfey",
@@ -9539,8 +8776,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 1
+        "is_legendary": false
     },
     "765": {
         "name": "oranguru",
@@ -9551,8 +8787,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     },
     "766": {
         "name": "passimian",
@@ -9562,8 +8797,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "767": {
         "name": "wimpod",
@@ -9576,8 +8810,7 @@
         ],
         "min_level": 30,
         "capture_rate": 90,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "768": {
         "name": "golisopod",
@@ -9588,8 +8821,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "769": {
         "name": "sandygast",
@@ -9602,8 +8834,7 @@
         ],
         "min_level": 42,
         "capture_rate": 140,
-        "is_legendary": false,
-        "height": 5
+        "is_legendary": false
     },
     "770": {
         "name": "palossand",
@@ -9614,8 +8845,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 13
+        "is_legendary": false
     },
     "771": {
         "name": "pyukumuku",
@@ -9625,8 +8855,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 60,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "772": {
         "name": "type-null",
@@ -9638,8 +8867,7 @@
         ],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 19
+        "is_legendary": false
     },
     "773": {
         "name": "silvally",
@@ -9649,8 +8877,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 23
+        "is_legendary": true
     },
     "774": {
         "name": "minior-red-meteor",
@@ -9661,8 +8888,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "775": {
         "name": "komala",
@@ -9672,8 +8898,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 4
+        "is_legendary": false
     },
     "776": {
         "name": "turtonator",
@@ -9684,8 +8909,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 70,
-        "is_legendary": false,
-        "height": 20
+        "is_legendary": false
     },
     "777": {
         "name": "togedemaru",
@@ -9696,8 +8920,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 180,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "778": {
         "name": "mimikyu-disguised",
@@ -9708,8 +8931,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 2
+        "is_legendary": false
     },
     "779": {
         "name": "bruxish",
@@ -9720,8 +8942,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 80,
-        "is_legendary": false,
-        "height": 9
+        "is_legendary": false
     },
     "780": {
         "name": "drampa",
@@ -9732,8 +8953,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 70,
-        "is_legendary": false,
-        "height": 30
+        "is_legendary": false
     },
     "781": {
         "name": "dhelmise",
@@ -9744,8 +8964,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 25,
-        "is_legendary": false,
-        "height": 39
+        "is_legendary": false
     },
     "782": {
         "name": "jangmo-o",
@@ -9757,8 +8976,7 @@
         ],
         "min_level": 35,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "783": {
         "name": "hakamo-o",
@@ -9771,8 +8989,7 @@
         ],
         "min_level": 45,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "784": {
         "name": "kommo-o",
@@ -9783,8 +9000,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 16
+        "is_legendary": false
     },
     "785": {
         "name": "tapu-koko",
@@ -9795,8 +9011,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 18
+        "is_legendary": true
     },
     "786": {
         "name": "tapu-lele",
@@ -9807,8 +9022,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 12
+        "is_legendary": true
     },
     "787": {
         "name": "tapu-bulu",
@@ -9819,8 +9033,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 19
+        "is_legendary": true
     },
     "788": {
         "name": "tapu-fini",
@@ -9831,8 +9044,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": true,
-        "height": 13
+        "is_legendary": true
     },
     "789": {
         "name": "cosmog",
@@ -9844,8 +9056,7 @@
         ],
         "min_level": 43,
         "capture_rate": 45,
-        "is_legendary": true,
-        "height": 2
+        "is_legendary": true
     },
     "790": {
         "name": "cosmoem",
@@ -9858,8 +9069,7 @@
         ],
         "min_level": 53,
         "capture_rate": 45,
-        "is_legendary": true,
-        "height": 1
+        "is_legendary": true
     },
     "791": {
         "name": "solgaleo",
@@ -9870,8 +9080,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": true,
-        "height": 34
+        "is_legendary": true
     },
     "792": {
         "name": "lunala",
@@ -9882,8 +9091,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": true,
-        "height": 40
+        "is_legendary": true
     },
     "793": {
         "name": "nihilego",
@@ -9894,8 +9102,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 12
+        "is_legendary": false
     },
     "794": {
         "name": "buzzwole",
@@ -9906,8 +9113,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 24
+        "is_legendary": false
     },
     "795": {
         "name": "pheromosa",
@@ -9918,8 +9124,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "796": {
         "name": "xurkitree",
@@ -9929,8 +9134,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 38
+        "is_legendary": false
     },
     "797": {
         "name": "celesteela",
@@ -9941,8 +9145,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 92
+        "is_legendary": false
     },
     "798": {
         "name": "kartana",
@@ -9953,8 +9156,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 3
+        "is_legendary": false
     },
     "799": {
         "name": "guzzlord",
@@ -9965,8 +9167,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 55
+        "is_legendary": false
     },
     "800": {
         "name": "necrozma",
@@ -9976,8 +9177,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 255,
-        "is_legendary": true,
-        "height": 24
+        "is_legendary": true
     },
     "801": {
         "name": "magearna",
@@ -9988,8 +9188,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 10
+        "is_legendary": false
     },
     "802": {
         "name": "marshadow",
@@ -10000,8 +9199,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 7
+        "is_legendary": false
     },
     "803": {
         "name": "poipole",
@@ -10013,8 +9211,7 @@
         ],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 6
+        "is_legendary": false
     },
     "804": {
         "name": "naganadel",
@@ -10025,8 +9222,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 45,
-        "is_legendary": false,
-        "height": 36
+        "is_legendary": false
     },
     "805": {
         "name": "stakataka",
@@ -10037,8 +9233,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 55
+        "is_legendary": false
     },
     "806": {
         "name": "blacephalon",
@@ -10049,8 +9244,7 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 30,
-        "is_legendary": false,
-        "height": 18
+        "is_legendary": false
     },
     "807": {
         "name": "zeraora",
@@ -10060,7 +9254,6 @@
         "evolves_to": [],
         "min_level": null,
         "capture_rate": 3,
-        "is_legendary": false,
-        "height": 15
+        "is_legendary": false
     }
 }

@@ -55,7 +55,6 @@ const fetchApi = async () => {
             `"min_level": ${evolvesTo[0]?.minLevel || null},` +
             `"capture_rate": ${speciesData.capture_rate},` +
             `"is_legendary": ${speciesData.is_legendary},` +
-            `"height": ${pkmnData.height}` +
             `},`;
 
           console.log(`Fetched data for Pokémon ID ${i}`);
