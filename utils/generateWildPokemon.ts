@@ -41,16 +41,25 @@ export function generateWildPokemon(weatherCondition:string) {
   const max = getLevelAvg().max;
   
   const generateStats = (arr: number[]) => {
-    let pokemonWithStats: object[] = [];
+    let pokemonWithStats: {
+      id:number,
+      specie:number,
+      level:number,
+      hp:number,
+      baseHp:number,
+      attack:number,
+      defense:number
+    }[] = [];
+    
     let id = 0;
-    arr.forEach(pkmn => {
+    arr.forEach(specie => {
       id++;
       const level = randint(avg, max);
       const hp = level * 10;
       const baseHp = hp;
       const attack = level * 2;
       const defense = level * 3;
-      pokemonWithStats.push({id, pkmn, level, hp, baseHp, attack, defense});
+      pokemonWithStats.push({id, specie, level, hp, baseHp, attack, defense});
     });
     return pokemonWithStats;
   };
