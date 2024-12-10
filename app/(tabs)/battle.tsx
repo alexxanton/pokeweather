@@ -21,6 +21,7 @@ export default function Battle() {
   const typesdata = require("@/assets/data/typesdata.json");
   const {weatherCondition} = useData();
   const [control, setControl] = useState(true);
+  const [animIndex, setAnimIndex] = useState(9);
 
   const [pokemon, setPokemon] = useState(generateWildPokemon(weatherCondition));
   const [trigger, setTrigger] = useState(true);
@@ -84,10 +85,9 @@ export default function Battle() {
   };
 
   const sendAttack = () => {
-    if (control) {
       sendSignal("attack");
+      setAnimIndex(animIndex < 3 ? animIndex + 1 : 0);
       takeDamage(setWildPokemon, wpIndex, wpHp - 7);
-    }
   };
 
   const takeDamage = (setter: React.Dispatch<React.SetStateAction<any>>, id:number, newHp:number) => {
@@ -121,7 +121,7 @@ export default function Battle() {
           action={wpAction}
           opponent
         >
-          <CAttackEffect trigger={trigger} action={action} />
+          <CAttackEffect trigger={trigger} animIndex={animIndex} num={1} />
         </CPokemon>
 
         <CPokemon
@@ -130,7 +130,7 @@ export default function Battle() {
           trigger={trigger}
           action={action}
         >
-          <CAttackEffect trigger={wpTrigger} action={wpAction} />
+          <CAttackEffect trigger={wpTrigger} />
         </CPokemon>
 
         <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>

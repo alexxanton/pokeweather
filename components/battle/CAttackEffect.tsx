@@ -9,10 +9,12 @@ import { useEffect } from "react";
 import { randint } from "@/utils/randint";
 
 type CAttackEffectProps = {
-  trigger?: boolean
+  trigger: boolean,
+  animIndex?: number,
+  num?: number
 }
 
-export function CAttackEffect({trigger}: CAttackEffectProps) {
+export function CAttackEffect({trigger, animIndex, num}: CAttackEffectProps) {
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
   const opacity = useSharedValue(0);
@@ -33,13 +35,15 @@ export function CAttackEffect({trigger}: CAttackEffectProps) {
     yPos.value = randint(-50, 50);
     scale.value = 1;
     opacity.value = withTiming(1, { duration: 100 }, () => {
-      scale.value = withTiming(2, { duration: 200 });
+      scale.value = withTiming(1.5, { duration: 200 });
       opacity.value = withTiming(0, { duration: 200 });
     });
   };
 
   useEffect(() => {
-    effectAnim();
+    if (animIndex === num || (!animIndex && !num)) {
+      effectAnim();
+    }
   }, [trigger]);
 
   return (
