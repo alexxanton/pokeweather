@@ -127,6 +127,7 @@ export default function Battle() {
   return (
     <CPadding>
       <CPreventBackButton />
+      <CButton onPress={sendAttack} style={{flex: 1}}></CButton>
       <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
       <CText>{wildHp}</CText>
       <View style={styles.container}>

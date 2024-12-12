@@ -1,1 +1,1 @@
-export const TransparentBlack = "#0C0C0D33";
+export const TransparentBlack = "#0C0C0D66";
