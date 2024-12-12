@@ -41,12 +41,14 @@ export default function Battle() {
   const wildHp = wildPokemon[wildIndex].hp;
   const wildBaseHp = wildPokemon[wildIndex].baseHp;
   const wildLevel = wildPokemon[wildIndex].level;
+  const wildDamage = wildPokemon[wildIndex].attack;
 
   const pkmnSpecie = pokemon[pkmnIndex].specie;
   const pkmnName = pokedata[pkmnSpecie].name;
   const pkmnHp = pokemon[pkmnIndex].hp;
   const pkmnBaseHp = pokemon[pkmnIndex].baseHp;
   const pkmnLevel = pokemon[pkmnIndex].level;
+  const pkmnDamage = pokemon[pkmnIndex].attack;
 
   async function delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -72,11 +74,7 @@ export default function Battle() {
         if (wildPokemon[wildIndex].hp > 0) {
           setWildAction("attack");
           setWildTrigger(!wildTrigger);
-          setAction("hurt");
-          setTimeout(() => {
-            setAction("");
-          }, 100);
-          takeDamage(setPokemon, pkmnIndex, pkmnHp - 7);
+          inflictDamage(setPokemon, setAction, pkmnIndex, pkmnHp, wildDamage * 2);
         }
       }
     };
@@ -84,37 +82,33 @@ export default function Battle() {
     wildPokemonLoop();
   }, [wildTrigger]);
 
-  const sendSignal = (
-    triggerSetter: React.Dispatch<React.SetStateAction<boolean>>,
-    actionSetter: React.Dispatch<React.SetStateAction<string>>,
-    trigger: boolean,
-    action:string
-  ) => {
-    triggerSetter(!trigger);
-    actionSetter(action);
-  };
-
-  
-
   const sendAttack = () => {
     setAction("attack");
     setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
-
-    if (wildHp > 0) setWildAction("hurt");
-    setTimeout(() => {
-      setWildAction("");
-    }, 100);
-
     setAnimIndex(animIndex < effectLimit - 1 ? animIndex + 1 : 0);
-    takeDamage(setWildPokemon, wildIndex, wildHp - 50);
+    inflictDamage(setWildPokemon, setWildAction, wildIndex, wildHp, pkmnDamage);
   };
 
-  const takeDamage = (setter: React.Dispatch<React.SetStateAction<any>>, id:number, newHp:number) => {
-    setter((prev: any) =>
-      prev.map((pkmn: any, i: number) =>
-        i === id ? {...pkmn, hp: newHp} : pkmn
-      )
-    );
+  const inflictDamage = (
+    setter: React.Dispatch<React.SetStateAction<any>>,
+    action: React.Dispatch<React.SetStateAction<string>>,
+    id: number,
+    hp: number,
+    damage: number
+  ) => {
+    const newHp = Math.round(hp - damage);
+    if (hp > 0) {
+      action("hurt");
+      setTimeout(() => {
+        action("");
+      }, 100);
+  
+      setter((prev: any) =>
+        prev.map((pkmn: any, i: number) =>
+          i === id ? {...pkmn, hp: newHp} : pkmn
+        )
+      );
+    }
   };
 
   const nextPokemon = () => {
