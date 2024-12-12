@@ -13,32 +13,37 @@ import Animated, {
 
 type CPokemonProps = ViewProps & {
   specie: number,
-  opponent?: boolean,
+  wild?: boolean,
   trigger: boolean,
   action: string
 };
 
 
-export function CPokemon({children, specie, opponent, trigger, action, style}: CPokemonProps) {
+export function CPokemon({children, specie, wild, trigger, action, style}: CPokemonProps) {
   const backSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
-  const sprite = opponent ? frontSprite : backSprite;
+  const sprite = wild ? frontSprite : backSprite;
+  const hitBack = 20;
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
+  const xHurt = useSharedValue(0);
   const yAttack = useSharedValue(0);
+  const yDefeat = useSharedValue(0);
   const opacity = useSharedValue(1);
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
       {translateY: yPos.value},
       {translateY: yAttack.value},
-      {translateX: xPos.value}
+      {translateY: yDefeat.value},
+      {translateX: xPos.value},
+      {translateX: xHurt.value},
     ],
     opacity: opacity.value,
   }));
 
   const hoverAnim = () => {
-    const delay = opponent ? 900 : 0;
+    const delay = wild ? 900 : 0;
     yPos.value = withDelay(
       delay,
       withRepeat(
@@ -56,28 +61,29 @@ export function CPokemon({children, specie, opponent, trigger, action, style}: C
   };
 
   const hurtAnim = () => {
-    xPos.value = withSequence(
-      withTiming(randint(-20, 20), { duration: 200 }),
+    xHurt.value = 0;
+    xHurt.value = withSequence(
+      withTiming(wild ? hitBack : -hitBack, { duration: 200 }),
       withTiming(0, { duration: 200 })
     );
   };
 
   const defeatAnim = () => {
-    setTimeout(() => {
-      yAttack.value = 0;
-      xPos.value = 0;
+    yDefeat.value = 0;
+    xPos.value = 0;
+    opacity.value = 1;
+    yDefeat.value = withTiming(200, { duration: 500 });
+    opacity.value = withTiming(0, { duration: 250 }, () => {
       opacity.value = 1;
-      yAttack.value = withTiming(200, { duration: 500 });
-      opacity.value = withTiming(0, { duration: 250 }, () => {
-        opacity.value = 1;
-        xPos.value = 200;
-        yAttack.value = 0;
-      });
-    }, 1000);
+      xPos.value = 200;
+      yDefeat.value = 0;
+    });
   };
 
   const nextAnim = () => {
-    xPos.value = withTiming(0, { duration: 200 });
+    setTimeout(() => {
+      xPos.value = withTiming(0, { duration: 200 });
+    }, 100);
   };
 
   const leftAnim = () => {};

@@ -6,22 +6,25 @@ import { CText } from "@/components/text/CText";
 import { CControlPanel } from "@/components/containers/CControlPanel";
 import { CButton } from "@/components/buttons/CButton";
 import { CPreventBackButton } from "@/components/battle/CPreventBackButton";
+import { CAttackEffect } from "@/components/battle/CAttackEffect";
 import { useData } from "@/components/CDataProvider";
 import { useEffect, useState } from "react";
 import { randint } from "@/utils/randint";
+import { generateWildPokemon } from "@/utils/generateWildPokemon";
 import axios from "axios";
 
-import Pokeball from '@/assets/images/misc/Pokeball'
-import { generateWildPokemon } from "@/utils/generateWildPokemon";
-import { CAttackEffect } from "@/components/battle/CAttackEffect";
+import Pokeball from '@/assets/images/misc/Pokeball';
+import SwitchButton from '@/assets/images/buttons/SwitchButton';
 
 
 export default function Battle() {
   const pokedata = require("@/assets/data/pokedata.json");
   const typesdata = require("@/assets/data/typesdata.json");
+  const effectLimit = 5;
+
   const {weatherCondition} = useData();
   const [control, setControl] = useState(true);
-  const [animIndex, setAnimIndex] = useState(9);
+  const [animIndex, setAnimIndex] = useState(0);
 
   const [pokemon, setPokemon] = useState(generateWildPokemon(weatherCondition));
   const [trigger, setTrigger] = useState(true);
@@ -29,65 +32,81 @@ export default function Battle() {
   const [pkmnIndex, setPkmnIndex] = useState(0);
   
   const [wildPokemon, setWildPokemon] = useState(generateWildPokemon(weatherCondition));
-  const [wpTrigger, setWpTrigger] = useState(true);
-  const [wpAction, setWpAction] = useState("");
-  const [wpIndex, setWpIndex] = useState(0);
+  const [wildTrigger, setWildTrigger] = useState(true);
+  const [wildAction, setWildAction] = useState("");
+  const [wildIndex, setWildIndex] = useState(0);
 
-  const wpSpecie = wildPokemon[wpIndex].specie;
-  const wpName = pokedata[wpSpecie].name;
-  const wpHp = wildPokemon[wpIndex].hp;
-  const wpBaseHp = wildPokemon[wpIndex].baseHp;
-  const wpLevel = wildPokemon[wpIndex].level;
+  const wildSpecie = wildPokemon[wildIndex].specie;
+  const wildName = pokedata[wildSpecie].name;
+  const wildHp = wildPokemon[wildIndex].hp;
+  const wildBaseHp = wildPokemon[wildIndex].baseHp;
+  const wildLevel = wildPokemon[wildIndex].level;
 
   const pkmnSpecie = pokemon[pkmnIndex].specie;
   const pkmnName = pokedata[pkmnSpecie].name;
   const pkmnHp = pokemon[pkmnIndex].hp;
   const pkmnBaseHp = pokemon[pkmnIndex].baseHp;
   const pkmnLevel = pokemon[pkmnIndex].level;
+
+  async function delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
   
 
-  // useEffect(() => {
-  //   sendSignal("attack");
-  // }, [trigger]);
-  
   useEffect(() => {
-    if (wpHp <= 0) {
-      setControl(false);
-      setWpAction("defeat");
-      setTimeout(() => {
-        if (wpIndex < wildPokemon.length - 1) {
-          setWpIndex(wpIndex + 1);
-          setWpAction("next");
-          setTimeout(() => {
-            setWpTrigger(!wpTrigger);
-            setControl(true);
-          }, 1000);
+    const wildPokemonLoop = async () => {
+      if (wildHp <= 0) {
+        setControl(false);
+        await delay(1000);
+        setWildAction("defeat");
+        await delay(1000);
+        if (wildIndex < wildPokemon.length - 1) {
+          setWildIndex(wildIndex + 1);
+          setWildAction("next");
+          await delay(1500);
+          setWildTrigger(!wildTrigger);
+          setControl(true);
         }
-      }, 1500);
-    } else {
-      setTimeout(() => {
-        if (wpHp > 0) {
-          sendWpSignal("attack");
+      } else {
+        await delay(randint(100, 1000));
+        if (wildPokemon[wildIndex].hp > 0) {
+          setWildAction("attack");
+          setWildTrigger(!wildTrigger);
+          setAction("hurt");
+          setTimeout(() => {
+            setAction("");
+          }, 100);
           takeDamage(setPokemon, pkmnIndex, pkmnHp - 7);
         }
-      }, randint(100, 1000));
-    }
-  }, [wpTrigger]);
+      }
+    };
 
-  const sendSignal = (action:string) => {
-    setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
-    setAction(action);
+    wildPokemonLoop();
+  }, [wildTrigger]);
+
+  const sendSignal = (
+    triggerSetter: React.Dispatch<React.SetStateAction<boolean>>,
+    actionSetter: React.Dispatch<React.SetStateAction<string>>,
+    trigger: boolean,
+    action:string
+  ) => {
+    triggerSetter(!trigger);
+    actionSetter(action);
   };
 
-  const sendWpSignal = (action:string) => {
-    setWpTrigger(!wpTrigger);
-    setWpAction(action);
-  };
+  
 
   const sendAttack = () => {
-      sendSignal("attack");
-      setAnimIndex(animIndex < 3 ? animIndex + 1 : 0);
-      takeDamage(setWildPokemon, wpIndex, wpHp - 7);
+    setAction("attack");
+    setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
+
+    if (wildHp > 0) setWildAction("hurt");
+    setTimeout(() => {
+      setWildAction("");
+    }, 100);
+
+    setAnimIndex(animIndex < effectLimit - 1 ? animIndex + 1 : 0);
+    takeDamage(setWildPokemon, wildIndex, wildHp - 50);
   };
 
   const takeDamage = (setter: React.Dispatch<React.SetStateAction<any>>, id:number, newHp:number) => {
@@ -109,19 +128,21 @@ export default function Battle() {
   return (
     <CPadding>
       <CPreventBackButton />
-      <CVar name={wpName} hp={wpHp / wpBaseHp * 100} />
-      <CText>{wpHp}</CText>
+      <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
+      <CText>{wildHp}</CText>
       <View style={styles.container}>
-        <CText outlined size={20}>LVL {wpLevel}</CText>
+        <CText outlined size={20}>LVL {wildLevel}</CText>
 
         <CPokemon
-          specie={wpSpecie}
+          specie={wildSpecie}
           style={styles.front}
-          trigger={wpTrigger}
-          action={wpAction}
-          opponent
+          trigger={wildTrigger}
+          action={wildAction}
+          wild
         >
-          <CAttackEffect trigger={trigger} animIndex={animIndex} num={1} />
+          {[...Array(effectLimit)].map((_, i) => {
+            return <CAttackEffect trigger={trigger} animIndex={animIndex} num={i} key={i} />
+          })}
         </CPokemon>
 
         <CPokemon
@@ -130,21 +151,21 @@ export default function Battle() {
           trigger={trigger}
           action={action}
         >
-          <CAttackEffect trigger={wpTrigger} />
+          <CAttackEffect trigger={wildTrigger} />
         </CPokemon>
 
         <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>
       </View>
       <CVar name={pkmnName} hp={pkmnHp / pkmnBaseHp * 100} style={styles.bottomVar} />
-      <CControlPanel>
+      <CControlPanel style={styles.buttons}>
         <CButton onPress={prevPokemon}>
-          <Pokeball width={100} height={100} />
+          <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
         </CButton>
         <CButton onPress={sendAttack}>
           <Pokeball width={100} height={100} />
         </CButton>
         <CButton onPress={nextPokemon}>
-          <Pokeball width={100} height={100} />
+          <SwitchButton width={100} height={100} />
         </CButton>
       </CControlPanel>
     </CPadding>
@@ -173,5 +194,9 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     left: -25
+  },
+  buttons: {
+    justifyContent: "center",
+    gap: 10,
   }
 });

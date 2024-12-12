@@ -19,7 +19,7 @@ export function CAttackEffect({trigger, animIndex, num}: CAttackEffectProps) {
   const xPos = useSharedValue(0);
   const opacity = useSharedValue(0);
   const scale = useSharedValue(1);
-  const attackImage = require("@/assets/images/battle/attack.png");
+  const attackImage = require("@/assets/images/battle/grass-attack.png");
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
@@ -57,8 +57,6 @@ const styles = StyleSheet.create({
   container: {
     width: 100,
     height: 100,
-    backgroundColor: "red",
-    borderRadius: "100%",
     position: "absolute",
     alignSelf: "center",
   },

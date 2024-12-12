@@ -11,12 +11,12 @@ export function CControlPanel({children, style, ...rest}: ViewProps) {
   const {coins} = useData();
 
   return (
-    <View style={style}>
+    <View>
       <View style={styles.row}>
         <CVar name="" hp={20} style={styles.var} color="#a085c4" bgColor="#663399" />
         <CText outlined size={25} style={styles.coins}>$000000{coins}</CText>
       </View>
-      <View style={styles.buttonContainer} {...rest}>
+      <View style={[styles.buttonContainer, style]} {...rest}>
         {children}
       </View>
     </View>
