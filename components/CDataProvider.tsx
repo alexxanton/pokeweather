@@ -15,6 +15,8 @@ type CDataProviderType = {
   setWeatherCondition: React.Dispatch<React.SetStateAction<string>>;
 
   // Misc
+  boost: number;
+  setBoost: React.Dispatch<React.SetStateAction<number>>;
   coins: number;
   setCoins: React.Dispatch<React.SetStateAction<number>>;
   wheelTries: number;
@@ -40,6 +42,7 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
   const [weatherCondition, setWeatherCondition] = useState<string>("");
   const [description, setDescription] = useState<string>("");
 
+  const [boost, setBoost] = useState(100);
   const [coins, setCoins] = useState<number>(0);
   const [wheelTries, setWheelTries] = useState<number>(10);
 
@@ -59,6 +62,8 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
       description,
       setDescription,
 
+      boost,
+      setBoost,
       coins,
       setCoins,
       weatherCondition,

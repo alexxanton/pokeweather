@@ -22,7 +22,7 @@ export default function Battle() {
   const typesdata = require("@/assets/data/typesdata.json");
   const effectLimit = 5;
 
-  const {weatherCondition} = useData();
+  const {weatherCondition, boost, setBoost} = useData();
   const [control, setControl] = useState(true);
   const [animIndex, setAnimIndex] = useState(0);
 
@@ -42,6 +42,7 @@ export default function Battle() {
   const wildBaseHp = wildPokemon[wildIndex].baseHp;
   const wildLevel = wildPokemon[wildIndex].level;
   const wildDamage = wildPokemon[wildIndex].attack;
+  const wildDefense = wildPokemon[wildIndex].attack;
 
   const pkmnSpecie = pokemon[pkmnIndex].specie;
   const pkmnName = pokedata[pkmnSpecie].name;
@@ -49,6 +50,7 @@ export default function Battle() {
   const pkmnBaseHp = pokemon[pkmnIndex].baseHp;
   const pkmnLevel = pokemon[pkmnIndex].level;
   const pkmnDamage = pokemon[pkmnIndex].attack;
+  const pkmnDefense = pokemon[pkmnIndex].attack;
 
   async function delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -74,7 +76,7 @@ export default function Battle() {
         if (wildPokemon[wildIndex].hp > 0) {
           setWildAction("attack");
           setWildTrigger(!wildTrigger);
-          inflictDamage(setPokemon, setAction, pkmnIndex, pkmnHp, wildDamage * 2);
+          inflictDamage(setPokemon, setAction, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
         }
       }
     };
@@ -86,7 +88,9 @@ export default function Battle() {
     setAction("attack");
     setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
     setAnimIndex(animIndex < effectLimit - 1 ? animIndex + 1 : 0);
-    inflictDamage(setWildPokemon, setWildAction, wildIndex, wildHp, pkmnDamage);
+    const boostModifier = boost > 0 ? 3 : 1;
+    setBoost(boost - 1);
+    inflictDamage(setWildPokemon, setWildAction, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
   };
 
   const inflictDamage = (
@@ -94,9 +98,10 @@ export default function Battle() {
     action: React.Dispatch<React.SetStateAction<string>>,
     id: number,
     hp: number,
-    damage: number
+    damage: number,
+    defense: number
   ) => {
-    const newHp = Math.round(hp - damage);
+    const newHp = Math.round(hp - (damage / defense) * 2);
     if (hp > 0) {
       action("hurt");
       setTimeout(() => {
@@ -177,7 +182,7 @@ const styles = StyleSheet.create({
     right: 0
   },
   bottomVar: {
-    marginBottom: 20
+    marginBottom: 15
   },
   front: {
     position: "absolute",

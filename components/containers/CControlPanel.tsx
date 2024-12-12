@@ -8,12 +8,12 @@ import { useData } from "../CDataProvider";
 
 
 export function CControlPanel({children, style, ...rest}: ViewProps) {
-  const {coins} = useData();
+  const {coins, boost} = useData();
 
   return (
     <View>
       <View style={styles.row}>
-        <CVar name="" hp={20} style={styles.var} color="#a085c4" bgColor="#663399" />
+        <CVar name="" hp={boost} style={styles.var} color="#a085c4" bgColor="#663399" />
         <CText outlined size={25} style={styles.coins}>$000000{coins}</CText>
       </View>
       <View style={[styles.buttonContainer, style]} {...rest}>
