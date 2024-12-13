@@ -23,7 +23,7 @@ db.connect((err) => {
     console.log("Connected to database.")
 });
 
-app.post("/user/:id", (req, res) => {
+app.get("/user/:id", (req, res) => {
     const query = "SELECT * FROM user WHERE id = (?)";
     const {id, mail, coins, pokemon1, pokemon2, pokemon3, pokemon4, pokemon5, pokemon6} = req.params;
     db.query(query, [id, mail, coins, pokemon1, pokemon2, pokemon3, pokemon4, pokemon5, pokemon6], (err, result) => {
