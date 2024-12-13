@@ -27,7 +27,7 @@ export default function Profile() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.post(DATABASE_SERVER_URI + "/user", 1);
+      const response = await axios.get(`${DATABASE_SERVER_URI}/user/${userId}`);
       setUser(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -44,7 +44,7 @@ export default function Profile() {
 
     try {
       console.log(username)
-      const response = await axios.get(DATABASE_SERVER_URI + `/login/${username}`);
+      const response = await axios.get(`${DATABASE_SERVER_URI}/login/${username}`);
       setUserId(response.data[0].id);
       console.log(response.data[0].id)
       setUser(response.data.user);

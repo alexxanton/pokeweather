@@ -7,12 +7,18 @@ create table if not exists user (
     password varchar(255) not null,
     coins int default 1000,
     boost int default 0,
-    pokemon1 int not null,
-    pokemon2 int,
-    pokemon3 int,
-    pokemon4 int,
-    pokemon5 int,
-    pokemon6 int
+);
+
+create table if not exists team (
+    id int primary key auto_increment,
+    slot_1 int not null,
+    slot_2 int,
+    slot_3 int,
+    slot_4 int,
+    slot_5 int,
+    slot_6 int,
+    user_fk int not null,
+    foreign key (user_fk) references user(id) on delete cascade
 );
 
 create table if not exists pokemon (
@@ -27,13 +33,6 @@ create table if not exists pokemon (
 create table if not exists trophy (
     id int primary key auto_increment,
     obtained boolean default false,
-    user_fk int not null,
-    foreign key (user_fk) references user(id) on delete cascade
-);
-
-create table if not exists missions (
-    id int primary key auto_increment,
-    completed boolean default false,
     user_fk int not null,
     foreign key (user_fk) references user(id) on delete cascade
 );
