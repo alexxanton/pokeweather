@@ -4,10 +4,15 @@ import { Text, StyleSheet, type TextProps, type ViewProps } from "react-native";
 
 type CTextProps = TextProps & ViewProps & {
   size?: number,
-  outlined?: boolean
+  outlined?: boolean,
+  color?: string
 };
 
-export function CText({ children, size, outlined, style, ...rest }: CTextProps) {
+export function CText({ children, size, outlined, color, style, ...rest }: CTextProps) {
+  if (!color) {
+    color = "white";
+  }
+
   if (outlined) {
     return (
       <View style={[styles.container, style]} {...rest}>
@@ -21,13 +26,13 @@ export function CText({ children, size, outlined, style, ...rest }: CTextProps) 
         <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineLeft]}>{children}</Text>
         <Text style={[{fontSize:size}, styles.text, styles.outline, styles.outlineRight]}>{children}</Text>
         {/* Main text */}
-        <Text style={[{fontSize:size}, styles.text]}>{children}</Text>
+        <Text style={[{fontSize:size}, {color: color}, styles.text]}>{children}</Text>
       </View>
     );
   }
 
   return (
-    <Text style={[styles.text, {fontSize:size}, style]} {...rest}>
+    <Text style={[styles.text, {fontSize:size}, {color: color}, style]} {...rest}>
       {children}
     </Text>
   );
@@ -39,7 +44,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: "BlackHanSans",
-    color: "white"
   },
   outline: {
     color: "black",

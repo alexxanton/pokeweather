@@ -6,6 +6,7 @@ create table if not exists user (
     name varchar(255) not null unique,
     password varchar(255) not null,
     coins int default 1000,
+    boost int default 0,
     pokemon1 int not null,
     pokemon2 int,
     pokemon3 int,

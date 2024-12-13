@@ -1,3 +1,12 @@
+import { CButton } from '@/components/buttons/CButton';
+import { CArrowButton } from '@/components/buttons/CArrowButton';
+import { useEffect, useState } from 'react';
+import { CText } from '@/components/text/CText';
+import { DATABASE_SERVER_URI } from '@/constants/URI';
+import { CPadding } from '@/components/containers/CPadding';
+import { useData } from '@/components/CDataProvider';
+import { TransparentBlack } from '@/constants/TransparentBlack';
+import axios from 'axios';
 import {
   StyleSheet,
   TextInput,
@@ -8,18 +17,7 @@ import {
   Platform,
   Alert
 } from 'react-native';
-import { CControlPanel } from '@/components/containers/CControlPanel';
-import { CButton } from '@/components/buttons/CButton';
-import { CArrowButton } from '@/components/buttons/CArrowButton';
-import { useEffect, useState } from 'react';
-import { CText } from '@/components/text/CText';
-import { DATABASE_SERVER_URI } from '@/constants/URI';
-import { CPadding } from '@/components/containers/CPadding';
-import axios from 'axios';
 
-import SignoutButton from '@/assets/images/buttons/SignoutButton';
-import { useData } from '@/components/CDataProvider';
-import { TransparentBlack } from '@/constants/TransparentBlack';
 
 export default function Profile() {
   const { user, setUser, userId, setUserId } = useData();
@@ -29,7 +27,7 @@ export default function Profile() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get(`${DATABASE_SERVER_URI}/user`);
+      const response = await axios.post(DATABASE_SERVER_URI + "/user", 1);
       setUser(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -38,17 +36,17 @@ export default function Profile() {
   };
 
   const handleLogIn = async () => {
+    // setUserId(1);
     if (!username || !password) {
       setError("Please fill in all fields.");
       return;
     }
 
     try {
-      const response = await axios.post(`${DATABASE_SERVER_URI}/login`, {
-        username,
-        password,
-      });
-      setUserId(response.data.userId);
+      console.log(username)
+      const response = await axios.get(DATABASE_SERVER_URI + `/login/${username}`);
+      setUserId(response.data.id);
+      console.log(response.data[0].id)
       setUser(response.data.user);
     } catch (error) {
       console.error("Log-in error:", error);
@@ -56,8 +54,13 @@ export default function Profile() {
     }
   };
 
+  const signOut = () => {
+    setUserId(0);
+  };
+
   useEffect(() => {
     fetchUsers();
+    console.log(user)
   }, []);
 
   return (
@@ -70,52 +73,59 @@ export default function Profile() {
         <CPadding>
           <CArrowButton />
           <View style={styles.container}>
+          <View style={styles.form}>
             {userId ? (
-              <View style={styles.centeredContent}>
-                <CText size={45}>{user.name}</CText>
-                <CControlPanel>
-                  <CButton>
-                    <SignoutButton width={270} height={90} />
-                  </CButton>
-                </CControlPanel>
-              </View>
+              <>
+                {/* <CText size={45}>{user.name}</CText> */}
+                <CButton style={styles.button} onPress={signOut}>
+                  <CText size={20}>Log out</CText>
+                </CButton>
+              </>
             ) : (
-              <View style={[styles.form, styles.centeredContent]}>
+              <>
                 <CText outlined size={45}>Log in</CText>
-                {error ? <CText style={styles.errorText}>{error}</CText> : null}
                 <TextInput
                   style={styles.textInput}
                   maxLength={20}
                   placeholder="Enter your user name"
                   placeholderTextColor="#fff"
-                  cursorColor="white"
+                  cursorColor="red"
                   value={username}
                   onChangeText={setUsername}
                   selectionColor="red"
-
                 />
+                {error ? <InputField error={error} /> : null}
                 <TextInput
                   style={styles.textInput}
                   maxLength={20}
                   placeholder="Enter your password"
                   placeholderTextColor="#fff"
-                  cursorColor="white"
+                  cursorColor="red"
                   secureTextEntry={true}
                   value={password}
                   onChangeText={setPassword}
                   selectionColor="red"
                 />
-                <CButton style={[styles.button, styles.buttonShadow]} onPress={handleLogIn}>
-                  <CText size={20} style={styles.buttonText}>Log in</CText>
+                <CButton style={styles.button} onPress={handleLogIn}>
+                  <CText size={20}>Log in</CText>
                 </CButton>
-              </View>
+              </>
             )}
+            </View>
           </View>
         </CPadding>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
   );
 }
+
+const InputField = ({error}: {error:string}) => {
+  return (
+    <View>
+      <CText outlined color="red">{error}</CText>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   keyboardAvoidingContainer: {
@@ -128,9 +138,7 @@ const styles = StyleSheet.create({
   form: {
     gap: 20,
     alignContent: "center",
-  },
-  centeredContent: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   textInput: {
     backgroundColor: TransparentBlack,
@@ -139,29 +147,19 @@ const styles = StyleSheet.create({
     color: "white",
     padding: 15,
     borderRadius: 8,
-    marginBottom: 15,
     width: "80%",
   },
   button: {
     marginTop: 20,
-    backgroundColor: "#6200EE",
+    backgroundColor: "#663399",
     paddingVertical: 12,
     paddingHorizontal: 40,
     borderRadius: 25,
     alignItems: "center",
-  },
-  buttonShadow: {
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-  },
-  buttonText: {
-    color: "white",
-  },
-  errorText: {
-    color: "red",
-    marginBottom: 10,
   },
 });
