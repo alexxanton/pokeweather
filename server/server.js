@@ -23,41 +23,33 @@ db.connect((err) => {
     console.log("Connected to database.")
 });
 
-app.get("/user/:id", (req, res) => {
-    const query = "SELECT * FROM user WHERE id = (?)";
-    const {id, mail, coins} = req.params;
-    db.query(query, [id, mail, coins], (err, result) => {
+const dbQuery = (query, res, params = []) => {
+    db.query(query, params, (err, result) => {
         if (err) {
             console.error("Error: ", err);
-            res.status(500).send("error");
+            res.status(500).send("Error: ", err);
             return;
         }
         res.json(result);
     });
+};
+
+app.get("/user/:id", (req, res) => {
+    const query = "SELECT * FROM user WHERE id = (?)";
+    const {id} = req.params;
+    dbQuery(query, res, [id]);
 });
 
 app.get("/login/:mail", (req, res) => {
     const query = "SELECT id FROM user WHERE mail = (?)";
     const {mail} = req.params;
-    db.query(query, [mail], (err, result) => {
-        if (err) {
-            console.error("Error: ", err);
-            res.status(500).send("error");
-            return;
-        }
-        res.json(result);
-    });
+    dbQuery(query, res, [mail]);
 });
 
 app.get("/pokemon/:id", (req, res) => {
-    db.query("SELECT * FROM pokemon WHERE user_fk = (?)", (err, result) => {
-        if (err) {
-            console.error("Error: ", err);
-            res.status(500).send("error");
-            return;
-        }
-        res.json(result);
-    });
+    const query = "SELECT * FROM pokemon WHERE user_fk = (?)";
+    const {id} = req.params;
+    dbQuery(query, res, [id]);
 });
 
 app.listen(3001, () => {
