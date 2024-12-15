@@ -48,7 +48,8 @@ export function generateWildPokemon(weatherCondition:string) {
       hp: number,
       baseHp: number,
       attack: number,
-      defense: number
+      defense: number,
+      types: string[]
     }[] = [];
     
     let id = 0;
@@ -59,7 +60,8 @@ export function generateWildPokemon(weatherCondition:string) {
       const hp = baseHp;
       const attack = level * 5;
       const defense = level * 1.5;
-      pokemonWithStats.push({id, specie, level, hp, baseHp, attack, defense});
+      const types = [""];
+      pokemonWithStats.push({id, specie, level, hp, baseHp, attack, defense, types});
     });
     return pokemonWithStats;
   };

@@ -15,11 +15,12 @@ type CPokemonProps = ViewProps & {
   specie: number,
   wild?: boolean,
   trigger: boolean,
-  action: string
+  action: string,
+  hp: number
 };
 
 
-export function CPokemon({children, specie, wild, trigger, action, style}: CPokemonProps) {
+export function CPokemon({children, specie, wild, trigger, action, hp, style}: CPokemonProps) {
   const backSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const sprite = wild ? frontSprite : backSprite;
@@ -95,9 +96,12 @@ export function CPokemon({children, specie, wild, trigger, action, style}: CPoke
   }, []);
 
   useEffect(() => {
+    hurtAnim();
+  }, [hp]);
+
+  useEffect(() => {
     switch (action) {
       case "attack" : attackAnim(); break;
-      case "hurt"   : hurtAnim();   break;
       case "defeat" : defeatAnim(); break;
       case "left"   : leftAnim();   break;
       case "right"  : rightAnim();  break;

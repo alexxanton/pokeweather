@@ -14,7 +14,7 @@ type CDataProviderType = {
   weatherCondition: string;
   setWeatherCondition: React.Dispatch<React.SetStateAction<string>>;
 
-  // Misc
+  // User Data
   user: string;
   setUser: React.Dispatch<React.SetStateAction<string>>;
   userId: number;
@@ -27,8 +27,6 @@ type CDataProviderType = {
   setWheelTries: React.Dispatch<React.SetStateAction<number>>;
 
   // Buttons
-  attackTrigger: boolean;
-  setAttackTrigger: React.Dispatch<React.SetStateAction<boolean>>;
   buttonActive: boolean;
   setButtonActive: React.Dispatch<React.SetStateAction<boolean>>;
   
@@ -53,7 +51,6 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
   const [wheelTries, setWheelTries] = useState<number>(10);
 
   const [buttonActive, setButtonActive] = useState<boolean>(true);
-  const [attackTrigger, setAttackTrigger] = useState<boolean>(true);
 
   const [collection, setCollection] = useState<Record<string, any>>([]);
 
@@ -81,8 +78,6 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
       wheelTries,
       setWheelTries,
 
-      attackTrigger,
-      setAttackTrigger,
       buttonActive,
       setButtonActive,
 

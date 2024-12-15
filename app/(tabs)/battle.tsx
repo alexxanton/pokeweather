@@ -8,7 +8,7 @@ import { CButton } from "@/components/buttons/CButton";
 import { CPreventBackButton } from "@/components/battle/CPreventBackButton";
 import { CAttackEffect } from "@/components/battle/CAttackEffect";
 import { useData } from "@/components/CDataProvider";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { randint } from "@/utils/randint";
 import { generateWildPokemon } from "@/utils/generateWildPokemon";
 import axios from "axios";
@@ -26,31 +26,31 @@ export default function Battle() {
   const [control, setControl] = useState(true);
   const [animIndex, setAnimIndex] = useState(0);
 
-  const [pokemon, setPokemon] = useState(generateWildPokemon(weatherCondition));
+  const [pokemon, setPokemon] = useState(() => generateWildPokemon(weatherCondition));
   const [trigger, setTrigger] = useState(true);
   const [action, setAction] = useState("");
   const [pkmnIndex, setPkmnIndex] = useState(0);
   
-  const [wildPokemon, setWildPokemon] = useState(generateWildPokemon(weatherCondition));
+  const [wildPokemon, setWildPokemon] = useState(() => generateWildPokemon(weatherCondition));
   const [wildTrigger, setWildTrigger] = useState(true);
   const [wildAction, setWildAction] = useState("");
   const [wildIndex, setWildIndex] = useState(0);
 
-  const wildSpecie = wildPokemon[wildIndex].specie;
-  const wildName = pokedata[wildSpecie].name;
-  const wildHp = wildPokemon[wildIndex].hp;
-  const wildBaseHp = wildPokemon[wildIndex].baseHp;
-  const wildLevel = wildPokemon[wildIndex].level;
-  const wildDamage = wildPokemon[wildIndex].attack;
-  const wildDefense = wildPokemon[wildIndex].attack;
+  const wildSpecie = useMemo(() => wildPokemon[wildIndex].specie, [wildPokemon, wildIndex]);
+  const wildName = useMemo(() => pokedata[wildSpecie].name, [pokedata, wildSpecie]);
+  const wildHp = useMemo(() => wildPokemon[wildIndex].hp, [wildPokemon, wildIndex]);
+  const wildBaseHp = useMemo(() => wildPokemon[wildIndex].baseHp, [wildPokemon, wildIndex]);
+  const wildLevel = useMemo(() => wildPokemon[wildIndex].level, [wildPokemon, wildIndex]);
+  const wildDamage = useMemo(() => wildPokemon[wildIndex].attack, [wildPokemon, wildIndex]);
+  const wildDefense = useMemo(() => wildPokemon[wildIndex].defense, [wildPokemon, wildIndex]);
 
-  const pkmnSpecie = pokemon[pkmnIndex].specie;
-  const pkmnName = pokedata[pkmnSpecie].name;
-  const pkmnHp = pokemon[pkmnIndex].hp;
-  const pkmnBaseHp = pokemon[pkmnIndex].baseHp;
-  const pkmnLevel = pokemon[pkmnIndex].level;
-  const pkmnDamage = pokemon[pkmnIndex].attack;
-  const pkmnDefense = pokemon[pkmnIndex].attack;
+  const pkmnSpecie = useMemo(() => pokemon[pkmnIndex].specie, [pokemon, pkmnIndex]);
+  const pkmnName = useMemo(() => pokedata[pkmnSpecie].name, [pokedata, pkmnSpecie]);
+  const pkmnHp = useMemo(() => pokemon[pkmnIndex].hp, [pokemon, pkmnIndex]);
+  const pkmnBaseHp = useMemo(() => pokemon[pkmnIndex].baseHp, [pokemon, pkmnIndex]);
+  const pkmnLevel = useMemo(() => pokemon[pkmnIndex].level, [pokemon, pkmnIndex]);
+  const pkmnDamage = useMemo(() => pokemon[pkmnIndex].attack, [pokemon, pkmnIndex]);
+  const pkmnDefense = useMemo(() => pokemon[pkmnIndex].defense, [pokemon, pkmnIndex]);
 
   async function delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -76,7 +76,7 @@ export default function Battle() {
         if (wildPokemon[wildIndex].hp > 0) {
           setWildAction("attack");
           setWildTrigger(!wildTrigger);
-          inflictDamage(setPokemon, setAction, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
+          inflictDamage(setPokemon, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
         }
       }
     };
@@ -90,25 +90,19 @@ export default function Battle() {
     setAnimIndex(animIndex < effectLimit - 1 ? animIndex + 1 : 0);
     const boostModifier = boost > 0 ? 3 : 1;
     setBoost(boost - 1);
-    inflictDamage(setWildPokemon, setWildAction, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
+    inflictDamage(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
   };
 
   const inflictDamage = (
-    setter: React.Dispatch<React.SetStateAction<any>>,
-    action: React.Dispatch<React.SetStateAction<string>>,
+    pokemon: React.Dispatch<React.SetStateAction<any>>,
     id: number,
     hp: number,
     damage: number,
     defense: number
   ) => {
-    const newHp = Math.round(hp - (damage / defense) * 2);
+    const newHp = hp - Math.round(damage / defense);
     if (hp > 0) {
-      action("hurt");
-      setTimeout(() => {
-        action("");
-      }, 100);
-  
-      setter((prev: any) =>
+      pokemon((prev: any) =>
         prev.map((pkmn: any, i: number) =>
           i === id ? {...pkmn, hp: newHp} : pkmn
         )
@@ -138,6 +132,7 @@ export default function Battle() {
           style={styles.front}
           trigger={wildTrigger}
           action={wildAction}
+          hp={wildHp}
           wild
         >
           {[...Array(effectLimit)].map((_, i) => {
@@ -150,6 +145,7 @@ export default function Battle() {
           style={styles.back}
           trigger={trigger}
           action={action}
+          hp={pkmnHp}
         >
           <CAttackEffect trigger={wildTrigger} />
         </CPokemon>

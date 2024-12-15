@@ -20,7 +20,7 @@ export default function Team() {
   const {collection, setCollection} = useData();
   
   const fetchPokemon = async () => {
-    const response = await axios.get(DATABASE_SERVER_URI + "/pokemon");
+    const response = await axios.get(`${DATABASE_SERVER_URI}/pokemon/${1}`);
     setCollection(response.data);
   };
 
