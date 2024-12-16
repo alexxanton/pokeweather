@@ -18,8 +18,6 @@ import SwitchButton from '@/assets/images/buttons/SwitchButton';
 
 
 export default function Battle() {
-  const pokedata = require("@/assets/data/pokedata.json");
-  const typesdata = require("@/assets/data/typesdata.json");
   const effectLimit = 5;
 
   const {weatherCondition, boost, setBoost} = useData();
@@ -36,21 +34,21 @@ export default function Battle() {
   const [wildAction, setWildAction] = useState("");
   const [wildIndex, setWildIndex] = useState(0);
 
-  const wildSpecie = useMemo(() => wildPokemon[wildIndex].specie, [wildPokemon, wildIndex]);
-  const wildName = useMemo(() => pokedata[wildSpecie].name, [pokedata, wildSpecie]);
+  const wildSpecie = useMemo(() => wildPokemon[wildIndex].specie, [wildIndex]);
+  const wildName = useMemo(() => wildPokemon[wildIndex].name, [wildSpecie]);
   const wildHp = useMemo(() => wildPokemon[wildIndex].hp, [wildPokemon, wildIndex]);
-  const wildBaseHp = useMemo(() => wildPokemon[wildIndex].baseHp, [wildPokemon, wildIndex]);
-  const wildLevel = useMemo(() => wildPokemon[wildIndex].level, [wildPokemon, wildIndex]);
-  const wildDamage = useMemo(() => wildPokemon[wildIndex].attack, [wildPokemon, wildIndex]);
-  const wildDefense = useMemo(() => wildPokemon[wildIndex].defense, [wildPokemon, wildIndex]);
+  const wildBaseHp = useMemo(() => wildPokemon[wildIndex].baseHp, [wildIndex]);
+  const wildLevel = useMemo(() => wildPokemon[wildIndex].level, [wildIndex]);
+  const wildDamage = useMemo(() => wildPokemon[wildIndex].attack, [wildIndex]);
+  const wildDefense = useMemo(() => wildPokemon[wildIndex].defense, [wildIndex]);
 
-  const pkmnSpecie = useMemo(() => pokemon[pkmnIndex].specie, [pokemon, pkmnIndex]);
-  const pkmnName = useMemo(() => pokedata[pkmnSpecie].name, [pokedata, pkmnSpecie]);
+  const pkmnSpecie = useMemo(() => pokemon[pkmnIndex].specie, [pkmnIndex]);
+  const pkmnName = useMemo(() => pokemon[pkmnIndex].name, [pkmnSpecie]);
   const pkmnHp = useMemo(() => pokemon[pkmnIndex].hp, [pokemon, pkmnIndex]);
-  const pkmnBaseHp = useMemo(() => pokemon[pkmnIndex].baseHp, [pokemon, pkmnIndex]);
-  const pkmnLevel = useMemo(() => pokemon[pkmnIndex].level, [pokemon, pkmnIndex]);
-  const pkmnDamage = useMemo(() => pokemon[pkmnIndex].attack, [pokemon, pkmnIndex]);
-  const pkmnDefense = useMemo(() => pokemon[pkmnIndex].defense, [pokemon, pkmnIndex]);
+  const pkmnBaseHp = useMemo(() => pokemon[pkmnIndex].baseHp, [pkmnIndex]);
+  const pkmnLevel = useMemo(() => pokemon[pkmnIndex].level, [pkmnIndex]);
+  const pkmnDamage = useMemo(() => pokemon[pkmnIndex].attack, [pkmnIndex]);
+  const pkmnDefense = useMemo(() => pokemon[pkmnIndex].defense, [pkmnIndex]);
 
   async function delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
