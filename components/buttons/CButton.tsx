@@ -21,7 +21,6 @@ export function CButton({ href, ...rest }: Props) {
       if (buttonActive) {
         if (!userId && pathname !== "/profile") {
           router.push("/(tabs)/profile");
-          console.log(pathname)
         } else {
           router.push(href);
         }

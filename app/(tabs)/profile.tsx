@@ -1,6 +1,6 @@
 import { CButton } from '@/components/buttons/CButton';
 import { CArrowButton } from '@/components/buttons/CArrowButton';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CText } from '@/components/text/CText';
 import { DATABASE_SERVER_URI } from '@/constants/URI';
 import { CPadding } from '@/components/containers/CPadding';

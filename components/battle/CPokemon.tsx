@@ -21,9 +21,10 @@ type CPokemonProps = ViewProps & {
 
 
 export function CPokemon({children, specie, wild, trigger, action, hp, style}: CPokemonProps) {
-  const backSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
-  const frontSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
-  const sprite = wild ? frontSprite : backSprite;
+  const backSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
+  const frontSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
+  const missingImage = require("@/assets/images/misc/missingno.png");
+  const [sprite, setSprite] = useState(wild ? frontSprite : backSprite);
   const hitBack = 20;
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
@@ -100,6 +101,10 @@ export function CPokemon({children, specie, wild, trigger, action, hp, style}: C
   }, [hp]);
 
   useEffect(() => {
+    setSprite(wild ? frontSprite : backSprite);
+  }, [specie]);
+
+  useEffect(() => {
     switch (action) {
       case "attack" : attackAnim(); break;
       case "defeat" : defeatAnim(); break;
@@ -113,7 +118,9 @@ export function CPokemon({children, specie, wild, trigger, action, hp, style}: C
     <View style={[styles.continer, style]}>
       <View style={styles.shadow} />
       <Animated.View style={animStyle}>
-        <Image source={sprite} style={styles.image} />
+        <Image source={sprite} style={styles.image}
+          onError={() => setSprite(missingImage)}
+        />
       </Animated.View>
       {children}
     </View>
