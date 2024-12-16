@@ -1,5 +1,5 @@
 import { Pressable, Vibration } from "react-native";
-import { useRouter } from "expo-router";
+import { useRouter, usePathname } from "expo-router";
 import { type ComponentProps } from "react";
 import { useData } from "../CDataProvider";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
@@ -8,7 +8,8 @@ type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> 
 
 export function CButton({ href, ...rest }: Props) {
   const router = useRouter();
-  const { buttonActive, setButtonActive } = useData();
+  const pathname = usePathname();
+  const { buttonActive, setButtonActive, userId } = useData();
   const scale = useSharedValue(1);
 
   const animStyle = useAnimatedStyle(() => ({
@@ -18,8 +19,14 @@ export function CButton({ href, ...rest }: Props) {
   const handlePress = () => {
     if (href) {
       if (buttonActive) {
-        router.push(href);
+        if (!userId && pathname !== "/profile") {
+          router.push("/(tabs)/profile");
+          console.log(pathname)
+        } else {
+          router.push(href);
+        }
       }
+      
       setButtonActive(false);
       setTimeout(() => {
         setButtonActive(true);
