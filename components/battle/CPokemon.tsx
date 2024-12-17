@@ -83,9 +83,7 @@ export function CPokemon({children, specie, wild, trigger, action, hp, style}: C
   };
 
   const nextAnim = () => {
-    setTimeout(() => {
-      xPos.value = withTiming(0, { duration: 200 });
-    }, 100);
+    xPos.value = withTiming(0, { duration: 200 });
   };
 
   const leftAnim = () => {};
@@ -110,7 +108,6 @@ export function CPokemon({children, specie, wild, trigger, action, hp, style}: C
       case "defeat" : defeatAnim(); break;
       case "left"   : leftAnim();   break;
       case "right"  : rightAnim();  break;
-      case "next"   : nextAnim();   break;
     }
   }, [trigger, action]);
 
@@ -120,6 +117,7 @@ export function CPokemon({children, specie, wild, trigger, action, hp, style}: C
       <Animated.View style={animStyle}>
         <Image source={sprite} style={styles.image}
           onError={() => setSprite(missingImage)}
+          onLoad={nextAnim}
         />
       </Animated.View>
       {children}
