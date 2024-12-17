@@ -9,12 +9,14 @@ import axios from 'axios';
 import Pokeball from '@/assets/images/misc/Pokeball';
 import ProfileButton from '@/assets/images/buttons/ProfileButton';
 import { TestingPanel } from './testing/TestingPanel'
+import { getStoredData } from '@/utils/asyncDataStorage';
 
 export function CMainScreen() {
   const [error, setError] = useState("");
-  const {temp, setTemp, setDescription, setWindSpeed, setHour} = useData();
-  const [weatherData, setWeatherData] = useState();
+  const {setUserId, temp, setTemp, setDescription, setWindSpeed, setHour} = useData();
+  const [weatherData, setWeatherData] = useState<Record<string, any>>();
   const apiKey = process.env.EXPO_PUBLIC_API_KEY;
+  const getUserId = async () => setUserId(await getStoredData("id"));
 
   const getWeatherData = async () => {
     let { status } = await Location.requestForegroundPermissionsAsync();
@@ -31,6 +33,8 @@ export function CMainScreen() {
   };
 
   useEffect(() => {
+    // ! TODO: set 5 min interval
+    getUserId();
     getWeatherData();
   }, []);
 

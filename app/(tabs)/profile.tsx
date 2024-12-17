@@ -6,6 +6,8 @@ import { DATABASE_SERVER_URI } from '@/constants/URI';
 import { CPadding } from '@/components/containers/CPadding';
 import { useData } from '@/components/CDataProvider';
 import { TransparentBlack } from '@/constants/TransparentBlack';
+import { storeData } from '@/utils/asyncDataStorage';
+
 import axios from 'axios';
 import {
   StyleSheet,
@@ -36,7 +38,6 @@ export default function Profile() {
   };
 
   const handleLogIn = async () => {
-    // setUserId(1);
     if (!username || !password) {
       setError("Please fill in all fields.");
       return;
@@ -48,13 +49,14 @@ export default function Profile() {
       setUserId(response.data[0].id);
       console.log(response.data[0].id)
       setUser(response.data.user);
+      storeData("id", "1");
     } catch (error) {
       console.error("Log-in error:", error);
       setError("Invalid username or password.");
     }
   };
 
-  const signOut = () => {
+  const logOut = () => {
     setUserId(0);
   };
 
@@ -77,7 +79,7 @@ export default function Profile() {
             {userId ? (
               <>
                 {/* <CText size={45}>{user.name}</CText> */}
-                <CButton style={styles.button} onPress={signOut}>
+                <CButton style={styles.button} onPress={logOut}>
                   <CText size={20}>Log out</CText>
                 </CButton>
               </>
