@@ -26,12 +26,10 @@ export default function Battle() {
 
   const [pokemon, setPokemon] = useState(() => generateWildPokemon(weatherCondition));
   const [trigger, setTrigger] = useState(true);
-  const [action, setAction] = useState("");
   const [pkmnIndex, setPkmnIndex] = useState(0);
   
   const [wildPokemon, setWildPokemon] = useState(() => generateWildPokemon(weatherCondition));
   const [wildTrigger, setWildTrigger] = useState(true);
-  const [wildAction, setWildAction] = useState("");
   const [wildIndex, setWildIndex] = useState(0);
 
   const wildSpecie = useMemo(() => wildPokemon[wildIndex].specie, [wildIndex]);
@@ -59,22 +57,20 @@ export default function Battle() {
     const wildPokemonLoop = async () => {
       if (wildHp <= 0) {
         setControl(false);
-        await delay(1000);
-        setWildAction("defeat");
-        await delay(1000);
+        await delay(2000);
         if (wildIndex < wildPokemon.length - 1) {
           setWildIndex(wildIndex + 1);
-          setWildAction("next");
           await delay(1500);
           setWildTrigger(!wildTrigger);
           setControl(true);
         }
       } else {
         await delay(randint(100, 1000));
-        if (wildPokemon[wildIndex].hp > 0) {
-          setWildAction("attack");
-          setWildTrigger(!wildTrigger);
-          inflictDamage(setPokemon, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
+        setWildTrigger(!wildTrigger);
+        inflictDamage(setPokemon, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
+        if (pkmnHp <= 0) {
+          await delay(1000);
+          nextPokemon();
         }
       }
     };
@@ -83,7 +79,6 @@ export default function Battle() {
   }, [wildTrigger]);
 
   const sendAttack = () => {
-    setAction("attack");
     setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
     setAnimIndex(animIndex < effectLimit - 1 ? animIndex + 1 : 0);
     const boostModifier = boost > 0 ? 3 : 1;
@@ -109,7 +104,11 @@ export default function Battle() {
   };
 
   const nextPokemon = () => {
-    setPkmnIndex(pkmnIndex < pokemon.length - 1 ? pkmnIndex + 1 : 0);
+    let next = pkmnIndex < pokemon.length - 1 ? pkmnIndex + 1 : 0;
+    for (let i = 0; i < pokemon.length - 1 && pokemon[next].hp <= 0; i++) {
+      next = next < pokemon.length - 1 ? next + 1 : 0
+    }
+    setPkmnIndex(next);
   };
 
   const prevPokemon = () => {
@@ -129,7 +128,6 @@ export default function Battle() {
           specie={wildSpecie}
           style={styles.front}
           trigger={wildTrigger}
-          action={wildAction}
           hp={wildHp}
           wild
         >
@@ -142,7 +140,6 @@ export default function Battle() {
           specie={pkmnSpecie}
           style={styles.back}
           trigger={trigger}
-          action={action}
           hp={pkmnHp}
         >
           <CAttackEffect trigger={wildTrigger} />

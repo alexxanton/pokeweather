@@ -16,7 +16,7 @@ export function CMainScreen() {
   const {setUserId, temp, setTemp, setDescription, setWindSpeed, setHour} = useData();
   const [weatherData, setWeatherData] = useState<Record<string, any>>();
   const apiKey = process.env.EXPO_PUBLIC_API_KEY;
-  const getUserId = async () => setUserId(await getStoredData("id"));
+  const getUserId = async () => setUserId(parseInt(await getStoredData("id")));
 
   const getWeatherData = async () => {
     let { status } = await Location.requestForegroundPermissionsAsync();

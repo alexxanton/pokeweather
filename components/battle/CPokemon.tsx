@@ -15,12 +15,11 @@ type CPokemonProps = ViewProps & {
   specie: number,
   wild?: boolean,
   trigger: boolean,
-  action: string,
   hp: number
 };
 
 
-export function CPokemon({children, specie, wild, trigger, action, hp, style}: CPokemonProps) {
+export function CPokemon({children, specie, wild, trigger, hp, style}: CPokemonProps) {
   const backSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const missingImage = require("@/assets/images/misc/missingno.png");
@@ -74,12 +73,15 @@ export function CPokemon({children, specie, wild, trigger, action, hp, style}: C
     yDefeat.value = 0;
     xPos.value = 0;
     opacity.value = 1;
-    yDefeat.value = withTiming(200, { duration: 500 });
-    opacity.value = withTiming(0, { duration: 250 }, () => {
-      opacity.value = 1;
-      xPos.value = 200;
-      yDefeat.value = 0;
-    });
+
+    setTimeout(() => {
+      yDefeat.value = withTiming(200, { duration: 500 });
+      opacity.value = withTiming(0, { duration: 250 }, () => {
+        opacity.value = 1;
+        xPos.value = 200;
+        yDefeat.value = 0;
+      });
+    }, 1000);
   };
 
   const nextAnim = () => {
@@ -95,7 +97,11 @@ export function CPokemon({children, specie, wild, trigger, action, hp, style}: C
   }, []);
 
   useEffect(() => {
-    hurtAnim();
+    if (hp > 0) {
+      hurtAnim();
+    } else {
+      defeatAnim();
+    }
   }, [hp]);
 
   useEffect(() => {
@@ -103,13 +109,8 @@ export function CPokemon({children, specie, wild, trigger, action, hp, style}: C
   }, [specie]);
 
   useEffect(() => {
-    switch (action) {
-      case "attack" : attackAnim(); break;
-      case "defeat" : defeatAnim(); break;
-      case "left"   : leftAnim();   break;
-      case "right"  : rightAnim();  break;
-    }
-  }, [trigger, action]);
+    attackAnim();
+  }, [trigger]);
 
   return(
     <View style={[styles.continer, style]}>

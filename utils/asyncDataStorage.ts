@@ -12,11 +12,11 @@ export const getStoredData = async (key: string) => {
     try {
         const value = await AsyncStorage.getItem(key);
         if (value !== null) {
-            return parseInt(value);
+            return value;
         }
-        return 0;
+        return "0";
     } catch (error) {
         console.log(error);
-        return 0;
+        return "";
     }
 };
