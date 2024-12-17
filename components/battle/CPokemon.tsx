@@ -25,6 +25,7 @@ export function CPokemon({children, specie, wild, trigger, hp, style}: CPokemonP
   const missingImage = require("@/assets/images/misc/missingno.png");
   const [sprite, setSprite] = useState(wild ? frontSprite : backSprite);
   const hitBack = 20;
+  const hideX = 200;
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
   const xHurt = useSharedValue(0);
@@ -78,7 +79,7 @@ export function CPokemon({children, specie, wild, trigger, hp, style}: CPokemonP
       yDefeat.value = withTiming(200, { duration: 500 });
       opacity.value = withTiming(0, { duration: 250 }, () => {
         opacity.value = 1;
-        xPos.value = 200;
+        xPos.value = wild ? hideX : -hideX;
         yDefeat.value = 0;
       });
     }, 1000);
@@ -97,9 +98,8 @@ export function CPokemon({children, specie, wild, trigger, hp, style}: CPokemonP
   }, []);
 
   useEffect(() => {
-    if (hp > 0) {
-      hurtAnim();
-    } else {
+    hurtAnim();
+    if (hp <= 0) {
       defeatAnim();
     }
   }, [hp]);

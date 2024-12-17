@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { CPadding } from '@/components/containers/CPadding';
 import { CVar } from "@/components/battle/CVar";
 import { CPokemon } from "@/components/battle/CPokemon";
@@ -118,41 +118,44 @@ export default function Battle() {
   return (
     <CPadding>
       <CPreventBackButton />
-      <CButton onPress={sendAttack} style={{flex: 1}}></CButton>
-      <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
-      <CText>{wildHp}</CText>
-      <View style={styles.container}>
-        <CText outlined size={20}>LVL {wildLevel}</CText>
+      <TouchableWithoutFeedback onPress={sendAttack}>
+        <View style={styles.touchableContainer}>
+          <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
+          <CText>{wildHp}</CText>
+          <View style={styles.battleContainer}>
+            <CText outlined size={20}>LVL {wildLevel}</CText>
 
-        <CPokemon
-          specie={wildSpecie}
-          style={styles.front}
-          trigger={wildTrigger}
-          hp={wildHp}
-          wild
-        >
-          {[...Array(effectLimit)].map((_, i) => {
-            return <CAttackEffect trigger={trigger} animIndex={animIndex} num={i} key={i} />
-          })}
-        </CPokemon>
+            <CPokemon
+              specie={wildSpecie}
+              style={styles.front}
+              trigger={wildTrigger}
+              hp={wildHp}
+              wild
+            >
+              {[...Array(effectLimit)].map((_, i) => {
+                return <CAttackEffect trigger={trigger} animIndex={animIndex} num={i} key={i} />
+              })}
+            </CPokemon>
 
-        <CPokemon
-          specie={pkmnSpecie}
-          style={styles.back}
-          trigger={trigger}
-          hp={pkmnHp}
-        >
-          <CAttackEffect trigger={wildTrigger} />
-        </CPokemon>
+            <CPokemon
+              specie={pkmnSpecie}
+              style={styles.back}
+              trigger={trigger}
+              hp={pkmnHp}
+            >
+              <CAttackEffect trigger={wildTrigger} />
+            </CPokemon>
 
-        <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>
-      </View>
-      <CVar name={pkmnName} hp={pkmnHp / pkmnBaseHp * 100} style={styles.bottomVar} />
+            <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>
+          </View>
+          <CVar name={pkmnName} hp={pkmnHp / pkmnBaseHp * 100} style={styles.bottomVar} />
+        </View>
+      </TouchableWithoutFeedback>
       <CControlPanel style={styles.buttons}>
         <CButton onPress={prevPokemon}>
           <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
         </CButton>
-        <CButton onPress={sendAttack}>
+        <CButton>
           <Pokeball width={100} height={100} />
         </CButton>
         <CButton onPress={nextPokemon}>
@@ -164,7 +167,7 @@ export default function Battle() {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  battleContainer: {
     flex: 1,
     margin: 10,
   },
@@ -189,5 +192,8 @@ const styles = StyleSheet.create({
   buttons: {
     justifyContent: "center",
     gap: 10,
+  },
+  touchableContainer: {
+    flex: 1
   }
 });
