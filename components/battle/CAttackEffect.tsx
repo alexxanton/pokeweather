@@ -7,19 +7,21 @@ import Animated, {
 } from "react-native-reanimated";
 import { useEffect } from "react";
 import { randint } from "@/utils/randint";
+import { attackSprites } from "@/utils/attackSpritesMap";
 
 type CAttackEffectProps = {
   trigger: boolean,
-  animIndex?: number,
-  num?: number
+  effectIndex?: number,
+  num?: number,
+  type: string
 }
 
-export function CAttackEffect({trigger, animIndex, num}: CAttackEffectProps) {
+export function CAttackEffect({trigger, effectIndex, type, num}: CAttackEffectProps) {
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
   const opacity = useSharedValue(0);
   const scale = useSharedValue(1);
-  const attackImage = require("@/assets/images/battle/grass-attack.png");
+  const attackImage = attackSprites["dragon"];
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
@@ -41,7 +43,7 @@ export function CAttackEffect({trigger, animIndex, num}: CAttackEffectProps) {
   };
 
   useEffect(() => {
-    if (animIndex === num || (!animIndex && !num)) {
+    if (effectIndex === num || (!effectIndex && !num)) {
       effectAnim();
     }
   }, [trigger]);

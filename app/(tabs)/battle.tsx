@@ -15,6 +15,7 @@ import axios from "axios";
 
 import Pokeball from '@/assets/images/misc/Pokeball';
 import SwitchButton from '@/assets/images/buttons/SwitchButton';
+import { CPokeballButton } from "@/components/buttons/CPokeballButton";
 
 
 export default function Battle() {
@@ -22,7 +23,7 @@ export default function Battle() {
 
   const {weatherCondition, boost, setBoost} = useData();
   const [control, setControl] = useState(true);
-  const [animIndex, setAnimIndex] = useState(0);
+  const [effectIndex, setEffectIndex] = useState(0);
 
   const [pokemon, setPokemon] = useState(() => generateWildPokemon(weatherCondition));
   const [trigger, setTrigger] = useState(true);
@@ -39,6 +40,7 @@ export default function Battle() {
   const wildLevel = useMemo(() => wildPokemon[wildIndex].level, [wildIndex]);
   const wildDamage = useMemo(() => wildPokemon[wildIndex].attack, [wildIndex]);
   const wildDefense = useMemo(() => wildPokemon[wildIndex].defense, [wildIndex]);
+  const wildTypes = useMemo(() => wildPokemon[wildIndex].types, [wildIndex]);
 
   const pkmnSpecie = useMemo(() => pokemon[pkmnIndex].specie, [pkmnIndex]);
   const pkmnName = useMemo(() => pokemon[pkmnIndex].name, [pkmnSpecie]);
@@ -47,6 +49,7 @@ export default function Battle() {
   const pkmnLevel = useMemo(() => pokemon[pkmnIndex].level, [pkmnIndex]);
   const pkmnDamage = useMemo(() => pokemon[pkmnIndex].attack, [pkmnIndex]);
   const pkmnDefense = useMemo(() => pokemon[pkmnIndex].defense, [pkmnIndex]);
+  const pkmnTypes = useMemo(() => pokemon[pkmnIndex].types, [pkmnIndex]);
 
   async function delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -56,21 +59,21 @@ export default function Battle() {
   useEffect(() => {
     const wildPokemonLoop = async () => {
       if (wildHp <= 0) {
-        setControl(false);
         await delay(2000);
         if (wildIndex < wildPokemon.length - 1) {
           setWildIndex(wildIndex + 1);
           await delay(1500);
           setWildTrigger(!wildTrigger);
-          setControl(true);
         }
       } else {
         await delay(randint(100, 1000));
         setWildTrigger(!wildTrigger);
-        inflictDamage(setPokemon, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
+        updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage*5, pkmnDefense);
         if (pkmnHp <= 0) {
+          setControl(false);
           await delay(1000);
           nextPokemon();
+          setControl(true);
         }
       }
     };
@@ -79,14 +82,14 @@ export default function Battle() {
   }, [wildTrigger]);
 
   const sendAttack = () => {
-    setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
-    setAnimIndex(animIndex < effectLimit - 1 ? animIndex + 1 : 0);
     const boostModifier = boost > 0 ? 3 : 1;
+    setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
+    setEffectIndex(effectIndex < effectLimit - 1 ? effectIndex + 1 : 0);
     setBoost(boost - 1);
-    inflictDamage(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
+    updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
   };
 
-  const inflictDamage = (
+  const updatePokemonHp = (
     pokemon: React.Dispatch<React.SetStateAction<any>>,
     id: number,
     hp: number,
@@ -104,16 +107,24 @@ export default function Battle() {
   };
 
   const nextPokemon = () => {
+    if (!control) return;
     let next = pkmnIndex < pokemon.length - 1 ? pkmnIndex + 1 : 0;
     for (let i = 0; i < pokemon.length - 1 && pokemon[next].hp <= 0; i++) {
-      next = next < pokemon.length - 1 ? next + 1 : 0
+      next = next < pokemon.length - 1 ? next + 1 : 0;
     }
     setPkmnIndex(next);
   };
 
   const prevPokemon = () => {
-    setPkmnIndex(pkmnIndex > 0 ? pkmnIndex - 1 : pokemon.length - 1);
+    if (!control) return;
+    let prev = pkmnIndex > 0 ? pkmnIndex - 1 : pokemon.length - 1; 
+    for (let i = 0; i < pokemon.length - 1 && pokemon[prev].hp <= 0; i++) {
+      prev = prev > 0 ? prev - 1 : pokemon.length - 1;
+    }
+    setPkmnIndex(prev);
   };
+
+  const throwPokeball = () => {};
   
   return (
     <CPadding>
@@ -133,7 +144,13 @@ export default function Battle() {
               wild
             >
               {[...Array(effectLimit)].map((_, i) => {
-                return <CAttackEffect trigger={trigger} animIndex={animIndex} num={i} key={i} />
+                return <CAttackEffect
+                  trigger={trigger}
+                  effectIndex={effectIndex}
+                  num={i}
+                  key={i}
+                  type={pkmnTypes[randint(0, pkmnTypes.length - 1)]}
+                />
               })}
             </CPokemon>
 
@@ -143,7 +160,7 @@ export default function Battle() {
               trigger={trigger}
               hp={pkmnHp}
             >
-              <CAttackEffect trigger={wildTrigger} />
+              <CAttackEffect trigger={wildTrigger} type={wildTypes[randint(0, wildTypes.length - 1)]} />
             </CPokemon>
 
             <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>
@@ -155,9 +172,7 @@ export default function Battle() {
         <CButton onPress={prevPokemon}>
           <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
         </CButton>
-        <CButton>
-          <Pokeball width={100} height={100} />
-        </CButton>
+        <CPokeballButton onPress={throwPokeball} />
         <CButton onPress={nextPokemon}>
           <SwitchButton width={100} height={100} />
         </CButton>
@@ -191,7 +206,8 @@ const styles = StyleSheet.create({
   },
   buttons: {
     justifyContent: "center",
-    gap: 10,
+    gap: 20,
+    backgroundColor: "transparent"
   },
   touchableContainer: {
     flex: 1
