@@ -21,7 +21,7 @@ export function CAttackEffect({trigger, effectIndex, type, num}: CAttackEffectPr
   const xPos = useSharedValue(0);
   const opacity = useSharedValue(0);
   const scale = useSharedValue(1);
-  const attackImage = attackSprites["dragon"];
+  const attackImage = attackSprites[type];
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
