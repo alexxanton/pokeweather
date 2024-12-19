@@ -3,16 +3,16 @@ import { CButton } from "@/components/buttons/CButton";
 import { CArrowButton } from "@/components/buttons/CArrowButton";
 import { CText } from "@/components/text/CText";
 import { useData } from "@/components/CDataProvider";
-import { CGestureHandler } from '@/components/containers/CGestureHandler';
+import React from "react";
 
 export default function Trophies() {
   const {temp, setTemp} = useData();
   return (
-    <CGestureHandler>
+    <>
       <CArrowButton />
       <View style={styles.container}>
       </View>
-    </CGestureHandler>
+    </>
   );
 }
 

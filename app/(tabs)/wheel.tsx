@@ -1,10 +1,9 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { CText } from '@/components/text/CText';
-import { View } from 'react-native';
 import { CControlPanel } from '@/components/containers/CControlPanel';
 import { CButton } from '@/components/buttons/CButton';
 import { CArrowButton } from '@/components/buttons/CArrowButton';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useData } from '@/components/CDataProvider';
 import { CGestureHandler } from '@/components/containers/CGestureHandler';
 import { TransparentBlack } from "@/constants/TransparentBlack";
@@ -22,19 +21,16 @@ export default function Wheel() {
   };
 
   return (
-    <CGestureHandler>
-
+    <>
       <CArrowButton />
       <View style={styles.container}>
         <CButton onPress={spin}>
           <WheelSVG width={300} height={300} />
         </CButton>
       </View>
-
       <View style={styles.tries}>
         <CText size={30}>x {wheelTries}</CText>
       </View>
-
       <CControlPanel>
         <CButton href="/ad">
           <AdButton width={90} height={90} />
@@ -43,8 +39,7 @@ export default function Wheel() {
           <SpinButton width={180} height={90} />
         </CButton>
       </CControlPanel>
-      
-    </CGestureHandler>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ import { CPokemonButton } from "@/components/buttons/CPokemonButton";
 import { CScrollPanel } from "@/components/containers/CScrollPanel";
 import { useData } from "@/components/CDataProvider";
 import { CLabel } from "@/components/text/CLabel";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DATABASE_SERVER_URI } from '@/constants/URI';
 import { CGestureHandler } from '@/components/containers/CGestureHandler';
 import axios from "axios";
@@ -31,7 +31,7 @@ export default function Team() {
   }, []);
 
   return (
-    <CGestureHandler>
+    <>
       <CArrowButton />
       <View style={styles.container}>
         <CLabel title="Team">
@@ -57,7 +57,7 @@ export default function Team() {
           <BattleButton width={135} height={90} />
         </CButton>
       </CControlPanel>
-    </CGestureHandler>
+    </>
   );
 }
 

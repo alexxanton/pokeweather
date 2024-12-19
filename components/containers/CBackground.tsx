@@ -11,7 +11,7 @@ export function CBackground({ children }: PropsWithChildren) {
   const [firstTime, setFirstTime] = useState(true);
   const fade = useSharedValue(1);
   
-  const imageMap = {
+  const imageMap: { [key: string]: any } = {
     "thunder": require("@/assets/images/backgrounds/storm.png"),
     "rain": require("@/assets/images/backgrounds/rain.png"),
     "night": require("@/assets/images/backgrounds/night.png"),
@@ -43,8 +43,8 @@ export function CBackground({ children }: PropsWithChildren) {
     else if (description.includes("snow")) state = "snow";
     else if (windSpeed > 10) state = "windy";
     else if (hour > 19 || hour < 6) state = "night";
-    else if (temp < 10) state = "cold";
-    else if (temp > 35) state = "hot";
+    else if ((temp ?? 0) < 10) state = "cold";
+    else if ((temp ?? 0) > 35) state = "hot";
     else if (description.includes("clear")) state = "clear";
     else if (description.includes("cloud")) {
       if (description.includes("few")) {
@@ -54,7 +54,7 @@ export function CBackground({ children }: PropsWithChildren) {
       }
     }
 
-    const bg = state;
+    const bg: keyof typeof imageMap = state;
     setWeatherCondition(state);
     setImage(imageMap[bg] || imageMap.black);
   }
@@ -69,7 +69,9 @@ export function CBackground({ children }: PropsWithChildren) {
         <Animated.View style={[styles.anim, {opacity: fade}]}>
           <ImageBackground source={cover} style={[styles.cover]} />
         </Animated.View>
-        {children}
+        <View style={styles.padding}>
+          {children}
+        </View>
       </ImageBackground>
     </View>
   );
@@ -79,6 +81,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#181414",
+  },
+  padding: {
+    flex: 1,
+    paddingTop: 50,
+    padding: 20,
   },
   bg: {
     flex: 1,

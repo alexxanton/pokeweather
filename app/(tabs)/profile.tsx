@@ -3,10 +3,10 @@ import { CArrowButton } from '@/components/buttons/CArrowButton';
 import React, { useEffect, useState } from 'react';
 import { CText } from '@/components/text/CText';
 import { DATABASE_SERVER_URI } from '@/constants/URI';
-import { CGestureHandler } from '@/components/containers/CGestureHandler';
 import { useData } from '@/components/CDataProvider';
 import { TransparentBlack } from '@/constants/TransparentBlack';
 import { storeData } from '@/utils/asyncDataStorage';
+import Checkbox from 'expo-checkbox';
 
 import axios from 'axios';
 import {
@@ -72,50 +72,53 @@ export default function Profile() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         keyboardVerticalOffset={Platform.OS === "ios" ? 60 : 0}
       >
-        <CGestureHandler>
-          <CArrowButton />
-          <View style={styles.container}>
-          <View style={styles.form}>
-            {userId ? (
-              <>
-                {/* <CText size={45}>{user.name}</CText> */}
-                <CButton style={styles.button} onPress={logOut}>
-                  <CText size={20}>Log out</CText>
-                </CButton>
-              </>
-            ) : (
-              <>
-                <CText outlined size={45}>Log in</CText>
-                <TextInput
-                  style={styles.textInput}
-                  maxLength={20}
-                  placeholder="Enter your user name"
-                  placeholderTextColor="#fff"
-                  cursorColor="red"
-                  value={username}
-                  onChangeText={setUsername}
-                  selectionColor="red"
-                />
-                {error ? <InputField error={error} /> : null}
-                <TextInput
-                  style={styles.textInput}
-                  maxLength={20}
-                  placeholder="Enter your password"
-                  placeholderTextColor="#fff"
-                  cursorColor="red"
-                  secureTextEntry={true}
-                  value={password}
-                  onChangeText={setPassword}
-                  selectionColor="red"
-                />
-                <CButton style={styles.button} onPress={handleLogIn}>
-                  <CText size={20}>Log in</CText>
-                </CButton>
-              </>
-            )}
-            </View>
+        <CArrowButton />
+        <View style={styles.container}>
+        <View style={styles.form}>
+          {userId ? (
+            <>
+              <CText outlined size={40}>{`Hi, @${user[0].mail}!`}</CText>
+              <View style={styles.settings}>
+                <CBoxField title="Music" />
+                <CBoxField title="Sounds" />
+                <CBoxField title="Vibration" />
+              </View>
+              <CButton style={styles.button} onPress={logOut}>
+                <CText size={20}>Log out</CText>
+              </CButton>
+            </>
+          ) : (
+            <>
+              <CText outlined size={45}>Log in</CText>
+              <TextInput
+                style={styles.textInput}
+                maxLength={20}
+                placeholder="Enter your user name"
+                placeholderTextColor="#fff"
+                cursorColor="red"
+                value={username}
+                onChangeText={setUsername}
+                selectionColor="red"
+              />
+              {error ? <InputField error={error} /> : null}
+              <TextInput
+                style={styles.textInput}
+                maxLength={20}
+                placeholder="Enter your password"
+                placeholderTextColor="#fff"
+                cursorColor="red"
+                secureTextEntry={true}
+                value={password}
+                onChangeText={setPassword}
+                selectionColor="red"
+              />
+              <CButton style={styles.button} onPress={handleLogIn}>
+                <CText size={20}>Log in</CText>
+              </CButton>
+            </>
+          )}
           </View>
-        </CGestureHandler>
+        </View>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
   );
@@ -125,6 +128,21 @@ const InputField = ({error}: {error:string}) => {
   return (
     <View>
       <CText outlined color="red">{error}</CText>
+    </View>
+  );
+};
+
+const CBoxField = ({title}: {title: string}) => {
+  const [checked, setCheked] = useState(true);
+  return (
+    <View style={styles.checkboxField}>
+      <CText size={16}>{title}</CText>
+      <Checkbox
+        value={checked}
+        onValueChange={setCheked}
+        color="#663399"
+        style={styles.checkbox}
+      />
     </View>
   );
 };
@@ -164,4 +182,20 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
+  checkboxField: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center"
+  },
+  checkbox: {
+    width: 30,
+    height: 30,
+  },
+  settings: {
+    backgroundColor: TransparentBlack,
+    width: "80%",
+    gap: 30,
+    borderRadius: 15,
+    padding: 15
+  }
 });

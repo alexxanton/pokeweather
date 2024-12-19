@@ -9,11 +9,13 @@ import { useEffect } from "react";
 import { randint } from "@/utils/randint";
 import { attackSprites } from "@/utils/attackSpritesMap";
 
+type AttackType = keyof typeof attackSprites;
+
 type CAttackEffectProps = {
   trigger: boolean,
-  effectIndex?: number,
+  type: AttackType
   num?: number,
-  type: string
+  effectIndex: number
 }
 
 export function CAttackEffect({trigger, effectIndex, type, num}: CAttackEffectProps) {
