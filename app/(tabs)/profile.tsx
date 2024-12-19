@@ -3,7 +3,7 @@ import { CArrowButton } from '@/components/buttons/CArrowButton';
 import React, { useEffect, useState } from 'react';
 import { CText } from '@/components/text/CText';
 import { DATABASE_SERVER_URI } from '@/constants/URI';
-import { CSwipeRightHandler } from '@/components/containers/CSwipeRightHandler';
+import { CGestureHandler } from '@/components/containers/CGestureHandler';
 import { useData } from '@/components/CDataProvider';
 import { TransparentBlack } from '@/constants/TransparentBlack';
 import { storeData } from '@/utils/asyncDataStorage';
@@ -72,7 +72,7 @@ export default function Profile() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         keyboardVerticalOffset={Platform.OS === "ios" ? 60 : 0}
       >
-        <CSwipeRightHandler>
+        <CGestureHandler>
           <CArrowButton />
           <View style={styles.container}>
           <View style={styles.form}>
@@ -115,7 +115,7 @@ export default function Profile() {
             )}
             </View>
           </View>
-        </CSwipeRightHandler>
+        </CGestureHandler>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
   );

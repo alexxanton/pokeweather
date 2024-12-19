@@ -1,5 +1,5 @@
 import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
-import { CSwipeRightHandler } from '@/components/containers/CSwipeRightHandler';
+import { CGestureHandler } from '@/components/containers/CGestureHandler';
 import { CVar } from "@/components/battle/CVar";
 import { CPokemon } from "@/components/battle/CPokemon";
 import { CText } from "@/components/text/CText";
@@ -16,6 +16,7 @@ import axios from "axios";
 import Pokeball from '@/assets/images/misc/Pokeball';
 import SwitchButton from '@/assets/images/buttons/SwitchButton';
 import { CPokeballButton } from "@/components/buttons/CPokeballButton";
+import { State } from "react-native-gesture-handler";
 
 
 export default function Battle() {
@@ -125,9 +126,20 @@ export default function Battle() {
   };
 
   const throwPokeball = () => {};
+
+  const handleGesture = (event: any) => {
+    const { translationX, velocityX, state } = event.nativeEvent;
+    if (state === State.END) {
+      if (translationX < -50 && velocityX < 0) {
+        nextPokemon();
+      } else if (translationX > 50 && velocityX > 0) {
+        prevPokemon();
+      }
+    }
+  };
   
   return (
-    <CSwipeRightHandler>
+    <CGestureHandler onGestureEvent={handleGesture}>
       <CPreventBackButton />
       <TouchableWithoutFeedback onPress={sendAttack}>
         <View style={styles.touchableContainer}>
@@ -177,7 +189,7 @@ export default function Battle() {
           <SwitchButton width={100} height={100} />
         </CButton>
       </CControlPanel>
-    </CSwipeRightHandler>
+    </CGestureHandler>
   );
 }
 

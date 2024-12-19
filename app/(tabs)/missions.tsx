@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import { CControlPanel } from "@/components/containers/CControlPanel";
 import { CButton } from "@/components/buttons/CButton";
-import { CSwipeRightHandler } from '@/components/containers/CSwipeRightHandler';
+import { CGestureHandler } from '@/components/containers/CGestureHandler';
 
 import TrophyButton from '@/assets/images/buttons/TrophyButton';
 import { CArrowButton } from "@/components/buttons/CArrowButton";
@@ -9,7 +9,7 @@ import { CText } from "@/components/text/CText";
 
 export default function Missions() {
   return (
-    <CSwipeRightHandler>
+    <CGestureHandler>
       <CArrowButton />
       <View style={styles.container}>
       </View>
@@ -18,7 +18,7 @@ export default function Missions() {
           <TrophyButton width={270} height={90} />
         </CButton>
       </CControlPanel>
-    </CSwipeRightHandler>
+    </CGestureHandler>
   );
 }
 

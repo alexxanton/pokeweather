@@ -6,7 +6,7 @@ export const storeData = async (key: string, value: string) => {
     } catch (error) {
         console.log(error);
     }
-  };
+};
 
 export const getStoredData = async (key: string) => {
     try {

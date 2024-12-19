@@ -8,8 +8,8 @@ export function CPreventBackButton() {
   useFocusEffect(
     useCallback(() => {
       const onBackPress = () => {
-        Alert.alert("Hold on!", "If you leave, all progress will be lost.", [
-          { text: "LEAVE", style: "default", onPress: () => router.back() },
+        Alert.alert("Hold on!", "Are you sure you want to escape?", [
+          { text: "ESCAPE", style: "default", onPress: () => router.back() },
           { text: "CANCEL", style: "default" },
         ]);
         return true; // Block the back action
