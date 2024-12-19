@@ -16,7 +16,7 @@ export default function RootLayout() {
               headerShown: false,
               contentStyle: {backgroundColor: "transparent"},
               animation: "fade",
-              gestureEnabled: true
+              gestureEnabled: false
             }}
           >
             <Stack.Screen name="ad" options={{animation: "slide_from_bottom"}} />

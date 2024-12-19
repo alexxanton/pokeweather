@@ -3,16 +3,16 @@ import { CButton } from "@/components/buttons/CButton";
 import { CArrowButton } from "@/components/buttons/CArrowButton";
 import { CText } from "@/components/text/CText";
 import { useData } from "@/components/CDataProvider";
-import { CPadding } from '@/components/containers/CPadding';
+import { CSwipeRightHandler } from '@/components/containers/CSwipeRightHandler';
 
 export default function Trophies() {
   const {temp, setTemp} = useData();
   return (
-    <CPadding>
+    <CSwipeRightHandler>
       <CArrowButton />
       <View style={styles.container}>
       </View>
-    </CPadding>
+    </CSwipeRightHandler>
   );
 }
 

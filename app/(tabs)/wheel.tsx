@@ -6,7 +6,7 @@ import { CButton } from '@/components/buttons/CButton';
 import { CArrowButton } from '@/components/buttons/CArrowButton';
 import { useState } from 'react';
 import { useData } from '@/components/CDataProvider';
-import { CPadding } from '@/components/containers/CPadding';
+import { CSwipeRightHandler } from '@/components/containers/CSwipeRightHandler';
 import { TransparentBlack } from "@/constants/TransparentBlack";
 
 import AdButton from '@/assets/images/buttons/AdButton';
@@ -22,7 +22,7 @@ export default function Wheel() {
   };
 
   return (
-    <CPadding>
+    <CSwipeRightHandler>
 
       <CArrowButton />
       <View style={styles.container}>
@@ -44,7 +44,7 @@ export default function Wheel() {
         </CButton>
       </CControlPanel>
       
-    </CPadding>
+    </CSwipeRightHandler>
   );
 }
 

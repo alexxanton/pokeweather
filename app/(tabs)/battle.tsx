@@ -1,5 +1,5 @@
 import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
-import { CPadding } from '@/components/containers/CPadding';
+import { CSwipeRightHandler } from '@/components/containers/CSwipeRightHandler';
 import { CVar } from "@/components/battle/CVar";
 import { CPokemon } from "@/components/battle/CPokemon";
 import { CText } from "@/components/text/CText";
@@ -127,7 +127,7 @@ export default function Battle() {
   const throwPokeball = () => {};
   
   return (
-    <CPadding>
+    <CSwipeRightHandler>
       <CPreventBackButton />
       <TouchableWithoutFeedback onPress={sendAttack}>
         <View style={styles.touchableContainer}>
@@ -177,7 +177,7 @@ export default function Battle() {
           <SwitchButton width={100} height={100} />
         </CButton>
       </CControlPanel>
-    </CPadding>
+    </CSwipeRightHandler>
   );
 }
 
