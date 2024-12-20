@@ -23,7 +23,7 @@ import { CPadding } from '@/components/containers/CPadding';
 
 
 export default function Profile() {
-  const { user, setUser, userId, setUserId } = useData();
+  const {user, setUser, userId, setUserId} = useData();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -57,6 +57,18 @@ export default function Profile() {
     }
   };
 
+  const createUser = async () => {
+    try {
+      const response = await axios.post(`${DATABASE_SERVER_URI}/create-user`, {
+        username,
+        password
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error("User error:", error);
+    }
+  };
+
   const logOut = () => {
     setUserId(0);
   };
@@ -79,7 +91,7 @@ export default function Profile() {
             <View style={styles.form}>
               {userId ? (
                 <>
-                  <CText outlined size={40}>{`Hi, @${user[0].mail}!`}</CText>
+                  {user ? <CText outlined size={40}>{`Hi, @${user[0].name}!`}</CText> : null}
                   <View style={styles.settings}>
                     <CBoxField title="Music" />
                     <CBoxField title="Sounds" />
@@ -114,9 +126,14 @@ export default function Profile() {
                     onChangeText={setPassword}
                     selectionColor="red"
                   />
-                  <CButton style={styles.button} onPress={handleLogIn}>
-                    <CText size={20}>Log in</CText>
-                  </CButton>
+                  <View style={styles.buttons}>
+                    <CButton style={styles.button} onPress={handleLogIn}>
+                      <CText size={20}>Log in</CText>
+                    </CButton>
+                    <CButton style={styles.button} onPress={createUser}>
+                      <CText size={20}>Create</CText>
+                    </CButton>
+                  </View>
                 </>
               )}
             </View>
@@ -176,7 +193,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     backgroundColor: "#663399",
     paddingVertical: 12,
-    paddingHorizontal: 40,
+    paddingHorizontal: 20,
     borderRadius: 25,
     alignItems: "center",
     shadowColor: "#000",
@@ -189,6 +206,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center"
+  },
+  buttons: {
+    flexDirection: "row",
+    gap: 20,
   },
   checkbox: {
     width: 30,

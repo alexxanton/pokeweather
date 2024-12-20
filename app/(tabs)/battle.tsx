@@ -17,6 +17,8 @@ import Pokeball from '@/assets/images/misc/Pokeball';
 import SwitchButton from '@/assets/images/buttons/SwitchButton';
 import { CPokeballButton } from "@/components/buttons/CPokeballButton";
 import { State } from "react-native-gesture-handler";
+import { AttackType } from "@/components/battle/CAttackEffect"; // Adjust the import path as necessary
+import { CPadding } from "@/components/containers/CPadding";
 
 
 export default function Battle() {
@@ -139,47 +141,49 @@ export default function Battle() {
   };
   
   return (
-    <CGestureHandler onGestureEvent={handleGesture}>
+    <CPadding>
       <CPreventBackButton />
-      <TouchableWithoutFeedback onPress={sendAttack}>
-        <View style={styles.touchableContainer}>
-          <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
-          <CText>{wildHp}</CText>
-          <View style={styles.battleContainer}>
-            <CText outlined size={20}>LVL {wildLevel}</CText>
+      <CGestureHandler onGestureEvent={handleGesture}>
+        <TouchableWithoutFeedback onPress={sendAttack}>
+          <View style={styles.touchableContainer}>
+            <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
+            <CText>{wildHp}</CText>
+            <View style={styles.battleContainer}>
+              <CText outlined size={20}>LVL {wildLevel}</CText>
 
-            <CPokemon
-              specie={wildSpecie}
-              style={styles.front}
-              trigger={wildTrigger}
-              hp={wildHp}
-              wild
-            >
-              {[...Array(effectLimit)].map((_, i) => {
-                return <CAttackEffect
-                  trigger={trigger}
-                  effectIndex={effectIndex}
-                  num={i}
-                  key={i}
-                  type={pkmnTypes[randint(0, pkmnTypes.length - 1)]}
-                />
-              })}
-            </CPokemon>
+              <CPokemon
+                specie={wildSpecie}
+                style={styles.front}
+                trigger={wildTrigger}
+                hp={wildHp}
+                wild
+              >
+                {[...Array(effectLimit)].map((_, i) => {
+                  return <CAttackEffect
+                    trigger={trigger}
+                    effectIndex={effectIndex}
+                    num={i}
+                    key={i}
+                    type={pkmnTypes[randint(0, pkmnTypes.length - 1)] as AttackType}
+                  />
+                })}
+              </CPokemon>
 
-            <CPokemon
-              specie={pkmnSpecie}
-              style={styles.back}
-              trigger={trigger}
-              hp={pkmnHp}
-            >
-              <CAttackEffect trigger={wildTrigger} type={wildTypes[randint(0, wildTypes.length - 1)]} />
-            </CPokemon>
+              <CPokemon
+                specie={pkmnSpecie}
+                style={styles.back}
+                trigger={trigger}
+                hp={pkmnHp}
+              >
+                <CAttackEffect trigger={wildTrigger} type={wildTypes[randint(0, wildTypes.length - 1)] as AttackType} />
+              </CPokemon>
 
-            <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>
+              <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>
+            </View>
+            <CVar name={pkmnName} hp={pkmnHp / pkmnBaseHp * 100} style={styles.bottomVar} />
           </View>
-          <CVar name={pkmnName} hp={pkmnHp / pkmnBaseHp * 100} style={styles.bottomVar} />
-        </View>
-      </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback>
+      </CGestureHandler>
       <CControlPanel style={styles.buttons}>
         <CButton onPress={prevPokemon}>
           <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
@@ -189,7 +193,7 @@ export default function Battle() {
           <SwitchButton width={100} height={100} />
         </CButton>
       </CControlPanel>
-    </CGestureHandler>
+    </CPadding>
   );
 }
 

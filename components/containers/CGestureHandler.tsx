@@ -28,7 +28,5 @@ export function CGestureHandler({children, onGestureEvent}: CGestureHandlerProps
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 50,
-    padding: 20,
   },
 });
