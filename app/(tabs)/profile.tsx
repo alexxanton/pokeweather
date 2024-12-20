@@ -19,6 +19,7 @@ import {
   Platform,
   Alert
 } from 'react-native';
+import { CPadding } from '@/components/containers/CPadding';
 
 
 export default function Profile() {
@@ -72,53 +73,55 @@ export default function Profile() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         keyboardVerticalOffset={Platform.OS === "ios" ? 60 : 0}
       >
-        <CArrowButton />
-        <View style={styles.container}>
-        <View style={styles.form}>
-          {userId ? (
-            <>
-              <CText outlined size={40}>{`Hi, @${user[0].mail}!`}</CText>
-              <View style={styles.settings}>
-                <CBoxField title="Music" />
-                <CBoxField title="Sounds" />
-                <CBoxField title="Vibration" />
-              </View>
-              <CButton style={styles.button} onPress={logOut}>
-                <CText size={20}>Log out</CText>
-              </CButton>
-            </>
-          ) : (
-            <>
-              <CText outlined size={45}>Log in</CText>
-              <TextInput
-                style={styles.textInput}
-                maxLength={20}
-                placeholder="Enter your user name"
-                placeholderTextColor="#fff"
-                cursorColor="red"
-                value={username}
-                onChangeText={setUsername}
-                selectionColor="red"
-              />
-              {error ? <InputField error={error} /> : null}
-              <TextInput
-                style={styles.textInput}
-                maxLength={20}
-                placeholder="Enter your password"
-                placeholderTextColor="#fff"
-                cursorColor="red"
-                secureTextEntry={true}
-                value={password}
-                onChangeText={setPassword}
-                selectionColor="red"
-              />
-              <CButton style={styles.button} onPress={handleLogIn}>
-                <CText size={20}>Log in</CText>
-              </CButton>
-            </>
-          )}
+        <CPadding>
+          <CArrowButton />
+          <View style={styles.container}>
+            <View style={styles.form}>
+              {userId ? (
+                <>
+                  <CText outlined size={40}>{`Hi, @${user[0].mail}!`}</CText>
+                  <View style={styles.settings}>
+                    <CBoxField title="Music" />
+                    <CBoxField title="Sounds" />
+                    <CBoxField title="Vibration" />
+                  </View>
+                  <CButton style={styles.button} onPress={logOut}>
+                    <CText size={20}>Log out</CText>
+                  </CButton>
+                </>
+              ) : (
+                <>
+                  <CText outlined size={45}>Log in</CText>
+                  <TextInput
+                    style={styles.textInput}
+                    maxLength={20}
+                    placeholder="Enter your user name"
+                    placeholderTextColor="#fff"
+                    cursorColor="red"
+                    value={username}
+                    onChangeText={setUsername}
+                    selectionColor="red"
+                  />
+                  {error ? <InputField error={error} /> : null}
+                  <TextInput
+                    style={styles.textInput}
+                    maxLength={20}
+                    placeholder="Enter your password"
+                    placeholderTextColor="#fff"
+                    cursorColor="red"
+                    secureTextEntry={true}
+                    value={password}
+                    onChangeText={setPassword}
+                    selectionColor="red"
+                  />
+                  <CButton style={styles.button} onPress={handleLogIn}>
+                    <CText size={20}>Log in</CText>
+                  </CButton>
+                </>
+              )}
+            </View>
           </View>
-        </View>
+        </CPadding>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
   );

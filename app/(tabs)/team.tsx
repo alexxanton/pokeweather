@@ -7,8 +7,8 @@ import { CScrollPanel } from "@/components/containers/CScrollPanel";
 import { useData } from "@/components/CDataProvider";
 import { CLabel } from "@/components/text/CLabel";
 import React, { useEffect, useState } from "react";
+import { CPadding } from '@/components/containers/CPadding';
 import { DATABASE_SERVER_URI } from '@/constants/URI';
-import { CGestureHandler } from '@/components/containers/CGestureHandler';
 import axios from "axios";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
@@ -31,7 +31,7 @@ export default function Team() {
   }, []);
 
   return (
-    <>
+    <CPadding>
       <CArrowButton />
       <View style={styles.container}>
         <CLabel title="Team">
@@ -57,7 +57,7 @@ export default function Team() {
           <BattleButton width={135} height={90} />
         </CButton>
       </CControlPanel>
-    </>
+    </CPadding>
   );
 }
 

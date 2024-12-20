@@ -6,11 +6,12 @@ import React from 'react';
 import WheelButton from '@/assets/images/buttons/WheelButton';
 import TeamButton from '@/assets/images/buttons/TeamButton';
 import MissionsButton from '@/assets/images/buttons/MissionsButton';
+import { CPadding } from '@/components/containers/CPadding';
 
 
 export default function Index() {
   return (
-    <>
+    <CPadding>
       <CMainScreen />
       <CControlPanel>
         <CButton href="/wheel">
@@ -23,6 +24,6 @@ export default function Index() {
           <MissionsButton width={90} height={90} />
         </CButton>
       </CControlPanel>
-    </>
+    </CPadding>
   );
 }

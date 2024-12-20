@@ -4,8 +4,8 @@ import { CControlPanel } from '@/components/containers/CControlPanel';
 import { CButton } from '@/components/buttons/CButton';
 import { CArrowButton } from '@/components/buttons/CArrowButton';
 import React, { useState } from 'react';
+import { CPadding } from '@/components/containers/CPadding';
 import { useData } from '@/components/CDataProvider';
-import { CGestureHandler } from '@/components/containers/CGestureHandler';
 import { TransparentBlack } from "@/constants/TransparentBlack";
 
 import AdButton from '@/assets/images/buttons/AdButton';
@@ -21,7 +21,7 @@ export default function Wheel() {
   };
 
   return (
-    <>
+    <CPadding>
       <CArrowButton />
       <View style={styles.container}>
         <CButton onPress={spin}>
@@ -39,7 +39,7 @@ export default function Wheel() {
           <SpinButton width={180} height={90} />
         </CButton>
       </CControlPanel>
-    </>
+    </CPadding>
   );
 }
 

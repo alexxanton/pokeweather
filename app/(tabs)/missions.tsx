@@ -5,11 +5,12 @@ import React from "react";
 
 import TrophyButton from '@/assets/images/buttons/TrophyButton';
 import { CArrowButton } from "@/components/buttons/CArrowButton";
+import { CPadding } from '@/components/containers/CPadding';
 import { CText } from "@/components/text/CText";
 
 export default function Missions() {
   return (
-    <>
+    <CPadding>
       <CArrowButton />
       <View style={styles.container}>
       </View>
@@ -18,7 +19,7 @@ export default function Missions() {
           <TrophyButton width={270} height={90} />
         </CButton>
       </CControlPanel>
-    </>
+    </CPadding>
   );
 }
 

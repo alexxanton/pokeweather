@@ -69,9 +69,7 @@ export function CBackground({ children }: PropsWithChildren) {
         <Animated.View style={[styles.anim, {opacity: fade}]}>
           <ImageBackground source={cover} style={[styles.cover]} />
         </Animated.View>
-        <View style={styles.padding}>
-          {children}
-        </View>
+        {children}
       </ImageBackground>
     </View>
   );
@@ -81,11 +79,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#181414",
-  },
-  padding: {
-    flex: 1,
-    paddingTop: 50,
-    padding: 20,
   },
   bg: {
     flex: 1,
