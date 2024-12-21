@@ -38,19 +38,24 @@ export default function Profile() {
     }
   };
 
-  const handleLogIn = async () => {
+  const validateForm = () => {
     if (!username || !password) {
       setError("Please fill in all fields.");
       return;
     }
+  };
 
+  const handleLogIn = async () => {
+    validateForm();
     try {
       console.log(username)
       const response = await axios.get(`${DATABASE_SERVER_URI}/login/${username}`);
       setUserId(response.data[0].id);
       console.log(response.data[0].id)
       setUser(response.data.user);
-      storeData("id", "1");
+      console.log(userId);
+      
+      storeData("id", response.data[0].id.toString());
     } catch (error) {
       console.error("Log-in error:", error);
       setError("Invalid username or password.");
@@ -64,6 +69,8 @@ export default function Profile() {
         password
       });
       console.log(response.data);
+      setUserId(response.data[0].insertId);
+      storeData("id", response.data[0].insertId.toString());
     } catch (error) {
       console.error("User error:", error);
     }
@@ -91,7 +98,7 @@ export default function Profile() {
             <View style={styles.form}>
               {userId ? (
                 <>
-                  {user ? <CText outlined size={40}>{`Hi, @${user[0].name}!`}</CText> : null}
+                  {/* {user ? <CText outlined size={40}>{`Hi, @${user[0].name}!`}</CText> : null} */}
                   <View style={styles.settings}>
                     <CBoxField title="Music" />
                     <CBoxField title="Sounds" />

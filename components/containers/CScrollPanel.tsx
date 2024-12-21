@@ -21,6 +21,7 @@ export function CScrollPanel<T>({...rest}: FlatListProps<T>) {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     borderRadius: 15,
     backgroundColor: TransparentBlack,
   },

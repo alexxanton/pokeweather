@@ -31,6 +31,8 @@ type CDataProviderType = {
   setButtonActive: React.Dispatch<React.SetStateAction<boolean>>;
   
   // Pokemon
+  team: Record<string, any>;
+  setTeam: React.Dispatch<React.SetStateAction<Record<string, any>>>;
   collection: Record<string, any>;
   setCollection: React.Dispatch<React.SetStateAction<Record<string, any>>>;
 }
@@ -52,6 +54,7 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
 
   const [buttonActive, setButtonActive] = useState<boolean>(true);
 
+  const [team, setTeam] = useState<Record<string, any>>([]);
   const [collection, setCollection] = useState<Record<string, any>>([]);
 
   return (
@@ -81,6 +84,8 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
       buttonActive,
       setButtonActive,
 
+      team,
+      setTeam,
       collection,
       setCollection,
     }}>
@@ -94,4 +99,3 @@ export const useData = () => {
   if (!context) throw new Error('useData must be used within a DataProvider');
   return context;
 };
-

@@ -17,17 +17,20 @@ import { TransparentBlack } from "@/constants/TransparentBlack";
 
 
 export default function Team() {
-  const {collection, setCollection} = useData();
+  const {userId, team, setTeam, collection, setCollection} = useData();
   
   const fetchPokemon = async () => {
-    const response = await axios.get(`${DATABASE_SERVER_URI}/pokemon/${1}`);
-    setCollection(response.data);
+    const teamResponse = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
+    const pokemonResponse = await axios.get(`${DATABASE_SERVER_URI}/pokemon/${userId}`);
+    setTeam(teamResponse.data);
+    setCollection(pokemonResponse.data);
   };
 
   useEffect(() => {
     if (collection.length < 0) {
     };
     fetchPokemon();
+    console.log(team);
   }, []);
 
   return (
@@ -36,6 +39,9 @@ export default function Team() {
       <View style={styles.container}>
         <CLabel title="Team">
           <View style={styles.team}>
+            {team.map((pkmn: any, idx: number) => {
+              return <CPokemonButton specie={pkmn.specie} key={idx} />
+            })}
           </View>
         </CLabel>
         <CLabel title="Caught" style={styles.label}>
@@ -67,11 +73,11 @@ const styles = StyleSheet.create({
     paddingTop: "20%",
   },
   team: {
-    padding: 40,
     marginBottom: 30,
     backgroundColor: TransparentBlack,
     flexDirection: "row",
     borderRadius: 15,
+    justifyContent: "center"
   },
   label: {
     flex: 1,
