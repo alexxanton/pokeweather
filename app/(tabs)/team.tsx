@@ -59,7 +59,7 @@ export default function Team() {
         <CButton>
           <BoostButton width={135} height={90} />
         </CButton>
-        <CButton href="/battle">
+        <CButton href="/battle" replace>
           <BattleButton width={135} height={90} />
         </CButton>
       </CControlPanel>

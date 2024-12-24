@@ -4,9 +4,9 @@ import { type ComponentProps } from "react";
 import { useData } from "../CDataProvider";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
 
-type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & { href?: string };
+type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & { href?: string, replace?: boolean };
 
-export function CButton({ href, ...rest }: Props) {
+export function CButton({ href, replace, ...rest }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const { buttonActive, setButtonActive, userId } = useData();
@@ -22,7 +22,11 @@ export function CButton({ href, ...rest }: Props) {
         if (!userId && pathname !== "/profile") {
           router.push("/(tabs)/profile");
         } else {
-          router.push(href);
+          if (replace) {
+            router.replace(href);
+          } else {
+            router.push(href);
+          }
         }
       }
       
