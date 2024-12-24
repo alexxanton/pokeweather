@@ -29,10 +29,12 @@ export default function Battle() {
   const [effectIndex, setEffectIndex] = useState(0);
 
   const [pokemon, setPokemon] = useState(() => generateWildPokemon(weatherCondition));
+  const [action, setAction] = useState("");
   const [trigger, setTrigger] = useState(true);
   const [pkmnIndex, setPkmnIndex] = useState(0);
   
   const [wildPokemon, setWildPokemon] = useState(() => generateWildPokemon(weatherCondition));
+  const [wildAction, setWildAction] = useState("");
   const [wildTrigger, setWildTrigger] = useState(true);
   const [wildIndex, setWildIndex] = useState(0);
 
@@ -69,14 +71,13 @@ export default function Battle() {
           setWildTrigger(!wildTrigger);
         }
       } else {
+        if (!control) return;
         await delay(randint(100, 1000));
         setWildTrigger(!wildTrigger);
         updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage*5, pkmnDefense);
         if (pkmnHp <= 0) {
-          setControl(false);
           await delay(1000);
-          nextPokemon();
-          setControl(true);
+          switchPokemon(getNextIndex);
         }
       }
     };
@@ -85,11 +86,19 @@ export default function Battle() {
   }, [wildTrigger]);
 
   const sendAttack = () => {
+    if (!control) return;
     const boostModifier = boost > 0 ? 3 : 1;
     setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
     setEffectIndex(effectIndex < effectLimit - 1 ? effectIndex + 1 : 0);
     setBoost(boost - 1);
     updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
+  };
+
+  const sendAction = (setAction: React.Dispatch<React.SetStateAction<any>>, action: string) => {
+    setAction(action);
+    setTimeout(() => {
+      setAction("");
+    }, 100);
   };
 
   const updatePokemonHp = (
@@ -109,33 +118,32 @@ export default function Battle() {
     }
   };
 
-  const nextPokemon = () => {
-    if (!control) return;
-    let next = pkmnIndex < pokemon.length - 1 ? pkmnIndex + 1 : 0;
-    for (let i = 0; i < pokemon.length - 1 && pokemon[next].hp <= 0; i++) {
-      next = next < pokemon.length - 1 ? next + 1 : 0;
+  const switchPokemon = (getIndex: (index: number, length: number) => number) => {
+    setControl(false);
+    let index = getIndex(pkmnIndex, pokemon.length);
+    for (let i = 0; i < pokemon.length - 1 && pokemon[index].hp <= 0; i++) {
+      index = getIndex(index, pokemon.length);
     }
-    setPkmnIndex(next);
+    setPkmnIndex(index);
+    setControl(true);
   };
 
-  const prevPokemon = () => {
-    if (!control) return;
-    let prev = pkmnIndex > 0 ? pkmnIndex - 1 : pokemon.length - 1; 
-    for (let i = 0; i < pokemon.length - 1 && pokemon[prev].hp <= 0; i++) {
-      prev = prev > 0 ? prev - 1 : pokemon.length - 1;
-    }
-    setPkmnIndex(prev);
-  };
+  const getNextIndex = (index: number, length: number) => index < length - 1 ? index + 1 : 0;
 
-  const throwPokeball = () => {};
+  const getPrevIndex = (index: number, length: number) => index > 0 ? index - 1 : length - 1;
+
+  const throwPokeball = () => {
+    setControl(false)
+    sendAction(setWildAction, "catch")
+  };
 
   const handleGesture = (event: any) => {
     const { translationX, velocityX, state } = event.nativeEvent;
     if (state === State.END) {
       if (translationX < -50 && velocityX < 0) {
-        nextPokemon();
+        switchPokemon(getNextIndex);
       } else if (translationX > 50 && velocityX > 0) {
-        prevPokemon();
+        switchPokemon(getPrevIndex);
       }
     }
   };
@@ -154,6 +162,7 @@ export default function Battle() {
               <CPokemon
                 specie={wildSpecie}
                 style={styles.front}
+                action={wildAction}
                 trigger={wildTrigger}
                 hp={wildHp}
                 wild
@@ -185,11 +194,11 @@ export default function Battle() {
         </TouchableWithoutFeedback>
       </CGestureHandler>
       <CControlPanel style={styles.buttons}>
-        <CButton onPress={prevPokemon}>
+        <CButton onPress={() => switchPokemon(getPrevIndex)}>
           <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
         </CButton>
-        <CPokeballButton onPress={throwPokeball} />
-        <CButton onPress={nextPokemon}>
+        <CPokeballButton onThrow={throwPokeball} />
+        <CButton onPress={() => switchPokemon(getNextIndex)}>
           <SwitchButton width={100} height={100} />
         </CButton>
       </CControlPanel>

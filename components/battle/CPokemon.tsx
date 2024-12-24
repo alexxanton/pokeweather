@@ -14,12 +14,13 @@ import Animated, {
 type CPokemonProps = ViewProps & {
   specie: number,
   wild?: boolean,
+  action?: string,
   trigger: boolean,
   hp: number
 };
 
 
-export function CPokemon({children, specie, wild, trigger, hp, style}: CPokemonProps) {
+export function CPokemon({children, specie, action, wild, trigger, hp, style}: CPokemonProps) {
   const backSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const missingImage = require("@/assets/images/misc/missingno.png");
@@ -32,15 +33,19 @@ export function CPokemon({children, specie, wild, trigger, hp, style}: CPokemonP
   const yAttack = useSharedValue(0);
   const yDefeat = useSharedValue(0);
   const opacity = useSharedValue(1);
+  const brightness = useSharedValue(1);
+  const scale = useSharedValue(1);
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
-      {translateY: yPos.value},
-      {translateY: yAttack.value},
-      {translateY: yDefeat.value},
-      {translateX: xPos.value},
-      {translateX: xHurt.value},
+      { translateY: yPos.value },
+      { translateY: yAttack.value },
+      { translateY: yDefeat.value },
+      { translateX: xPos.value },
+      { translateX: xHurt.value },
+      { scale: scale.value }
     ],
+    filter: [{ brightness: brightness.value }],
     opacity: opacity.value,
   }));
 
@@ -85,6 +90,21 @@ export function CPokemon({children, specie, wild, trigger, hp, style}: CPokemonP
     }, 1000);
   };
 
+  const catchAnim = () => {
+    brightness.value = 1;
+    opacity.value = 1;
+    xPos.value = 0;
+    yPos.value = 0;
+    scale.value = 1;
+
+    brightness.value = withDelay(1200, withTiming(100, { duration: 1000 }, () => {
+      scale.value = withTiming(0.5, { duration: 500 });
+      opacity.value = withTiming(0, { duration: 500 });
+      xPos.value = withTiming(-100, { duration: 500 });
+      yPos.value = withTiming(-100, { duration: 500 });
+    }));
+  };
+
   const nextAnim = () => {
     xPos.value = withTiming(0, { duration: 200 });
   };
@@ -92,6 +112,12 @@ export function CPokemon({children, specie, wild, trigger, hp, style}: CPokemonP
   const leftAnim = () => {};
   
   const rightAnim = () => {};
+
+  useEffect(() => {
+    if (action === "catch") {
+      catchAnim();
+    }
+  }, [action]);
 
   useEffect(() => {
     hoverAnim();
