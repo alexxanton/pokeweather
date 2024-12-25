@@ -139,17 +139,26 @@ export default function Battle() {
     sendSignal(setWildAction, "catch");
     setWobble(0);
     for (let i = 0; i < 3; i++) {
-      await delay(2000 - (i == 0 ? 0 : 1000));
+      await delay(i == 0 ? 2000 : 1000);
       setWobble((prevWobble) => prevWobble + 1);
     }
+    await delay(1000);
+    if (randint(1, 1) == 10) {
+      setWobble(4); // win
+    } else {
+      setWobble(-1); // lose
+      sendSignal(setWildAction, "escape");
+    }
+    setControl(true);
+    setWildTrigger(!wildTrigger);
   };
 
   const catchPokemon = async () => {
     try {
       const response = await axios.post(`${DATABASE_SERVER_URI}/catch-pokemon`, {
-        wildSpecie,
-        wildLevel,
-        userId
+        specie: wildSpecie,
+        level: wildLevel,
+        id: userId
       });
       if (wildIndex < wildPokemon.length - 1) {
         setWildIndex(wildIndex + 1);

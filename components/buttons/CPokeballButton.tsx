@@ -70,9 +70,25 @@ export function CPokeballButton({onThrow, wobble, ...rest}: CPokeballButtonProps
     );
   };
 
+  const catchFailedAnim = () => {
+    rotation.value = withTiming(-3600, { duration: 1000 });
+    xPos.value = withTiming(0, { duration: 1000 });
+    yPos.value = withTiming(-550, { duration: 400 }, () => {
+      yPos.value = withTiming(0, { duration: 500 }, () => {
+        scale.value = withTiming(1);
+      });
+    });
+  };
+
+  const catchSucceedAnim = () => {};
+
   useEffect(() => {
-    if (wobble > 0) {
+    if (wobble > 0 && wobble < 4) {
       wobbleAnim();
+    } else if (wobble == 4) {
+      catchSucceedAnim();
+    } else if (wobble == -1) {
+      catchFailedAnim();
     }
   }, [wobble]);
   

@@ -106,17 +106,16 @@ export function CPokemon({children, specie, action, wild, trigger, hp, style}: C
   };
 
   const scapeAnim = () => {
-    brightness.value = 1;
+    brightness.value = 100;
     opacity.value = 1;
-    yPos.value = 0;
-    scale.value = 0.5;
+    yPos.value = 100;
+    xPos.value = 0;
+    scale.value = 0;
 
-    brightness.value = withTiming(100, { duration: 500 }, () => {
-      scale.value = withTiming(1, { duration: 300 });
-      opacity.value = withTiming(1, { duration: 300 });
-      xPos.value = withTiming(0, { duration: 300 });
-      yPos.value = withTiming(0, { duration: 300 });
-    });
+    scale.value = withTiming(1, { duration: 500 });
+    yPos.value = withTiming(0, { duration: 300 });
+    opacity.value = withTiming(1, { duration: 500 });
+    brightness.value = withTiming(1, { duration: 500 });
   };
 
   const nextAnim = () => {
@@ -128,8 +127,9 @@ export function CPokemon({children, specie, action, wild, trigger, hp, style}: C
   const rightAnim = () => {};
 
   useEffect(() => {
-    if (action === "catch") {
-      catchAnim();
+    switch(action) {
+      case "catch" : catchAnim(); break;
+      case "escape" : scapeAnim(); break;
     }
   }, [action]);
 
