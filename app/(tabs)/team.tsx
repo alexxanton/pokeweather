@@ -50,7 +50,7 @@ export default function Team() {
             numColumns={6}
             initialNumToRender={1}
             renderItem={({ item }) => (
-              <CPokemonButton specie={item.specie} />
+              <CPokemonButton specie={item.specie} level={item.level} />
             )}
           />
         </CLabel>

@@ -1,13 +1,16 @@
 import { Image } from "expo-image";
 import { StyleSheet, Pressable, Vibration, View } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
+import { CText } from "../text/CText";
+import { TransparentBlack } from "@/constants/TransparentBlack";
 
 type Props =  {
   specie: number,
+  level: number
 };
 
 
-export function CPokemonButton({specie}: Props) {
+export function CPokemonButton({specie, level}: Props) {
   const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/${specie}.png`;
   const scale = useSharedValue(1);
   const y = useSharedValue(1);
@@ -33,6 +36,7 @@ export function CPokemonButton({specie}: Props) {
   return (
     <Animated.View style={animStyle}>
       <View style={styles.container}>
+        {/* <CText outlined style={styles.level}>{level}</CText> */}
         <Image
           style={styles.pokemon}
           source={url}
@@ -52,16 +56,24 @@ export function CPokemonButton({specie}: Props) {
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
-    transform: [{translateY: "-15%"}]
   },
   button: {
     height: 45,
     width: 45,
+    backgroundColor: TransparentBlack
   },
   pokemon: {
     aspectRatio: 1,
     width: "120%",
     height: "120%",
-    transform: [{translateX: "-15%"}]
+    transform: [
+      {translateX: "-15%"},
+      {translateY: "-25%"}
+    ]
   },
+  level: {
+    zIndex: 9999,
+    position: "absolute",
+    transform: [{translateY: "50%"}]
+  }
 });

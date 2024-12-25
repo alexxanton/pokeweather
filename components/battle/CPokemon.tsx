@@ -97,12 +97,26 @@ export function CPokemon({children, specie, action, wild, trigger, hp, style}: C
     yPos.value = 0;
     scale.value = 1;
 
-    brightness.value = withDelay(1200, withTiming(100, { duration: 1000 }, () => {
-      scale.value = withTiming(0.5, { duration: 500 });
-      opacity.value = withTiming(0, { duration: 500 });
-      xPos.value = withTiming(-100, { duration: 500 });
-      yPos.value = withTiming(-100, { duration: 500 });
+    brightness.value = withDelay(400, withTiming(100, { duration: 500 }, () => {
+      scale.value = withTiming(0.5, { duration: 300 });
+      opacity.value = withTiming(0, { duration: 300 });
+      xPos.value = withTiming(-100, { duration: 300 });
+      yPos.value = withTiming(-100, { duration: 300 });
     }));
+  };
+
+  const scapeAnim = () => {
+    brightness.value = 1;
+    opacity.value = 1;
+    yPos.value = 0;
+    scale.value = 0.5;
+
+    brightness.value = withTiming(100, { duration: 500 }, () => {
+      scale.value = withTiming(1, { duration: 300 });
+      opacity.value = withTiming(1, { duration: 300 });
+      xPos.value = withTiming(0, { duration: 300 });
+      yPos.value = withTiming(0, { duration: 300 });
+    });
   };
 
   const nextAnim = () => {

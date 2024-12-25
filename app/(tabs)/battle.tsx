@@ -19,14 +19,16 @@ import { CPokeballButton } from "@/components/buttons/CPokeballButton";
 import { State } from "react-native-gesture-handler";
 import { AttackType } from "@/components/battle/CAttackEffect"; // Adjust the import path as necessary
 import { CPadding } from "@/components/containers/CPadding";
+import { DATABASE_SERVER_URI } from "@/constants/URI";
 
 
 export default function Battle() {
   const effectLimit = 5;
 
-  const {weatherCondition, boost, setBoost} = useData();
+  const {userId, weatherCondition, boost, setBoost} = useData();
   const [control, setControl] = useState(true);
   const [effectIndex, setEffectIndex] = useState(0);
+  const [wobble, setWobble] = useState(0);
 
   const [pokemon, setPokemon] = useState(() => generateWildPokemon(weatherCondition));
   const [action, setAction] = useState("");
@@ -94,10 +96,10 @@ export default function Battle() {
     updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
   };
 
-  const sendAction = (setAction: React.Dispatch<React.SetStateAction<any>>, action: string) => {
-    setAction(action);
+  const sendSignal = (setSignal: React.Dispatch<React.SetStateAction<any>>, signal: string) => {
+    setSignal(signal);
     setTimeout(() => {
-      setAction("");
+      setSignal("");
     }, 100);
   };
 
@@ -132,9 +134,31 @@ export default function Battle() {
 
   const getPrevIndex = (index: number, length: number) => index > 0 ? index - 1 : length - 1;
 
-  const throwPokeball = () => {
-    setControl(false)
-    sendAction(setWildAction, "catch")
+  const throwPokeball = async () => {
+    setControl(false);
+    sendSignal(setWildAction, "catch");
+    setWobble(0);
+    for (let i = 0; i < 3; i++) {
+      await delay(2000 - (i == 0 ? 0 : 1000));
+      setWobble((prevWobble) => prevWobble + 1);
+    }
+  };
+
+  const catchPokemon = async () => {
+    try {
+      const response = await axios.post(`${DATABASE_SERVER_URI}/catch-pokemon`, {
+        wildSpecie,
+        wildLevel,
+        userId
+      });
+      if (wildIndex < wildPokemon.length - 1) {
+        setWildIndex(wildIndex + 1);
+        await delay(1500);
+        setWildTrigger(!wildTrigger);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleGesture = (event: any) => {
@@ -197,7 +221,7 @@ export default function Battle() {
         <CButton onPress={() => switchPokemon(getPrevIndex)}>
           <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
         </CButton>
-        <CPokeballButton onThrow={throwPokeball} />
+        <CPokeballButton onThrow={throwPokeball} wobble={wobble} />
         <CButton onPress={() => switchPokemon(getNextIndex)}>
           <SwitchButton width={100} height={100} />
         </CButton>
