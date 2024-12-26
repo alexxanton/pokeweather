@@ -26,17 +26,17 @@ export default function Battle() {
   const effectLimit = 5;
 
   const {userId, weatherCondition, boost, setBoost} = useData();
-  const [control, setControl] = useState(true);
+  const [battleFlag, setBattleFlag] = useState(true);
   const [effectIndex, setEffectIndex] = useState(0);
   const [wobble, setWobble] = useState(0);
 
   const [pokemon, setPokemon] = useState(() => generateWildPokemon(weatherCondition));
-  const [action, setAction] = useState("");
+  const [state, setState] = useState("");
   const [trigger, setTrigger] = useState(true);
   const [pkmnIndex, setPkmnIndex] = useState(0);
   
   const [wildPokemon, setWildPokemon] = useState(() => generateWildPokemon(weatherCondition));
-  const [wildAction, setWildAction] = useState("");
+  const [wildState, setWildState] = useState("");
   const [wildTrigger, setWildTrigger] = useState(true);
   const [wildIndex, setWildIndex] = useState(0);
 
@@ -65,42 +65,64 @@ export default function Battle() {
 
   useEffect(() => {
     const wildPokemonLoop = async () => {
-      if (wildHp <= 0) {
-        await delay(2000);
-        if (wildIndex < wildPokemon.length - 1) {
-          setWildIndex(wildIndex + 1);
-          await delay(1500);
-          setWildTrigger(!wildTrigger);
-        }
-      } else {
-        if (!control) return;
-        await delay(randint(100, 1000));
-        setWildTrigger(!wildTrigger);
+      if (battleFlag) {
         updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage*5, pkmnDefense);
         if (pkmnHp <= 0) {
           await delay(1000);
           switchPokemon(getNextIndex);
         }
+      } else {
+        if (wildState === "escape") {
+          setWildState("");
+          setBattleFlag(true);
+        }
       }
+
+      if (wildHp <= 0) {
+        await delay(2000);
+        if (wildIndex < wildPokemon.length - 1) {
+          setWildIndex(wildIndex + 1);
+          await delay(1500);
+        }
+      }
+
+      await delay(randint(100, 1000));
+      setWildTrigger(!wildTrigger);
     };
 
     wildPokemonLoop();
   }, [wildTrigger]);
 
+  
+  // throw pokeball
+
+  const throwPokeball = async () => {
+    setBattleFlag(false);
+    setWildState("catch");
+    setWobble(0);
+
+    for (let i = 1; i <= 3; i++) {
+      await delay(i == 1 ? 2000 : 1000);
+      setWobble(i);
+    }
+
+    await delay(1000);
+    if (randint(1, 1) == 10) {
+      setWobble(4); // triggers win animation
+      catchPokemon();
+    } else {
+      setWobble(-1); // triggers lose animation
+      setWildState("escape");
+    }
+  };
+
   const sendAttack = () => {
-    if (!control) return;
+    if (!battleFlag) return;
     const boostModifier = boost > 0 ? 3 : 1;
     setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
     setEffectIndex(effectIndex < effectLimit - 1 ? effectIndex + 1 : 0);
     setBoost(boost - 1);
     updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
-  };
-
-  const sendSignal = (setSignal: React.Dispatch<React.SetStateAction<any>>, signal: string) => {
-    setSignal(signal);
-    setTimeout(() => {
-      setSignal("");
-    }, 100);
   };
 
   const updatePokemonHp = (
@@ -121,37 +143,17 @@ export default function Battle() {
   };
 
   const switchPokemon = (getIndex: (index: number, length: number) => number) => {
-    setControl(false);
+    setBattleFlag(false);
     let index = getIndex(pkmnIndex, pokemon.length);
     for (let i = 0; i < pokemon.length - 1 && pokemon[index].hp <= 0; i++) {
       index = getIndex(index, pokemon.length);
     }
     setPkmnIndex(index);
-    setControl(true);
   };
 
   const getNextIndex = (index: number, length: number) => index < length - 1 ? index + 1 : 0;
 
   const getPrevIndex = (index: number, length: number) => index > 0 ? index - 1 : length - 1;
-
-  const throwPokeball = async () => {
-    setControl(false);
-    sendSignal(setWildAction, "catch");
-    setWobble(0);
-    for (let i = 0; i < 3; i++) {
-      await delay(i == 0 ? 2000 : 1000);
-      setWobble((prevWobble) => prevWobble + 1);
-    }
-    await delay(1000);
-    if (randint(1, 1) == 10) {
-      setWobble(4); // win
-    } else {
-      setWobble(-1); // lose
-      sendSignal(setWildAction, "escape");
-    }
-    setControl(true);
-    setWildTrigger(!wildTrigger);
-  };
 
   const catchPokemon = async () => {
     try {
@@ -195,9 +197,10 @@ export default function Battle() {
               <CPokemon
                 specie={wildSpecie}
                 style={styles.front}
-                action={wildAction}
+                state={wildState}
                 trigger={wildTrigger}
                 hp={wildHp}
+                battleFlag={battleFlag}
                 wild
               >
                 {[...Array(effectLimit)].map((_, i) => {
@@ -206,6 +209,7 @@ export default function Battle() {
                     effectIndex={effectIndex}
                     num={i}
                     key={i}
+                    battleFlag={battleFlag}
                     type={pkmnTypes[randint(0, pkmnTypes.length - 1)] as AttackType}
                   />
                 })}
@@ -216,8 +220,13 @@ export default function Battle() {
                 style={styles.back}
                 trigger={trigger}
                 hp={pkmnHp}
+                battleFlag={battleFlag}
               >
-                <CAttackEffect trigger={wildTrigger} type={wildTypes[randint(0, wildTypes.length - 1)] as AttackType} />
+                <CAttackEffect
+                  trigger={wildTrigger}
+                  type={wildTypes[randint(0, wildTypes.length - 1)] as AttackType}
+                  battleFlag={battleFlag}
+                />
               </CPokemon>
 
               <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>

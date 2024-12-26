@@ -15,10 +15,11 @@ type CAttackEffectProps = {
   trigger: boolean,
   type: AttackType
   num?: number,
+  battleFlag: boolean,
   effectIndex?: number
 }
 
-export function CAttackEffect({trigger, effectIndex, type, num}: CAttackEffectProps) {
+export function CAttackEffect({trigger, effectIndex, type, num, battleFlag}: CAttackEffectProps) {
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
   const opacity = useSharedValue(0);
@@ -46,7 +47,9 @@ export function CAttackEffect({trigger, effectIndex, type, num}: CAttackEffectPr
 
   useEffect(() => {
     if (effectIndex === num || (!effectIndex && !num)) {
-      effectAnim();
+      if (battleFlag) {
+        effectAnim();
+      }
     }
   }, [trigger]);
 

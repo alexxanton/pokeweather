@@ -14,13 +14,14 @@ import Animated, {
 type CPokemonProps = ViewProps & {
   specie: number,
   wild?: boolean,
-  action?: string,
+  state?: string,
   trigger: boolean,
-  hp: number
+  hp: number,
+  battleFlag: boolean
 };
 
 
-export function CPokemon({children, specie, action, wild, trigger, hp, style}: CPokemonProps) {
+export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag, style}: CPokemonProps) {
   const backSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${specie}.png`;
   const frontSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const missingImage = require("@/assets/images/misc/missingno.png");
@@ -127,11 +128,11 @@ export function CPokemon({children, specie, action, wild, trigger, hp, style}: C
   const rightAnim = () => {};
 
   useEffect(() => {
-    switch(action) {
+    switch(state) {
       case "catch" : catchAnim(); break;
       case "escape" : scapeAnim(); break;
     }
-  }, [action]);
+  }, [state]);
 
   useEffect(() => {
     hoverAnim();
@@ -149,7 +150,9 @@ export function CPokemon({children, specie, action, wild, trigger, hp, style}: C
   }, [specie]);
 
   useEffect(() => {
-    attackAnim();
+    if (battleFlag) {
+      attackAnim();
+    }
   }, [trigger]);
 
   return(
