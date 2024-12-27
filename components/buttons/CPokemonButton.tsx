@@ -3,6 +3,7 @@ import { StyleSheet, Pressable, Vibration, View } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
 import { CText } from "../text/CText";
 import { TransparentBlack } from "@/constants/TransparentBlack";
+import { useState } from "react";
 
 type Props =  {
   specie: number,
@@ -14,6 +15,7 @@ export function CPokemonButton({specie, level}: Props) {
   const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/${specie}.png`;
   const scale = useSharedValue(1);
   const y = useSharedValue(1);
+  const [isPressed, setIsPressed] = useState(false);
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [{ scale: scale.value }, { translateY: y.value }]
@@ -24,11 +26,13 @@ export function CPokemonButton({specie, level}: Props) {
 
   const scaleGrow = () => {
     Vibration.vibrate(100);
+    setIsPressed(true);
     scale.value = withTiming(1.3, { duration: 200 });
     y.value = withTiming(-20, { duration: 200 })
   };
 
   const scaleShrink = () => {
+    setIsPressed(false);
     scale.value = withTiming(1, { duration: 200 });
     y.value = withTiming(1, { duration: 200 })
   }
@@ -36,7 +40,7 @@ export function CPokemonButton({specie, level}: Props) {
   return (
     <Animated.View style={animStyle}>
       <View style={styles.container}>
-        {/* <CText outlined style={styles.level}>{level}</CText> */}
+        {isPressed ? <CText outlined style={styles.level}>{level}</CText> : null}
         <Image
           style={styles.pokemon}
           source={url}
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
   button: {
     height: 45,
     width: 45,
-    backgroundColor: TransparentBlack
+    // backgroundColor: TransparentBlack
   },
   pokemon: {
     aspectRatio: 1,

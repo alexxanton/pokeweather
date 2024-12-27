@@ -30,6 +30,8 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   const hideX = 200;
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
+  const yCatch = useSharedValue(0);
+  const xCatch = useSharedValue(0);
   const xHurt = useSharedValue(0);
   const yAttack = useSharedValue(0);
   const yDefeat = useSharedValue(0);
@@ -44,6 +46,8 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
       { translateY: yDefeat.value },
       { translateX: xPos.value },
       { translateX: xHurt.value },
+      { translateX: xCatch.value },
+      { translateY: yCatch.value },
       { scale: scale.value }
     ],
     filter: [{ brightness: brightness.value }],
@@ -94,27 +98,29 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   const catchAnim = () => {
     brightness.value = 1;
     opacity.value = 1;
-    xPos.value = 0;
-    yPos.value = 0;
+    xCatch.value = 0;
+    yCatch.value = 0;
     scale.value = 1;
 
     brightness.value = withDelay(400, withTiming(100, { duration: 500 }, () => {
       scale.value = withTiming(0.5, { duration: 300 });
       opacity.value = withTiming(0, { duration: 300 });
-      xPos.value = withTiming(-100, { duration: 300 });
-      yPos.value = withTiming(-100, { duration: 300 });
+      xCatch.value = withTiming(-80, { duration: 300 });
+      yCatch.value = withTiming(-100, { duration: 300 });
     }));
   };
 
   const scapeAnim = () => {
     brightness.value = 100;
     opacity.value = 1;
-    yPos.value = 100;
-    xPos.value = 0;
+    yCatch.value = 90;
+    xCatch.value = 0;
     scale.value = 0;
 
     scale.value = withTiming(1, { duration: 500 });
-    yPos.value = withTiming(0, { duration: 300 });
+    yCatch.value = withTiming(-10, { duration: 500 }, () => {
+      yCatch.value = withTiming(0, { duration: 300 });
+    });
     opacity.value = withTiming(1, { duration: 500 });
     brightness.value = withTiming(1, { duration: 500 });
   };

@@ -17,9 +17,10 @@ import Pokeball from '@/assets/images/misc/Pokeball';
 import SwitchButton from '@/assets/images/buttons/SwitchButton';
 import { CPokeballButton } from "@/components/buttons/CPokeballButton";
 import { State } from "react-native-gesture-handler";
-import { AttackType } from "@/components/battle/CAttackEffect"; // Adjust the import path as necessary
+import { AttackType } from "@/components/battle/CAttackEffect";
 import { CPadding } from "@/components/containers/CPadding";
 import { DATABASE_SERVER_URI } from "@/constants/URI";
+import { updatePokemonHp } from "@/utils/updatePokemonHp";
 
 
 export default function Battle() {
@@ -65,14 +66,15 @@ export default function Battle() {
 
   useEffect(() => {
     const wildPokemonLoop = async () => {
+      const possibleStates = ["escape", "switch"];
       if (battleFlag) {
         updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage*5, pkmnDefense);
         if (pkmnHp <= 0) {
           await delay(1000);
-          switchPokemon(getNextIndex);
+          switchPokemon(getNextIndex, "skipCheck");
         }
       } else {
-        if (wildState === "escape") {
+        if (possibleStates.includes(wildState)) {
           setWildState("");
           setBattleFlag(true);
         }
@@ -108,10 +110,10 @@ export default function Battle() {
 
     await delay(1000);
     if (randint(1, 1) == 10) {
-      setWobble(4); // triggers win animation
+      setWobble(4); // triggers catch animation
       catchPokemon();
     } else {
-      setWobble(-1); // triggers lose animation
+      setWobble(-1); // triggers escape animation
       setWildState("escape");
     }
   };
@@ -125,25 +127,11 @@ export default function Battle() {
     updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
   };
 
-  const updatePokemonHp = (
-    pokemon: React.Dispatch<React.SetStateAction<any>>,
-    id: number,
-    hp: number,
-    damage: number,
-    defense: number
-  ) => {
-    const newHp = hp - Math.round(damage / defense);
-    if (hp > 0) {
-      pokemon((prev: any) =>
-        prev.map((pkmn: any, i: number) =>
-          i === id ? {...pkmn, hp: newHp} : pkmn
-        )
-      );
-    }
-  };
-
-  const switchPokemon = (getIndex: (index: number, length: number) => number) => {
+  const switchPokemon = (getIndex: (index: number, length: number) => number, skipCheck?: string) => {
+    if (pkmnHp <= 0 && !skipCheck) return;
     setBattleFlag(false);
+    setWildState("switch");
+
     let index = getIndex(pkmnIndex, pokemon.length);
     for (let i = 0; i < pokemon.length - 1 && pokemon[index].hp <= 0; i++) {
       index = getIndex(index, pokemon.length);

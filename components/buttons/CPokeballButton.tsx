@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Animated, { useAnimatedStyle, useSharedValue, withDelay, withTiming, withSpring, withSequence } from 'react-native-reanimated';
 import { CButton } from './CButton';
 import { type PressableProps } from 'react-native';
@@ -12,6 +12,7 @@ type CPokeballButtonProps = PressableProps & {
 
 
 export function CPokeballButton({onThrow, wobble, ...rest}: CPokeballButtonProps) {
+  const [isPressed, setIsPressed] = useState(false);
   const xPos = useSharedValue(0);
   const yPos = useSharedValue(0);
   const rotation = useSharedValue(0);
@@ -29,6 +30,9 @@ export function CPokeballButton({onThrow, wobble, ...rest}: CPokeballButtonProps
   }));
 
   const throwAnim = () => {
+    if (isPressed) return;
+    setIsPressed(true);
+    
     xPos.value = 0;
     yPos.value = 0;
     scale.value = 1;
@@ -78,9 +82,17 @@ export function CPokeballButton({onThrow, wobble, ...rest}: CPokeballButtonProps
         scale.value = withTiming(1);
       });
     });
+
+    setTimeout(() => {
+      setIsPressed(false);
+    }, 900);
   };
 
-  const catchSucceedAnim = () => {};
+  const catchSucceedAnim = () => {
+    setTimeout(() => {
+      setIsPressed(false);
+    }, 900);
+  };
 
   useEffect(() => {
     if (wobble > 0 && wobble < 4) {
