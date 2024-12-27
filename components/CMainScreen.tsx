@@ -10,13 +10,24 @@ import Pokeball from '@/assets/images/misc/Pokeball';
 import ProfileButton from '@/assets/images/buttons/ProfileButton';
 import { TestingPanel } from './testing/TestingPanel'
 import { getStoredData } from '@/utils/asyncDataStorage';
+import { DATABASE_SERVER_URI } from '@/constants/URI';
 
 export function CMainScreen() {
   const [error, setError] = useState("");
-  const {setUserId, temp, setTemp, setDescription, setWindSpeed, setHour} = useData();
+  const {setUserId, userId, setCoins, setBoost, temp, setTemp, setDescription, setWindSpeed, setHour} = useData();
   const [weatherData, setWeatherData] = useState<Record<string, any>>();
   const apiKey = process.env.EXPO_PUBLIC_API_KEY;
   const getUserId = async () => setUserId(parseInt(await getStoredData("id")));
+
+  const getUserData = async () => {
+    try {
+      const response = await axios.get(`${DATABASE_SERVER_URI}/user/${userId}`);
+      setCoins(response.data[0].coins);
+      setBoost(response.data[0].boost);
+    } catch (error) {
+      
+    }
+  };
 
   const getWeatherData = async () => {
     let { status } = await Location.requestForegroundPermissionsAsync();
@@ -37,6 +48,12 @@ export function CMainScreen() {
     getUserId();
     getWeatherData();
   }, []);
+
+  useEffect(() => {
+    if (userId) {
+      getUserData();
+    }
+  }, [userId]);
 
   useEffect(() => {
     if (weatherData) {

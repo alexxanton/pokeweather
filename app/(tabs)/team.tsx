@@ -17,7 +17,7 @@ import { TransparentBlack } from "@/constants/TransparentBlack";
 
 
 export default function Team() {
-  const {userId, team, setTeam, collection, setCollection} = useData();
+  const {userId, coins, setCoins, setBoost, team, setTeam, collection, setCollection} = useData();
   
   const fetchPokemon = async () => {
     const teamResponse = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
@@ -27,11 +27,14 @@ export default function Team() {
   };
 
   useEffect(() => {
-    if (collection.length < 0) {
-    };
     fetchPokemon();
     console.log(team);
   }, []);
+
+  const buyBoost = () => {
+    setCoins(coins - 100);
+    setBoost(100);
+  };
 
   return (
     <CPadding>
@@ -40,7 +43,7 @@ export default function Team() {
         <CLabel title="Team">
           <View style={styles.team}>
             {team.map((pkmn: any, idx: number) => {
-              return <CPokemonButton specie={pkmn.specie} key={idx} />
+              return <CPokemonButton specie={pkmn.specie} level={pkmn.level} key={idx} />
             })}
           </View>
         </CLabel>
@@ -56,7 +59,7 @@ export default function Team() {
         </CLabel>
       </View>
       <CControlPanel>
-        <CButton>
+        <CButton onPress={buyBoost}>
           <BoostButton width={135} height={90} />
         </CButton>
         <CButton href="/battle" replace>

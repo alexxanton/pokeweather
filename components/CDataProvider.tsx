@@ -48,7 +48,7 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
 
   const [user, setUser] = useState("");
   const [userId, setUserId] = useState(0);
-  const [boost, setBoost] = useState(100);
+  const [boost, setBoost] = useState(0);
   const [coins, setCoins] = useState<number>(0);
   const [wheelTries, setWheelTries] = useState<number>(10);
 

@@ -78,6 +78,7 @@ export default function Profile() {
 
   const logOut = () => {
     setUserId(0);
+    storeData("id", "0")
   };
 
   useEffect(() => {

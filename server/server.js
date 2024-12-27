@@ -98,6 +98,13 @@ app.put("/update-team", (req, res) => {
     dbQuery(query, res, [slot_1, slot_2, slot_3, slot_4, slot_5, slot_6, user_fk]);
 });
 
+// Update user data
+app.put("/update-user-data", (req, res) => {
+    const query = "UPDATE user SET coins = ?, boost = ? WHERE id = ?";
+    const {coins, boost, id} = req.body;
+    dbQuery(query, res, [coins, boost, id]);
+});
+
 
 app.listen(3001, () => {
     console.log("Server running at http://localhost:3001");
