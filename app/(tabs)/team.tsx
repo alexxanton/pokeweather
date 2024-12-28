@@ -17,7 +17,7 @@ import { TransparentBlack } from "@/constants/TransparentBlack";
 
 
 export default function Team() {
-  const {userId, coins, setCoins, setBoost, team, setTeam, collection, setCollection} = useData();
+  const {userId, coins, setCoins, boost, setBoost, team, setTeam, collection, setCollection} = useData();
   
   const fetchPokemon = async () => {
     const teamResponse = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
@@ -32,7 +32,7 @@ export default function Team() {
   }, []);
 
   const buyBoost = () => {
-    setCoins(coins - 100);
+    setCoins(coins - (100 - boost));
     setBoost(100);
   };
 
@@ -52,6 +52,8 @@ export default function Team() {
             data={collection}
             numColumns={6}
             initialNumToRender={1}
+            windowSize={2.5}
+            maxToRenderPerBatch={3}
             renderItem={({ item }) => (
               <CPokemonButton specie={item.specie} level={item.level} />
             )}
@@ -59,7 +61,13 @@ export default function Team() {
         </CLabel>
       </View>
       <CControlPanel>
-        <CButton onPress={buyBoost}>
+        <CButton onLongPress={() => {setBoost(0);setCoins(coins + 100)}} onPress={() => {
+          if (boost < 100) {
+            setTimeout(() => {
+              buyBoost();
+            }, 100);
+          }
+        }}>
           <BoostButton width={135} height={90} />
         </CButton>
         <CButton href="/battle" replace>

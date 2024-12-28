@@ -6,12 +6,30 @@ import { TransparentBlack } from "@/constants/TransparentBlack";
 import { CText } from "../text/CText";
 import { useData } from "../CDataProvider";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { DATABASE_SERVER_URI } from "@/constants/URI";
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 
 
 export function CControlPanel({children, style, ...rest}: ViewProps) {
   const {coins, boost} = useData();
+  const coinCounterPos = useSharedValue(0);
+  const opacity = useSharedValue(0);
+  const [lastCoinValue, setLastCoinValue] = useState(coins);
+  const [coinDifference, setCoinDifference] = useState(0);
+
+  const animStyle = useAnimatedStyle(() => ({
+    transform: [{ translateY: coinCounterPos.value }],
+    opacity: opacity.value,
+  }));
+
+  const coinsAnim = () => {
+    opacity.value = 1;
+    coinCounterPos.value = 0;
+
+    opacity.value = withTiming(0, { duration: 1000 });
+    coinCounterPos.value = withTiming(-50, { duration: 500 });
+  };
 
   const updateUserData = async () => {
     try {
@@ -22,14 +40,26 @@ export function CControlPanel({children, style, ...rest}: ViewProps) {
   };
 
   useEffect(() => {
+    const difference = coins - lastCoinValue;
     updateUserData();
+    setCoinDifference(difference);
+    setLastCoinValue(coins);
   }, [coins, boost]);
+  
+  useEffect(() => {
+    if (coinDifference !== 0) {
+      coinsAnim();
+    }
+  }, [lastCoinValue]);
 
   return (
     <View>
       <View style={styles.row}>
         <CVar name="" hp={boost} style={styles.var} color="#a085c4" bgColor="#663399" />
         <CText outlined size={25} style={styles.coins}>${coins}</CText>
+        <Animated.View style={[styles.coins, animStyle]}>
+          <CText outlined color={coinDifference > 0 ? "lightgreen" : "red"} size={25}>{`${coinDifference > 0 ? "+" : ""}${coinDifference}`}</CText>
+        </Animated.View>
       </View>
       <View style={[styles.buttonContainer, style]} {...rest}>
         {children}
