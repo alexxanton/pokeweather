@@ -8,10 +8,11 @@ import Pokeball from '@/assets/images/misc/Pokeball';
 type CPokeballButtonProps = PressableProps & {
   onThrow: () => void;
   wobble: number;
+  canThrow: boolean;
 };
 
 
-export function CPokeballButton({onThrow, wobble, ...rest}: CPokeballButtonProps) {
+export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballButtonProps) {
   const [isPressed, setIsPressed] = useState(false);
   const xPos = useSharedValue(0);
   const yPos = useSharedValue(0);
@@ -30,7 +31,7 @@ export function CPokeballButton({onThrow, wobble, ...rest}: CPokeballButtonProps
   }));
 
   const throwAnim = () => {
-    if (isPressed) return;
+    if (isPressed || canThrow) return;
     setIsPressed(true);
     
     xPos.value = 0;

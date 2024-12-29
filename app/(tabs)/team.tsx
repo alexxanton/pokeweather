@@ -61,7 +61,7 @@ export default function Team() {
         </CLabel>
       </View>
       <CControlPanel>
-        <CButton onLongPress={() => {setBoost(0);setCoins(coins + 100)}} onPress={() => {
+        <CButton onLongPress={() => {setBoost(0);setCoins(-1000)}} onPress={() => {
           if (boost < 100) {
             setTimeout(() => {
               buyBoost();

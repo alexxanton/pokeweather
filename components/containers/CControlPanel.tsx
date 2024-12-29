@@ -27,7 +27,7 @@ export function CControlPanel({children, style, ...rest}: ViewProps) {
     opacity.value = 1;
     coinCounterPos.value = 0;
 
-    opacity.value = withTiming(0, { duration: 1000 });
+    opacity.value = withTiming(0, { duration: 2000 });
     coinCounterPos.value = withTiming(-50, { duration: 500 });
   };
 
@@ -41,10 +41,10 @@ export function CControlPanel({children, style, ...rest}: ViewProps) {
 
   useEffect(() => {
     const difference = coins - lastCoinValue;
+    setLastCoinValue(coins);
     updateUserData();
     setCoinDifference(difference);
-    setLastCoinValue(coins);
-  }, [coins, boost]);
+  }, [coins]);
   
   useEffect(() => {
     if (coinDifference !== 0) {

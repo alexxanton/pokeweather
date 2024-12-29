@@ -26,7 +26,7 @@ import { updatePokemonHp } from "@/utils/updatePokemonHp";
 export default function Battle() {
   const effectLimit = 5;
 
-  const {userId, weatherCondition, boost, setBoost} = useData();
+  const {userId, weatherCondition, boost, setBoost, coins, setCoins} = useData();
   const [battleFlag, setBattleFlag] = useState(true);
   const [effectIndex, setEffectIndex] = useState(0);
   const [wobble, setWobble] = useState(0);
@@ -81,6 +81,7 @@ export default function Battle() {
       }
 
       if (wildHp <= 0) {
+        setCoins(coins + 1000);
         await delay(2000);
         if (wildIndex < wildPokemon.length - 1) {
           setWildIndex(wildIndex + 1);
@@ -99,9 +100,11 @@ export default function Battle() {
   // throw pokeball
 
   const throwPokeball = async () => {
+    if (wildHp <= 0 || coins < 50) return;
     setBattleFlag(false);
     setWildState("catch");
     setWobble(0);
+    setCoins(coins - 50);
 
     for (let i = 1; i <= 3; i++) {
       await delay(i == 1 ? 2000 : 1000);
@@ -227,7 +230,7 @@ export default function Battle() {
         <CButton onPress={() => switchPokemon(getPrevIndex)}>
           <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
         </CButton>
-        <CPokeballButton onThrow={throwPokeball} wobble={wobble} />
+        <CPokeballButton onThrow={() => throwPokeball()} wobble={wobble} canThrow={wildHp <= 0 || coins < 50} />
         <CButton onPress={() => switchPokemon(getNextIndex)}>
           <SwitchButton width={100} height={100} />
         </CButton>
