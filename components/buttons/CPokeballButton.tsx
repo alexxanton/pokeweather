@@ -31,7 +31,7 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
   }));
 
   const throwAnim = () => {
-    if (isPressed || canThrow) return;
+    if (isPressed || !canThrow) return;
     setIsPressed(true);
     
     xPos.value = 0;

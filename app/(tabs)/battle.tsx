@@ -230,7 +230,7 @@ export default function Battle() {
         <CButton onPress={() => switchPokemon(getPrevIndex)}>
           <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
         </CButton>
-        <CPokeballButton onThrow={() => throwPokeball()} wobble={wobble} canThrow={wildHp <= 0 || coins < 50} />
+        <CPokeballButton onThrow={throwPokeball} wobble={wobble} canThrow={wildHp > 0 && coins > 50} />
         <CButton onPress={() => switchPokemon(getNextIndex)}>
           <SwitchButton width={100} height={100} />
         </CButton>
