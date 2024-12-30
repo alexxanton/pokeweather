@@ -8,27 +8,36 @@ import { useData } from "../CDataProvider";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { DATABASE_SERVER_URI } from "@/constants/URI";
-import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
+import Animated, { Easing, useAnimatedStyle, useSharedValue, withRepeat, withTiming } from "react-native-reanimated";
 
 
 export function CControlPanel({children, style, ...rest}: ViewProps) {
   const {coins, boost} = useData();
-  const coinCounterPos = useSharedValue(0);
+  const yPos = useSharedValue(0);
+  const xPos = useSharedValue(0);
   const opacity = useSharedValue(0);
   const [lastCoinValue, setLastCoinValue] = useState(coins);
   const [coinDifference, setCoinDifference] = useState(0);
 
   const animStyle = useAnimatedStyle(() => ({
-    transform: [{ translateY: coinCounterPos.value }],
+    transform: [
+      { translateY: yPos.value },
+      { translateX: Math.sin(xPos.value * Math.PI * 2) * 5 }
+    ],
     opacity: opacity.value,
   }));
 
   const coinsAnim = () => {
     opacity.value = 1;
-    coinCounterPos.value = 0;
+    yPos.value = 0;
+    xPos.value = 0;
 
-    opacity.value = withTiming(0, { duration: 2000 });
-    coinCounterPos.value = withTiming(-50, { duration: 500 });
+    opacity.value = withTiming(0, { duration: 3000, easing: Easing.back() });
+    yPos.value = withTiming(-250, { duration: 3000, easing: Easing.linear });
+    xPos.value = withRepeat(
+      withTiming(1, { duration: 1000, easing: Easing.linear }),
+      10
+    );
   };
 
   const updateUserData = async () => {
