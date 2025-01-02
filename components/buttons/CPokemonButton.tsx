@@ -40,12 +40,12 @@ export function CPokemonButton({specie, level}: Props) {
   return (
     <Animated.View style={animStyle}>
       <View style={styles.container}>
-        {isPressed ? <CText outlined style={styles.level}>{level}</CText> : null}
         <Image
           style={styles.pokemon}
           source={url}
           contentFit="contain"
         />
+        {isPressed ? <CText outlined style={styles.level}>{level}</CText> : null}
       </View>
       <Pressable
         style={styles.button}
@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
     ]
   },
   level: {
-    zIndex: 9999,
     position: "absolute",
     transform: [{translateY: "50%"}]
   }

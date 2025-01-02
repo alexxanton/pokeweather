@@ -35,9 +35,7 @@ export function CControlPanel({children, style, ...rest}: ViewProps) {
     opacity.value = withTiming(0, { duration: 3000, easing: Easing.back() });
     yPos.value = withTiming(-250, { duration: 3000, easing: Easing.linear });
     xPos.value = withRepeat(
-      withTiming(1, { duration: 1000, easing: Easing.linear }),
-      10
-    );
+      withTiming(1, { duration: 1000, easing: Easing.linear }), 10);
   };
 
   const updateUserData = async () => {
@@ -95,7 +93,6 @@ const styles = StyleSheet.create({
     width: "60%",
     height: 20,
     transform: [{translateY: -5}],
-    zIndex: 9999,
   },
   coins: {
     position: "absolute",

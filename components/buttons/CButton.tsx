@@ -1,12 +1,16 @@
 import { Pressable, Vibration } from "react-native";
 import { useRouter, usePathname } from "expo-router";
-import { type ComponentProps } from "react";
+import { useEffect, type ComponentProps } from "react";
 import { useData } from "../CDataProvider";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
 
-type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & { href?: string, replace?: boolean };
+type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & {
+  href?: string,
+  replace?: boolean
+  transitionAnim?: () => void
+};
 
-export function CButton({ href, replace, ...rest }: Props) {
+export function CButton({ href, replace, transitionAnim, ...rest }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const { buttonActive, setButtonActive, userId } = useData();
@@ -18,9 +22,13 @@ export function CButton({ href, replace, ...rest }: Props) {
 
   const handlePress = () => {
     if (href) {
+      if (transitionAnim) {
+        transitionAnim();
+      }
+
       if (buttonActive) {
         if (!userId && pathname !== "/profile") {
-          router.push("/(tabs)/profile");
+          router.push("/profile");
         } else {
           if (replace) {
             router.replace(href);
@@ -45,6 +53,10 @@ export function CButton({ href, replace, ...rest }: Props) {
   const scaleShrink = () => {
     scale.value = withTiming(1, { duration: 200 });
   };
+
+  useEffect(() => {
+    
+  }, []);
 
   return (
     <Animated.View style={animStyle}>
