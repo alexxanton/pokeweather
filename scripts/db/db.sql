@@ -6,7 +6,8 @@ create table if not exists user (
     name varchar(255) not null unique,
     password varchar(255) not null,
     coins int default 1000,
-    boost int default 0
+    boost int default 0,
+    tries int default 10
 );
 
 create table if not exists team (

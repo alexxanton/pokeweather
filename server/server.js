@@ -71,7 +71,7 @@ app.get("/pokemon/:id", (req, res) => {
 app.get("/get-team/:id", (req, res) => {
     const query = `
         SELECT 
-            p.id AS pokemon_id, 
+            p.id AS id, 
             p.specie, 
             p.level
         FROM 

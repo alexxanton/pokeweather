@@ -29,12 +29,6 @@ type CDataProviderType = {
   // Buttons
   buttonActive: boolean;
   setButtonActive: React.Dispatch<React.SetStateAction<boolean>>;
-  
-  // Pokemon
-  team: Record<string, any>;
-  setTeam: React.Dispatch<React.SetStateAction<Record<string, any>>>;
-  collection: Record<string, any>;
-  setCollection: React.Dispatch<React.SetStateAction<Record<string, any>>>;
 }
 
 const DataContext = createContext<CDataProviderType | undefined>(undefined);
@@ -53,9 +47,6 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
   const [wheelTries, setWheelTries] = useState<number>(10);
 
   const [buttonActive, setButtonActive] = useState<boolean>(true);
-
-  const [team, setTeam] = useState<Record<string, any>>([]);
-  const [collection, setCollection] = useState<Record<string, any>>([]);
 
   return (
     <DataContext.Provider value={{
@@ -83,11 +74,6 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
 
       buttonActive,
       setButtonActive,
-
-      team,
-      setTeam,
-      collection,
-      setCollection,
     }}>
       {children}
     </DataContext.Provider>

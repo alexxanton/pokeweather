@@ -32,7 +32,7 @@ export default function Battle() {
   const [wobble, setWobble] = useState(0);
 
   const [pokemon, setPokemon] = useState(() => generateWildPokemon(weatherCondition));
-  const [state, setState] = useState("");
+  const [state, setState] = useState("first");
   const [trigger, setTrigger] = useState(true);
   const [pkmnIndex, setPkmnIndex] = useState(0);
   
@@ -67,6 +67,11 @@ export default function Battle() {
   useEffect(() => {
     const wildPokemonLoop = async () => {
       const possibleStates = ["escape", "switch"];
+      if (state == "first") {
+        setState("");
+        await delay(2000);
+      }
+
       if (battleFlag) {
         updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage*5, pkmnDefense);
         if (pkmnHp <= 0) {
@@ -133,7 +138,10 @@ export default function Battle() {
   const switchPokemon = (getIndex: (index: number, length: number) => number, skipCheck?: string) => {
     if (pkmnHp <= 0 && !skipCheck) return;
     setBattleFlag(false);
-    setWildState("switch");
+
+    if (wildState !== "catch") {
+      setWildState("switch");
+    }
 
     let index = getIndex(pkmnIndex, pokemon.length);
     for (let i = 0; i < pokemon.length - 1 && pokemon[index].hp <= 0; i++) {

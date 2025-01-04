@@ -17,18 +17,58 @@ import { TransparentBlack } from "@/constants/TransparentBlack";
 
 
 export default function Team() {
-  const {userId, coins, setCoins, boost, setBoost, team, setTeam, collection, setCollection} = useData();
+  const {userId, coins, setCoins, boost, setBoost} = useData();
+  const [team, setTeam] = useState<Record<string, any>[]>([]);
+  const [pokemon, setPokemon] = useState<Record<string, any>[]>([]);
   
-  const fetchPokemon = async () => {
-    const teamResponse = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
-    const pokemonResponse = await axios.get(`${DATABASE_SERVER_URI}/pokemon/${userId}`);
-    setTeam(teamResponse.data);
-    setCollection(pokemonResponse.data);
+  const getPokemon = async () => {
+    const team = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
+    const pokemon = await axios.get(`${DATABASE_SERVER_URI}/pokemon/${userId}`);
+    setTeam(team.data);
+    setPokemon(pokemon.data);
+  };
+
+  const updateTeam = async () => {
+    console.log(team);
+    
+    try {
+      const response = await axios.put(`${DATABASE_SERVER_URI}/update-team/`, {
+        slot_1: team[0].id,
+        slot_2: team[1].id ?? null,
+        slot_3: team[2].id ?? null,
+        slot_4: team[3].id ?? null,
+        slot_5: team[4].id ?? null,
+        slot_6: team[5].id ?? null,
+      });
+      console.log(response.data)
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
-    fetchPokemon();
-    console.log(team);
+    // console.log(team[0].id);
+    
+    updateTeam();
+  }, [team]);
+
+  const addPokemon = (pkmn: Record<string, any>) => {
+    if (team.length < 6 && !team.some(obj => obj.id === pkmn.id)) {
+      setTeam(prev => [...prev, pkmn]);
+    }
+  };
+
+  const removePokemon = (id: number) => {
+    if (team.length > 1) {
+      setTeam(prev => prev.filter((_, index) => index !== id));
+    }
+  };
+
+  const switchPokemon = () => {};
+
+  useEffect(() => {
+    getPokemon();
+    console.log(pokemon);
   }, []);
 
   const buyBoost = () => {
@@ -43,19 +83,29 @@ export default function Team() {
         <CLabel title="Team">
           <View style={styles.team}>
             {team.map((pkmn: any, idx: number) => {
-              return <CPokemonButton specie={pkmn.specie} level={pkmn.level} key={idx} />
+              return <CPokemonButton
+                specie={pkmn.specie}
+                level={pkmn.level}
+                key={idx}
+                onPress={switchPokemon}
+                onLongPress={() => removePokemon(idx)}
+              />
             })}
           </View>
         </CLabel>
         <CLabel title="Caught" style={styles.label}>
           <CScrollPanel
-            data={collection}
+            data={pokemon}
             numColumns={6}
             initialNumToRender={1}
             windowSize={2.5}
             maxToRenderPerBatch={3}
             renderItem={({ item }) => (
-              <CPokemonButton specie={item.specie} level={item.level} />
+              <CPokemonButton
+                specie={item.specie}
+                level={item.level}
+                onPress={() => addPokemon({id: item.id, specie: item.specie, level: item.level})}
+              />
             )}
           />
         </CLabel>
