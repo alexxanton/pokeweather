@@ -64,7 +64,12 @@ export default function Team() {
     }
   };
 
-  const switchPokemon = () => {};
+  const switchPokemon = () => {
+    setTeam((prev) => {
+      const news = [...prev];
+      return [];
+    });
+  };
 
   useEffect(() => {
     getPokemon();
@@ -104,6 +109,7 @@ export default function Team() {
               <CPokemonButton
                 specie={item.specie}
                 level={item.level}
+                isOnTeam={team.some(obj => obj.id === item.id)}
                 onPress={() => addPokemon({id: item.id, specie: item.specie, level: item.level})}
               />
             )}
@@ -138,7 +144,10 @@ const styles = StyleSheet.create({
     backgroundColor: TransparentBlack,
     flexDirection: "row",
     borderRadius: 15,
-    justifyContent: "center"
+    justifyContent: "center",
+    alignItems: "center",
+    height: 100,
+    gap: 5
   },
   label: {
     flex: 1,

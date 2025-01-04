@@ -6,9 +6,9 @@ import { type PressableProps } from 'react-native';
 import Pokeball from '@/assets/images/misc/Pokeball';
 
 type CPokeballButtonProps = PressableProps & {
-  onThrow: () => void;
-  wobble: number;
-  canThrow: boolean;
+  onThrow: () => void,
+  wobble: number,
+  canThrow: boolean
 };
 
 

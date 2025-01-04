@@ -65,21 +65,19 @@ export default function Battle() {
   
 
   useEffect(() => {
-    const wildPokemonLoop = async () => {
-      const possibleStates = ["escape", "switch"];
+    const battleLoop = async () => {
       if (state == "first") {
         setState("");
         await delay(2000);
       }
-
-      if (battleFlag) {
+      else if (battleFlag) {
         updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage*5, pkmnDefense);
         if (pkmnHp <= 0) {
           await delay(1000);
           switchPokemon(getNextIndex, "skipCheck");
         }
       } else {
-        if (possibleStates.includes(wildState)) {
+        if (["escape", "switch"].includes(wildState) && state !== "pokeball") {
           setWildState("");
           setBattleFlag(true);
         }
@@ -98,7 +96,7 @@ export default function Battle() {
       setWildTrigger(!wildTrigger);
     };
 
-    wildPokemonLoop();
+    battleLoop();
   }, [wildTrigger]);
 
   
@@ -108,6 +106,7 @@ export default function Battle() {
     if (wildHp <= 0 || coins < 50) return;
     setBattleFlag(false);
     setWildState("catch");
+    setState("pokeball");
     setWobble(0);
     setCoins(coins - 50);
 
@@ -123,6 +122,7 @@ export default function Battle() {
     } else {
       setWobble(-1); // triggers escape animation
       setWildState("escape");
+      setState("");
     }
   };
 

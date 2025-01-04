@@ -7,11 +7,12 @@ import { ComponentProps, useState } from "react";
 
 type Props = Omit<ComponentProps<typeof Pressable>, 'onPressIn' | 'onPressOut'> & {
   specie: number,
-  level: number
+  level: number,
+  isOnTeam?: boolean
 };
 
 
-export function CPokemonButton({specie, level, ...rest}: Props) {
+export function CPokemonButton({specie, level, isOnTeam, ...rest}: Props) {
   const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/${specie}.png`;
   const scale = useSharedValue(1);
   const y = useSharedValue(1);
@@ -36,14 +37,14 @@ export function CPokemonButton({specie, level, ...rest}: Props) {
     <Animated.View style={animStyle}>
       <View style={styles.container}>
         <Image
-          style={styles.pokemon}
+          style={[styles.pokemon, { opacity: isOnTeam ? 0.2 : 1 }]}
           source={url}
           contentFit="contain"
         />
         {isPressed ? <CText outlined style={styles.level}>{level}</CText> : null}
       </View>
       <Pressable
-      {...rest}
+        {...rest}
         style={styles.button}
         onPressIn={scaleGrow}
         onPressOut={scaleShrink}
