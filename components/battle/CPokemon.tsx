@@ -15,7 +15,7 @@ type CPokemonProps = ViewProps & {
   specie: number,
   wild?: boolean,
   state?: string,
-  trigger: boolean,
+  trigger: number,
   hp: number,
   battleFlag: boolean
 };

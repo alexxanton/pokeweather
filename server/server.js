@@ -92,10 +92,10 @@ app.post("/catch-pokemon", (req, res) => {
 });
 
 // Update team
-app.put("/update-team", (req, res) => {
-    const query = "UPDATE team SET slot_1 = ?, slot_2 = ?, slot_3 = ?, slot_4 = ?, slot_5 = ?, slot_6 = ? WHERE user_fk = ?";
-    const {slot_1, slot_2, slot_3, slot_4, slot_5, slot_6, user_fk} = req.body;
-    dbQuery(query, res, [slot_1, slot_2, slot_3, slot_4, slot_5, slot_6, user_fk]);
+app.put("/update-team/:id", (req, res) => {
+    const query = "UPDATE team SET slot_1 = ?, slot_2 = ?, slot_3 = ?, slot_4 = ?, slot_5 = ?, slot_6 = ? WHERE user_fk = id";
+    const {slot_1, slot_2, slot_3, slot_4, slot_5, slot_6} = req.body;
+    dbQuery(query, res, [slot_1, slot_2, slot_3, slot_4, slot_5, slot_6]);
 });
 
 // Update user data

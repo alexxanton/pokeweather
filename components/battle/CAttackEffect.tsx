@@ -12,7 +12,7 @@ import { attackSprites } from "@/utils/attackSpritesMap";
 export type AttackType = keyof typeof attackSprites;
 
 type CAttackEffectProps = {
-  trigger: boolean,
+  trigger: number,
   type: AttackType
   num?: number,
   battleFlag: boolean,
@@ -46,7 +46,7 @@ export function CAttackEffect({trigger, effectIndex, type, num, battleFlag}: CAt
   };
 
   useEffect(() => {
-    if (effectIndex === num || (!effectIndex && !num)) {
+    if (effectIndex === num) {
       if (battleFlag) {
         effectAnim();
       }

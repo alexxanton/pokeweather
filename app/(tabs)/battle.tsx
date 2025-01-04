@@ -28,17 +28,16 @@ export default function Battle() {
 
   const {userId, weatherCondition, boost, setBoost, coins, setCoins} = useData();
   const [battleFlag, setBattleFlag] = useState(true);
-  const [effectIndex, setEffectIndex] = useState(0);
   const [wobble, setWobble] = useState(0);
 
   const [pokemon, setPokemon] = useState(() => generateWildPokemon(weatherCondition));
   const [state, setState] = useState("first");
-  const [trigger, setTrigger] = useState(true);
+  const [trigger, setTrigger] = useState(0);
   const [pkmnIndex, setPkmnIndex] = useState(0);
   
   const [wildPokemon, setWildPokemon] = useState(() => generateWildPokemon(weatherCondition));
   const [wildState, setWildState] = useState("");
-  const [wildTrigger, setWildTrigger] = useState(true);
+  const [wildTrigger, setWildTrigger] = useState(0);
   const [wildIndex, setWildIndex] = useState(0);
 
   const wildSpecie = useMemo(() => wildPokemon[wildIndex].specie, [wildIndex]);
@@ -77,7 +76,7 @@ export default function Battle() {
           switchPokemon(getNextIndex, "skipCheck");
         }
       } else {
-        if (["escape", "switch"].includes(wildState) && state !== "pokeball") {
+        if (["capture", "escape", "switch"].includes(wildState) && state !== "pokeball") {
           setWildState("");
           setBattleFlag(true);
         }
@@ -93,7 +92,7 @@ export default function Battle() {
       }
 
       await delay(randint(100, 1000));
-      setWildTrigger(!wildTrigger);
+      setWildTrigger(wildTrigger < effectLimit - 1 ? wildTrigger + 1 : 0);
     };
 
     battleLoop();
@@ -119,18 +118,18 @@ export default function Battle() {
     if (randint(1, 1) == 10) {
       setWobble(4); // triggers catch animation
       catchPokemon();
+      setWildState("capture");
     } else {
       setWobble(-1); // triggers escape animation
       setWildState("escape");
-      setState("");
     }
+    setState("");
   };
 
   const sendAttack = () => {
     if (!battleFlag) return;
     const boostModifier = boost > 0 ? 3 : 1;
-    setTrigger(!trigger); // alternate between true and false so react detects a change and rerenders
-    setEffectIndex(effectIndex < effectLimit - 1 ? effectIndex + 1 : 0);
+    setTrigger(trigger < effectLimit - 1 ? trigger + 1 : 0);
     setBoost(boost - 1);
     updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
   };
@@ -164,7 +163,7 @@ export default function Battle() {
       if (wildIndex < wildPokemon.length - 1) {
         setWildIndex(wildIndex + 1);
         await delay(1500);
-        setWildTrigger(!wildTrigger);
+        // setWildTrigger(!wildTrigger);
       }
     } catch (error) {
       console.log(error);
@@ -202,12 +201,12 @@ export default function Battle() {
                 battleFlag={battleFlag}
                 wild
               >
-                {[...Array(effectLimit)].map((_, i) => {
+                {[...Array(effectLimit)].map((_, index) => {
                   return <CAttackEffect
                     trigger={trigger}
-                    effectIndex={effectIndex}
-                    num={i}
-                    key={i}
+                    effectIndex={trigger}
+                    num={index}
+                    key={index}
                     battleFlag={battleFlag}
                     type={pkmnTypes[randint(0, pkmnTypes.length - 1)] as AttackType}
                   />
@@ -221,11 +220,16 @@ export default function Battle() {
                 hp={pkmnHp}
                 battleFlag={battleFlag}
               >
-                <CAttackEffect
-                  trigger={wildTrigger}
-                  type={wildTypes[randint(0, wildTypes.length - 1)] as AttackType}
-                  battleFlag={battleFlag}
-                />
+                {[...Array(effectLimit)].map((_, index) => {
+                  return <CAttackEffect
+                    trigger={wildTrigger}
+                    effectIndex={wildTrigger}
+                    num={index}
+                    key={index}
+                    battleFlag={battleFlag}
+                    type={wildTypes[randint(0, wildTypes.length - 1)] as AttackType}
+                  />
+                })}
               </CPokemon>
 
               <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>

@@ -32,7 +32,7 @@ export default function Team() {
     console.log(team);
     
     try {
-      const response = await axios.put(`${DATABASE_SERVER_URI}/update-team/`, {
+      const response = await axios.put(`${DATABASE_SERVER_URI}/update-team/${userId}`, {
         slot_1: team[0].id,
         slot_2: team[1].id ?? null,
         slot_3: team[2].id ?? null,
@@ -47,8 +47,6 @@ export default function Team() {
   };
 
   useEffect(() => {
-    // console.log(team[0].id);
-    
     updateTeam();
   }, [team]);
 
