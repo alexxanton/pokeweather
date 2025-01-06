@@ -1,4 +1,4 @@
-import { randint } from "./randint";
+import { randint } from "../randint";
 
 
 export function generateWildPokemon(weatherCondition:string) {
