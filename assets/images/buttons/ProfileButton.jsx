@@ -1,29 +1,25 @@
 import * as React from "react"
-import Svg, { SvgProps, Circle, Path } from "react-native-svg"
+import Svg, { Path, Circle } from "react-native-svg"
 const SvgComponent = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={71}
-    height={71}
+    width={61}
+    height={61}
     fill="none"
     {...props}
   >
-    <Circle
-      cx={35.5}
-      cy={35.5}
-      r={31.5}
-      fill="#FF1C1C"
+    <Path
+      fill="#663399"
+      stroke="#000"
+      strokeWidth={5}
+      d="M25.26 2.5h-2.5v8.82L18.19 6.75 16.42 4.981 14.653 6.75 6.75 14.653l-1.768 1.768 1.768 1.768 3.873 3.873H2.5V38.24h8.82L6.75 42.81 4.98 44.58l1.768 1.768 7.904 7.904 1.768 1.768 1.768-1.768 4.571-4.572V58.5h16.178v-8.122l3.873 3.873 1.768 1.768 1.768-1.768 7.904-7.904 1.768-1.768-1.768-1.768-4.572-4.571H58.5V22.76h-8.82l4.571-4.571 1.768-1.768-1.768-1.768-7.904-7.904-1.768-1.768-1.768 1.768-3.873 3.873V2.5H25.26Zm-1.482 13.374.689-.69H35.83l1.04 1.04 7.904 7.905.341.341V36.248l-.482.482-7.904 7.904-1.181 1.181H24.203l-.557-.557-7.064-7.064V23.069l7.196-7.195Z"
     />
-    <Path fill="white" d="M57 63H14s9.626-23 21.5-23S57 63 57 63Z" />
-    <Circle
-      cx={35.5}
-      cy={35.5}
-      r={31.5}
-      fill="none"
-      stroke="black"
-      strokeWidth={8}
+    <Path
+      stroke="#663399"
+      strokeWidth={11}
+      d="M44.212 30.5c0 7.573-6.139 13.712-13.712 13.712-7.573 0-13.712-6.139-13.712-13.712 0-7.573 6.139-13.712 13.712-13.712 7.573 0 13.712 6.139 13.712 13.712Z"
     />
-    <Circle cx={36} cy={24} r={11} fill="white" />
+    <Circle cx={30.5} cy={30.5} r={10} stroke="#000" strokeWidth={5} />
   </Svg>
 )
 export default SvgComponent
