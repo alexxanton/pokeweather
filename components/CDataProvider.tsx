@@ -1,5 +1,5 @@
+import { type Pokemon } from '@/utils/battleFunctions/generatePokemonWithStats';
 import React, { createContext, useState, useContext, type PropsWithChildren } from 'react';
-import { generateWildPokemon } from "@/utils/generateWildPokemon";
 
 type CDataProviderType = {
   // Weather
@@ -29,6 +29,10 @@ type CDataProviderType = {
   // Buttons
   buttonActive: boolean;
   setButtonActive: React.Dispatch<React.SetStateAction<boolean>>;
+  
+  // Pokemon
+  team: Pokemon[];
+  setTeam: React.Dispatch<React.SetStateAction<Pokemon[]>>;
 }
 
 const DataContext = createContext<CDataProviderType | undefined>(undefined);
@@ -39,14 +43,13 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
   const [windSpeed, setWindSpeed] = useState<number>(0);
   const [weatherCondition, setWeatherCondition] = useState<string>("");
   const [description, setDescription] = useState<string>("");
-
   const [user, setUser] = useState("");
   const [userId, setUserId] = useState(0);
   const [boost, setBoost] = useState(0);
   const [coins, setCoins] = useState<number>(0);
   const [wheelTries, setWheelTries] = useState<number>(10);
-
   const [buttonActive, setButtonActive] = useState<boolean>(true);
+  const [team, setTeam] = useState<Pokemon[]>([]);
 
   return (
     <DataContext.Provider value={{
@@ -74,6 +77,9 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
 
       buttonActive,
       setButtonActive,
+
+      team,
+      setTeam
     }}>
       {children}
     </DataContext.Provider>

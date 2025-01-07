@@ -42,7 +42,7 @@ export function CControlPanel({children, style, ...rest}: ViewProps) {
     try {
       // const response = await axios.put(`${DATABASE_SERVER_URI}/update-user-data/`);
     } catch (error) {
-      
+      console.error(error);
     }
   };
 

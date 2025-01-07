@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { BackHandler, StyleSheet, View } from "react-native";
 import { CControlPanel } from "@/components/containers/CControlPanel";
 import { CButton } from "@/components/buttons/CButton";
 import { CArrowButton } from "@/components/buttons/CArrowButton";
@@ -14,12 +14,14 @@ import axios from "axios";
 import BoostButton from '@/assets/images/buttons/BoostButton';
 import BattleButton from '@/assets/images/buttons/BattleButton';
 import { TransparentBlack } from "@/constants/TransparentBlack";
+import { useRouter } from "expo-router";
+import { Pokemon } from "@/utils/battleFunctions/generatePokemonWithStats";
 
 
 export default function Team() {
-  const {userId, coins, setCoins, boost, setBoost} = useData();
-  const [team, setTeam] = useState<Record<string, any>[]>([]);
-  const [pokemon, setPokemon] = useState<Record<string, any>[]>([]);
+  const {userId, team, setTeam, coins, setCoins, boost, setBoost} = useData();
+  const [pokemon, setPokemon] = useState<Pokemon[]>([]);
+  const [hidden, setHidden] = useState(false);
   
   const getPokemon = async () => {
     const team = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
@@ -29,16 +31,25 @@ export default function Team() {
   };
 
   const updateTeam = async () => {
-    console.log(team);
+    console.log(pokemon);
+    const slots = [];
+    for (let i = 0; i < 6; i++) {
+      const pkmn = team[i];
+      if (pkmn) {
+        slots.push(pkmn.id);
+      } else {
+        slots.push(null);
+      }
+    }
     
     try {
       const response = await axios.put(`${DATABASE_SERVER_URI}/update-team/${userId}`, {
-        slot_1: team[0].id,
-        slot_2: team[1].id ?? null,
-        slot_3: team[2].id ?? null,
-        slot_4: team[3].id ?? null,
-        slot_5: team[4].id ?? null,
-        slot_6: team[5].id ?? null,
+        slot_1: slots[0],
+        slot_2: slots[1],
+        slot_3: slots[2],
+        slot_4: slots[3],
+        slot_5: slots[4],
+        slot_6: slots[5],
       });
       console.log(response.data)
     } catch (error) {
@@ -47,18 +58,38 @@ export default function Team() {
   };
 
   useEffect(() => {
-    updateTeam();
+    if (team.length > 0) {
+      updateTeam();
+    }
   }, [team]);
 
-  const addPokemon = (pkmn: Record<string, any>) => {
-    if (team.length < 6 && !team.some(obj => obj.id === pkmn.id)) {
-      setTeam(prev => [...prev, pkmn]);
+  const router = useRouter();
+
+  useEffect(() => {
+    const onBackPress = () => {
+      setHidden(true);
+      setTimeout(() => {
+        router.back();
+      }, 0);
+      return true;
+    };
+
+    BackHandler.addEventListener("hardwareBackPress", onBackPress);
+
+    return () => {
+      BackHandler.removeEventListener("hardwareBackPress", onBackPress);
+    };
+  }, []);
+
+  const addPokemon = (pkmn: Pokemon) => {
+    if (team.length < 6 && !team.some((obj: any) => obj.id === pkmn.id)) {
+      setTeam(prev  => [...prev, pkmn]);
     }
   };
 
   const removePokemon = (id: number) => {
     if (team.length > 1) {
-      setTeam(prev => prev.filter((_, index) => index !== id));
+      setTeam(prev => prev.filter((_: any, index: number) => index !== id));
     }
   };
 
@@ -97,21 +128,23 @@ export default function Team() {
           </View>
         </CLabel>
         <CLabel title="Caught" style={styles.label}>
-          <CScrollPanel
-            data={pokemon}
-            numColumns={6}
-            initialNumToRender={1}
-            windowSize={2.5}
-            maxToRenderPerBatch={3}
-            renderItem={({ item }) => (
-              <CPokemonButton
-                specie={item.specie}
-                level={item.level}
-                isOnTeam={team.some(obj => obj.id === item.id)}
-                onPress={() => addPokemon({id: item.id, specie: item.specie, level: item.level})}
-              />
-            )}
-          />
+          {hidden ? null : (
+            <CScrollPanel
+              data={pokemon}
+              numColumns={6}
+              initialNumToRender={1}
+              windowSize={2.5}
+              maxToRenderPerBatch={3}
+              renderItem={({ item }) => (
+                <CPokemonButton
+                  specie={item.specie}
+                  level={item.level}
+                  // isOnTeam={team.some((obj: any) => obj.id === item.id)}
+                  // onPress={() => addPokemon({id: item.id, specie: item.specie, level: item.level})}
+                />
+              )}
+            />
+          )}
         </CLabel>
       </View>
       <CControlPanel>
@@ -124,7 +157,7 @@ export default function Team() {
         }}>
           <BoostButton width={135} height={90} />
         </CButton>
-        <CButton href="/battle" replace>
+        <CButton href="/battle" onPress={() => setHidden(!hidden)}>
           <BattleButton width={135} height={90} />
         </CButton>
       </CControlPanel>

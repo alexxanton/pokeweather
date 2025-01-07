@@ -95,7 +95,7 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
     }, 1000);
   };
 
-  const catchAnim = () => {
+  const pokeballAnim = () => {
     brightness.value = 1;
     opacity.value = 1;
     xCatch.value = 0;
@@ -110,7 +110,7 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
     }));
   };
 
-  const scapeAnim = () => {
+  const escapeAnim = () => {
     brightness.value = 100;
     opacity.value = 1;
     yCatch.value = 90;
@@ -129,14 +129,16 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
     xPos.value = withTiming(0, { duration: 200 });
   };
 
+  const catchAnim = () => {};
+
   const leftAnim = () => {};
   
   const rightAnim = () => {};
 
   useEffect(() => {
     switch(state) {
-      case "catch" : catchAnim(); break;
-      case "escape" : scapeAnim(); break;
+      case "pokeball": pokeballAnim(); break;
+      case "escape": escapeAnim(); break;
     }
   }, [state]);
 

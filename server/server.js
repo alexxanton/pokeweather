@@ -62,7 +62,7 @@ app.get("/login/:name", (req, res) => {
 
 // Get caught pokemon
 app.get("/pokemon/:id", (req, res) => {
-    const query = "SELECT * FROM pokemon WHERE user_fk = (?)";
+    const query = "SELECT id, level, specie FROM pokemon WHERE user_fk = (?)";
     const {id} = req.params;
     dbQuery(query, res, [id]);
 });

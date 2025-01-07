@@ -15,7 +15,7 @@ import Animated, { useAnimatedStyle, useSharedValue, withDelay, withRepeat, with
 
 export function CMainScreen() {
   const [error, setError] = useState("");
-  const {setUserId, userId, setCoins, setBoost, temp, setTemp, setDescription, setWindSpeed, setHour} = useData();
+  const {setUserId, userId, setTeam, setCoins, setBoost, temp, setTemp, setDescription, setWindSpeed, setHour} = useData();
   const [weatherData, setWeatherData] = useState<Record<string, any>>();
   const apiKey = process.env.EXPO_PUBLIC_API_KEY;
   const yPokeball = useSharedValue(0);
@@ -65,8 +65,10 @@ export function CMainScreen() {
   const getUserData = async () => {
     try {
       const response = await axios.get(`${DATABASE_SERVER_URI}/user/${userId}`);
+      const teamRes = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
       setCoins(response.data[0].coins);
       setBoost(response.data[0].boost);
+      setTeam(teamRes.data);
     } catch (error) {
       console.log(error);
     }

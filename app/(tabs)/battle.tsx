@@ -10,32 +10,32 @@ import { CAttackEffect } from "@/components/battle/CAttackEffect";
 import { useData } from "@/components/CDataProvider";
 import { useEffect, useMemo, useState } from "react";
 import { randint } from "@/utils/randint";
-import { generateWildPokemon } from "@/utils/generateWildPokemon";
+import { generatePokemonWithStats } from "@/utils/battleFunctions/generatePokemonWithStats";
 import axios from "axios";
 
 import Pokeball from '@/assets/images/misc/Pokeball';
 import SwitchButton from '@/assets/images/buttons/SwitchButton';
 import { CPokeballButton } from "@/components/buttons/CPokeballButton";
 import { State } from "react-native-gesture-handler";
-import { AttackType } from "@/components/battle/CAttackEffect";
 import { CPadding } from "@/components/containers/CPadding";
 import { DATABASE_SERVER_URI } from "@/constants/URI";
-import { updatePokemonHp } from "@/utils/updatePokemonHp";
+import { updatePokemonHp } from "@/utils/battleFunctions/updatePokemonHp";
 
 
 export default function Battle() {
   const effectLimit = 5;
 
-  const {userId, weatherCondition, boost, setBoost, coins, setCoins} = useData();
+  const {userId, team, weatherCondition, boost, setBoost, coins, setCoins} = useData();
   const [battleFlag, setBattleFlag] = useState(true);
   const [wobble, setWobble] = useState(0);
+  const [pokeballTrhown, setPokeballTrhown] = useState(false);
 
-  const [pokemon, setPokemon] = useState(() => generateWildPokemon(weatherCondition));
+  const [pokemon, setPokemon] = useState(() => generatePokemonWithStats(team));
   const [state, setState] = useState("first");
   const [trigger, setTrigger] = useState(0);
   const [pkmnIndex, setPkmnIndex] = useState(0);
   
-  const [wildPokemon, setWildPokemon] = useState(() => generateWildPokemon(weatherCondition));
+  const [wildPokemon, setWildPokemon] = useState(() => generatePokemonWithStats(team, weatherCondition));
   const [wildState, setWildState] = useState("");
   const [wildTrigger, setWildTrigger] = useState(0);
   const [wildIndex, setWildIndex] = useState(0);
@@ -48,6 +48,7 @@ export default function Battle() {
   const wildDamage = useMemo(() => wildPokemon[wildIndex].attack, [wildIndex]);
   const wildDefense = useMemo(() => wildPokemon[wildIndex].defense, [wildIndex]);
   const wildTypes = useMemo(() => wildPokemon[wildIndex].types, [wildIndex]);
+  const wildAttackType = useMemo(() => wildTypes[randint(0, wildTypes.length - 1)], [wildTrigger]);
 
   const pkmnSpecie = useMemo(() => pokemon[pkmnIndex].specie, [pkmnIndex]);
   const pkmnName = useMemo(() => pokemon[pkmnIndex].name, [pkmnSpecie]);
@@ -57,6 +58,7 @@ export default function Battle() {
   const pkmnDamage = useMemo(() => pokemon[pkmnIndex].attack, [pkmnIndex]);
   const pkmnDefense = useMemo(() => pokemon[pkmnIndex].defense, [pkmnIndex]);
   const pkmnTypes = useMemo(() => pokemon[pkmnIndex].types, [pkmnIndex]);
+  const pkmnAttackType = useMemo(() => pkmnTypes[randint(0, pkmnTypes.length - 1)], [trigger]);
 
   async function delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -65,6 +67,9 @@ export default function Battle() {
 
   useEffect(() => {
     const battleLoop = async () => {
+      if (pokemon.length < 1) {
+        return;
+      }
       if (state == "first") {
         setState("");
         await delay(2000);
@@ -75,8 +80,9 @@ export default function Battle() {
           await delay(1000);
           switchPokemon(getNextIndex, "skipCheck");
         }
-      } else {
-        if (["capture", "escape", "switch"].includes(wildState) && state !== "pokeball") {
+      }
+      else {
+        if ((state === "switch" || ["catch", "escape"].includes(wildState)) && !pokeballTrhown) {
           setWildState("");
           setBattleFlag(true);
         }
@@ -104,8 +110,8 @@ export default function Battle() {
   const throwPokeball = async () => {
     if (wildHp <= 0 || coins < 50) return;
     setBattleFlag(false);
-    setWildState("catch");
-    setState("pokeball");
+    setWildState("pokeball");
+    setPokeballTrhown(true);
     setWobble(0);
     setCoins(coins - 50);
 
@@ -118,12 +124,12 @@ export default function Battle() {
     if (randint(1, 1) == 10) {
       setWobble(4); // triggers catch animation
       catchPokemon();
-      setWildState("capture");
+      setWildState("catch");
     } else {
       setWobble(-1); // triggers escape animation
       setWildState("escape");
     }
-    setState("");
+    setPokeballTrhown(false);
   };
 
   const sendAttack = () => {
@@ -137,10 +143,7 @@ export default function Battle() {
   const switchPokemon = (getIndex: (index: number, length: number) => number, skipCheck?: string) => {
     if (pkmnHp <= 0 && !skipCheck) return;
     setBattleFlag(false);
-
-    if (wildState !== "catch") {
-      setWildState("switch");
-    }
+    setState("switch");
 
     let index = getIndex(pkmnIndex, pokemon.length);
     for (let i = 0; i < pokemon.length - 1 && pokemon[index].hp <= 0; i++) {
@@ -186,7 +189,7 @@ export default function Battle() {
       <CPreventBackButton />
       <CGestureHandler onGestureEvent={handleGesture}>
         <TouchableWithoutFeedback onPress={sendAttack}>
-          <View style={styles.touchableContainer}>
+          <View style={styles.battleArea}>
             <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
             <CText>{wildHp}</CText>
             <View style={styles.battleContainer}>
@@ -208,7 +211,7 @@ export default function Battle() {
                     num={index}
                     key={index}
                     battleFlag={battleFlag}
-                    type={pkmnTypes[randint(0, pkmnTypes.length - 1)] as AttackType}
+                    type={pkmnAttackType.name}
                   />
                 })}
               </CPokemon>
@@ -227,7 +230,7 @@ export default function Battle() {
                     num={index}
                     key={index}
                     battleFlag={battleFlag}
-                    type={wildTypes[randint(0, wildTypes.length - 1)] as AttackType}
+                    type={wildAttackType.name}
                   />
                 })}
               </CPokemon>
@@ -279,7 +282,7 @@ const styles = StyleSheet.create({
     gap: 20,
     backgroundColor: "transparent"
   },
-  touchableContainer: {
+  battleArea: {
     flex: 1
   }
 });
