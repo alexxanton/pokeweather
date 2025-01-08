@@ -31,7 +31,6 @@ export default function Team() {
   };
 
   const updateTeam = async () => {
-    console.log(pokemon);
     const slots = [];
     for (let i = 0; i < 6; i++) {
       const pkmn = team[i];
