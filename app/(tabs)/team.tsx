@@ -130,7 +130,7 @@ export default function Team() {
         <CLabel title="Caught" style={styles.label}>
           {hidden ? null : (
             <CScrollPanel
-              data={pokemon}
+              data={pokemon.slice(0, 30)}
               numColumns={6}
               initialNumToRender={1}
               windowSize={2.5}
@@ -139,8 +139,8 @@ export default function Team() {
                 <CPokemonButton
                   specie={item.specie}
                   level={item.level}
-                  // isOnTeam={team.some((obj: any) => obj.id === item.id)}
-                  // onPress={() => addPokemon({id: item.id, specie: item.specie, level: item.level})}
+                  isOnTeam={team.some((obj: Pokemon) => obj.id === item.id)}
+                  onPress={() => addPokemon({id: item.id, specie: item.specie, level: item.level})}
                 />
               )}
             />
@@ -157,7 +157,7 @@ export default function Team() {
         }}>
           <BoostButton width={135} height={90} />
         </CButton>
-        <CButton href="/battle" onPress={() => setHidden(!hidden)}>
+        <CButton href="/battle" replace>
           <BattleButton width={135} height={90} />
         </CButton>
       </CControlPanel>

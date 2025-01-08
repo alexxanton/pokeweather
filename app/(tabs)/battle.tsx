@@ -20,10 +20,12 @@ import { State } from "react-native-gesture-handler";
 import { CPadding } from "@/components/containers/CPadding";
 import { DATABASE_SERVER_URI } from "@/constants/URI";
 import { updatePokemonHp } from "@/utils/battleFunctions/updatePokemonHp";
+import { useRouter } from "expo-router";
 
 
 export default function Battle() {
   const effectLimit = 5;
+  const router = useRouter();
 
   const {userId, team, weatherCondition, boost, setBoost, coins, setCoins} = useData();
   const [battleFlag, setBattleFlag] = useState(true);
@@ -146,8 +148,11 @@ export default function Battle() {
     setState("switch");
 
     let index = getIndex(pkmnIndex, pokemon.length);
-    for (let i = 0; i < pokemon.length - 1 && pokemon[index].hp <= 0; i++) {
+    for (let i = 0; i <= pokemon.length && pokemon[index].hp <= 0; i++) {
       index = getIndex(index, pokemon.length);
+      if (i == pokemon.length && router.canGoBack()) {
+        router.back();
+      }
     }
     setPkmnIndex(index);
   };
