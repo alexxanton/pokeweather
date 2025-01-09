@@ -13,6 +13,7 @@ import axios from "axios";
 
 import BoostButton from '@/assets/images/buttons/BoostButton';
 import BattleButton from '@/assets/images/buttons/BattleButton';
+import SwitchButton from '@/assets/images/buttons/SwitchButton';
 import { TransparentBlack } from "@/constants/TransparentBlack";
 import { useRouter } from "expo-router";
 import { Pokemon } from "@/utils/battleFunctions/generatePokemonWithStats";
@@ -22,6 +23,7 @@ export default function Team() {
   const {userId, team, setTeam, coins, setCoins, boost, setBoost} = useData();
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
   const [hidden, setHidden] = useState(false);
+  const [pagination, setPagination] = useState(0);
   
   const getPokemon = async () => {
     const team = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
@@ -127,9 +129,8 @@ export default function Team() {
           </View>
         </CLabel>
         <CLabel title="Caught" style={styles.label}>
-          {hidden ? null : (
             <CScrollPanel
-              data={pokemon.slice(0, 30)}
+              data={pokemon.slice(pagination, pagination + 30)}
               numColumns={6}
               initialNumToRender={1}
               windowSize={2.5}
@@ -143,7 +144,14 @@ export default function Team() {
                 />
               )}
             />
-          )}
+          <View style={styles.paginationButtons}>
+            <CButton onPress={() => {if (pagination > 0) setPagination(pagination - 30)}} style={{transform: [{scaleX: -1}]}}>
+              <SwitchButton height={75} width={75} />
+            </CButton>
+            <CButton onPress={() => {if (pagination < pokemon.length - 30) setPagination(pagination + 30)}}>
+              <SwitchButton height={75} width={75} />
+            </CButton>
+          </View>
         </CLabel>
       </View>
       <CControlPanel>
@@ -183,4 +191,8 @@ const styles = StyleSheet.create({
     flex: 1,
     marginBottom: 20
   },
+  paginationButtons: {
+    flexDirection: "row",
+    justifyContent:"space-between"
+  }
 });
