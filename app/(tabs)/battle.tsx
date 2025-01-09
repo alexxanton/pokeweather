@@ -13,6 +13,7 @@ import { randint } from "@/utils/randint";
 import { generatePokemonWithStats } from "@/utils/battleFunctions/generatePokemonWithStats";
 import axios from "axios";
 
+import Arrow from '@/assets/images/misc/Arrow';
 import Pokeball from '@/assets/images/misc/Pokeball';
 import SwitchButton from '@/assets/images/buttons/SwitchButton';
 import { CPokeballButton } from "@/components/buttons/CPokeballButton";
@@ -52,18 +53,19 @@ export default function Battle() {
   
 
   const {userId, team, weatherCondition, boost, setBoost, coins, setCoins} = useData();
-  const [battleFlag, setBattleFlag] = useState(true);
+  const [battleFlag, setBattleFlag] = useState(false);
   const [wobble, setWobble] = useState(0);
   const [pokeballTrhown, setPokeballTrhown] = useState(false);
+  const [switchDirection, setSwitchDirection] = useState("");
 
   const [pokemon, setPokemon] = useState(() => generatePokemonWithStats(team));
   const [state, setState] = useState("first");
-  const [trigger, setTrigger] = useState(0);
+  const [trigger, setTrigger] = useState(-1);
   const [pkmnIndex, setPkmnIndex] = useState(0);
   
   const [wildPokemon, setWildPokemon] = useState(() => generatePokemonWithStats(team, weatherCondition));
   const [wildState, setWildState] = useState("");
-  const [wildTrigger, setWildTrigger] = useState(0);
+  const [wildTrigger, setWildTrigger] = useState(-1);
   const [wildIndex, setWildIndex] = useState(0);
 
   const wildSpecie = useMemo(() => wildPokemon[wildIndex].specie, [wildIndex]);
@@ -93,25 +95,41 @@ export default function Battle() {
 
   useEffect(() => {
     const battleLoop = async () => {
-      if (pokemon.length < 1) {
-        return;
-      }
-      if (state == "first") {
+      if (battleFlag) {
+        updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
+        if (pkmnHp <= 0) {
+          const skipCheck = true;
+          await delay(1000);
+          switchPokemon(getNextIndex, skipCheck);
+        }
+      } else if (state === "first") {
+        if (team.length < 1) {
+          return;
+        }
+        setBattleFlag(true);
         setState("");
         await delay(2000);
       }
-      else if (battleFlag) {
-        updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
-        if (pkmnHp <= 0) {
-          await delay(1000);
-          switchPokemon(getNextIndex, "skipCheck");
+
+      if (pokeballTrhown) {
+        setWobble(0);
+
+        for (let i = 1; i <= 3; i++) {
+          await delay(i == 1 ? 1500 : 1000);
+          setWobble(i);
         }
-      }
-      else {
-        if ((state === "switch" || ["catch", "escape"].includes(wildState)) && !pokeballTrhown) {
-          setWildState("");
-          setBattleFlag(true);
+
+        await delay(1000);
+        if (randint(1, 1) == 10) {
+          setWobble(4); // triggers catch animation
+          catchPokemon();
+          setWildState("catch");
+        } else {
+          setWobble(-1); // triggers escape animation
+          setWildState("escape");
         }
+        setPokeballTrhown(false);
+        setBattleFlag(true);
       }
 
       if (wildHp <= 0) {
@@ -123,9 +141,7 @@ export default function Battle() {
         } else {
           fadeOutAnim(true);
           setTimeout(() => {
-            if (router.canGoBack()) {
-              router.back();
-            }
+            setState("win");
           }, 3000);
           
           return;
@@ -139,43 +155,28 @@ export default function Battle() {
     battleLoop();
   }, [wildTrigger]);
 
-  
-  // throw pokeball
-
   const throwPokeball = async () => {
     if (wildHp <= 0 || coins < 50) return;
+    setPokeballTrhown(true);
     setBattleFlag(false);
     setWildState("pokeball");
-    setPokeballTrhown(true);
-    setWobble(0);
     setCoins(coins - 50);
-
-    for (let i = 1; i <= 3; i++) {
-      await delay(i == 1 ? 2000 : 1000);
-      setWobble(i);
-    }
-
-    await delay(1000);
-    if (randint(1, 1) == 10) {
-      setWobble(4); // triggers catch animation
-      catchPokemon();
-      setWildState("catch");
-    } else {
-      setWobble(-1); // triggers escape animation
-      setWildState("escape");
-    }
-    setPokeballTrhown(false);
   };
 
-  const sendAttack = () => {
+  const handleTap = () => {
     if (!battleFlag) return;
-    const boostModifier = boost > 0 ? 3 : 1;
-    setTrigger(trigger < effectLimit - 1 ? trigger + 1 : 0);
-    setBoost(boost - 1);
-    updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
+    if (wildHp > 0) {
+      const boostModifier = boost > 0 ? 3 : 1;
+      if (wildTrigger < 0) setWildTrigger(0);
+      setTrigger(trigger < effectLimit - 1 ? trigger + 1 : 0);
+      setBoost(boost - 1);
+      updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
+    } else if (state === "win" && router.canGoBack()) {
+      router.back();
+    }
   };
 
-  const switchPokemon = (getIndex: (index: number, length: number) => number, skipCheck?: string) => {
+  const switchPokemon = (getIndex: (index: number, length: number) => number, skipCheck?: boolean) => {
     if (pkmnHp <= 0 && !skipCheck) return;
     setBattleFlag(false);
     setState("switch");
@@ -233,7 +234,9 @@ export default function Battle() {
           return (
             <View style={styles.teamRow}>
               <Image style={styles.teamImage} source={`${imageUrl}/${pkmn.specie}.png`} />
-              <CText size={30} outlined>{` ${pkmn.level} > ${pkmn.level + (pkmn.level < 100 ? 1 : 0)}`}</CText>
+              <CText size={30} outlined>{` ${pkmn.level} `}</CText>
+              <Arrow />
+              <CText size={30} outlined>{` ${pkmn.level + (pkmn.level < 100 ? 1 : 0)} `}</CText>
               {pkmn.level + (pkmn.level < 100 ? 1 : 0) == 6 ? (
                 <Image style={styles.teamImage} source={`${imageUrl}/${pokedata[pkmn.specie].evolves_to[0]}.png`} />
               ) : null}
@@ -243,7 +246,7 @@ export default function Battle() {
       </Animated.View>
       <Animated.View style={[styles.container, animStyle]}>
         <CGestureHandler onGestureEvent={handleGesture}>
-          <TouchableWithoutFeedback onPress={sendAttack}>
+          <TouchableWithoutFeedback onPress={handleTap}>
             <View style={styles.battleArea}>
               <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
               <CText>{wildHp}</CText>
