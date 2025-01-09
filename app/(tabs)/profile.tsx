@@ -73,6 +73,7 @@ export default function Profile() {
       storeData("id", response.data[0].insertId.toString());
     } catch (error) {
       console.error("User error:", error);
+      setError("Username already exists.");
     }
   };
 

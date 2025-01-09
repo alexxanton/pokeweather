@@ -13,8 +13,6 @@ import { randint } from "@/utils/randint";
 import { generatePokemonWithStats } from "@/utils/battleFunctions/generatePokemonWithStats";
 import axios from "axios";
 
-import Arrow from '@/assets/images/misc/Arrow';
-import Pokeball from '@/assets/images/misc/Pokeball';
 import SwitchButton from '@/assets/images/buttons/SwitchButton';
 import { CPokeballButton } from "@/components/buttons/CPokeballButton";
 import { State } from "react-native-gesture-handler";
@@ -23,32 +21,22 @@ import { DATABASE_SERVER_URI } from "@/constants/URI";
 import { updatePokemonHp } from "@/utils/battleFunctions/updatePokemonHp";
 import { useRouter } from "expo-router";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
-import { Image } from "expo-image";
+import { CStats } from "@/components/battle/CStats";
+import { delay } from "@/utils/delay";
 
 
 export default function Battle() {
   const effectLimit = 5;
   const opacitiy = useSharedValue(1);
-  const teamOpacitiy = useSharedValue(0);
-  const pokedata = require("@/assets/data/pokedata.json");
-  const imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons";
   const router = useRouter();
 
   const animStyle = useAnimatedStyle(() => ({
     opacity: opacitiy.value,
   }));
 
-  const teamAnimStyle = useAnimatedStyle(() => ({
-    opacity: teamOpacitiy.value,
-  }));
-
-  const fadeOutAnim = (win?: boolean) => {
+  const fadeOutAnim = () => {
     opacitiy.value = 1;
     opacitiy.value = withTiming(0, {duration: 1000 });
-    if (win) {
-      teamOpacitiy.value = 0;
-      teamOpacitiy.value = withTiming(1, {duration: 1000 });
-    }
   };
   
 
@@ -88,14 +76,17 @@ export default function Battle() {
   const pkmnTypes = useMemo(() => pokemon[pkmnIndex].types, [pkmnIndex]);
   const pkmnAttackType = useMemo(() => pkmnTypes[randint(0, pkmnTypes.length - 1)], [trigger]);
 
-  async function delay(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+  
   
 
   useEffect(() => {
     const battleLoop = async () => {
-      if (battleFlag) {
+      if (switchDirection) {
+        switchPokemon(switchDirection === "next" ? getNextIndex : getPrevIndex);
+        setSwitchDirection("");
+      }
+
+      if (battleFlag && wildHp > 0) {
         updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
         if (pkmnHp <= 0) {
           const skipCheck = true;
@@ -108,7 +99,7 @@ export default function Battle() {
         }
         setBattleFlag(true);
         setState("");
-        await delay(2000);
+        await delay(500);
       }
 
       if (pokeballTrhown) {
@@ -139,10 +130,10 @@ export default function Battle() {
           setWildIndex(wildIndex + 1);
           await delay(1500);
         } else {
-          fadeOutAnim(true);
+          fadeOutAnim();
           setTimeout(() => {
             setState("win");
-          }, 3000);
+          }, 1000);
           
           return;
         }
@@ -167,28 +158,26 @@ export default function Battle() {
     if (!battleFlag) return;
     if (wildHp > 0) {
       const boostModifier = boost > 0 ? 3 : 1;
-      if (wildTrigger < 0) setWildTrigger(0);
       setTrigger(trigger < effectLimit - 1 ? trigger + 1 : 0);
       setBoost(boost - 1);
       updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
-    } else if (state === "win" && router.canGoBack()) {
-      router.back();
     }
   };
 
   const switchPokemon = (getIndex: (index: number, length: number) => number, skipCheck?: boolean) => {
     if (pkmnHp <= 0 && !skipCheck) return;
-    setBattleFlag(false);
-    setState("switch");
 
     let index = getIndex(pkmnIndex, pokemon.length);
     for (let i = 0; i <= pokemon.length && pokemon[index].hp <= 0; i++) {
       index = getIndex(index, pokemon.length);
-      if (i == pokemon.length && router.canGoBack()) {
+      if (i == pokemon.length) {
         fadeOutAnim();
         setTimeout(() => {
-          router.back();
+          if (router.canGoBack()) {
+            router.back();
+          }
         }, 1000);
+        return;
       }
     }
     setPkmnIndex(index);
@@ -219,37 +208,21 @@ export default function Battle() {
     const { translationX, velocityX, state } = event.nativeEvent;
     if (state === State.END) {
       if (translationX < -50 && velocityX < 0) {
-        switchPokemon(getNextIndex);
+        setSwitchDirection("next");
       } else if (translationX > 50 && velocityX > 0) {
-        switchPokemon(getPrevIndex);
+        setSwitchDirection("prev");
       }
     }
   };
   
   return (
     <CPadding>
-      <CPreventBackButton />
-      <Animated.View style={[styles.teamContainer, teamAnimStyle]}>
-        {team.map((pkmn) => {
-          return (
-            <View style={styles.teamRow}>
-              <Image style={styles.teamImage} source={`${imageUrl}/${pkmn.specie}.png`} />
-              <CText size={30} outlined>{` ${pkmn.level} `}</CText>
-              <Arrow />
-              <CText size={30} outlined>{` ${pkmn.level + (pkmn.level < 100 ? 1 : 0)} `}</CText>
-              {pkmn.level + (pkmn.level < 100 ? 1 : 0) == 6 ? (
-                <Image style={styles.teamImage} source={`${imageUrl}/${pokedata[pkmn.specie].evolves_to[0]}.png`} />
-              ) : null}
-            </View>
-          );
-        })}
-      </Animated.View>
-      <Animated.View style={[styles.container, animStyle]}>
+      {state !== "win" ? <CPreventBackButton /> : <CStats team={team} />}
+      <Animated.View style={[styles.battleArea, animStyle]}>
         <CGestureHandler onGestureEvent={handleGesture}>
           <TouchableWithoutFeedback onPress={handleTap}>
             <View style={styles.battleArea}>
               <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
-              <CText>{wildHp}</CText>
               <View style={styles.container}>
                 <CText outlined size={20}>LVL {wildLevel}</CText>
 
@@ -300,11 +273,11 @@ export default function Battle() {
           </TouchableWithoutFeedback>
         </CGestureHandler>
         <CControlPanel style={styles.buttons}>
-          <CButton onPress={() => switchPokemon(getPrevIndex)}>
+          <CButton onPress={() => setSwitchDirection("prev")}>
             <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
           </CButton>
           <CPokeballButton onThrow={throwPokeball} wobble={wobble} canThrow={wildHp > 0 && coins >= 50} />
-          <CButton onPress={() => switchPokemon(getNextIndex)}>
+          <CButton onPress={() => setSwitchDirection("next")}>
             <SwitchButton width={100} height={100} />
           </CButton>
         </CControlPanel>
@@ -344,19 +317,4 @@ const styles = StyleSheet.create({
   battleArea: {
     flex: 1
   },
-  teamContainer: {
-    flex: 1,
-    position: "absolute",
-    alignSelf: "center",
-    top: "20%",
-  },
-  teamRow: {
-    flexDirection: "row",
-    alignItems: "center"
-  },
-  teamImage: {
-    height: 50,
-    width: 50,
-    transform: [{scaleX: -1}]
-  }
 });
