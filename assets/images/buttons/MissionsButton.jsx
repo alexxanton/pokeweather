@@ -26,7 +26,6 @@ const SvgComponent = (props) => (
       cy={93}
       r={10}
       fill="white"
-      stroke="663399"
       strokeWidth={4}
     />
   </Svg>

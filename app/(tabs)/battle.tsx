@@ -23,6 +23,7 @@ import { useRouter } from "expo-router";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 import { CStats } from "@/components/battle/CStats";
 import { delay } from "@/utils/delay";
+import CMusic from "@/components/CMusic";
 
 
 export default function Battle() {
@@ -174,7 +175,7 @@ export default function Battle() {
     const getNextIndex = (index: number, length: number) => index < length - 1 ? index + 1 : 0;
     const getPrevIndex = (index: number, length: number) => index > 0 ? index - 1 : length - 1;
 
-    if (pkmnHp <= 0 && !skipCheck || team.length < 2) return;
+    if (pkmnHp <= 0 && !skipCheck) return;
     const getIndex = direction === "next" ? getNextIndex : getPrevIndex;
     let index = getIndex(pkmnIndex, pokemon.length);
     setBattleFlag(false);
@@ -194,6 +195,7 @@ export default function Battle() {
 
     if (skipCheck) {
       setPkmnIndex(index);
+      setBattleFlag(true);
     } else {
       setSwitchIndex(index);
       setState(direction);
@@ -231,6 +233,7 @@ export default function Battle() {
   
   return (
     <CPadding>
+      <CMusic />
       {!win ? <CPreventBackButton /> : <CStats team={team} />}
       <CGestureHandler onGestureEvent={handleGesture}>
         <TouchableWithoutFeedback onPress={handleTap}>
