@@ -14,7 +14,7 @@ import Animated, {
 type CPokemonProps = ViewProps & {
   specie: number,
   wild?: boolean,
-  state?: string,
+  state: string,
   trigger: number,
   hp: number,
   battleFlag: boolean
@@ -27,12 +27,13 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   const missingImage = require("@/assets/images/misc/missingno.png");
   const [sprite, setSprite] = useState(wild ? frontSprite : backSprite);
   const hitBack = 20;
-  const hideX = 200;
+  const hideX = 300;
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
   const yCatch = useSharedValue(0);
   const xCatch = useSharedValue(0);
   const xHurt = useSharedValue(0);
+  const xSwitch = useSharedValue(0);
   const yAttack = useSharedValue(0);
   const yDefeat = useSharedValue(0);
   const opacity = useSharedValue(1);
@@ -46,6 +47,7 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
       { translateY: yDefeat.value },
       { translateX: xPos.value },
       { translateX: xHurt.value },
+      { translateX: xSwitch.value },
       { translateX: xCatch.value },
       { translateY: yCatch.value },
       { scale: scale.value }
@@ -131,14 +133,28 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
 
   const catchAnim = () => {};
 
-  const leftAnim = () => {};
+  const switchNextAnim = () => {
+    xSwitch.value = 0;
+    xSwitch.value = withTiming(300, { duration: 200 }, () => {
+      xSwitch.value = -300;
+      xSwitch.value = withDelay(1000, withTiming(0, { duration: 200 }));
+    });
+  };
   
-  const rightAnim = () => {};
+  const switchPrevAnim = () => {
+    xSwitch.value = 0;
+    xSwitch.value = withTiming(-300, { duration: 200 }, () => {
+      xSwitch.value = 500;
+      xSwitch.value = withDelay(1000, withTiming(0, { duration: 200 }));
+    });
+  };
 
   useEffect(() => {
     switch(state) {
       case "pokeball": pokeballAnim(); break;
       case "escape": escapeAnim(); break;
+      case "next": switchNextAnim(); break;
+      case "prev": switchPrevAnim(); break;
     }
   }, [state]);
 

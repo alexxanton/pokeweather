@@ -7,6 +7,7 @@ import { delay } from "@/utils/delay";
 import { CButton } from "../buttons/CButton";
 import Arrow from '@/assets/images/misc/Arrow';
 import { useRouter } from "expo-router";
+import { useData } from "../CDataProvider";
 
 
 export function CStats({team}: {team: Pokemon[]}) {
@@ -15,12 +16,14 @@ export function CStats({team}: {team: Pokemon[]}) {
   const imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons";
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
   const [hidden, setHidden] = useState(true);
+  const {coins, setCoins} = useData();
 
   const displayStats = async () => {
     for (let i = 0; i < team.length; i++) {
       setPokemon(prev => [...prev, team[i]]);
       await delay(500);
     }
+    setCoins(coins + 3000);
     setHidden(false);
   }
 
@@ -51,19 +54,19 @@ export function CStats({team}: {team: Pokemon[]}) {
           );
         })}
       </View>
-      <View style={styles.button}>
-        {hidden ? null : <CButton onPress={goBack}><CText size={40} outlined>GO BACK</CText></CButton>}
-      </View>
+      {hidden ? null : (
+        <CButton onPress={goBack} style={styles.button}>
+          <CText size={20} outlined>Go Back</CText>
+        </CButton>
+      )}
     </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    position: "absolute",
     alignSelf: "center",
-    top: "20%",
+    height: "60%"
   },
   row: {
     flexDirection: "row",
@@ -77,9 +80,18 @@ const styles = StyleSheet.create({
     transform: [{scaleX: -1}]
   },
   button: {
-    position: "absolute",
     alignSelf: "center",
-    bottom: "10%",
-    zIndex: 9999
-  }
+    zIndex: 9999,
+    marginTop: 20,
+    backgroundColor: "#663399",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
 });

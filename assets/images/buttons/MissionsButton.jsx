@@ -14,19 +14,19 @@ const SvgComponent = (props) => (
       height={107}
       x={24.215}
       y={8}
-      fill="white"
+      fill="#663399"
       rx={15}
     />
     <Path
-      fill="#FF1C1C"
+      fill="white"
       d="M79 75h-3.857a3 3 0 0 1-2.989-2.737l-3.867-44A3 3 0 0 1 71.275 25h15.45a3 3 0 0 1 2.988 3.263l-3.867 44A3 3 0 0 1 82.856 75H79Z"
     />
     <Circle
       cx={79}
       cy={93}
       r={10}
-      fill="#FF1C1C"
-      stroke="white"
+      fill="white"
+      stroke="663399"
       strokeWidth={4}
     />
   </Svg>
