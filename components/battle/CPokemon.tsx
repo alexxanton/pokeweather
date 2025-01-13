@@ -135,16 +135,17 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
 
   const switchNextAnim = () => {
     xSwitch.value = 0;
-    xSwitch.value = withTiming(300, { duration: 200 }, () => {
-      xSwitch.value = -300;
+    xSwitch.value = withTiming(-300, { duration: 200 }, () => {
+      xSwitch.value = 500;
       xSwitch.value = withDelay(1000, withTiming(0, { duration: 200 }));
     });
+    
   };
   
   const switchPrevAnim = () => {
     xSwitch.value = 0;
-    xSwitch.value = withTiming(-300, { duration: 200 }, () => {
-      xSwitch.value = 500;
+    xSwitch.value = withTiming(300, { duration: 200 }, () => {
+      xSwitch.value = -300;
       xSwitch.value = withDelay(1000, withTiming(0, { duration: 200 }));
     });
   };

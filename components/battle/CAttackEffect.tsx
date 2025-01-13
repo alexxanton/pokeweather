@@ -7,7 +7,7 @@ import Animated, {
 } from "react-native-reanimated";
 import { useEffect } from "react";
 import { randint } from "@/utils/randint";
-import { attackSprites } from "@/utils/attackSpritesMap";
+import { attackSprites } from "@/utils/battleFunctions/attackSpritesMap";
 
 export type AttackType = keyof typeof attackSprites;
 

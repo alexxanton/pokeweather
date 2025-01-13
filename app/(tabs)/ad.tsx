@@ -1,13 +1,13 @@
 import { useData } from "@/components/CDataProvider";
-import { CPadding } from "@/components/containers/CPadding";
 import { Image } from "expo-image";
 import { useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 export default function Ad() {
-  const {wheelTries, setWheelTries} = useData();
+  const {wheelTries, setWheelTries, setSong} = useData();
 
   useEffect(() => {
+    setSong("ad");
     setWheelTries(wheelTries + 10);
   }, []);
 

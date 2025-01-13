@@ -23,7 +23,6 @@ import { useRouter } from "expo-router";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 import { CStats } from "@/components/battle/CStats";
 import { delay } from "@/utils/delay";
-import CMusic from "@/components/CMusic";
 
 
 export default function Battle() {
@@ -41,7 +40,7 @@ export default function Battle() {
   };
   
 
-  const {userId, team, weatherCondition, boost, setBoost, coins, setCoins} = useData();
+  const {userId, team, weatherCondition, boost, setBoost, coins, setCoins, song, setSong} = useData();
   const [battleFlag, setBattleFlag] = useState(false);
   const [wobble, setWobble] = useState(0);
   const [pokeballTrhown, setPokeballTrhown] = useState(false);
@@ -104,6 +103,7 @@ export default function Battle() {
         if (team.length < 1) {
           return;
         }
+        setSong("battle");
         setBattleFlag(true);
         setState("");
         await delay(500);
@@ -224,16 +224,15 @@ export default function Battle() {
     const { translationX, velocityX, state } = event.nativeEvent;
     if (state === State.END) {
       if (translationX < -50 && velocityX < 0) {
-        switchPokemon("prev");
-      } else if (translationX > 50 && velocityX > 0) {
         switchPokemon("next");
+      } else if (translationX > 50 && velocityX > 0) {
+        switchPokemon("prev");
       }
     }
   };
   
   return (
     <CPadding>
-      <CMusic />
       {!win ? <CPreventBackButton /> : <CStats team={team} />}
       <CGestureHandler onGestureEvent={handleGesture}>
         <TouchableWithoutFeedback onPress={handleTap}>

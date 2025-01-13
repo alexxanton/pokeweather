@@ -1,4 +1,4 @@
-import { BackHandler, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { CControlPanel } from "@/components/containers/CControlPanel";
 import { CButton } from "@/components/buttons/CButton";
 import { CArrowButton } from "@/components/buttons/CArrowButton";
@@ -22,7 +22,6 @@ import { Pokemon } from "@/utils/battleFunctions/generatePokemonWithStats";
 export default function Team() {
   const {userId, team, setTeam, coins, setCoins, boost, setBoost} = useData();
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
-  const [hidden, setHidden] = useState(false);
   const [pagination, setPagination] = useState(0);
   
   const getPokemon = async () => {
@@ -65,22 +64,6 @@ export default function Team() {
   }, [team]);
 
   const router = useRouter();
-
-  useEffect(() => {
-    const onBackPress = () => {
-      setHidden(true);
-      setTimeout(() => {
-        router.back();
-      }, 0);
-      return true;
-    };
-
-    BackHandler.addEventListener("hardwareBackPress", onBackPress);
-
-    return () => {
-      BackHandler.removeEventListener("hardwareBackPress", onBackPress);
-    };
-  }, []);
 
   const addPokemon = (pkmn: Pokemon) => {
     if (team.length < 6 && !team.some((obj: any) => obj.id === pkmn.id)) {

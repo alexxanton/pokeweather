@@ -1,17 +1,57 @@
 import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
+import { View, ViewProps } from 'react-native';
 import { Audio } from 'expo-av';
+import { randint } from '@/utils/randint';
+import { battleMusicMap } from '@/utils/battleFunctions/musicMap';
+import { useData } from './CDataProvider';
 
-const CMusic = () => {
+type RandomKey = keyof typeof battleMusicMap;
+
+
+export function CMusic({children}: ViewProps) {
   const [sound, setSound] = useState<Audio.Sound | null>(null);
+  const adSong = require("@/assets/music/ad_song.mp3");
+  const {song} = useData();
+  const [preloadedSounds, setPreloadedSounds] = useState<{ [key: string]: Audio.Sound }>({});
+
+  useEffect(() => {
+    const preloadSounds = async () => {
+      const sounds: { [key: string]: Audio.Sound } = {};
+      const keys = Object.keys(battleMusicMap);
+
+      for (const key of keys) {
+        const { sound } = await Audio.Sound.createAsync(battleMusicMap[key as RandomKey]);
+        sounds[key] = sound;
+      }
+
+      // Add the adSong to the preload sounds as well
+      const { sound: adSound } = await Audio.Sound.createAsync(adSong);
+      sounds["adSong"] = adSound;
+
+      setPreloadedSounds(sounds);
+      console.log("All sounds preloaded");
+    };
+
+    preloadSounds();
+
+    // Clean up preloaded sounds when component unmounts
+    return () => {
+      Object.values(preloadedSounds).forEach((sound) => {
+        sound.unloadAsync();
+      });
+    };
+  }, []); // Empty array to run only on mount
 
   useEffect(() => {
     let soundObject: Audio.Sound;
+    const keys = Object.keys(battleMusicMap);
+    const randomKey = keys[randint(0, keys.length)] as RandomKey;
+    if (!song) return;
 
     const playMusic = async () => {
       try {
         const { sound } = await Audio.Sound.createAsync(
-          require("../assets/music/dp_trainer.mp3"),
+          song === "battle" ? battleMusicMap[randomKey] : adSong,
           { shouldPlay: true, isLooping: true }
         );
         soundObject = sound;
@@ -52,9 +92,11 @@ const CMusic = () => {
 
       fadeOutAndStop();
     };
-  }, []);
+  }, [song]);
 
-  return <View />;
+  return (
+    <View style={{flex: 1}}>
+      {children}
+    </View>
+  );
 };
-
-export default CMusic;
