@@ -1,14 +1,19 @@
-import { useFocusEffect, useRouter } from "expo-router";
+import { useFocusEffect, useRouter, usePathname } from "expo-router";
 import { useCallback } from "react";
 import { Alert, BackHandler } from "react-native";
 import { useData } from "../CDataProvider";
 
 export function CHandleBackButton({ask}: {ask?: boolean}) {
   const router = useRouter();
+  const pathname = usePathname();
   const {setSong} = useData();
 
   const goBack = () => {
-    setSong("");
+    if (pathname === "/battle") {
+      setSong("stop_battle");
+    } else {
+      setSong("stop_ad");
+    }
     router.back();
   };
 
