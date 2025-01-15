@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Animated, { useAnimatedStyle, useSharedValue, withDelay, withTiming, withSpring, withSequence } from 'react-native-reanimated';
 import { CButton } from './CButton';
 import { type PressableProps } from 'react-native';
 
 import Pokeball from '@/assets/images/misc/Pokeball';
+import { Audio } from 'expo-av';
+
 
 type CPokeballButtonProps = PressableProps & {
   onThrow: () => void,
@@ -19,6 +21,7 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
   const rotation = useSharedValue(0);
   const wobbleRotation = useSharedValue(0);
   const scale = useSharedValue(1);
+  const soundRef = useRef<Audio.Sound | null>(null);
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
@@ -39,6 +42,7 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
     scale.value = 1;
 
     // throw pokeball
+    playSound();
     scale.value = withTiming(0.5, { duration: 500 });
     rotation.value = withTiming(360, { duration: 800 });
     xPos.value = withTiming(70, { duration: 1000 });
@@ -104,6 +108,35 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
       catchFailedAnim();
     }
   }, [wobble]);
+
+  const playSound = async () => {
+    try {
+      await soundRef.current.replayAsync();
+    } catch (error) {
+      console.error("Error replaying sound:", error);
+    }
+  };
+
+  useEffect(() => {
+      const preloadSound = async () => {
+        try {
+          const { sound } = await Audio.Sound.createAsync(
+            require("@/assets/sounds/pokeball_throw.wav")
+          );
+          soundRef.current = sound;
+        } catch (error) {
+          console.error("Error preloading sound:", error);
+        }
+      };
+  
+      preloadSound();
+  
+      return () => {
+        if (soundRef.current) {
+          soundRef.current.unloadAsync();
+        }
+      };
+    }, []);
   
   return(
     <>

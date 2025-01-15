@@ -1,6 +1,7 @@
 import { randint } from "@/utils/randint";
 import { Image } from "expo-image";
 import { useEffect, useState } from "react";
+import { Audio } from 'expo-av';
 import { StyleSheet, View, type ViewProps } from "react-native";
 import Animated, {
   useSharedValue,
@@ -39,6 +40,15 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   const opacity = useSharedValue(1);
   const brightness = useSharedValue(1);
   const scale = useSharedValue(1);
+
+  async function playSound() {
+    const { sound } = await Audio.Sound.createAsync(
+      {uri: `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${specie}.ogg`}
+    );
+
+    sound.setVolumeAsync(0.3)
+    await sound.playAsync();
+  }
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
@@ -129,23 +139,23 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
 
   const nextAnim = () => {
     xPos.value = withTiming(0, { duration: 200 });
+    playSound();
   };
 
   const catchAnim = () => {};
 
   const switchNextAnim = () => {
     xSwitch.value = 0;
-    xSwitch.value = withTiming(-300, { duration: 200 }, () => {
-      xSwitch.value = 500;
+    xSwitch.value = withTiming(300, { duration: 200 }, () => {
+      xSwitch.value = -300;
       xSwitch.value = withDelay(1000, withTiming(0, { duration: 200 }));
     });
-    
   };
   
   const switchPrevAnim = () => {
     xSwitch.value = 0;
-    xSwitch.value = withTiming(300, { duration: 200 }, () => {
-      xSwitch.value = -300;
+    xSwitch.value = withTiming(-300, { duration: 200 }, () => {
+      xSwitch.value = 500;
       xSwitch.value = withDelay(1000, withTiming(0, { duration: 200 }));
     });
   };

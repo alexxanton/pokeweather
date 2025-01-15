@@ -1,17 +1,11 @@
 export const battleMusicMap = {
-    "bw2_gym": require("@/assets/music/bw2_gym.mp3"),
     "bw2_world": require("@/assets/music/bw2_world.mp3"),
-    "bw_elite": require("@/assets/music/bw_elite.mp3"),
     "dp_trainer": require("@/assets/music/dp_trainer.mp3"),
-    "dpp_anime": require("@/assets/music/dpp_anime.mp3"),
     "dpp_wild": require("@/assets/music/dpp_wild.mp3"),
-    "hgss_champion": require("@/assets/music/hgss_champion.mp3"),
-    "hgss_gym": require("@/assets/music/hgss_gym.mp3"),
     "hgss_kanto_trainer": require("@/assets/music/hgss_kanto_trainer.mp3"),
     "hgss_rival": require("@/assets/music/hgss_rival.mp3"),
     "hgss_trainer": require("@/assets/music/hgss_trainer.mp3"),
     "hgss_wild": require("@/assets/music/hgss_wild.mp3"),
     "hgss_wild2": require("@/assets/music/hgss_wild2.mp3"),
-    "sg_trainer": require("@/assets/music/sg_trainer.mp3"),
-    "sm_trainer": require("@/assets/music/sm_trainer.mp3"),
+    "sm_trainer": require("@/assets/music/sm_trainer.mp3")
 };

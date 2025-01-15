@@ -1,3 +1,4 @@
+import { CHandleBackButton } from "@/components/battle/CHandleBackButton";
 import { useData } from "@/components/CDataProvider";
 import { Image } from "expo-image";
 import { useEffect } from "react";
@@ -13,6 +14,7 @@ export default function Ad() {
 
   return (
     <View style={styles.container}>
+      <CHandleBackButton />
       <Image source={require("@/assets/images/misc/ad.png")} style={styles.image} />
     </View>
   );

@@ -5,7 +5,7 @@ import { CPokemon } from "@/components/battle/CPokemon";
 import { CText } from "@/components/text/CText";
 import { CControlPanel } from "@/components/containers/CControlPanel";
 import { CButton } from "@/components/buttons/CButton";
-import { CPreventBackButton } from "@/components/battle/CPreventBackButton";
+import { CHandleBackButton } from "@/components/battle/CHandleBackButton";
 import { CAttackEffect } from "@/components/battle/CAttackEffect";
 import { useData } from "@/components/CDataProvider";
 import { useEffect, useMemo, useState } from "react";
@@ -78,8 +78,6 @@ export default function Battle() {
   const pkmnTypes = useMemo(() => pokemon[pkmnIndex].types, [pkmnIndex]);
   const pkmnAttackType = useMemo(() => pkmnTypes[randint(0, pkmnTypes.length - 1)], [trigger]);
 
-  
-  
 
   useEffect(() => {
     const battleLoop = async () => {
@@ -224,16 +222,16 @@ export default function Battle() {
     const { translationX, velocityX, state } = event.nativeEvent;
     if (state === State.END) {
       if (translationX < -50 && velocityX < 0) {
-        switchPokemon("next");
-      } else if (translationX > 50 && velocityX > 0) {
         switchPokemon("prev");
+      } else if (translationX > 50 && velocityX > 0) {
+        switchPokemon("next");
       }
     }
   };
   
   return (
     <CPadding>
-      {!win ? <CPreventBackButton /> : <CStats team={team} />}
+      {!win ? <CHandleBackButton ask /> : <CStats team={team} />}
       <CGestureHandler onGestureEvent={handleGesture}>
         <TouchableWithoutFeedback onPress={handleTap}>
           <Animated.View style={[styles.battleArea, animStyle]}>
@@ -278,6 +276,7 @@ export default function Battle() {
                     key={index}
                     battleFlag={battleFlag}
                     type={wildAttackType.name}
+                    wildAttack
                   />
                 })}
               </CPokemon>

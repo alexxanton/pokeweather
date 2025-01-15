@@ -7,12 +7,11 @@ import { useData } from './CDataProvider';
 
 type RandomKey = keyof typeof battleMusicMap;
 
-
-export function CMusic({children}: ViewProps) {
-  const [sound, setSound] = useState<Audio.Sound | null>(null);
-  const adSong = require("@/assets/music/ad_song.mp3");
-  const {song} = useData();
+export function CMusic({ children }: ViewProps) {
+  const [playingSounds, setPlayingSounds] = useState<Audio.Sound[]>([]);
   const [preloadedSounds, setPreloadedSounds] = useState<{ [key: string]: Audio.Sound }>({});
+  const adSong = require("@/assets/music/ad_song.mp3");
+  const { song } = useData();
 
   useEffect(() => {
     const preloadSounds = async () => {
@@ -26,7 +25,7 @@ export function CMusic({children}: ViewProps) {
 
       // Add the adSong to the preload sounds as well
       const { sound: adSound } = await Audio.Sound.createAsync(adSong);
-      sounds["adSong"] = adSound;
+      sounds["ad_song"] = adSound;
 
       setPreloadedSounds(sounds);
       console.log("All sounds preloaded");
@@ -40,63 +39,72 @@ export function CMusic({children}: ViewProps) {
         sound.unloadAsync();
       });
     };
-  }, []); // Empty array to run only on mount
+  }, []);
 
   useEffect(() => {
-    let soundObject: Audio.Sound;
-    const keys = Object.keys(battleMusicMap);
-    const randomKey = keys[randint(0, keys.length)] as RandomKey;
-    if (!song) return;
-
     const playMusic = async () => {
       try {
-        const { sound } = await Audio.Sound.createAsync(
-          song === "battle" ? battleMusicMap[randomKey] : adSong,
-          { shouldPlay: true, isLooping: true }
-        );
-        soundObject = sound;
-        setSound(sound);
+        // Stop and unload all currently playing sounds
+        await stopAllSounds();
+
+        const keys = Object.keys(battleMusicMap);
+        const randomKey = keys[randint(0, keys.length)] as RandomKey;
+        const source = song === "battle" ? battleMusicMap[randomKey] : adSong;
+
+        console.log("Loading Music:", source);
+        const { sound } = await Audio.Sound.createAsync(source, {
+          shouldPlay: true,
+          isLooping: true,
+        });
+
+        sound.setVolumeAsync(0.2);
+        setPlayingSounds((prevSounds) => [...prevSounds, sound]);
         console.log("Playing Music");
       } catch (error) {
-        console.error("Error loading sound:", error);
+        console.error("Error playing sound:", error);
       }
     };
 
-    playMusic();
+    if (song) {
+      playMusic();
+    }
 
-    return () => {
-      const fadeOutAndStop = async () => {
-        if (soundObject) {
-          try {
-            console.log("Fading out music");
-            const fadeDuration = 2000;
-            const steps = 20;
-            const interval = fadeDuration / steps;
-            const volumeStep = 1 / steps;
-
-            for (let i = 0; i < steps; i++) {
-              const currentVolume = 1 - i * volumeStep;
-              await soundObject.setVolumeAsync(currentVolume);
-              await new Promise((resolve) => setTimeout(resolve, interval));
-            }
-
-            await soundObject.stopAsync();
-            console.log("Music stopped");
-          } catch (error) {
-            console.error("Error fading out:", error);
-          } finally {
-            soundObject.unloadAsync();
-          }
-        }
-      };
-
-      fadeOutAndStop();
-    };
+    stopAllSounds();
   }, [song]);
 
-  return (
-    <View style={{flex: 1}}>
-      {children}
-    </View>
-  );
-};
+  const stopAllSounds = async () => {
+    try {
+      for (const sound of playingSounds) {
+        await fadeOutAndStop(sound);
+        await sound.unloadAsync();
+      }
+      setPlayingSounds([]);
+      console.log("All sounds stopped and unloaded");
+    } catch (error) {
+      console.error("Error stopping sounds:", error);
+    }
+  };
+
+  const fadeOutAndStop = async (sound: Audio.Sound) => {
+    try {
+      console.log("Fading out music");
+      const fadeDuration = 2000;
+      const steps = 20;
+      const interval = fadeDuration / steps;
+      const volumeStep = 0.2 / steps;
+
+      for (let i = 0; i < steps; i++) {
+        const currentVolume = 0.2 - i * volumeStep;
+        await sound.setVolumeAsync(currentVolume);
+        await new Promise((resolve) => setTimeout(resolve, interval));
+      }
+
+      await sound.stopAsync();
+      console.log("Music stopped");
+    } catch (error) {
+      console.error("Error fading out:", error);
+    }
+  };
+
+  return <View style={{ flex: 1 }}>{children}</View>;
+}
