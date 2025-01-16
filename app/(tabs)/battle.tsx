@@ -251,8 +251,7 @@ export default function Battle() {
                 {[...Array(effectLimit)].map((_, index) => {
                   return <CAttackEffect
                     trigger={trigger}
-                    effectIndex={trigger}
-                    num={index}
+                    index={index}
                     key={index}
                     battleFlag={battleFlag}
                     type={pkmnAttackType.name}
@@ -271,12 +270,10 @@ export default function Battle() {
                 {[...Array(effectLimit)].map((_, index) => {
                   return <CAttackEffect
                     trigger={wildTrigger}
-                    effectIndex={wildTrigger}
-                    num={index}
+                    index={index}
                     key={index}
                     battleFlag={battleFlag}
                     type={wildAttackType.name}
-                    wildAttack
                   />
                 })}
               </CPokemon>

@@ -5,7 +5,8 @@ import { type PressableProps } from 'react-native';
 
 import Pokeball from '@/assets/images/misc/Pokeball';
 import { Audio } from 'expo-av';
-
+import { loadSound } from '@/utils/loadSound';
+import { playSound } from '@/utils/playSound';
 
 type CPokeballButtonProps = PressableProps & {
   onThrow: () => void,
@@ -16,12 +17,18 @@ type CPokeballButtonProps = PressableProps & {
 
 export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballButtonProps) {
   const [isPressed, setIsPressed] = useState(false);
+  const [throwSound, setThrowSound] = useState<Audio.Sound>();
+  const [wobbleSound, setWobbleSound] = useState<Audio.Sound>();
   const xPos = useSharedValue(0);
   const yPos = useSharedValue(0);
   const rotation = useSharedValue(0);
   const wobbleRotation = useSharedValue(0);
   const scale = useSharedValue(1);
-  const soundRef = useRef<Audio.Sound | null>(null);
+
+  useEffect(() => {
+    loadSound(setThrowSound, require("@/assets/sounds/pokeball_throw.wav"));
+    loadSound(setWobbleSound, require("@/assets/sounds/pokeball_throw.wav"));
+  }, []);
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
@@ -42,7 +49,7 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
     scale.value = 1;
 
     // throw pokeball
-    playSound();
+    playSound(throwSound);
     scale.value = withTiming(0.5, { duration: 500 });
     rotation.value = withTiming(360, { duration: 800 });
     xPos.value = withTiming(70, { duration: 1000 });
@@ -109,35 +116,6 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
     }
   }, [wobble]);
 
-  const playSound = async () => {
-    try {
-      await soundRef.current.replayAsync();
-    } catch (error) {
-      console.error("Error replaying sound:", error);
-    }
-  };
-
-  useEffect(() => {
-      const preloadSound = async () => {
-        try {
-          const { sound } = await Audio.Sound.createAsync(
-            require("@/assets/sounds/pokeball_throw.wav")
-          );
-          soundRef.current = sound;
-        } catch (error) {
-          console.error("Error preloading sound:", error);
-        }
-      };
-  
-      preloadSound();
-  
-      return () => {
-        if (soundRef.current) {
-          soundRef.current.unloadAsync();
-        }
-      };
-    }, []);
-  
   return(
     <>
       <Animated.View style={animStyle}>

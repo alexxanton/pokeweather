@@ -8,6 +8,8 @@ export function CHandleBackButton({ask}: {ask?: boolean}) {
   const pathname = usePathname();
   const {setSong} = useData();
 
+  // Prevents going back from the battle screen without
+  // asking first and handles stopping music when leaving
   const goBack = () => {
     if (pathname === "/battle") {
       setSong("stop_battle");

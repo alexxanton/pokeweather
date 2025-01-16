@@ -12,13 +12,11 @@ export function CMusic({ children }: ViewProps) {
   const {song} = useData();
 
   useEffect(() => {
-    const loadMusic = async (setter: React.Dispatch<React.SetStateAction<any>>, source: any) => {
-      const { sound } = await Audio.Sound.createAsync(source, {
-        isLooping: true,
-      });
+    const loadMusic = async (setSound: React.Dispatch<React.SetStateAction<any>>, source: any) => {
+      const { sound } = await Audio.Sound.createAsync(source, { isLooping: true });
 
       sound.setVolumeAsync(0.2);
-      setter(sound);
+      setSound(sound);
     };
 
     loadMusic(setAdMusic, adSong);
@@ -38,7 +36,6 @@ export function CMusic({ children }: ViewProps) {
       console.error("Error playing sound:", error);
     }
 
-    console.log("song:",song)
     if (song === "stop_battle") {
       if (battleMusic) fadeOutAndStop(battleMusic);
     } else if (song === "stop_ad") {

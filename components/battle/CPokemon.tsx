@@ -48,6 +48,9 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
 
     sound.setVolumeAsync(0.3)
     await sound.playAsync();
+    setTimeout(() => {
+      sound.unloadAsync();
+    }, 10000);
   }
 
   const animStyle = useAnimatedStyle(() => ({
