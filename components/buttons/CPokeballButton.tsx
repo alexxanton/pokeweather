@@ -5,8 +5,9 @@ import { type PressableProps } from 'react-native';
 
 import Pokeball from '@/assets/images/misc/Pokeball';
 import { Audio } from 'expo-av';
-import { loadSound } from '@/utils/loadSound';
-import { playSound } from '@/utils/playSound';
+import { loadSound } from '@/utils/sounds/loadSound';
+import { playSound } from '@/utils/sounds/playSound';
+import { unloadSound } from '@/utils/sounds/unloadSound';
 
 type CPokeballButtonProps = PressableProps & {
   onThrow: () => void,
@@ -26,8 +27,13 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
   const scale = useSharedValue(1);
 
   useEffect(() => {
-    loadSound(setThrowSound, require("@/assets/sounds/pokeball_throw.wav"));
-    loadSound(setWobbleSound, require("@/assets/sounds/pokeball_throw.wav"));
+    loadSound(setThrowSound, require("@/assets/sounds/pokeball_throw.ogg"));
+    loadSound(setWobbleSound, require("@/assets/sounds/pokeball_throw.ogg"));
+
+    return () => {
+      unloadSound(throwSound);
+      unloadSound(wobbleSound);
+    };
   }, []);
 
   const animStyle = useAnimatedStyle(() => ({
