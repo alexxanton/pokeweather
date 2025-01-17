@@ -1,5 +1,8 @@
 import { type Pokemon } from '@/utils/battleFunctions/generatePokemonWithStats';
+import { Audio } from 'expo-av';
 import React, { createContext, useState, useContext, type PropsWithChildren } from 'react';
+
+type Sounds = {pokeball?: Audio.Sound, throw?: Audio.Sound, wobble?: Audio.Sound, escape?: Audio.Sound};
 
 type CDataProviderType = {
   // Weather
@@ -35,6 +38,9 @@ type CDataProviderType = {
   setTeam: React.Dispatch<React.SetStateAction<Pokemon[]>>;
   song: string;
   setSong: React.Dispatch<React.SetStateAction<string>>;
+  sounds: Sounds;
+  setSounds: React.Dispatch<React.SetStateAction<Sounds>>;
+  
 }
 
 const DataContext = createContext<CDataProviderType | undefined>(undefined);
@@ -52,7 +58,8 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
   const [wheelTries, setWheelTries] = useState<number>(10);
   const [buttonActive, setButtonActive] = useState<boolean>(true);
   const [team, setTeam] = useState<Pokemon[]>([]);
-  const [song, setSong] = useState("")
+  const [song, setSong] = useState("");
+  const [sounds, setSounds] = useState<Sounds>({});
 
   return (
     <DataContext.Provider value={{
@@ -84,7 +91,9 @@ export const CDataProvider = ( {children}: PropsWithChildren ) => {
       team,
       setTeam,
       song,
-      setSong
+      setSong,
+      sounds,
+      setSounds
     }}>
       {children}
     </DataContext.Provider>

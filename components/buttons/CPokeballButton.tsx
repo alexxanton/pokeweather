@@ -8,6 +8,7 @@ import { Audio } from 'expo-av';
 import { loadSound } from '@/utils/sounds/loadSound';
 import { playSound } from '@/utils/sounds/playSound';
 import { unloadSound } from '@/utils/sounds/unloadSound';
+import { useData } from '../CDataProvider';
 
 type CPokeballButtonProps = PressableProps & {
   onThrow: () => void,
@@ -18,23 +19,15 @@ type CPokeballButtonProps = PressableProps & {
 
 export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballButtonProps) {
   const [isPressed, setIsPressed] = useState(false);
-  const [throwSound, setThrowSound] = useState<Audio.Sound>();
-  const [wobbleSound, setWobbleSound] = useState<Audio.Sound>();
+  const {sounds, setSounds} = useData();
   const xPos = useSharedValue(0);
   const yPos = useSharedValue(0);
   const rotation = useSharedValue(0);
   const wobbleRotation = useSharedValue(0);
   const scale = useSharedValue(1);
+  
 
-  useEffect(() => {
-    loadSound(setThrowSound, require("@/assets/sounds/pokeball_throw.ogg"));
-    loadSound(setWobbleSound, require("@/assets/sounds/pokeball_throw.ogg"));
-
-    return () => {
-      unloadSound(throwSound);
-      unloadSound(wobbleSound);
-    };
-  }, []);
+  
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
@@ -55,7 +48,10 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
     scale.value = 1;
 
     // throw pokeball
-    playSound(throwSound);
+    playSound(sounds.throw);
+    setTimeout(() => {
+      playSound(sounds.pokeball);
+    }, 500);
     scale.value = withTiming(0.5, { duration: 500 });
     rotation.value = withTiming(360, { duration: 800 });
     xPos.value = withTiming(70, { duration: 1000 });
@@ -115,10 +111,12 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
   useEffect(() => {
     if (wobble > 0 && wobble < 4) {
       wobbleAnim();
+      playSound(sounds.wobble);
     } else if (wobble == 4) {
       catchSucceedAnim();
     } else if (wobble == -1) {
       catchFailedAnim();
+      playSound(sounds.escape);
     }
   }, [wobble]);
 

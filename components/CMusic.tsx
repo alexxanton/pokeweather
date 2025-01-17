@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, ViewProps } from 'react-native';
 import { Audio } from 'expo-av';
 import { useData } from './CDataProvider';
+import { loadSound } from '@/utils/sounds/loadSound';
 
 
 export function CMusic({ children }: ViewProps) {
@@ -9,7 +10,7 @@ export function CMusic({ children }: ViewProps) {
   const [adMusic, setAdMusic] = useState<Audio.Sound>();
   const adSong = require("../assets/music/ad_song.ogg");
   const battleSong = require("@/assets/music/dpp_wild.ogg");
-  const {song} = useData();
+  const {song, setSounds} = useData();
 
   useEffect(() => {
     const loadMusic = async (setSound: React.Dispatch<React.SetStateAction<any>>, source: any) => {
@@ -21,8 +22,12 @@ export function CMusic({ children }: ViewProps) {
 
     loadMusic(setAdMusic, adSong);
     loadMusic(setBattleMusic, battleSong);
+    loadSound(setSounds, "pokeball", require("@/assets/sounds/pokeball.ogg"));
+    loadSound(setSounds, "throw", require("@/assets/sounds/pokeball_throw.ogg"));
+    loadSound(setSounds, "wobble", require("@/assets/sounds/wobble.ogg"));
+    loadSound(setSounds, "escape", require("@/assets/sounds/escape.ogg"));
   }, []);
-  
+
   useEffect(() => {
     try {
       if (song === "battle") {

@@ -47,8 +47,8 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   const scale = useSharedValue(1);
 
   useEffect(() => {
-    loadSound(setAttackSound, require("@/assets/sounds/attack.ogg"));
-    loadSound(setDefeatSound, require("@/assets/sounds/defeat.ogg"));
+    // loadSound(setAttackSound, require("@/assets/sounds/attack.ogg"));
+    // loadSound(setDefeatSound, require("@/assets/sounds/defeat.ogg"));
 
     return () => {
       unloadSound(attackSound);
