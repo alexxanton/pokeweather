@@ -19,15 +19,12 @@ type CPokeballButtonProps = PressableProps & {
 
 export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballButtonProps) {
   const [isPressed, setIsPressed] = useState(false);
-  const {sounds, setSounds} = useData();
+  const {sounds} = useData();
   const xPos = useSharedValue(0);
   const yPos = useSharedValue(0);
   const rotation = useSharedValue(0);
   const wobbleRotation = useSharedValue(0);
   const scale = useSharedValue(1);
-  
-
-  
 
   const animStyle = useAnimatedStyle(() => ({
     transform: [
@@ -103,6 +100,18 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
   };
 
   const catchSucceedAnim = () => {
+    scale.value = withSequence(
+      withTiming(0.7, { duration: 200 }),
+      withTiming(0.5, { duration: 200 })
+    );
+
+    rotation.value = withDelay(300, withTiming(360, { duration: 700 }));
+    yPos.value = withDelay(300, withTiming(0, { duration: 700 }));
+    xPos.value = withDelay(300, withTiming(0, { duration: 700 }, () => {
+      scale.value = withTiming(1, { duration: 500 });
+      rotation.value = 1;
+    }));
+    
     setTimeout(() => {
       setIsPressed(false);
     }, 900);
@@ -114,6 +123,7 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
       playSound(sounds.wobble);
     } else if (wobble == 4) {
       catchSucceedAnim();
+      playSound(sounds.catch)
     } else if (wobble == -1) {
       catchFailedAnim();
       playSound(sounds.escape);

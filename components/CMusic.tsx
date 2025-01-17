@@ -26,6 +26,7 @@ export function CMusic({ children }: ViewProps) {
     loadSound(setSounds, "throw", require("@/assets/sounds/pokeball_throw.ogg"));
     loadSound(setSounds, "wobble", require("@/assets/sounds/wobble.ogg"));
     loadSound(setSounds, "escape", require("@/assets/sounds/escape.ogg"));
+    loadSound(setSounds, "catch", require("@/assets/sounds/catch.ogg"));
   }, []);
 
   useEffect(() => {

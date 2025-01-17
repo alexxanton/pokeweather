@@ -108,21 +108,27 @@ export default function Battle() {
       }
 
       if (pokeballTrhown) {
+        let pokemonCaught = true;
         setWobble(0);
 
         for (let i = 1; i <= 3; i++) {
           await delay(i == 1 ? 1500 : 1000);
-          setWobble(i);
+          if (randint(0, 4) < 4 || i == 1) {
+            setWobble(i);
+          } else {
+            pokemonCaught = false;
+            setWobble(-1); // triggers pokeball escape animation
+            setWildState("escape");
+            break;
+          }
         }
 
         await delay(1000);
-        if (randint(1, 1) == 10) {
-          setWobble(4); // triggers catch animation
+        if (pokemonCaught) {
+          setWobble(4); // triggers pokeball catch animation
           catchPokemon();
+          await delay(2000);
           setWildState("catch");
-        } else {
-          setWobble(-1); // triggers escape animation
-          setWildState("escape");
         }
         setPokeballTrhown(false);
         setBattleFlag(true);
@@ -203,15 +209,19 @@ export default function Battle() {
 
   const catchPokemon = async () => {
     try {
-      const response = await axios.post(`${DATABASE_SERVER_URI}/catch-pokemon`, {
+      await axios.post(`${DATABASE_SERVER_URI}/catch-pokemon`, {
         specie: wildSpecie,
         level: wildLevel,
         id: userId
       });
+      setCoins(coins + 1000);
       if (wildIndex < wildPokemon.length - 1) {
         setWildIndex(wildIndex + 1);
-        await delay(1500);
-        // setWildTrigger(!wildTrigger);
+      } else {
+        fadeOutAnim();
+        setTimeout(() => {
+          setWin(true);
+        }, 1000);
       }
     } catch (error) {
       console.log(error);

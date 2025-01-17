@@ -11,9 +11,7 @@ import Animated, {
   withDelay,
   withSequence
 } from "react-native-reanimated";
-import { loadSound } from "@/utils/sounds/loadSound";
 import { playSound } from "@/utils/sounds/playSound";
-import { unloadSound } from "@/utils/sounds/unloadSound";
 
 type CPokemonProps = ViewProps & {
   specie: number,
@@ -30,8 +28,6 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   const frontSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const missingImage = require("@/assets/images/misc/missingno.png");
   const [sprite, setSprite] = useState(wild ? frontSprite : backSprite);
-  const [attackSound, setAttackSound] = useState<Audio.Sound>();
-  const [defeatSound, setDefeatSound] = useState<Audio.Sound>();
   const hitBack = 20;
   const hideX = 300;
   const yPos = useSharedValue(0);
@@ -45,16 +41,6 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   const opacity = useSharedValue(1);
   const brightness = useSharedValue(1);
   const scale = useSharedValue(1);
-
-  useEffect(() => {
-    // loadSound(setAttackSound, require("@/assets/sounds/attack.ogg"));
-    // loadSound(setDefeatSound, require("@/assets/sounds/defeat.ogg"));
-
-    return () => {
-      unloadSound(attackSound);
-      unloadSound(defeatSound);
-    };
-  }, []);
 
   async function playCrySound() {
     const { sound } = await Audio.Sound.createAsync(
@@ -157,10 +143,19 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
 
   const nextAnim = () => {
     xPos.value = withTiming(0, { duration: 200 });
-    playCrySound();
+    setTimeout(() => {
+      playCrySound();
+    }, wild ? 1000 : 0);
   };
 
-  const catchAnim = () => {};
+  const catchAnim = () => {
+    scale.value = 1;
+    xCatch.value = 300;
+    yCatch.value = 0;
+    opacity.value = 1;
+    brightness.value = 1;
+    xCatch.value = withTiming(0, { duration: 500 });
+  };
 
   const switchNextAnim = () => {
     xSwitch.value = 0;
@@ -181,6 +176,7 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   useEffect(() => {
     switch(state) {
       case "pokeball": pokeballAnim(); break;
+      case "catch": catchAnim(); break;
       case "escape": escapeAnim(); break;
       case "next": switchNextAnim(); break;
       case "prev": switchPrevAnim(); break;
@@ -196,7 +192,7 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
     if (hp <= 0) {
       defeatAnim();
       setTimeout(() => {
-        playSound(defeatSound);
+        // playSound(defeatSound);
       }, 1000);
     }
   }, [hp]);
@@ -209,7 +205,7 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
     if (battleFlag) {
       attackAnim();
       if (trigger % 4 == 0 && !wild) {
-        playSound(attackSound);
+        // playSound(attackSound);
       }
     }
   }, [trigger]);
