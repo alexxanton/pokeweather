@@ -11,7 +11,6 @@ import Animated, {
   withDelay,
   withSequence
 } from "react-native-reanimated";
-import { playSound } from "@/utils/sounds/playSound";
 
 type CPokemonProps = ViewProps & {
   specie: number,

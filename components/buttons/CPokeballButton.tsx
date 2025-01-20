@@ -4,10 +4,7 @@ import { CButton } from './CButton';
 import { type PressableProps } from 'react-native';
 
 import Pokeball from '@/assets/images/misc/Pokeball';
-import { Audio } from 'expo-av';
-import { loadSound } from '@/utils/sounds/loadSound';
 import { playSound } from '@/utils/sounds/playSound';
-import { unloadSound } from '@/utils/sounds/unloadSound';
 import { useData } from '../CDataProvider';
 
 type CPokeballButtonProps = PressableProps & {
@@ -45,9 +42,9 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
     scale.value = 1;
 
     // throw pokeball
-    playSound(sounds.throw);
+    playSound(sounds.pokeball_throw);
     setTimeout(() => {
-      playSound(sounds.pokeball);
+      playSound(sounds.pokeball_in);
     }, 500);
     scale.value = withTiming(0.5, { duration: 500 });
     rotation.value = withTiming(360, { duration: 800 });
@@ -120,13 +117,13 @@ export function CPokeballButton({onThrow, wobble, canThrow, ...rest}: CPokeballB
   useEffect(() => {
     if (wobble > 0 && wobble < 4) {
       wobbleAnim();
-      playSound(sounds.wobble);
+      playSound(sounds.pokeball_wobble);
     } else if (wobble == 4) {
       catchSucceedAnim();
-      playSound(sounds.catch)
+      playSound(sounds.pokeball_catch)
     } else if (wobble == -1) {
       catchFailedAnim();
-      playSound(sounds.escape);
+      playSound(sounds.pokeball_escape);
     }
   }, [wobble]);
 

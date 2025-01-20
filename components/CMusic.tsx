@@ -22,11 +22,14 @@ export function CMusic({ children }: ViewProps) {
 
     loadMusic(setAdMusic, adSong);
     loadMusic(setBattleMusic, battleSong);
-    loadSound(setSounds, "pokeball", require("@/assets/sounds/pokeball.ogg"));
-    loadSound(setSounds, "throw", require("@/assets/sounds/pokeball_throw.ogg"));
-    loadSound(setSounds, "wobble", require("@/assets/sounds/wobble.ogg"));
-    loadSound(setSounds, "escape", require("@/assets/sounds/escape.ogg"));
-    loadSound(setSounds, "catch", require("@/assets/sounds/catch.ogg"));
+    loadSound(setSounds, "pokeball_in", require("@/assets/sounds/pokeball.ogg"));
+    loadSound(setSounds, "pokeball_throw", require("@/assets/sounds/pokeball_throw.ogg"));
+    loadSound(setSounds, "pokeball_wobble", require("@/assets/sounds/wobble.ogg"));
+    loadSound(setSounds, "pokeball_escape", require("@/assets/sounds/escape.ogg"));
+    loadSound(setSounds, "pokeball_catch", require("@/assets/sounds/catch.ogg"));
+    loadSound(setSounds, "wheel_pop", require("@/assets/sounds/wheel_pop.ogg"));
+    loadSound(setSounds, "wheel_spin", require("@/assets/sounds/wheel_spin.ogg"));
+    loadSound(setSounds, "wheel_reward", require("@/assets/sounds/wheel_reward.ogg"));
   }, []);
 
   useEffect(() => {

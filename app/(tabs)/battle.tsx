@@ -159,10 +159,12 @@ export default function Battle() {
 
   const throwPokeball = async () => {
     if (wildHp <= 0 || coins < 50) return;
-    setPokeballTrhown(true);
-    setBattleFlag(false);
-    setWildState("pokeball");
-    setCoins(coins - 50);
+    if (!pokeballTrhown) {
+      setPokeballTrhown(true);
+      setBattleFlag(false);
+      setWildState("pokeball");
+      setCoins(coins - 50);
+    }
   };
 
   const handleTap = () => {
@@ -298,7 +300,7 @@ export default function Battle() {
         <CButton onPress={() => switchPokemon("prev")}>
           <SwitchButton width={100} height={100} style={{transform: [{scaleX: -1}]}} />
         </CButton>
-        <CPokeballButton onThrow={throwPokeball} wobble={wobble} canThrow={wildHp > 0 && coins >= 50} />
+        <CPokeballButton onThrow={throwPokeball} wobble={wobble} canThrow={(wildHp > 0 && coins >= 50) && !pokeballTrhown} />
         <CButton onPress={() => switchPokemon("next")}>
           <SwitchButton width={100} height={100} />
         </CButton>
