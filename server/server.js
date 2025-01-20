@@ -62,7 +62,8 @@ app.get("/login/:name", (req, res) => {
 
 // Get caught pokemon
 app.get("/pokemon/:id", (req, res) => {
-    const query = "SELECT id, level, specie FROM pokemon WHERE user_fk = (?) ORDER BY specie";
+    const {order} = req.query;
+    const query = `SELECT id, level, specie FROM pokemon WHERE user_fk = (?) ORDER BY ${order}`;
     const {id} = req.params;
     dbQuery(query, res, [id]);
 });

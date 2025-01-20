@@ -15,18 +15,21 @@ import BoostButton from '@/assets/images/buttons/BoostButton';
 import BattleButton from '@/assets/images/buttons/BattleButton';
 import SwitchButton from '@/assets/images/buttons/SwitchButton';
 import { TransparentBlack } from "@/constants/TransparentBlack";
-import { useRouter } from "expo-router";
 import { Pokemon } from "@/utils/battleFunctions/generatePokemonWithStats";
+import { CText } from "@/components/text/CText";
 
 
 export default function Team() {
   const {userId, team, setTeam, coins, setCoins, boost, setBoost} = useData();
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
   const [pagination, setPagination] = useState(0);
+  const [orderByLevel, setOrderByLevel] = useState(false);
   
   const getPokemon = async () => {
     const team = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
-    const pokemon = await axios.get(`${DATABASE_SERVER_URI}/pokemon/${userId}`);
+    const pokemon = await axios.get(`${DATABASE_SERVER_URI}/pokemon/${userId}`, {
+      params: {order: orderByLevel ? "level DESC" : "specie"}
+    });
     setTeam(team.data);
     setPokemon(pokemon.data);
   };
@@ -63,8 +66,6 @@ export default function Team() {
     }
   }, [team]);
 
-  const router = useRouter();
-
   const addPokemon = (pkmn: Pokemon) => {
     if (team.length < 6 && !team.some((obj: any) => obj.id === pkmn.id)) {
       setTeam(prev  => [...prev, pkmn]);
@@ -86,12 +87,16 @@ export default function Team() {
 
   useEffect(() => {
     getPokemon();
-    console.log(pokemon);
-  }, []);
+  }, [orderByLevel]);
 
   const buyBoost = () => {
     setCoins(coins - (100 - boost));
     setBoost(100);
+  };
+
+  const orderPokemon = () => {
+    setPokemon([]);
+    setOrderByLevel(!orderByLevel);
   };
 
   return (
@@ -112,24 +117,27 @@ export default function Team() {
           </View>
         </CLabel>
         <CLabel title="Caught" style={styles.label}>
-            <CScrollPanel
-              data={pokemon.slice(pagination, pagination + 30)}
-              numColumns={6}
-              initialNumToRender={1}
-              windowSize={2.5}
-              maxToRenderPerBatch={3}
-              renderItem={({ item }) => (
-                <CPokemonButton
-                  specie={item.specie}
-                  level={item.level}
-                  isOnTeam={team.some((obj: Pokemon) => obj.id === item.id)}
-                  onPress={() => addPokemon({id: item.id, specie: item.specie, level: item.level})}
-                />
-              )}
-            />
+          <CScrollPanel
+            data={pokemon.slice(pagination, pagination + 30)}
+            numColumns={6}
+            initialNumToRender={1}
+            windowSize={2.5}
+            maxToRenderPerBatch={3}
+            renderItem={({ item }) => (
+              <CPokemonButton
+                specie={item.specie}
+                level={item.level}
+                isOnTeam={team.some((obj: Pokemon) => obj.id === item.id)}
+                onPress={() => addPokemon({id: item.id, specie: item.specie, level: item.level})}
+              />
+            )}
+          />
           <View style={styles.paginationButtons}>
             <CButton onPress={() => {if (pagination > 0) setPagination(pagination - 30)}} style={{transform: [{scaleX: -1}]}}>
               <SwitchButton height={75} width={75} />
+            </CButton>
+            <CButton style={styles.button} onPress={orderPokemon}>
+                <CText outlined>{orderByLevel ? "Order by level" : "Order by specie"}</CText>
             </CButton>
             <CButton onPress={() => {if (pagination < pokemon.length - 30) setPagination(pagination + 30)}}>
               <SwitchButton height={75} width={75} />
@@ -176,6 +184,21 @@ const styles = StyleSheet.create({
   },
   paginationButtons: {
     flexDirection: "row",
-    justifyContent:"space-between"
-  }
+    justifyContent:"space-between",
+    alignItems: "center"
+  },
+  button: {
+    alignSelf: "center",
+    zIndex: 9999,
+    backgroundColor: "#663399",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    borderWidth: 5,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
 });

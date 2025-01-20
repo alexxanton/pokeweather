@@ -31,6 +31,7 @@ export default function Wheel() {
   const wheelScale = useSharedValue(1);
   const yReward = useSharedValue(0);
   const rewardOpacity = useSharedValue(0);
+  const rewardIndex = useSharedValue(-1);
 
   const wheelAnimStyle = useAnimatedStyle(() => ({
     transform: [
@@ -41,13 +42,15 @@ export default function Wheel() {
   
   const rewardAnimStyle = useAnimatedStyle(() => ({
     transform: [{ translateY: yReward.value }],
-    opacity: rewardOpacity.value
+    opacity: rewardOpacity.value,
+    zIndex: rewardIndex.value,
   }));
 
   const wheelAnim = () => {
     rotation.value = 0;
     wheelScale.value = 1;
     rewardOpacity.value = withTiming(0);
+    rewardIndex.value = 0;
 
     playSound(sounds.wheel_spin);
     rotation.value = withTiming(360 * 2, { duration: 2000, easing: Easing.elastic() });
@@ -73,8 +76,9 @@ export default function Wheel() {
 
     setTimeout(() => {
       playSound(sounds.wheel_reward);
+      rewardIndex.value = -1;
       setReward("");
-    }, 3000);
+    }, 3250);
   };
 
   const spinTheWheel = () => {
