@@ -9,10 +9,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { DATABASE_SERVER_URI } from "@/constants/URI";
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withRepeat, withTiming } from "react-native-reanimated";
+import { playSound } from "@/utils/sounds/playSound";
 
 
 export function CControlPanel({children, style, ...rest}: ViewProps) {
-  const {coins, boost} = useData();
+  const {coins, boost, sounds, userId} = useData();
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
   const opacity = useSharedValue(0);
@@ -40,7 +41,10 @@ export function CControlPanel({children, style, ...rest}: ViewProps) {
 
   const updateUserData = async () => {
     try {
-      // const response = await axios.put(`${DATABASE_SERVER_URI}/update-user-data/`);
+      await axios.put(`${DATABASE_SERVER_URI}/update-user-data/${userId}`, {
+        coins,
+        boost
+      });
     } catch (error) {
       console.error(error);
     }
@@ -55,6 +59,7 @@ export function CControlPanel({children, style, ...rest}: ViewProps) {
   
   useEffect(() => {
     if (coinDifference !== 0) {
+      playSound(sounds.coins);
       coinsAnim();
     }
   }, [lastCoinValue]);

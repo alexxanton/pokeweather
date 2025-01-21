@@ -23,6 +23,7 @@ import { Audio } from 'expo-av';
 export default function Wheel() {
   const {wheelTries, setWheelTries, sounds, coins, setCoins, userId} = useData();
   const [reward, setReward] = useState("");
+  const [smallImage, setSmallImage] = useState(false);
   const pokemonSprite = (specie: number) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const pokemonCry = (specie: number) => `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${specie}.ogg`;
   const [image, setImage] = useState(pokemonSprite(1));
@@ -111,6 +112,7 @@ export default function Wheel() {
       id: userId
     });
     setTimeout(() => {
+      setSmallImage(true);
       setImage(pokemonSprite(randomPokemon));
     }, 200);
 
@@ -121,6 +123,7 @@ export default function Wheel() {
 
   const addMoney = (image: any, money: number) => {
     setTimeout(() => {
+      setSmallImage(false);
       setImage(image);
     }, 200);
 
@@ -153,7 +156,7 @@ export default function Wheel() {
         <Animated.View style={[styles.reward, rewardAnimStyle]}>
           <Image
             source={image}
-            style={styles.image}
+            style={smallImage ? styles.pokeImage : styles.image}
           />
         </Animated.View>
       </View>
@@ -199,5 +202,9 @@ const styles = StyleSheet.create({
   image: {
     height: 300,
     width: 300,
+  },
+  pokeImage: {
+    height: 200,
+    width: 200,
   }
 });

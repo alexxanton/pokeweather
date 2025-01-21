@@ -10,7 +10,7 @@ import { CAttackEffect } from "@/components/battle/CAttackEffect";
 import { useData } from "@/components/CDataProvider";
 import { useEffect, useMemo, useState } from "react";
 import { randint } from "@/utils/randint";
-import { generatePokemonWithStats } from "@/utils/battleFunctions/generatePokemonWithStats";
+import { AttackStatsType, generatePokemonWithStats } from "@/utils/battleFunctions/generatePokemonWithStats";
 import axios from "axios";
 
 import SwitchButton from '@/assets/images/buttons/SwitchButton';
@@ -65,7 +65,7 @@ export default function Battle() {
   const wildLevel = useMemo(() => wildPokemon[wildIndex].level, [wildIndex]);
   const wildDamage = useMemo(() => wildPokemon[wildIndex].attack, [wildIndex]);
   const wildDefense = useMemo(() => wildPokemon[wildIndex].defense, [wildIndex]);
-  const wildTypes = useMemo(() => wildPokemon[wildIndex].types, [wildIndex]);
+  const wildTypes = useMemo<AttackStatsType[]>(() => wildPokemon[wildIndex].types, [wildIndex]);
   const wildAttackType = useMemo(() => wildTypes[randint(0, wildTypes.length - 1)], [wildTrigger]);
 
   const pkmnSpecie = useMemo(() => pokemon[pkmnIndex].specie, [pkmnIndex]);
@@ -75,7 +75,7 @@ export default function Battle() {
   const pkmnLevel = useMemo(() => pokemon[pkmnIndex].level, [pkmnIndex]);
   const pkmnDamage = useMemo(() => pokemon[pkmnIndex].attack, [pkmnIndex]);
   const pkmnDefense = useMemo(() => pokemon[pkmnIndex].defense, [pkmnIndex]);
-  const pkmnTypes = useMemo(() => pokemon[pkmnIndex].types, [pkmnIndex]);
+  const pkmnTypes = useMemo<AttackStatsType[]>(() => pokemon[pkmnIndex].types, [pkmnIndex]);
   const pkmnAttackType = useMemo(() => pkmnTypes[randint(0, pkmnTypes.length - 1)], [trigger]);
 
 
@@ -91,7 +91,7 @@ export default function Battle() {
       }
 
       if (battleFlag && wildHp > 0) {
-        updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage, pkmnDefense);
+        updatePokemonHp(setPokemon, pkmnIndex, pkmnHp, wildDamage, pkmnDefense, wildAttackType, pkmnTypes);
         if (pkmnHp <= 0) {
           const skipCheck = true;
           await delay(1000);
@@ -170,10 +170,10 @@ export default function Battle() {
   const handleTap = () => {
     if (!battleFlag) return;
     if (wildHp > 0) {
-      const boostModifier = boost > 0 ? 3 : 1;
+      const boostModifier = boost > 0 ? 2 : 1;
       setTrigger(trigger < effectLimit - 1 ? trigger + 1 : 0);
       setBoost(boost - 1);
-      updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense);
+      updatePokemonHp(setWildPokemon, wildIndex, wildHp, pkmnDamage * boostModifier, wildDefense, pkmnAttackType, wildTypes);
     }
   };
 

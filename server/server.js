@@ -100,9 +100,10 @@ app.put("/update-team/:id", (req, res) => {
 });
 
 // Update user data
-app.put("/update-user-data", (req, res) => {
+app.put("/update-user-data/:id", (req, res) => {
     const query = "UPDATE user SET coins = ?, boost = ? WHERE id = ?";
-    const {coins, boost, id} = req.body;
+    const {coins, boost} = req.body;
+    const {id} = req.params;
     dbQuery(query, res, [coins, boost, id]);
 });
 

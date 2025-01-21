@@ -3,6 +3,16 @@ import { AttackType } from "@/components/battle/CAttackEffect";
 
 export type Pokemon = {id: number, level: number, specie: number};
 
+export type AttackStatsType = {
+  name: AttackType,
+  double_damage_from: string[],
+  double_damage_to: string[],
+  half_damage_from: string[],
+  half_damage_to: string[],
+  no_damage_from: string[],
+  no_damage_to: string[]
+};
+
 
 export function generatePokemonWithStats(team: Pokemon[], weatherCondition?: string) {
   const pokedata = require("@/assets/data/pokedata.json");
@@ -49,7 +59,7 @@ export function generatePokemonWithStats(team: Pokemon[], weatherCondition?: str
       baseHp: number,
       attack: number,
       defense: number,
-      types: Record<string, any>[],
+      types: AttackStatsType[],
     }[] = [];
     
     arr.forEach(pkmn => {
