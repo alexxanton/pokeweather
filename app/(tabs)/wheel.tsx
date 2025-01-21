@@ -17,12 +17,14 @@ import axios from 'axios';
 import { randint } from '@/utils/randint';
 import { playSound } from '@/utils/sounds/playSound';
 import { DATABASE_SERVER_URI } from '@/constants/URI';
+import { Audio } from 'expo-av';
 
 
 export default function Wheel() {
   const {wheelTries, setWheelTries, sounds, coins, setCoins, userId} = useData();
   const [reward, setReward] = useState("");
   const pokemonSprite = (specie: number) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
+  const pokemonCry = (specie: number) => `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${specie}.ogg`;
   const [image, setImage] = useState(pokemonSprite(1));
   const rewards = ["pokemon", "coins", "bills"];
   const coinsImage = require("@/assets/images/misc/coins.png");
@@ -32,6 +34,18 @@ export default function Wheel() {
   const yReward = useSharedValue(0);
   const rewardOpacity = useSharedValue(0);
   const rewardIndex = useSharedValue(-1);
+
+  const playCrySound = async (specie: number) => {
+    const { sound } = await Audio.Sound.createAsync(
+      {uri: pokemonCry(specie)}
+    );
+
+    sound.setVolumeAsync(0.3)
+    await sound.playAsync();
+    setTimeout(() => {
+      sound.unloadAsync();
+    }, 10000);
+  }
 
   const wheelAnimStyle = useAnimatedStyle(() => ({
     transform: [
@@ -47,12 +61,12 @@ export default function Wheel() {
   }));
 
   const wheelAnim = () => {
+    playSound(sounds.wheel_spin);
     rotation.value = 0;
     wheelScale.value = 1;
     rewardOpacity.value = withTiming(0);
     rewardIndex.value = 0;
 
-    playSound(sounds.wheel_spin);
     rotation.value = withTiming(360 * 2, { duration: 2000, easing: Easing.elastic() });
     wheelScale.value = withSequence(
       withTiming(1.5, { duration: 1000 }),
@@ -64,6 +78,8 @@ export default function Wheel() {
 
     setTimeout(() => {
       playSound(sounds.wheel_pop);
+      playSound(sounds.wheel_reward);
+
       yReward.value = 0;
       rewardOpacity.value = withTiming(1, { duration: 500 }, () => {
         rewardOpacity.value = withDelay(2000, withTiming(0, { duration: 500 }));
@@ -75,7 +91,6 @@ export default function Wheel() {
     }, 2000);
 
     setTimeout(() => {
-      playSound(sounds.wheel_reward);
       rewardIndex.value = -1;
       setReward("");
     }, 3250);
@@ -89,21 +104,25 @@ export default function Wheel() {
   };
 
   const newPokemon = async () => {
-    const randomPokemon = randint(0, 500);
+    const randomPokemon = randint(1, 807);
     await axios.post(`${DATABASE_SERVER_URI}/catch-pokemon`, {
       specie: randomPokemon,
-      level: randint(0, 100),
+      level: randint(1, 100),
       id: userId
     });
     setTimeout(() => {
       setImage(pokemonSprite(randomPokemon));
-    }, 1000);
+    }, 200);
+
+    setTimeout(() => {
+      playCrySound(randomPokemon);
+    }, 2000);
   };
 
   const addMoney = (image: any, money: number) => {
     setTimeout(() => {
       setImage(image);
-    }, 1000);
+    }, 200);
 
     setTimeout(() => {
       setCoins(coins + money);

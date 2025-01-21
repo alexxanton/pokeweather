@@ -41,7 +41,7 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   const brightness = useSharedValue(1);
   const scale = useSharedValue(1);
 
-  async function playCrySound() {
+  const playCrySound = async () => {
     const { sound } = await Audio.Sound.createAsync(
       {uri: `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${specie}.ogg`}
     );

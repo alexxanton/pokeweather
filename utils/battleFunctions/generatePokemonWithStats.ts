@@ -17,8 +17,9 @@ export function generatePokemonWithStats(team: Pokemon[], weatherCondition?: str
 
     const pkmnLevels = team.map((pkmn: Pokemon) => pkmn.level);
     const sum = pkmnLevels.reduce((acc: any, num: any) => acc + num, 0);
-    const avg = sum / pkmnLevels.length;
-    const max = Math.max(...pkmnLevels);
+    const avg = Math.round(sum / pkmnLevels.length);
+    const maxLevel = Math.max(...pkmnLevels);
+    const max = maxLevel < 99 ? 2 : 0
     
     let index = 1;
     while (index <= team.length) {
@@ -32,7 +33,7 @@ export function generatePokemonWithStats(team: Pokemon[], weatherCondition?: str
       }
       
       if (accepted) {
-        pokemon.push({id: index, level: randint(avg, max + 2), specie: randomPick});
+        pokemon.push({id: index, level: randint(avg, max), specie: randomPick});
         index++;
       }
     }
@@ -56,7 +57,7 @@ export function generatePokemonWithStats(team: Pokemon[], weatherCondition?: str
       const specie = pkmn.specie;
       const name = pokedata[specie].name;
       const level = pkmn.level;
-      const baseHp = level * 10;
+      const baseHp = 100;
       const hp = baseHp;
       const attack = level * 5;
       const defense = level * 1.5;
