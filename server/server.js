@@ -99,6 +99,17 @@ app.put("/update-team/:id", (req, res) => {
     dbQuery(query, res, [slot_1, slot_2, slot_3, slot_4, slot_5, slot_6]);
 });
 
+// Update team
+app.put("/update-levels/", (req, res) => {
+    const {team} = req.body;
+    console.log(team);
+    let query = "";
+    team.forEach(pkmn => {
+        query += `UPDATE pokemon SET level = ${pkmn.level}, specie = ${pkmn.specie} WHERE id = ${pkmn.id};`
+    });
+    dbQuery(query, res, []);
+});
+
 // Update user data
 app.put("/update-user-data/:id", (req, res) => {
     const query = "UPDATE user SET coins = ?, boost = ? WHERE id = ?";

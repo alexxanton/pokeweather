@@ -82,14 +82,16 @@ export default function Team() {
   };
 
   const switchPokemon = () => {
-    setTeam((prev) => {
-      const news = [...prev];
-      return [];
-    });
+    // setTeam((prev) => {
+    //   const news = [...prev];
+    //   return [];
+    // });
   };
 
   useEffect(() => {
     getPokemon();
+    console.log(team);
+    
   }, [orderByLevel]);
 
   const buyBoost = () => {
@@ -108,15 +110,15 @@ export default function Team() {
 
   return (
     <CPadding>
-      <View style={styles.container}>
       <CArrowButton />
-      <View style={styles.levelDisplay}>
-        <Image
-          source={levelDisplayImage}
-          style={styles.levelDisplayImage}
-        />
-        <CText outlined>{levelDisplay?.level}</CText>
-      </View>
+      <View style={styles.container}>
+        <View style={styles.levelDisplay}>
+          <Image
+            source={levelDisplayImage}
+            style={styles.levelDisplayImage}
+          />
+          <CText outlined>{levelDisplay?.level}</CText>
+        </View>
         <CLabel title="Team">
           <View style={styles.team}>
             {team.map((pkmn: any, idx: number) => {

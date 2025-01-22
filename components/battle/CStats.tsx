@@ -8,6 +8,9 @@ import { CButton } from "../buttons/CButton";
 import Arrow from '@/assets/images/misc/Arrow';
 import { useRouter } from "expo-router";
 import { useData } from "../CDataProvider";
+import axios from "axios";
+import { DATABASE_SERVER_URI } from "@/constants/URI";
+import { randint } from "@/utils/randint";
 
 
 export function CStats({team}: {team: Pokemon[]}) {
@@ -35,6 +38,23 @@ export function CStats({team}: {team: Pokemon[]}) {
 
   useEffect(() => {
     displayStats();
+    const updatedTeam = team.map(pokemon => ({
+      ...pokemon,
+      level: pokemon.level + (pokemon.level < 100 ? 1 : 0),
+      specie: pokedata[pokemon.specie].evolves_to.length > 0 &&
+        pokemon.level + 1 >= pokedata[pokemon.specie].min_level
+        ? pokedata[pokemon.specie].evolves_to[
+            randint(0, pokedata[pokemon.specie].evolves_to.length - 1)
+          ]
+        : pokemon.specie
+    }));
+    try {
+      axios.put(`${DATABASE_SERVER_URI}/update-levels`, {
+        team: updatedTeam
+      });
+    } catch (error) {
+      console.error(error);
+    }
   }, []);
 
   return (
@@ -47,7 +67,7 @@ export function CStats({team}: {team: Pokemon[]}) {
               <CText size={30} outlined>{` ${pkmn.level} `}</CText>
               <Arrow />
               <CText size={30} outlined>{` ${pkmn.level + (pkmn.level < 100 ? 1 : 0)} `}</CText>
-              {pkmn.level + (pkmn.level < 100 ? 1 : 0) == 6 ? (
+              {pkmn.level + (pkmn.level < 100 ? 1 : 0) >= pokedata[pkmn.specie].min_level ? (
                 <Image style={styles.image} source={`${imageUrl}/${pokedata[pkmn.specie].evolves_to[0]}.png`} />
               ) : null}
             </View>

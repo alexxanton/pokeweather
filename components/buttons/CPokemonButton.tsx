@@ -47,6 +47,7 @@ export function CPokemonButton({specie, level, isOnTeam, onPressIn, onPressOut, 
           contentFit="contain"
         />
       </View>
+      {isOnTeam ?? <CText outlined style={styles.level}>{level}</CText>}
       <Pressable
         {...rest}
         style={styles.button}
@@ -77,6 +78,6 @@ const styles = StyleSheet.create({
   },
   level: {
     position: "absolute",
-    transform: [{translateY: "50%"}]
+    transform: [{translateY: "-50%"}]
   }
 });

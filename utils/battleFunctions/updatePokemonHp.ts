@@ -10,7 +10,9 @@ export const updatePokemonHp = (
   opponentTypes: AttackStatsType[],
 ) => {
   opponentTypes.forEach(type => {
-    
+    Object.entries(type).forEach(([key, values]) => {
+      
+    });
   });
   
   const newHp = hp - Math.round(damage / defense);
