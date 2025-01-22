@@ -17,6 +17,7 @@ import SwitchButton from '@/assets/images/buttons/SwitchButton';
 import { TransparentBlack } from "@/constants/TransparentBlack";
 import { Pokemon } from "@/utils/battleFunctions/generatePokemonWithStats";
 import { CText } from "@/components/text/CText";
+import { Image } from "expo-image";
 
 
 export default function Team() {
@@ -24,6 +25,8 @@ export default function Team() {
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
   const [pagination, setPagination] = useState(0);
   const [orderByLevel, setOrderByLevel] = useState(false);
+  const [levelDisplay, setLevelDisplay] = useState<Pokemon>();
+  const levelDisplayImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/${levelDisplay?.specie}.png`;
   
   const getPokemon = async () => {
     const team = await axios.get(`${DATABASE_SERVER_URI}/get-team/${userId}`);
@@ -99,10 +102,21 @@ export default function Team() {
     setOrderByLevel(!orderByLevel);
   };
 
+  const handlePressIn = (level: Pokemon) => {
+    setLevelDisplay(level);
+  };
+
   return (
     <CPadding>
-      <CArrowButton />
       <View style={styles.container}>
+      <CArrowButton />
+      <View style={styles.levelDisplay}>
+        <Image
+          source={levelDisplayImage}
+          style={styles.levelDisplayImage}
+        />
+        <CText outlined>{levelDisplay?.level}</CText>
+      </View>
         <CLabel title="Team">
           <View style={styles.team}>
             {team.map((pkmn: any, idx: number) => {
@@ -129,6 +143,7 @@ export default function Team() {
                 level={item.level}
                 isOnTeam={team.some((obj: Pokemon) => obj.id === item.id)}
                 onPress={() => addPokemon({id: item.id, specie: item.specie, level: item.level})}
+                onPressIn={() => handlePressIn(item)}
               />
             )}
           />
@@ -201,4 +216,13 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
+  levelDisplay: {
+    position: "absolute",
+    alignSelf: "center",
+  },
+  levelDisplayImage: {
+    position: "absolute",
+    width: 50,
+    height: 50,
+  }
 });
