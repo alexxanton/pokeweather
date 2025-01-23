@@ -13,13 +13,13 @@ import { DATABASE_SERVER_URI } from "@/constants/URI";
 import { randint } from "@/utils/randint";
 
 
-export function CStats({team}: {team: Pokemon[]}) {
+export function CStats() {
   const pokedata = require("@/assets/data/pokedata.json");
   const router = useRouter();
   const imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons";
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
   const [hidden, setHidden] = useState(true);
-  const {coins, setCoins} = useData();
+  const {coins, setCoins, team, setTeam, setSong} = useData();
 
   const displayStats = async () => {
     for (let i = 0; i < team.length; i++) {
@@ -31,6 +31,7 @@ export function CStats({team}: {team: Pokemon[]}) {
   }
 
   const goBack = () => {
+    setSong("stop_battle");
     if (router.canGoBack()) {
       router.back();
     }
@@ -48,6 +49,9 @@ export function CStats({team}: {team: Pokemon[]}) {
           ]
         : pokemon.specie
     }));
+
+    setTeam(updatedTeam);
+
     try {
       axios.put(`${DATABASE_SERVER_URI}/update-levels`, {
         team: updatedTeam
@@ -101,7 +105,7 @@ const styles = StyleSheet.create({
   },
   button: {
     alignSelf: "center",
-    zIndex: 9999,
+    zIndex: 99999,
     marginTop: 20,
     backgroundColor: "#663399",
     paddingVertical: 12,

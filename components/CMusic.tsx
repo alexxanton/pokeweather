@@ -31,6 +31,8 @@ export function CMusic({ children }: ViewProps) {
     loadSound(setSounds, "wheel_spin", require("@/assets/sounds/wheel_spin.ogg"));
     loadSound(setSounds, "wheel_reward", require("@/assets/sounds/wheel_reward.ogg"));
     loadSound(setSounds, "coins", require("@/assets/sounds/coins.ogg"));
+    loadSound(setSounds, "attack", require("@/assets/sounds/attack.ogg"));
+    loadSound(setSounds, "defeat", require("@/assets/sounds/defeat.ogg"));
   }, []);
 
   useEffect(() => {

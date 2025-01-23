@@ -13,7 +13,7 @@ import { playSound } from "@/utils/sounds/playSound";
 
 
 export function CControlPanel({children, style, ...rest}: ViewProps) {
-  const {coins, boost, sounds, userId} = useData();
+  const {coins, boost, setBoost, sounds, userId} = useData();
   const yPos = useSharedValue(0);
   const xPos = useSharedValue(0);
   const opacity = useSharedValue(0);
@@ -52,6 +52,9 @@ export function CControlPanel({children, style, ...rest}: ViewProps) {
 
   useEffect(() => {
     const difference = coins - lastCoinValue;
+    if (boost < 0) {
+      setBoost(0);
+    }
     setLastCoinValue(coins);
     updateUserData();
     setCoinDifference(difference);

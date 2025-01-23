@@ -107,7 +107,7 @@ app.put("/update-levels/", (req, res) => {
     team.forEach(pkmn => {
         query += `UPDATE pokemon SET level = ${pkmn.level}, specie = ${pkmn.specie} WHERE id = ${pkmn.id};`
     });
-    dbQuery(query, res, []);
+    dbQuery(query, res);
 });
 
 // Update user data

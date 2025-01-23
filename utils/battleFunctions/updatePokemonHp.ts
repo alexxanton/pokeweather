@@ -9,13 +9,21 @@ export const updatePokemonHp = (
   attackType: AttackStatsType,
   opponentTypes: AttackStatsType[],
 ) => {
+  let typeDamage = 0;
+
   opponentTypes.forEach(type => {
-    Object.entries(type).forEach(([key, values]) => {
-      
-    });
+    if (type.double_damage_from.includes(attackType.name)) {
+      typeDamage += 2;
+    } else if (type.half_damage_from.includes(attackType.name)) {
+      typeDamage += 0.5;
+    } else if (type.no_damage_from.includes(attackType.name)) {
+      typeDamage += 0;
+    } else {
+      typeDamage += 1;
+    }
   });
   
-  const newHp = hp - Math.round(damage / defense);
+  const newHp = hp - Math.round(typeDamage * damage / defense);
   if (hp > 0) {
     pokemon((prev: any) =>
       prev.map((pkmn: any, i: number) =>

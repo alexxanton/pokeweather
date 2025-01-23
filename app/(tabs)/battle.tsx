@@ -23,6 +23,7 @@ import { useRouter } from "expo-router";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 import { CStats } from "@/components/battle/CStats";
 import { delay } from "@/utils/delay";
+import { playSound } from "@/utils/sounds/playSound";
 
 
 export default function Battle() {
@@ -40,7 +41,7 @@ export default function Battle() {
   };
   
 
-  const {userId, team, weatherCondition, boost, setBoost, coins, setCoins, song, setSong} = useData();
+  const {userId, team, weatherCondition, boost, setBoost, coins, setCoins, sounds, setSong} = useData();
   const [battleFlag, setBattleFlag] = useState(false);
   const [wobble, setWobble] = useState(0);
   const [pokeballTrhown, setPokeballTrhown] = useState(false);
@@ -169,6 +170,9 @@ export default function Battle() {
 
   const handleTap = () => {
     if (!battleFlag) return;
+    if (trigger % 5 == 0) {
+      playSound(sounds.attack);
+    }
     if (wildHp > 0) {
       const boostModifier = boost > 0 ? 2 : 1;
       setTrigger(trigger < effectLimit - 1 ? trigger + 1 : 0);
@@ -192,6 +196,7 @@ export default function Battle() {
         fadeOutAnim();
         setTimeout(() => {
           if (router.canGoBack()) {
+            setSong("stop_battle");
             router.back();
           }
         }, 1000);
@@ -243,58 +248,60 @@ export default function Battle() {
   
   return (
     <CPadding>
-      {!win ? <CHandleBackButton ask /> : <CStats team={team} />}
+      {!win ? <CHandleBackButton ask /> : <><CStats /><CHandleBackButton /></>}
       <CGestureHandler onGestureEvent={handleGesture}>
-        <TouchableWithoutFeedback onPress={handleTap}>
-          <Animated.View style={[styles.battleArea, animStyle]}>
-            <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
-            <View style={styles.container}>
-              <CText outlined size={20}>LVL {wildLevel}</CText>
+        {!win ? (
+          <TouchableWithoutFeedback onPress={handleTap}>
+            <Animated.View style={[styles.battleArea, animStyle]}>
+              <CVar name={wildName} hp={wildHp / wildBaseHp * 100} />
+              <View style={styles.container}>
+                <CText outlined size={20}>LVL {wildLevel}</CText>
 
-              <CPokemon
-                specie={wildSpecie}
-                style={styles.front}
-                state={wildState}
-                trigger={wildTrigger}
-                hp={wildHp}
-                battleFlag={battleFlag}
-                wild
-              >
-                {[...Array(effectLimit)].map((_, index) => {
-                  return <CAttackEffect
-                    trigger={trigger}
-                    index={index}
-                    key={index}
-                    battleFlag={battleFlag}
-                    type={pkmnAttackType.name}
-                  />
-                })}
-              </CPokemon>
+                <CPokemon
+                  specie={wildSpecie}
+                  style={styles.front}
+                  state={wildState}
+                  trigger={wildTrigger}
+                  hp={wildHp}
+                  battleFlag={battleFlag}
+                  wild
+                >
+                  {[...Array(effectLimit)].map((_, index) => {
+                    return <CAttackEffect
+                      trigger={trigger}
+                      index={index}
+                      key={index}
+                      battleFlag={battleFlag}
+                      type={pkmnAttackType.name}
+                    />
+                  })}
+                </CPokemon>
 
-              <CPokemon
-                specie={pkmnSpecie}
-                state={state}
-                style={styles.back}
-                trigger={trigger}
-                hp={pkmnHp}
-                battleFlag={battleFlag}
-              >
-                {[...Array(effectLimit)].map((_, index) => {
-                  return <CAttackEffect
-                    trigger={wildTrigger}
-                    index={index}
-                    key={index}
-                    battleFlag={battleFlag}
-                    type={wildAttackType.name}
-                  />
-                })}
-              </CPokemon>
+                <CPokemon
+                  specie={pkmnSpecie}
+                  state={state}
+                  style={styles.back}
+                  trigger={trigger}
+                  hp={pkmnHp}
+                  battleFlag={battleFlag}
+                >
+                  {[...Array(effectLimit)].map((_, index) => {
+                    return <CAttackEffect
+                      trigger={wildTrigger}
+                      index={index}
+                      key={index}
+                      battleFlag={battleFlag}
+                      type={wildAttackType.name}
+                    />
+                  })}
+                </CPokemon>
 
-              <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>
-            </View>
-            <CVar name={pkmnName} hp={pkmnHp / pkmnBaseHp * 100} style={styles.bottomVar} />
-          </Animated.View>
-        </TouchableWithoutFeedback>
+                <CText outlined size={20} style={styles.level}>{`LVL ${pkmnLevel}`}</CText>
+              </View>
+              <CVar name={pkmnName} hp={pkmnHp / pkmnBaseHp * 100} style={styles.bottomVar} />
+            </Animated.View>
+          </TouchableWithoutFeedback>
+        ) : null}
       </CGestureHandler>
       <CControlPanel style={styles.buttons}>
         <CButton onPress={() => switchPokemon("prev")}>

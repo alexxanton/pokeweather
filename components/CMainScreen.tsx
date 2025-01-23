@@ -89,10 +89,12 @@ export function CMainScreen() {
   };
 
   useEffect(() => {
-    // ! TODO: set 5 min interval
     getUserId();
     getWeatherData();
     pokeballAnim();
+    setInterval(() => {
+      getWeatherData();
+    }, 300000);
   }, []);
 
   useEffect(() => {

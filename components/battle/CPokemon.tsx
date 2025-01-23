@@ -11,6 +11,8 @@ import Animated, {
   withDelay,
   withSequence
 } from "react-native-reanimated";
+import { useData } from "../CDataProvider";
+import { playSound } from "@/utils/sounds/playSound";
 
 type CPokemonProps = ViewProps & {
   specie: number,
@@ -27,6 +29,7 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
   const frontSprite = () => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${specie}.png`;
   const missingImage = require("@/assets/images/misc/missingno.png");
   const [sprite, setSprite] = useState(wild ? frontSprite : backSprite);
+  const {sounds} = useData();
   const hitBack = 20;
   const hideX = 300;
   const yPos = useSharedValue(0);
@@ -191,7 +194,7 @@ export function CPokemon({children, specie, state, wild, trigger, hp, battleFlag
     if (hp <= 0) {
       defeatAnim();
       setTimeout(() => {
-        // playSound(defeatSound);
+        playSound(sounds.defeat);
       }, 1000);
     }
   }, [hp]);
